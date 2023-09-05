@@ -5,8 +5,7 @@ import {
   normalizePageHash,
   generateTimelineItems,
   generateActivitySelectOptions,
-  generateActivities,
-  id
+  generateActivities
 } from './functions.js'
 import TheHeader from './components/TheHeader.vue'
 import TheNav from './components/TheNav.vue'
@@ -26,12 +25,8 @@ function goTo(page) {
   currentPage.value = page
 }
 
-function createActivity(name) {
-  activities.value.push({
-    id: id(),
-    name,
-    secondsToComplete: 0
-  })
+function createActivity(activity) {
+  activities.value.push(activity)
 }
 
 function deleteActivity(activity) {
