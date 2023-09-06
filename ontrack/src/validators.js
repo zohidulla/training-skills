@@ -52,7 +52,7 @@ function isSelectOptionValid({ value, label }) {
   return (isNumber(value) || isNotEmptyString(value)) && isNotEmptyString(label)
 }
 
-function isNumber(value) {
+export function isNumber(value) {
   return typeof value === 'number'
 }
 
