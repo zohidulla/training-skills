@@ -2,6 +2,7 @@
 import { NULLABLE_ACTIVITY } from '../constants'
 import {
   isActivityValid,
+  isHourValid,
   isTimelineItemValid,
   validateActivities,
   validateSelectOptions
@@ -29,7 +30,8 @@ const props = defineProps({
 })
 
 const emit = defineEmits({
-  selectActivity: isActivityValid
+  selectActivity: isActivityValid,
+  scrollToHour: isHourValid
 })
 
 function selectActivity(id) {
@@ -43,7 +45,10 @@ function findActivityById(id) {
 
 <template>
   <li class="relative flex flex-col gap-2 border-t border-gray-200 px-4 py-10">
-    <TimelineHour :hour="timelineItem.hour" />
+    <TimelineHour
+      :hour="timelineItem.hour"
+      @click.prevent="emit('scrollToHour', timelineItem.hour)"
+    />
     <BaseSelect
       placeholder="Rest"
       :selected="timelineItem.activityId"
