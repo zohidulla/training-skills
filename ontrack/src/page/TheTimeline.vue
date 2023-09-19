@@ -1,16 +1,17 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { nextTick, ref, watchPostEffect } from 'vue'
 import TimelineItem from '../components/TimelineItem.vue'
 import {
   isActivityValid,
+  isPageValid,
   isTimelineItemValid,
   validateActivities,
   validateSelectOptions,
   validateTimelineItems
 } from '../validators'
-import { MIDNIGHT_HOUR } from '../constants'
+import { MIDNIGHT_HOUR, PAGE_TIMELINE } from '../constants'
 
-defineProps({
+const props = defineProps({
   timelineItems: {
     required: true,
     type: Array,
@@ -25,6 +26,11 @@ defineProps({
     required: true,
     type: Array,
     validator: validateSelectOptions
+  },
+  currentPage: {
+    required: true,
+    type: String,
+    validator: isPageValid
   }
 })
 
@@ -36,7 +42,12 @@ const emit = defineEmits({
 
 const timelineItemRefs = ref([])
 
-onMounted(scrollToCurrentTimelineItem)
+watchPostEffect(async () => {
+  if (props.currentPage === PAGE_TIMELINE) {
+    await nextTick()
+    scrollToCurrentTimelineItem()
+  }
+})
 
 function scrollToCurrentTimelineItem() {
   const currentHour = new Date().getHours()
