@@ -1,12 +1,7 @@
 <script setup>
-import { computed, provide, readonly, ref } from 'vue'
+import { provide, readonly, ref } from 'vue'
 import { PAGE_ACTIVITIES, PAGE_PROGRESS, PAGE_TIMELINE } from './constants'
-import {
-  generateTimelineItems,
-  generateActivitySelectOptions,
-  generateActivities,
-  generatePeriodSelectOptions
-} from './functions.js'
+import { generateTimelineItems, generatePeriodSelectOptions } from './functions.js'
 import { currentPage, timelineRef } from './router'
 import * as keys from './keys'
 import TheHeader from './components/TheHeader.vue'
@@ -14,26 +9,15 @@ import TheNav from './components/TheNav.vue'
 import TheTimeline from './page/TheTimeline.vue'
 import TheActivities from './page/TheActivities.vue'
 import TheProgress from './page/TheProgress.vue'
-
-const activities = ref(generateActivities())
+import {
+  activities,
+  activitySelectOptions,
+  createActivity,
+  deleteActivity,
+  setActivitySecondsToComplete
+} from './activities'
 
 const timelineItems = ref(generateTimelineItems(activities.value))
-
-const activitySelectOptions = computed(() => generateActivitySelectOptions(activities.value))
-
-function createActivity(activity) {
-  activities.value.push(activity)
-}
-
-function deleteActivity(activity) {
-  timelineItems.value.forEach((timelineItem) => {
-    if (timelineItem.activityId === activity.id) {
-      timelineItem.activityId = null
-      timelineItem.activitySeconds = 0
-    }
-  })
-  activities.value.splice(activities.value.indexOf(activity), 1)
-}
 
 function setTimelineItemActivity(timelineItem, activityId) {
   timelineItem.activityId = activityId
@@ -41,10 +25,6 @@ function setTimelineItemActivity(timelineItem, activityId) {
 
 function updateTimelineItemActivitySeconds(timelineItem, activitySeconds) {
   timelineItem.activitySeconds += activitySeconds
-}
-
-function setActivitySecondsToComplete(activity, secondsToComplete) {
-  activity.secondsToComplete = secondsToComplete || 0
 }
 
 provide(keys.updateTimelineItemActivitySecondsKey, updateTimelineItemActivitySeconds)
