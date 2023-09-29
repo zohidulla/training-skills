@@ -30,7 +30,7 @@ function scrollToHour(hour = null, isSmooth = true) {
       <TimelineItem
         v-for="timelineItem in timelineItems"
         :key="timelineItem.hour"
-        :timeline-item="timelineItems"
+        :timeline-item="timelineItem"
         ref="timelineItemRefs"
         @scroll-to-hour="scrollToHour(timelineItem.hour)"
       />
