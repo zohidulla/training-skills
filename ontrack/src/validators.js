@@ -55,7 +55,7 @@ export function isActivityValid({ id, name, secondsToComplete }) {
   return [isNotEmptyString(id), isNotEmptyString(name), isNumber(secondsToComplete)].every(Boolean)
 }
 
-export function isNotEmptyString(value) {
+function isNotEmptyString(value) {
   return isString(value) && value.length > 0
 }
 
