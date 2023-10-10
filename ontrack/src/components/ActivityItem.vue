@@ -6,8 +6,8 @@ import { resetTimelineItemActivities, timelineItems } from '../timeline-items'
 import BaseButton from './BaseButton.vue'
 import BaseSelect from './BaseSelect.vue'
 import BaseIcon from './BaseIcon.vue'
-import ActivitySecondsToComplete from './ActivitySecondsToComplete.vue'
 import { ICON_TRASH } from '../icons'
+import RemainingActivitySeconds from './RemainingActivitySeconds.vue'
 
 defineProps({
   activity: {
@@ -39,7 +39,7 @@ function deleteAndResetActivity(activity) {
         :selected="activity.secondsToComplete || null"
         @select="updateActivity(activity, { secondsToComplete: $event || 0 })"
       />
-      <ActivitySecondsToComplete v-if="activity.secondsToComplete" :activity="activity" />
+      <RemainingActivitySeconds v-if="activity.secondsToComplete" :activity="activity" />
     </div>
   </li>
 </template>
