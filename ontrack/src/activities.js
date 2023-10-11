@@ -1,5 +1,5 @@
 import { computed, ref } from 'vue'
-import { HUNDRED_PERCENT, SECONDS_IN_HOUR } from './constants'
+import { HUNDRED_PERCENT } from './constants'
 import { id } from './functions'
 
 export const activities = ref(generateActivities())
