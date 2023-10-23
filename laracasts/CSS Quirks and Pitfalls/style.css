@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 300px;
+  background: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem;
+  border-radius: 14px;
+}
+
+.parent {
+  background: red;
+  min-height: 400px;
+  /* height: 1px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: yellow;
+  /* height: 100%; */
+  flex: 1;
+}
