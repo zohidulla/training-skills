@@ -85,3 +85,48 @@ body {
   z-index: 1000:
  }
 
+.gradient-div {
+  text-align: center;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  --gradient-to-color: #2c5282;
+  --gradient-from-color: #90cdf4;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(144, 205, 244, 0));
+  background-image: linear-gradient(to bottom, var(--gradient-color-stops));
+  position: relative;
+  background: linear-gradient(to bottom, #90cdf4, #2c5282)
+}
+.gradient-div:after {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: inherit;
+  transition: opacity .3s;
+  background: linear-gradient(to bottom, red, purple)
+}
+.gradient-div:hover:after {
+  opacity: 1;
+}
+.gradient-div div {
+  position: relative;
+  z-index: 10;
+}
+.gradient-div h1 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: rgb(255 255 255);
+  margin-bottom: 0.25rem;
+}
+.gradient-div h2 {
+  color: rgb(107 114 128);
+}
+
