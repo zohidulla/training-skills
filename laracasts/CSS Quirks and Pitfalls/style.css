@@ -55,3 +55,33 @@ body {
 .clamp.three-lines {
   -webkit-line-clamp: 3;
 }
+
+.realm {
+  background: blue;
+  min-height: 400px;
+  /* border-redius: 20px;
+  border-bottom-left-radius: 159px 769px;
+  border-bottom-right-radius: 159px 769px; */
+  /* border: 5px solid black; */
+  clip-path: circle(40%);
+  /* clip-path: polygon(50& 0%, 61% 35%); */
+}
+
+.banner {
+  display: grid;
+  place-items-center: place-items;
+  /* min-height: 500px; */
+
+  background: url("/fall.jpg") no-repeat;
+  mask: url("/cloud-fog.svg");
+  mask-repeat: repeat;
+  mask-position: bottom;
+  mask-size: cover;
+  /* mask-size: 50% 100%; */
+}
+
+ .banner-img {
+  bottom: 200px;
+  z-index: 1000:
+ }
+
