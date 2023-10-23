@@ -34,3 +34,24 @@ body {
   /* height: 100%; */
   flex: 1;
 }
+
+.post {
+  width: 300px;
+  border: 1px solid blue;
+  margin-bottom: 10px;
+}
+
+.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clamp.two-lines {
+  -webkit-line-clamp: 2;
+  line-clamp: 2 "... (continue)";
+}
+
+.clamp.three-lines {
+  -webkit-line-clamp: 3;
+}
