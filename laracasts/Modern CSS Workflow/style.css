@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  flex-direction: column;
+}
+
+h1 {
+  animation: type 2s steps(28), blink 0.5s infinite alternate;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 28ch;
+  border-right: 3px solid;
+  font-family: monospace;
+  margin-bottom: 10px;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 5s;
+  animation-fill-mode: both;
+  margin-bottom: 10px;
+}
+
+.wait-2s {
+  animation-delay: 2s;
+}
+
+.wait-3s {
+  animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to: {
+    opacity: 1;
+  }
+}
