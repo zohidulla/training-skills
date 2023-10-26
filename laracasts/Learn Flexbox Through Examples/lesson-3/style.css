@@ -1,0 +1,47 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+header,
+footer {
+  background: #c5c5c5;
+}
+
+.container {
+  max-width: 1000px;
+  min-height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container > * {
+  padding: 0 20px;
+}
+
+main {
+  display: flex;
+  margin-bottom: auto;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+main aside {
+  margin-right: 40px;
+}
+
+/* 
+footer {
+  margin-top: auto;
+} */
