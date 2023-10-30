@@ -1,69 +1,44 @@
 "use strict";
 
-/*
-// const fruit = new Map();
+let fruit = ["Banana", "Strawberry", "Orange", "Apple", "Grape", "Plum"];
 
-// fruit.set(1, "Banana");
-// fruit.set(2, "Apple");
-// fruit.set(3, "Strawberry");
-
-// document.getElementById("output").innerHTML = fruit.get(2);
-
-// fruit.delete(2);
-
-// fruit.forEach((item) => {
-//   document.getElementById("output").innerHTML += "<br>" + item;
+// let fruitsThatContainE = [];
+// fruit.forEach(function (fruit) {
+//   if (fruit.includes("e")) {
+//     fruitsThatContainE.push(fruit);
+//   }
 // });
 
-// fruit.set(4, {
-//   type: "Orange",
-//   color: "orange",
-//   flavor: "orangey"
-// });
+// filter methods
+let fruitsThatContainE = fruit.filter((f) => f.includes("e"));
 
-// document.getElementById("output").innerHTML = fruit.get(4).flavor;
-*/
+document.getElementById("output").innerHTML = fruitsThatContainE.join(", ");
 
-const users = new Map();
-
-users.set(
+let users = [
   {
     name: "Andrew",
-    email: "andrew@example.com"
+    email: "andrew@example.com",
+    stars: 5
   },
-  function (user) {
-    document.getElementById(
-      "output"
-    ).innerHTML += `${user.name} (${user.email}) <br>`;
+  {
+    name: "Ashley",
+    email: "ashley@example.com",
+    stars: 9
+  },
+  {
+    name: "Gaston",
+    email: "gaston@example.com",
+    stars: 1
   }
-);
+];
 
-const userAshley = {
-  name: "Ashley",
-  email: "ashley@example.com"
-};
+// reduce methods
+let totalStars = users.reduce((stars, user) => (stars += user.stars), 0);
 
-users.set(userAshley, function (user) {
-  document.getElementById(
-    "output"
-  ).innerHTML += `(${user.email}) ${user.name} <br>`;
-});
+document.getElementById("output").innerHTML += "<br>Total Stars: " + totalStars;
 
-users.forEach((value, key) => {
-  value(key);
-});
+// map methods
+let userEmails = users.map((user) => user.email);
 
-let userAshleyExists = users.has(userAshley);
-console.log("userAshleyExists: ", userAshleyExists);
-
-const fruit = new Set();
-
-fruit.add("Banana");
-fruit.add("Apple");
-fruit.add("Strawberry");
-fruit.add("Apple");
-fruit.add("Apple");
-
-fruit.forEach((value) => {
-  document.getElementById("output").innerHTML += "<br>" + value;
-});
+document.getElementById("output").innerHTML +=
+  "<br>Emails: " + userEmails.join(", ");
