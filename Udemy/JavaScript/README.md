@@ -4,7 +4,7 @@
 
 ### Практически все сущности в JavaScript - ОБЪЕКТЫ
 
-> [!NOTE] > **ОБЪЕКТ** - Набор свойств. "имя: значение"
+> [!NOTE] > **ОБЪЕКТ** - Набор свойств. "имя: значение".
 
 Пример объекта:
 
@@ -24,9 +24,9 @@
 
 - Массив - это Объект
 - Функция - это Объект
-- Число - это Объект\*
-- Строка - это Объект\*
-  \*ведут себя как Объекты
+- Число - это Объект[*]
+- Строка - это Объект[*]
+  [*]ведут себя как Объекты
 
 console.log('Hello World')
 Объект.Точечная запись.Метод(Вызов метода)
@@ -199,12 +199,8 @@ a()
 
 **Структура и синтаксис**
 
-```
-const myCity = {
-  city: 'New York',
-  popular: true,
-  country: 'USA'
-}
+```html
+const myCity = { city: 'New York', popular: true, country: 'USA' }
 ```
 
 **Порядок свойств в объекте _не имеет значения_**
@@ -213,50 +209,144 @@ const myCity = {
 
 > Dot notation - Точечная запись
 
-```
-const myCity = {
-  city: 'New York',
-  popular: true,
-  country: 'USA'
-}
-
-myCity.city // 'New York'
-myCity.popular // true
+```html
+const myCity = { city: 'New York', popular: true, country: 'USA' } myCity.city
+// 'New York' myCity.popular // true
 ```
 
 **Изменение значений свойств**
 
-```
-const myCity = {
-  city: 'New York',
-}
-
-myCity.city = 'Las Vegas' // 'Las Vegas'
+```html
+const myCity = { city: 'New York', } myCity.city = 'Las Vegas' // 'Las Vegas'
 ```
 
 **Добавление новых свойств**
 
-```
-const myCity = {
-  city: 'New York',
-}
-
-myCity.popular = true
-myCity.country = 'USA'
-
-console.log(myCity) // {city: 'New York', popular: true, country: 'USA'}
+```html
+const myCity = { city: 'New York', } myCity.popular = true myCity.country =
+'USA' console.log(myCity) // {city: 'New York', popular: true, country: 'USA'}
 ```
 
 **Удаление свойств**
 
+```html
+const myCity = { city: 'New York', popular: true, country: 'USA' } delete
+myCity.country console.log(myCity) // {city: 'New York', popular: true}
 ```
-const myCity = {
-  city: 'New York',
-  popular: true,
-  country: 'USA'
+
+**Доступ к значению свойства с использованием скобок**
+
+> Bracket notation - Скобочная запись
+
+```html
+const myCity = { city: 'New York', } myCity['popular'] = true
+console.log(myCity) // {city: 'New York', popular: true} const
+countryPropertyName = 'country' myCity[countryPropertyName] = 'USA'
+console.log(myCity) // {city: 'New York', popular: true, country: 'USA'}
+```
+
+**Вложенные свойства**
+
+```html
+const myCity = { city: 'New York', info: { isPopular: true, country: 'USA' } }
+console.log(myCity.info.isPopular) // true delete myCity.info['isPopular']
+console.log(myCity) // {city: 'New York', info: {country: 'USA'}}
+```
+
+**Использование переменных**
+
+```html
+const name = 'Bogdan' const postsQty = 23 const userProfile = { name: name,
+postsQty: postsQty, hasSignedAgreement: false }
+```
+
+**Сокращенный формат записи свойств**
+
+> Сокращенные свойства рекомендуется размещать в начале объекта
+
+```html
+const name = 'Bogdan' const postsQty = 23 const userProfile = { name, postsQty,
+hasSignedAgreement: false }
+```
+
+### ГЛОБАЛЬНЫЕ ОБЪЕКТЫ
+
+> window - Веб браузеры
+> global - Node.js
+> globalThis - Унифицированный глобальный объект
+
+**Свойства глобальных объектов**
+
+> console
+> window.console
+> global.console
+
+### МЕТОДЫ
+
+> Метод - свойство объекта, значение которого - функция
+
+**Методы - свойства объекта, которые содержат функции**
+
+```html
+const myCity = { city: 'New York', cityGreeting: function () {
+console.log('Greetings!!!') } } myCity.cityGreeting() // 'Greetings!!'
+```
+
+**Сокращенный формат записи методов**
+
+```html
+const myCity = { city: 'New York', cityGreeting() { console.log('Greetings!!!')
+} } myCity.cityGreeting() // 'Greetings!!'
+```
+
+### JSON - JavaScript Object Notation
+
+> Формат обмена данными
+
+```
+{
+  "userId": 1,
+  "id": 1,
+  "title": "Test title",
+  "status": {
+    "completed": false
+  }
+}
+```
+
+> Передача дынных в формате JSON - передается в виде строки
+
+```
+{"userId":1,"id":1,"title":"Test title","status":{"completed":false}}
+```
+
+> ['NOTE']
+> JSON.parse() - Конвертация JSON в -> JavaScript объект.
+> JSON.stringify() - Конвертация JavaScript объекта в -> JSON.
+
+### Мутация в JavaScript
+
+**Значения примитивных типов**
+
+```
+const a = 10
+let b = a       Копирование значения (copy by value)
+b = 30
+
+console.log(a) // 10 Значение "a" не изменилось console.log(b) // 30
+```
+
+**Значения ссылочного типа**
+
+```
+const person = {
+  name: 'Bob',
+  age: 21
 }
 
-delete myCity.country
+person.age = 22
+person.isAdult = true
 
-console.log(myCity) // {city: 'New York', popular: true}
+console.log(person.age) // 22
+console.log(person.isAdult) // true
 ```
