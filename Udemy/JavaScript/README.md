@@ -4,7 +4,9 @@
 
 ### Практически все сущности в JavaScript - ОБЪЕКТЫ
 
-> [!NOTE] > **ОБЪЕКТ** - Набор свойств. "имя: значение".
+> [!NOTE]
+>
+> **ОБЪЕКТ** - Набор свойств. "имя: значение"
 
 Пример объекта:
 
@@ -24,12 +26,11 @@
 
 - Массив - это Объект
 - Функция - это Объект
-- Число - это Объект[*]
-- Строка - это Объект[*]
-  [*]ведут себя как Объекты
+- Число - это Объект<sup>\*</sup>
+- Строка - это Объект<sup>_</sup>
+  <sup>_</sup>ведут себя как Объекты
 
-console.log('Hello World')
-Объект.Точечная запись.Метод(Вызов метода)
+console<sup>Объект</sup>.<sup>Точечная запись</sup>log<sup>Метод</sup>('Hello World')<sup>Вызов метода</sup>
 
 ## ВЫРАЖЕНИЯ - возвращает значение
 
@@ -150,7 +151,9 @@ a = 'abc' // String
 a = 10 // Number
 ```
 
-> [!NOTE] > **JavaScript** - динамически типизируемый язык
+> [!NOTE]
+>
+> **JavaScript** - динамически типизируемый язык
 
 ### Динамическая типизация в **JavaScript**
 
@@ -199,8 +202,12 @@ a()
 
 **Структура и синтаксис**
 
-```html
-const myCity = { city: 'New York', popular: true, country: 'USA' }
+```
+const myCity = {
+  city: 'New York',
+  popular: true,
+  country: 'USA'
+}
 ```
 
 **Порядок свойств в объекте _не имеет значения_**
@@ -209,64 +216,111 @@ const myCity = { city: 'New York', popular: true, country: 'USA' }
 
 > Dot notation - Точечная запись
 
-```html
-const myCity = { city: 'New York', popular: true, country: 'USA' } myCity.city
-// 'New York' myCity.popular // true
+```
+const myCity = {
+  city: 'New York',
+  popular: true,
+  country: 'USA'
+  }
+
+  myCity.city // 'New York'
+  myCity.popular // true
 ```
 
 **Изменение значений свойств**
 
-```html
-const myCity = { city: 'New York', } myCity.city = 'Las Vegas' // 'Las Vegas'
+```
+const myCity = {
+  city: 'New York',
+}
+
+myCity.city = 'Las Vegas' // 'Las Vegas'
 ```
 
 **Добавление новых свойств**
 
-```html
-const myCity = { city: 'New York', } myCity.popular = true myCity.country =
-'USA' console.log(myCity) // {city: 'New York', popular: true, country: 'USA'}
+```
+const myCity = {
+  city: 'New York'
+}
+
+myCity.popular = true
+myCity.country = 'USA'
+
+console.log(myCity) // {city: 'New York', popular: true, country: 'USA'}
 ```
 
 **Удаление свойств**
 
-```html
-const myCity = { city: 'New York', popular: true, country: 'USA' } delete
-myCity.country console.log(myCity) // {city: 'New York', popular: true}
+```
+const myCity = {
+  city: 'New York',
+  popular: true,
+  country: 'USA'
+}
+
+delete myCity.country
+
+console.log(myCity) // {city: 'New York', popular: true}
 ```
 
 **Доступ к значению свойства с использованием скобок**
 
 > Bracket notation - Скобочная запись
 
-```html
-const myCity = { city: 'New York', } myCity['popular'] = true
+```
+const myCity = {
+  city: 'New York'
+}
+
+myCity['popular'] = true
 console.log(myCity) // {city: 'New York', popular: true} const
-countryPropertyName = 'country' myCity[countryPropertyName] = 'USA'
+
+countryPropertyName = 'country'
+myCity[countryPropertyName] = 'USA'
 console.log(myCity) // {city: 'New York', popular: true, country: 'USA'}
 ```
 
 **Вложенные свойства**
 
-```html
-const myCity = { city: 'New York', info: { isPopular: true, country: 'USA' } }
+```
+const myCity = {
+  city: 'New York',
+  info: {
+    isPopular: true,
+    country: 'USA'
+  }
+}
+
 console.log(myCity.info.isPopular) // true delete myCity.info['isPopular']
 console.log(myCity) // {city: 'New York', info: {country: 'USA'}}
 ```
 
 **Использование переменных**
 
-```html
-const name = 'Bogdan' const postsQty = 23 const userProfile = { name: name,
-postsQty: postsQty, hasSignedAgreement: false }
+```
+const name = 'Bogdan'
+const postsQty = 23
+
+const userProfile = {
+  name: name,
+  postsQty: postsQty,
+  hasSignedAgreement: false
+}
 ```
 
 **Сокращенный формат записи свойств**
 
 > Сокращенные свойства рекомендуется размещать в начале объекта
 
-```html
-const name = 'Bogdan' const postsQty = 23 const userProfile = { name, postsQty,
-hasSignedAgreement: false }
+```
+const name = 'Bogdan'
+const postsQty = 23
+
+const userProfile = {
+  name, postsQty,
+  hasSignedAgreement: false
+}
 ```
 
 ### ГЛОБАЛЬНЫЕ ОБЪЕКТЫ
@@ -287,16 +341,27 @@ hasSignedAgreement: false }
 
 **Методы - свойства объекта, которые содержат функции**
 
-```html
-const myCity = { city: 'New York', cityGreeting: function () {
-console.log('Greetings!!!') } } myCity.cityGreeting() // 'Greetings!!'
+```
+const myCity = {
+  city: 'New York',
+  cityGreeting: function () {
+    console.log('Greetings!!!')
+  }
+}
+
+myCity.cityGreeting() // 'Greetings!!'
 ```
 
 **Сокращенный формат записи методов**
 
-```html
-const myCity = { city: 'New York', cityGreeting() { console.log('Greetings!!!')
-} } myCity.cityGreeting() // 'Greetings!!'
+```
+const myCity = {
+  city: 'New York',
+  cityGreeting() { console.log('Greetings!!!')
+  }
+}
+
+myCity.cityGreeting() // 'Greetings!!'
 ```
 
 ### JSON - JavaScript Object Notation
@@ -321,6 +386,7 @@ const myCity = { city: 'New York', cityGreeting() { console.log('Greetings!!!')
 ```
 
 > ['NOTE']
+>
 > JSON.parse() - Конвертация JSON в -> JavaScript объект.
 > JSON.stringify() - Конвертация JavaScript объекта в -> JSON.
 
@@ -344,9 +410,44 @@ const person = {
   age: 21
 }
 
-person.age = 22
-person.isAdult = true
+person.age = 22                   Мутация объекта, на который ссылается переменная "person"
+person.isAdult = true             Мутация объекта, на который ссылается переменная "person"
 
 console.log(person.age) // 22
 console.log(person.isAdult) // true
+```
+
+**Мутирование копий**
+
+```
+const person = {
+  name: 'Bob',
+  age: 25
+}
+
+const person2 = person              Копирование ссылки (copy by reference)
+
+person2.age = 26                    Мутация объекта, на который ссылается "person2"
+person2.isAdult = true              Мутация объекта, на который ссылается "person2"
+
+console.log(person.age) // 26       Мутация также отразилась на переменной "person"
+console.log(person.isAdult) // true Мутация также отразилась на переменной "person"
+```
+
+**Как избежать мутаций**
+
+> Вариант 1
+
+```
+const person = {
+  name: 'Bob',
+  age: 25
+}
+
+const person2 = Object.assign({}, prerson)
+
+person2.age = 26
+
+console.log(person2.age) // 26
+console.log(person.age) // 25
 ```
