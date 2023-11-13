@@ -7,6 +7,7 @@ import { startTimer, stopTimer } from '../time'
 
 onActivated(() => {
   scrollToCurrentHour()
+
   startTimer()
 })
 
