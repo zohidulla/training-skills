@@ -545,7 +545,7 @@ function myFn(a, b) {
 
 > Исползуйте console.dir(myFn) чтобы отобразились свойства объекта
 
-<p align="center">
+<p align="left">
 <img src="./images/light.png" height="150">
 </p>
 
