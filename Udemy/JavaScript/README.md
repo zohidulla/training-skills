@@ -488,3 +488,97 @@ console.log(person.name); // Bob
 ```
 
 ## ФУНКЦИИ
+
+**Функция - блок кода, который можно выполнять многократно**
+
+```js
+let a = 5;
+let b = 3;
+
+let c;
+
+c = a + b;
+console.log(c); // 8
+
+a = 8;
+b = 12;
+
+c = a + b;
+console.log(c); // 20
+```
+
+```js
+let a = 5;
+let b = 3;
+
+function sum(a, b) {
+  const c = a + b;
+  console.log(c);
+}
+
+sum(a, b); // 8
+
+a = 8;
+b = 12;
+
+sum(a, b); // 20
+```
+
+> Функция может быть...
+> ... именованной
+> ... анонимной
+> ... присвоена переменной
+> ... аргументом при вызове другой функции
+> ... значением свойства (метода) объекта
+
+**Функция - это объект**
+
+```js
+function myFn(a, b) {
+  let c;
+  a = a + 1;
+  c = a + b;
+  return c;
+}
+```
+
+> Исползуйте console.dir(myFn) чтобы отобразились свойства объекта
+
+<picture>
+   <source media="(prefers-color-scheme: dark)" srcset="./images/dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./images/light.png">
+  <img alt="" src="./images/light.png >
+</picture>
+
+<p align="center">
+<img src="./images/function.png" height="150">
+</p>
+
+**Функция возвращает UNDEFINED если нет инструкции RETURN**
+
+**вызов функции**
+
+```js
+function myFn(a, b) {
+  let c;
+  a = a + 1;
+  c = a + b;
+  return c;
+}
+
+myFn(10, 3); // 14
+```
+
+> 1. Параметрам "a" и "b" присваиваются значения 10 и 3
+> 2. Объявляется перменная "c"
+> 3. Значение "a" увеличивается на 1
+> 4. Сумма значений "a" и "b" присваивается "c"
+> 5. Возвращается значение "c"
+
+**самая короткая функция**
+
+```js
+function myFn() {}
+
+myFn(); // undefined
+```
