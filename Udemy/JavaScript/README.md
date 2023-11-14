@@ -525,11 +525,12 @@ sum(a, b); // 20
 ```
 
 > Функция может быть...
-> ... именованной
-> ... анонимной
-> ... присвоена переменной
-> ... аргументом при вызове другой функции
-> ... значением свойства (метода) объекта
+>
+> - ... именованной
+> - ... анонимной
+> - ... присвоена переменной
+> - ... аргументом при вызове другой функции
+> - ... значением свойства (метода) объекта
 
 **Функция - это объект**
 
@@ -543,12 +544,6 @@ function myFn(a, b) {
 ```
 
 > Исползуйте console.dir(myFn) чтобы отобразились свойства объекта
-
-<picture>
-   <source media="(prefers-color-scheme: dark)" srcset="./images/dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./images/light.png">
-  <img alt="" src="./images/light.png >
-</picture>
 
 <p align="center">
 <img src="./images/function.png" height="150">
