@@ -550,7 +550,7 @@ function myFn(a, b) {
 </p>
 
 <p align="center">
-<img src="./images/function.png" height="150">
+<img src="./images/function.png" height="300">
 </p>
 
 **Функция возвращает UNDEFINED если нет инструкции RETURN**
