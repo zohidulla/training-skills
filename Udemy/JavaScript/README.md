@@ -555,7 +555,7 @@ function myFn(a, b) {
 
 **Функция возвращает UNDEFINED если нет инструкции RETURN**
 
-**вызов функции**
+**Вызов функции**
 
 ```js
 function myFn(a, b) {
@@ -574,10 +574,82 @@ myFn(10, 3); // 14
 > 4. Сумма значений "a" и "b" присваивается "c"
 > 5. Возвращается значение "c"
 
-**самая короткая функция**
+**Самая короткая функция**
 
 ```js
 function myFn() {}
 
 myFn(); // undefined
 ```
+
+**Передача значения по ссылке**
+
+```js
+const personOne = {
+  name: "Bob",
+  age: 21
+};
+
+function increasePersonAge(person) {
+  // Функция мутирует внешний объект
+  person.age += 1;
+  return person;
+}
+
+increasePersonAge(personOne); // Передача объекта по ссылке
+console.log(personOne.age); // 22
+```
+
+> Внутри функции не рекомендуется мутировать внешние объекты
+
+**Создание копии объекта**
+
+```js
+const personOne = {
+  name: "Bob",
+  age: 21
+};
+
+function increasePersonAge(person) {
+  const updatePerson = Object.assign({}, person);
+  updatesPerson.age += 1;
+  return updatedPerson;
+}
+
+const upodatedPersonOne = increasePersonAge(personOne);
+console.log(personOne.age); // 21 Объект "personOne" не изменился!
+console.log(updatedPersonOne.age); // 22
+```
+
+### Колбэк функции
+
+```js
+function anotherFunction() {
+  //.Действия..
+}
+
+function fnWithCallback(callbackFunction) {
+  callbackFunction(); // В теле этой функции вызывается колбэк функция
+}
+
+fnWithCallback(anotherFunction);
+```
+
+> Пример
+
+```js
+function printMyName() {
+  console.log("Bogdan");
+}
+
+setTimeout(printMyName, 1000); // Функция "printMyName" будет вызвана через 1000 миллисекунд
+// setTimeoout - Встроенная функция
+```
+
+**Правила работы с функциями**
+
+> 1. **Называть** функции исходя из выполняемых задач
+> 2. **Одна** функция должна выполнять **одну** задачу
+> 3. Не рекомендуется изменять **внешние** относительно функции **переменные**
+
+**Области видимости**
