@@ -327,15 +327,15 @@ const userProfile = {
 
 ### ГЛОБАЛЬНЫЕ ОБЪЕКТЫ
 
-> window - Веб браузеры
-> global - Node.js
-> globalThis - Унифицированный глобальный объект
+> - window - Веб браузеры
+> - global - Node.js
+> - globalThis - Унифицированный глобальный объект
 
 **Свойства глобальных объектов**
 
-> console
-> window.console
-> global.console
+> - console
+> - window.console
+> - global.console
 
 ### МЕТОДЫ
 
