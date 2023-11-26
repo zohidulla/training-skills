@@ -1,9 +1,10 @@
 import { createApp } from 'vue'
 import { loadState, saveState } from './storage'
-import { startTimelineItemTimer, activeTimelineItem } from './timeline-items'
+import { activeTimelineItem } from './timeline-items'
 import App from './App.vue'
 
 import './assets/main.css'
+import { startTimelineItemTimer } from './timeline-item-timer'
 
 loadState()
 

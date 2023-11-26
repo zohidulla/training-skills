@@ -25,7 +25,7 @@ export function tomorrow() {
 export function endOfHour(date) {
   const endOfHour = new Date(date)
 
-  endOfHour.detTime(endOfHour.getTime() + SECONDS_IN_HOUR * MILLISECONDS_IN_SECOND)
+  endOfHour.setTime(endOfHour.getTime() + SECONDS_IN_HOUR * MILLISECONDS_IN_SECOND)
 
   endOfHour.setMinutes(0, 0, 0)
 
