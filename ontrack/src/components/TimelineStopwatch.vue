@@ -6,7 +6,7 @@ import { formatSeconds } from '../functions'
 import {
   resetTimelineItemTimer,
   startTimelineItemTimer,
-  stopTimelineItemTimer,
+  stopTimelineItemTimer
 } from '../timeline-item-timer'
 import BaseButton from './BaseButton.vue'
 import BaseIcon from './BaseIcon.vue'
