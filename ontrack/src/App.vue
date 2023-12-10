@@ -6,13 +6,11 @@ import TheNav from './components/TheNav.vue'
 
 <template>
   <TheHeader />
-
   <main class="flex flex-grow flex-col">
     <KeepAlive>
       <component :is="routes[currentPage]" />
     </KeepAlive>
   </main>
-
   <TheNav />
 </template>
 
