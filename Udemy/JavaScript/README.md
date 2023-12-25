@@ -207,7 +207,7 @@ a()
 const myCity = {
   city: "New York",
   popular: true,
-  country: "USA"
+  country: "USA",
 };
 ```
 
@@ -221,7 +221,7 @@ const myCity = {
 const myCity = {
   city: "New York",
   popular: true,
-  country: "USA"
+  country: "USA",
 };
 
 myCity.city; // 'New York'
@@ -232,7 +232,7 @@ myCity.popular; // true
 
 ```js
 const myCity = {
-  city: "New York"
+  city: "New York",
 };
 
 myCity.city = "Las Vegas"; // 'Las Vegas'
@@ -242,7 +242,7 @@ myCity.city = "Las Vegas"; // 'Las Vegas'
 
 ```js
 const myCity = {
-  city: "New York"
+  city: "New York",
 };
 
 myCity.popular = true;
@@ -257,7 +257,7 @@ console.log(myCity); // {city: 'New York', popular: true, country: 'USA'}
 const myCity = {
   city: "New York",
   popular: true,
-  country: "USA"
+  country: "USA",
 };
 
 delete myCity.country;
@@ -271,7 +271,7 @@ console.log(myCity); // {city: 'New York', popular: true}
 
 ```js
 const myCity = {
-  city: "New York"
+  city: "New York",
 };
 
 myCity["popular"] = true;
@@ -289,11 +289,12 @@ const myCity = {
   city: "New York",
   info: {
     isPopular: true,
-    country: "USA"
-  }
+    country: "USA",
+  },
 };
 
-console.log(myCity.info.isPopular); // true delete myCity.info['isPopular']
+console.log(myCity.info.isPopular); // true
+delete myCity.info["isPopular"];
 console.log(myCity); // {city: 'New York', info: {country: 'USA'}}
 ```
 
@@ -306,7 +307,7 @@ const postsQty = 23;
 const userProfile = {
   name: name,
   postsQty: postsQty,
-  hasSignedAgreement: false
+  hasSignedAgreement: false,
 };
 ```
 
@@ -321,7 +322,7 @@ const postsQty = 23;
 const userProfile = {
   name,
   postsQty,
-  hasSignedAgreement: false
+  hasSignedAgreement: false,
 };
 ```
 
@@ -348,7 +349,7 @@ const myCity = {
   city: "New York",
   cityGreeting: function () {
     console.log("Greetings!!!");
-  }
+  },
 };
 
 myCity.cityGreeting(); // 'Greetings!!'
@@ -361,7 +362,7 @@ const myCity = {
   city: "New York",
   cityGreeting() {
     console.log("Greetings!!!");
-  }
+  },
 };
 
 myCity.cityGreeting(); // 'Greetings!!'
@@ -388,10 +389,10 @@ myCity.cityGreeting(); // 'Greetings!!'
 {"userId":1,"id":1,"title":"Test title","status":{"completed":false}}
 ```
 
-> ['NOTE']
+> [!NOTE]
 >
-> JSON.parse() - Конвертация JSON в -> JavaScript объект.
-> JSON.stringify() - Конвертация JavaScript объекта в -> JSON.
+> **JSON.parse()** - Конвертация JSON в -> JavaScript объект.
+> **JSON.stringify()** - Конвертация JavaScript объекта в -> JSON.
 
 ### Мутация в JavaScript
 
@@ -444,7 +445,7 @@ console.log(person.isAdult) // true Мутация также отразилас
 ```js
 const person = {
   name: "Bob",
-  age: 25
+  age: 25,
 };
 
 const person2 = Object.assign({}, prerson);
@@ -460,7 +461,7 @@ console.log(person.age); // 25
 ```js
 const person = {
   name: "Bob",
-  age: 25
+  age: 25,
 };
 
 const person2 = { ...person }; // Оператор разделения объекта на свойства
@@ -476,7 +477,7 @@ console.log(person.name); // Bob
 ```js
 const person = {
   name: "Bob",
-  age: 25
+  age: 25,
 };
 
 const person2 = JSON.parse(JSON.stringify(person));
@@ -587,7 +588,7 @@ myFn(); // undefined
 ```js
 const personOne = {
   name: "Bob",
-  age: 21
+  age: 21,
 };
 
 function increasePersonAge(person) {
@@ -607,7 +608,7 @@ console.log(personOne.age); // 22
 ```js
 const personOne = {
   name: "Bob",
-  age: 21
+  age: 21,
 };
 
 function increasePersonAge(person) {
@@ -653,3 +654,107 @@ setTimeout(printMyName, 1000); // Функция "printMyName" будет выз
 > 3. Не рекомендуется изменять **внешние** относительно функции **переменные**
 
 **Области видимости**
+**Области видимости определяет границы действия переменной**
+**Глобальные переменные vs локальные переменные**
+
+> Области видимости
+
+```js
+let a;
+let b;
+
+function myFn() {
+  let b;
+  a = true;
+  b = 10;
+  console.log(b); // 10
+}
+
+myFn();
+
+console.log(a); // true
+console.log(b); // undefined
+```
+
+> Цепочка областей видимости
+
+```js
+const a = 5;
+function myFn() {
+  function innerFn() {
+    console.log(a); // 5
+  }
+  innerFn();
+}
+myFn();
+```
+
+<p align="center">
+<img src="./images/scope-js.webp" height="300">
+</p>
+
+> Жизненный цикл переменных (Переменная "b")
+
+```js
+let a;
+let b; // 1. Объявление "b" в глобальной области видимости. Ее значение undefined
+
+function myFn() {
+  let b; // 3. Объявление "b" в зоне видимости функции
+  a = true;
+  b = 10; // 4. Объявлена ли "b" в рамках функции? ДА
+  console.log(b); // 10   5. "b" имеет значение 10 в области видимости функции
+}
+
+myFn(); // 2. Вызов myFn
+
+console.log(a); // true
+console.log(b); // undefined  6. "b" все так же имеет значение undefined в глобальной области
+```
+
+> Жизненный цикл переменных (Переменная "a")
+
+```js
+let a; // 1. Объявление "a" в глобальной области видимости. Ее значение undefined
+let b;
+
+function myFn() {
+  let b;
+  a = true; // 3. Объявление ли "a" в зоне видимости функции? НЕТ
+  b = 10; //    Объявлена ли "a" во внешней области видимости? ДА
+  console.log(a); // true   Присваивание значения true глобальной перменной "a"
+}
+
+myFn(); // 2. Вызов myFn
+
+console.log(a); // true   4. "a" имеет значение true
+console.log(b); // undefined
+```
+
+**Типы областей видимости**
+
+- Глобальная область видимости
+- Область видимости функции
+- Область видимости блока
+  - Переменные, объявленные с помощью **let** или **const** внутри блока имеют область видмости, ограниченную этим блоком.
+  - Блок это код находится между фигурные скобками {}.
+
+> Области видимости
+> [!WARNING]
+> Необъявленные переменные
+> Не рекомендуется!
+
+```js
+function myFn() {
+  a = true; // Переменная "a" бедет автоматически объявлена в глобальной области видимости
+  console.log(a); // true
+}
+myFn();
+console.log(a); // true
+```
+
+**Правила работы с переменными**
+
+1. Все переменные объявлять перед их использованием
+2. Стараться использовать **const** везде, где это возможно
+3. Внутри функций не изменять переменные с внешних областей видимости
