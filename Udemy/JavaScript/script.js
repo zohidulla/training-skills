@@ -33,10 +33,14 @@ console.log(postStringified);
 console.log(JSON.parse(postStringified));
 */
 
-function myFn(a, b) {
-  let c;
-  a = a + 1;
-  c = a + b;
-  return c;
-}
-console.dir(myFn);
+// function myFn(a, b) {
+//   let c;
+//   a = a + 1;
+//   c = a + b;
+//   return c;
+// }
+// console.dir(myFn);
+
+console.log([] + null + 1);
+console.log("foo" + +"bar");
+console.log(!!"false" == !!"true");

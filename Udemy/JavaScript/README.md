@@ -1161,3 +1161,43 @@ newPost(firstPost);
 ```
 
 **Обработка ошибок**
+
+> Что происходит в случае ошибок
+
+```js
+const fnWithError = () => {
+  throw new Error("Some error");
+};
+
+fnWithError(); // Выполнение кода остановится после появления Uncaught ошибки
+
+console.log("Continue...");
+```
+
+**TRY/CATCH**
+
+```js
+try {
+  // Выполнение блока кода
+} catch (error) {
+  // Этот блок выполняется в случае возникновения ошибок в блокt try
+}
+```
+
+> Пример
+
+```js
+const fnWithError = () => {
+  throw new Error("some error");
+};
+
+try {
+  fnWithError();
+} catch (error) {
+  console.error(error);
+  console.log(error.message);
+}
+console.log("Continue..."); // Выполнение кода продолжится
+```
+
+**ИНСТРУКЦИИ**
