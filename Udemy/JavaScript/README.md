@@ -1209,3 +1209,250 @@ console.log("Continue..."); // Выполнение кода продолжит�
 > **Выражение - Инструкция**
 
 > **Инструкция - Выражение**
+
+> **Выражение возвращает значение**
+
+> **Инструкция выполняет действия**
+
+> Инструкции
+
+> Примеры
+
+```js
+let a;
+
+const b = 5;
+
+if (a > b) {
+  console.log("a is larger");
+}
+
+for (let i = 0; i++; i < 5) {
+  console.log(i);
+}
+```
+
+> **Инструкция обычно заканчивается точкой с запятой** Исключение: Точка с запятой не требуется после блока инструкций
+
+```js
+if ( a > b) {
+  console.log('a is larger');
+} // <= Точка с запятой не нужна
+
+for (let i = 0 i++ i < 5) {
+  console.log(i);
+} // <= Точка с запятой не нужна
+```
+
+> **Точку с запятой можно опускать**
+
+> **Выражение может быть инструкцией**
+
+> Выражение - инструкция
+
+> Примеры
+
+```js
+"abc";
+
+a = a + 3;
+
+c = a + b;
+
+d = "Good" + "Evening";
+
+myFunction(c, d);
+
+console.log("Hey");
+```
+
+> **инструкция не может быть трансформирована в выражение**
+
+> **Как отличить выражение от инструкции?**
+
+> **Выражения могут быть использованы как аргументы в вызовах функций**
+
+> Инструкция или выражение?
+
+> Примеры
+
+```js
+funciton myFn(a) {
+  console.log(a);
+}
+
+const b = true;
+let c = 10;
+
+myFn(2 + 3) // 5
+myFn(b) // true
+myFn(c = c + 1) // 11
+myFn(c = c + 1;) // Uncaught SyntaxError
+myFn(let d) // Uncaught SyntaxError
+```
+
+**МАССИВЫ**
+
+**МАССИВ - это объект с цифровыми именами свойств**
+
+> Формат записи массивов
+
+```js
+const myArray = [1, 2, 3];
+console.log(myArray); // [1, 2, 3]
+
+const myArray2 = new Array(1, 2, 3);
+console.log(myArray2); // [1, 2, 3]
+```
+
+> Структура массивов
+
+<p align="center">
+<img src="./images/array.png" height="300">
+</p>
+
+> **МАССИВ VS ОБЪЕКТ**
+
+```js
+const myArray = [1, 2, 3];
+
+console.log(myArray); // [1, 2, 3]
+```
+
+```js
+const myObject = {
+  0: 1,
+  1: 2,
+  2: 3,
+  length: 3,
+};
+
+console.log(myObject); // { 0: 1, 1: 2, 2: 3, length: 3}
+```
+
+> Чтение значений массива
+
+```js
+const myArray = [1, true, "a"];
+console.log(myArray); // [1, true, 'a']
+
+console.log(myArray[0]); // 1
+console.log(myArray[1]); // true
+
+console.log(myArray.length); // 3
+```
+
+> Длина массива
+
+```js
+const myArray = [1, 2, 3, 4];
+console.log(myArray); // [1, 2, 3, 4]
+console.log(myArray.length); // 4
+
+myArray[2] = "abc";
+
+console.log(myArray); // [1, 2, 'abc', 4]
+console.log(myArray[2]); // 'abc'
+
+myArray[4] = true;
+
+console.log(myArray); // [1, 2, 'abc', 4, true]
+console.log(myArray.length); // 5
+```
+
+**Методы массивов**
+
+- push
+- pop
+- shift
+- unshift
+- forEach
+- map
+
+**Функции высшего порядка в массивах**
+
+<p align="center">
+<img src="./images/arrays.png">
+</p>
+
+> PUSH
+
+```js
+const myArray = [1, 2, 3];
+console.log(myArray); // [1, 2, 3]
+
+myArray.push(4);
+console.log(myArray); // [1, 2, 3, 4] Довабление нового элемента в конце массива
+
+myArray.push(true);
+console.log(myArray); // [1, 2, 3, 4, true]
+```
+
+> POP
+
+```js
+const myArray = [1, 2, 3];
+console.log(myArray); // [1, 2, 3]
+
+myArray.pop();
+console.log(myArray); // [1, 2] Удаление последного элемента массива
+
+const removedElement = myArray.pop();
+
+console.log(myArray); // [1]
+console.log(removedElement); // 2
+```
+
+> UNSHIFT
+
+```js
+const myArray = [1, 2, 3];
+console.log(myArray); // [1, 2, 3]
+
+myArray.unshift(true);
+console.log(myArray); // [true, 1, 2, 3] Довабление элемента в начале массива
+
+myArray.unshift("abc");
+
+console.log(myArray); // ['abc', true, 1, 2, 3]
+```
+
+> SHIFT
+
+```js
+const myArray = [1, 2, 3];
+console.log(myArray); // [1, 2, 3]
+
+myArray.shift();
+console.log(myArray); // [2, 3] Удаление первого элемента массива
+
+const removedElement = myArray.shift();
+
+console.log(myArray); // [3]
+console.log(removedElement); // 2
+```
+
+> FOREACH
+
+```js
+const myArray = [1, 2, 3];
+console.log(myArray); // [1, 2, 3]
+
+myArray.forEach((el) => console.log(el * 2)); // Выполнение действий с каждым элементом массива
+
+console.log(myArray); // [1, 2, 3] Оригинальный массив не изменился
+```
+
+> MAP
+
+```js
+const myArray = [1, 2, 3];
+console.log(myArray); // [1, 2, 3]
+
+const newArray = myArray.map((el) => el * 3); // Возвращает новый массив
+
+console.log(newArray); // [3, 6, 9]
+console.log(myArray); // [1, 2, 3] Оригинальный массив не изменился
+```
+
+**ДЕСТРУКТУРИЗАЦИЯ**
