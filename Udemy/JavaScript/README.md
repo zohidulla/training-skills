@@ -1456,3 +1456,203 @@ console.log(myArray); // [1, 2, 3] Оригинальный массив не и
 ```
 
 **ДЕСТРУКТУРИЗАЦИЯ**
+
+> Деструктуризация объектов
+
+```js
+const userProfile = {
+  name: "Bogdan",
+  commentsQty: 23,
+  hasSignedAgreement: false,
+};
+
+const { name, commentsQty } = userProfile; // Объявление новых переменных и
+const { hasSignedAgreement } = userProfile; // присваивание значений на основе значений свойств объекта
+
+console.log(name); // Bogdan
+console.log(commentsQty); // 23
+```
+
+> Деструктуризация массивов
+
+```js
+const fruits = ["Apple", "Banana"];
+
+const [fruitOne, fruitTwo] = fruits; // Объявление новых перпменных и присваивание значений на основе элементов массива
+
+console.log(fruitOne); // Apple
+console.log(fruitTwo); // Banana
+```
+
+> Деструктуризация в функциях
+
+```js
+const userProfile = {
+  name: "Bogdan",
+  commentsQty: 23,
+  hasSignedAgreement: false,
+};
+
+const userInfo = ({ name, commentsQty }) => {
+  // Деструктуризация параметров
+  if (!commentsQty) {
+    return `User ${name} has no comments`;
+  }
+
+  return `User ${name} has ${commentsQty} comments`;
+};
+
+userInfo(userProfile); // User Bogdan has 23 comments
+```
+
+**УСЛОВНЫЕ ИНСТРУКЦИИ**
+
+- if
+- if ... else
+- switch
+- Тернарный оператор // Выражение
+
+> Инструкция **if**
+
+```js
+// Зарезервированное слово "if"
+if (Условие) {
+  // Блок инструкций
+  // Блок кода, выполняемый однократно, если Условие правдиво
+}
+```
+
+> Пример **if**
+
+```js
+let val = 10;
+
+if (val > 5) {
+  // Это условие правдиво
+  val += 20;
+}
+
+console.log(val); // 30
+```
+
+> Пример **if** c оператором отрицания
+
+```js
+const person = {
+  age: 20,
+};
+
+if (!person.name) {
+  // !undefined === true
+  console.log("Имя не указано");
+  // Другие действия в случае, если
+  //  свойства "name" у объекта "person" нету
+}
+```
+
+> Инструкция **if else**
+
+```js
+if (Условие) {
+  // Блок кода, выполняемый однократно, если Условие правдиво
+} else {
+  // Блок кода, выполняемый однократно, если Условие ложно
+}
+```
+
+> Пример **if else**
+
+```js
+let val = 10;
+
+if (val < 5) {
+  // Это условие ложно
+  val += 20;
+} else {
+  // Выполнится этот блок инструкций
+  val -= 20;
+}
+
+console.log(val); // -10
+```
+
+> Инструкция **if else if**
+
+```js
+if (Условие 1) {
+  // Блок кода, выполняемый однократно, если Условие 1 правдиво
+} else if (Условие 2) {
+  // Блок кода, выполняемый однократно, если Условие 2 правдиво
+} else {
+  // Блок кода, выполняемый однократно, если предыдущие условия ложны
+}
+```
+
+> Предпочтительный формат **if**
+
+```js
+if (Условие 1) {
+  // Блок кода, выполняемый однократно, если Условие 1 правдиво
+}
+
+if (Условие 2) {
+  // Блок кода, выполняемый однократно, если Условие 2 правдиво
+}
+
+if (Условие 3) {
+  // Блок кода, выполняемый однократно, если Условие 3 правдиво
+}
+```
+
+> Использование **if** в функциях
+
+```js
+const sumPositiveNumbers = (a, b) => {
+  if (typeof a !== "number" || typeof b !== "number") {
+    return "One of the arguments is not a number";
+  }
+
+  if (a <= 0 || b <= 0) {
+    return "Numbers are not positive";
+  }
+
+  return a + b;
+};
+```
+
+> Инструкция **switch**
+
+```js
+switch (Выражение) {
+  case A:
+    // Действия если Выражение === А
+    break;
+  case B:
+    // Действия если Выражение === В
+    break;
+  default:
+  // Действия по умолчанию
+}
+```
+
+> Пример **switch**
+
+```js
+const month = 2;
+
+switch (month) {
+  case 12:
+    console.log("Декабрь");
+    break;
+  case 1:
+    console.log("Январь");
+    break;
+  case 2:
+    console.log("Февраль");
+    break;
+  default:
+    console.log("Это не зимний месяц");
+}
+```
+
+**ТЕРНАРНЫЙ ОПЕРАТОР**
