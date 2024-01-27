@@ -1656,3 +1656,321 @@ switch (month) {
 ```
 
 **ТЕРНАРНЫЙ ОПЕРАТОР**
+
+> У тернарного оператора **три** операнда
+
+> Конструкция с тернарным оператором - **выражение**
+
+> **Выражение** возвращает значение
+
+> Тернарный оператор
+
+```js
+Условие ?  Выражение 1 : Выражение 2
+
+Условие
+  ? Выражение 1
+  : Выражение 2
+```
+
+> Пример 1
+
+```js
+const value = 11;
+
+value
+  ? console.log('Условие истинно');
+  : console.log('Условие ложно');
+```
+
+> Пример 2
+
+```js
+const value1 = 11;
+const value2 = 25;
+
+value111 && value2 ? myFunction(valkue1, value2) : myFunction();
+```
+
+> Пример 3
+
+```js
+const value = 11;
+console.log(value >= 0 ? value : -value); // 11
+
+value = -5;
+const res = value >= 0 ? value : -value;
+console.log(res); // 5
+```
+
+**ЦИКЛЫ**
+
+> Без циклов
+
+```js
+let i = 0;
+console.log(i);
+i++;
+console.log(i);
+i++;
+console.log(i);
+i++;
+console.log(i);
+i++;
+console.log(i);
+i++;
+```
+
+> Перебор всех элементов массива без цикла
+
+```js
+const myArray = [true, "abc", 10];
+
+console.log(myarray[0]);
+console.log(myarray[1]);
+console.log(myarray[2]);
+```
+
+> Перебор всех свойств объекта без цикла
+
+```js
+const myObject = {
+  x: 10,
+  y: true,
+  z: "abc",
+};
+
+console.log(myObject.x);
+console.log(myObject.y);
+console.log(myObject.z);
+```
+
+**ТИПЫ ЦИКЛОВ**
+
+- for
+- for ... in ...
+- while
+- do ... while
+- for ... of ...
+
+**ЦИКЛ for**
+
+```js
+for (Начальная инструкция; Условие; Итерационное действие) {
+  // Блок кода, выполняемый на каждой итерации
+}
+```
+
+```js
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+
+> [!CAUTION]
+> Циклы можно использовать для массивов
+
+> [!TIP]
+> Используйте функции высшего порядка массивов - "forEach", "map", "reduce"
+
+> Цикл **for** для массивов
+
+```js
+const myArray = ["first", "second", "third"];
+
+for (let i = 0; i < myArray.length; i++) {
+  console.log(myArray[i]);
+}
+
+// 'first'
+// 'second'
+// 'third'
+```
+
+> Метод массивов **forEach**
+
+```js
+const myArray = ["first", "second", "third"];
+
+myArray.forEach((element, index) => {
+  console.log(element, index);
+});
+
+// 'first'  0
+// 'second' 1
+// 'third'  2
+```
+
+**ЦИКЛ while**
+
+```js
+while (Условие) {
+  // Блок кода, выполняемый на каждой итерации
+}
+```
+
+```js
+let i = 0;
+
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+```
+
+> Бесконечный цикл
+
+```js
+let i = 0;
+
+while (i < 5) {
+  console.log(i);
+}
+```
+
+**ЦИКЛ do while**
+
+```js
+do {
+  // Блок кода, выполняемый на каждой итерации
+} while (Условие);
+```
+
+```js
+let i = 0;
+
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+```
+
+```js
+let i = 10;
+
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+```
+
+**ЦИКЛ for in**
+
+```js
+for (key in Object) {
+  // Действия с каждым свойстом объекта
+  // Значения свойства - Object[key]
+}
+```
+
+> **for in** для объектов
+
+```js
+const myObject = {
+  x: 10,
+  y: true,
+  z: "abc",
+};
+
+for (const key in myObject) {
+  console.log(key, myObject[key]);
+}
+```
+
+> **forEach** для объектов
+
+```js
+const myObject = {
+  x: 10,
+  y: true,
+  z: "abc",
+};
+
+Object.keys(myObject).forEach((key) => {
+  console.log(key, myObject[key]);
+});
+
+Object.values(myObject).forEach((value) => {
+  console.log(value);
+});
+```
+
+> **for in** для массивов
+
+```js
+const myArray = [true, 10, "abc", null];
+
+for (const key in myArray) {
+  console.log(myArray[key]);
+}
+```
+
+**ЦИКЛ for of** Появился в ES6
+
+```js
+for (Element of Iterable) {
+  // Действия с определенным элементом
+}
+```
+
+> **for of** для строк
+
+```js
+const myString = "Hey";
+
+for (const letter of myString) {
+  console.log(letter);
+}
+```
+
+> **for of** для массивов
+
+```js
+const myArray = [true, 10, "abc", null];
+
+for (const element of myArray) {
+  console.log(element);
+}
+```
+
+> [!CAUTION] > **for of** не для **объектов**
+
+**МОДУЛИ**
+
+> Модули позволяют структурировать код
+
+> Модули позволяют избегать дублирования блоков кода
+
+> EXPORT/IMPORT синтаксис появился в ES6
+
+```js
+moduleOne.js
+
+export ...
+```
+
+```js
+moduleTwo.js
+
+import ...
+```
+
+> Экспорт по умолчанию
+
+```js
+moduleOne.js;
+
+const myName = () => {
+  console.log("Bogdan");
+};
+
+export default myName;
+```
+
+```js
+moduleTwo.js;
+
+import printMyName from "./moduleOne.js";
+
+printMyName(); // Bogdan
+```
