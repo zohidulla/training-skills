@@ -1933,7 +1933,8 @@ for (const element of myArray) {
 }
 ```
 
-> [!CAUTION] > **for of** не для **объектов**
+> [!CAUTION]
+> for of не для объектов
 
 **МОДУЛИ**
 
@@ -1974,3 +1975,216 @@ import printMyName from "./moduleOne.js";
 
 printMyName(); // Bogdan
 ```
+
+> Несколько экспортов
+
+```js
+moduleOne.js;
+
+const one = 1;
+const two = "two";
+
+export { one, two }; // Имена переменных должны совпадать
+```
+
+```js
+moduleTwo.js;
+
+import { one, two } from "./moduleOne.js"; // Имена переменных должны совпадать
+
+console.log(one); // 1
+console.log(two); // 'two'
+```
+
+> Переименование импортов
+
+```js
+moduleOne.js;
+
+const one = 1;
+const two = "two";
+
+export { one, two };
+```
+
+```js
+moduleTwo.js;
+
+import { one as oneRenamed, two } from "./moduleOne.js"; // При импорте можно переименовывать переменные
+
+console.log(oneRenamed); // 1
+console.log(two); // 'two'
+```
+
+**Node.js поддерживает ES6 модули, начиная с версии 13**
+
+**Правила работы с модулями**
+
+1. Модули должны быть одноцелевыми
+2. Располагайте все **export** инструкции внизу файла
+3. Располагайте все **import** инструкции сверху файла
+4. По возможности используйте **export default**
+
+**КЛАССЫ И ПРОТОТИПЫ**
+
+> Синтаксис классов появился в **ES6**
+
+```js
+class ...
+```
+
+> **Классы** позволяют создавать прототиты для объектов
+
+> На основании прототипов создаются **экземпляры**
+
+> **Экземпляры** могут иметь собственные свойства и методы
+
+> **Экземпляры** наследуют свойства и методы прототипов
+
+> Класс
+
+```js
+class Comment {
+  constructor(text) {
+    this.text = text; // Переменная this указывает на экземпляр класса
+    this.votesQty = 0;
+  }
+
+  upvote() {
+    this.votesQty += 1;
+  }
+}
+```
+
+> Создание экземпляра
+
+```js
+const firstComment = new Comment("First comment"); // Вызывается функция constructor
+
+console.log(firstComment); // Собственные свойства экземпляра
+
+firstComment.text; // Наследование по цепочке
+```
+
+> Цепочка прототипов
+
+> firstComment => Comment => Object
+
+> Проверка принадлежности
+
+```js
+class Comment {
+  constructor(text) {
+    this.text = text;
+    this.votesQty = 0;
+  }
+
+  upvote() {
+    this.votesQty += 1;
+  }
+}
+
+const firstComment = new Commewnt("First comment");
+
+firstComment instanceof Comment; // true
+firstComment instanceof Object; // true
+```
+
+> Вызов методов
+
+```js
+class Comment {
+  constructor(text) {
+    this.text = text;
+    this.votesQty = 0;
+  }
+
+  upvote() {
+    this.votesQty += 1;
+  }
+}
+
+const firstComment = new Commewnt("First comment");
+
+firstComment.upvote();
+console.log(firstComment.votesQty); // 1   Методы можно вызывать многократно
+firstComment.upvote();
+console.log(firstComment.votesQty); // 2   Методы можно вызывать многократно
+```
+
+> Проверка принадлежности свойства экземпляру объекта
+
+```js
+const firstComment = new Comment("Frist comment");
+
+firstComment.hasOwnProperty("text"); // true
+firstComment.hasOwnProperty("votesQty"); // true
+firstComment.hasOwnProperty("upvote"); // false
+firstComment.hasOwnProperty("hasOwnProperty"); // false
+```
+
+> Создание нескольких экземпляров
+
+```js
+class Comment {
+  constructor(text) {
+    this.text = text;
+    this.votesQty = 0;
+  }
+
+  upvote() {
+    this.votesQty += 1;
+  }
+}
+
+const firstComment = new Commewnt("First comment"); // Разные объекты с разными собственными свойствами
+const secondComment = new Commewnt("Second comment");
+const thirdComment = new Commewnt("Third comment");
+```
+
+> Статические методы
+
+```js
+class Comment {
+  constructor(text) {
+    this.text = text;
+    this.votesQty = 0;
+  }
+
+  upvote() {
+    this.votesQty += 1;
+  }
+  static mergeComments(first, second) {
+    return `${first} ${second}`;
+  }
+}
+
+Comment.mergeComments("First comment.", "Second comment."); // Метод доступен как свойство класса и не наследуется экземплярами класса
+```
+
+> Расширение других классов
+
+```js
+class NumbersArray extends Array {
+  // Array Родительский конструктор вызовется автоматически
+  sum() {
+    return this.reduce((el, acc) => (acc += el), 0);
+  }
+}
+
+const myArray = new NumbersArray(2, 5, 7);
+
+console.log(myArray);
+myArray.sum();
+```
+
+> Цепочка прототипов
+
+> myArray => NumbersArray => Array => Object
+
+**Что же такое ПРОТОТИП?**
+
+> [!NOTE]
+> Прототипы - это механизм, с помощью которого объекты JavaScript наследуют свойства друг от друга. В этой статье мы объясним, как работают цепочки прототипов, и рассмотрим, как свойство prototype можно спользовать для добавления методов к существующим конструкторам.
+
+**ПРОМИСЫ**
