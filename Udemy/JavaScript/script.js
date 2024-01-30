@@ -44,17 +44,3 @@ console.log(JSON.parse(postStringified));
 // console.log([] + null + 1);
 // console.log("foo" + +"bar");
 // console.log(!!"false" == !!"true");
-
-const newPost = (post, addedAt = Date()) => ({
-  ...post,
-  addedAt,
-});
-
-const firstPost = {
-  id: 1,
-  author: "Bogdan",
-};
-
-newPost(firstPost);
-console.log(newPost(firstPost));
-console.log("firstPost =>", firstPost);
