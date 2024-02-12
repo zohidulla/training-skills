@@ -85,3 +85,114 @@ class HelloWorld extends Component {
 ```
 
 ## JavaScript Syntax Extension (JSX)
+
+```js
+<Card // Похоже на CSS
+  style={{
+    backgroundColor: `rgb(${initialColor}, ${opacity})`,
+  }}
+  className="m-2"
+>
+  <Card.Img // Похоже на HTML
+    variant="top"
+    style={
+      imageLoaded
+        ? { opacity: 1, transition: "opacity 2s easy-in-out" }
+        : { opacity: 0 }
+    }
+    src={image}
+    alt={title}
+    onLoad={() => setImageLoaded(true)} // JavaScript
+  />
+</Card>
+```
+
+> **JSX** - Синтаксическая надстройка над JS
+
+```js
+React.createElement(
+  Card,
+  {
+    style: {
+      backgroundColor: `rgb(${initialColor}, ${opacity})`,
+    },
+    className: "m-2",
+  },
+  React.createElement(Card.Img, {
+    variant: "top",
+    style: imageLoaded
+      ? {
+          opacity: 1,
+          transition: "opacity 2s ease-in-out",
+        }
+      : {
+          opacity: 0,
+        },
+    src: image,
+    alt: title,
+    onLoad: () => setImageLoaded(true),
+  })
+);
+```
+
+> Пользовательские и встроенные компоненты в JSX
+
+```js
+return (
+  // Валидный JSX
+  <div>
+    <h1>JSX в React</h1> // Встроенный компонент h1
+    <p>JSX похож на HTML</p>
+    <Footer text={text} /> // Пользовательский компонент Footer
+  </div>
+);
+```
+
+> [!NOTE] > **JSX** должен иметь один корневой элемент
+
+```js
+// Невалидный JSX
+return (
+  <h1>JSX в React</h1>
+  <p>JSX похож на HTML</p>
+);
+```
+
+```js
+// Невалидный JavaScript
+return (
+  React.createElement("h1", null, "JSX в React")
+  React.createElement("p", null, "JSX похож на HTML")
+);
+```
+
+## Свойства (PROPS) и состояние (STATE)
+
+> Свойства компоненту передаются от родительского компонента
+
+> Передача свойств
+
+- Свойства **нельзя** передавать родительскому компоненту
+
+> Компонент **не должен** изменять собственные свойства
+
+> Компонент **может** изменять собственное состояние
+
+> Компонент **не может** изменять состояние других компонентов
+
+> Но можно влиять на изменение **состояния** других компонентов
+
+> Можно передавать часть сових свойств и состояния дочерним компонентам в виде свойств
+
+> Компонент подлежит ререндерингу при изменении свойств или состояния
+
+## REACT HOOKS
+
+> В версии React 16.8 появилась поддержка **React hooks**
+
+> **React hooks** позволяют управлять состоянием в **функциональных** компонентах
+
+> Основные хуки React
+
+- useState
+- useEffect
