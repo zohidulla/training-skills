@@ -180,15 +180,15 @@ a(); // Uncaught TypeError: a is not a funciton
 ### const для объявления переменных
 
 ```js
-conat a = () => {
-  console.log('Hey there')
-}
+const a = () => {
+  console.log("Hey there");
+};
 
-a() // 'Hey there'
+a(); // 'Hey there'
 
-a = 10 // TypeError: Assignment to constat variable
+a = 10; // TypeError: Assignment to constat variable
 
-a()
+a();
 ```
 
 > [!NOTE]

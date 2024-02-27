@@ -179,6 +179,7 @@ const factorial = (n) => {
 };
 console.log(factorial(5));
 */
+/*
 const factorial = (n) => {
   console.log({ n });
   if (n === 0) {
@@ -191,6 +192,7 @@ const factorial = (n) => {
   return result;
 };
 console.log(factorial(5));
+*/
 /*
 function factorial(num) {
   if (num < 0) 
