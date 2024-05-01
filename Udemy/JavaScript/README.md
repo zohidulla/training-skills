@@ -2277,7 +2277,7 @@ myPromise
 
 ```js
 fetch("https://jsonplaceholder.typicode.com/todos")
-  .then((response) => response.json())
+  .then((response) => response.json()) // Метод "json" возвращает Промис
   .then((json) => console.log(json))
   .catch((error) => console.log(error));
 ```
