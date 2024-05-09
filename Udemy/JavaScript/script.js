@@ -912,3 +912,235 @@ console.log(isNumber(10))
 console.log(isNumber('Привет'))
 console.log(isNumber(true))
 */
+
+/*
+const mukltiply = (a, b) => a * b;
+setTimeout(() => {
+  console.log(mukltiply(5, 10));
+}, 2000);
+*/
+
+/*
+function multiplyBy(a, b = 2) {
+  console.log(a * b);
+}
+multiplyBy(2); // 4
+multiplyBy(2, undefined); // 4
+multiplyBy(2, 0); // 0
+multiplyBy(5, 10); // 50
+*/
+
+/*
+function square(a) {
+  // if (a === undefined) {
+  //   throw new Error('Функция "square" не может быть вызвана без аргумента')
+  // }
+  if (arguments.length === 0) {
+    throw new Error('Функция "square" не может быть вызвана без аргумента');
+  }
+  console.log(a * a);
+}
+square(10); // 100
+square();
+*/
+
+/*
+const objectWithNumbers = {
+  x: 5,
+  y: 20,
+  z: 3,
+};
+const mult = ({ x, y, z }) => x * y * z;
+const result = mult(objectWithNumbers);
+console.log(result); // 300
+*/
+
+/*
+const arr = [1, 2, 3, 4, 5, 6, 7];
+const [a, b, ...c] = arr;
+console.log(a); // 1
+console.log(b); // 2
+console.log(c); // [3, 4, 5, 6, 7]
+*/
+
+/*
+const a = [1, 2];
+const b = [4, 5];
+const c = [8, 9, 10];
+const d = 11;
+const combinedArray = [0, ...a, 3, ...b, 6, 7, ...c, d];
+console.log(combinedArray); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+// Original arrays were not changed
+console.log(a);
+console.log(b);
+console.log(c);
+*/
+
+/*
+const a = [1, 2, 3];
+// // OPTION 1
+// const b = [...a]
+// // OPTION 2
+// const b = Array.from(a)
+// OPTION 3
+const b = JSON.parse(JSON.stringify(a));
+b.push("newElement");
+console.log(a); // [1, 2, 3]
+console.log(b); // [1, 2, 3, "newElement"]
+*/
+
+/*
+const cars = [
+  { brand: "Honda", price: 13000 },
+  { brand: "Rolls-Royce", price: 120000 },
+];
+
+function carInfo({ brand, price }) {
+  return `Цена автомобиля ${brand} - ${price}$ и это ${
+    price > 20000 ? "дорогая" : "дешёвая"
+  } машина`;
+}
+
+cars.forEach((car) => console.log(carInfo(car)));
+// Цена автомобиля Honda - 13000$ и это дешёвая машина
+// Цена автомобиля Rolls-Royce - 120000$ и это дорогая машина
+*/
+
+/*
+const person1 = {
+  name: "Mike",
+  info: {
+    country: "Spain",
+    age: 23,
+  },
+  postsQuantity: 100,
+};
+const person2 = {
+  name: "Alice",
+  info: {
+    country: "Italy",
+    age: 25,
+  },
+};
+const shortPerson = ({
+  name: n,
+  info: { country: c, age: a },
+  postsQuantity: p = 0,
+}) => ({
+  n,
+  c,
+  a,
+  p,
+});
+console.log(shortPerson(person1)); // { n: "Mike", c: "Spain", a: 23, p: 100 }
+console.log(shortPerson(person2)); // { n: "Alice", c: "Italy", a: 25, p: 0 }
+*/
+
+/*
+let vowelsCount = 0;
+const vowels = ["a", "e", "i", "o", "u"];
+const str = "Today is the best day of my life";
+// // OPTION 1
+// str.split('').forEach((char) => {
+//   if (vowels.includes(char)) {
+//     vowelsCount += 1
+//   }
+// })
+// OPTION 2
+for (const char of str) {
+  if (vowels.includes(char)) {
+    vowelsCount += 1;
+  }
+}
+console.log(vowelsCount); // 9
+*/
+
+/*
+let a = "first";
+let b = "second";
+console.log(a, b); // first second
+[b, a] = [a, b];
+console.log(a, b); // second first
+*/
+
+/*
+const createGreeting = () => {
+  let greetingString = "Hey, this is";
+  function greet(name) {
+    return `${greetingString} ${name}`;
+  }
+  function changeGreeting(newGreeting) {
+    greetingString = newGreeting;
+  }
+  return {
+    greet,
+    changeGreeting,
+  };
+};
+const greeting1 = createGreeting();
+console.log(greeting1.greet("Bob")); // Hey, this is Bob
+greeting1.changeGreeting("Good Morning from");
+console.log(greeting1.greet("Emily")); // Good Morning from Emily
+greeting1.changeGreeting("Good Evening");
+console.log(greeting1.greet("Emily")); // Good Evening Emily
+const greeting2 = createGreeting();
+console.log(greeting2.greet("Emily")); // Hey, this is Emily
+*/
+/*
+class Fruit {
+  constructor(title, price) {
+    this.title = title;
+    this.price = price;
+  }
+  priceInfo() {
+    return `Price of the ${this.title} is ${this.price}$`;
+  }
+}
+const apple = new Fruit("Apple", 2);
+console.log(apple.priceInfo()); // Price of the Apple is 2$
+const orange = new Fruit("Orange", 3);
+console.log(orange.priceInfo()); // Price of the Orange is 3$
+*/
+
+/*
+const objectWithNumbers = {
+  a: 10,
+  b: 20,
+  c: "string",
+  d: 12,
+};
+function sumObjectValues(nums) {
+  let sum = 0;
+  Object.keys(nums).forEach((key) => {
+    if (typeof nums[key] === "number") {
+      sum += nums[key];
+    }
+  });
+  return sum;
+}
+const result = sumObjectValues(objectWithNumbers);
+console.log(result); //42
+*/
+
+const nums = [10, -12, 30, -1, -8, 0, 14, -33, 20];
+
+function sumPositiveNegative(arr) {
+  return arr.reduce(
+    (sums, num) => {
+      if (num > 0) {
+        return {
+          ...sums,
+          positive: sums.positive + num,
+        };
+      }
+      return {
+        ...sums,
+        negative: sums.negative + num,
+      };
+    },
+    { positive: 0, negative: 0 }
+  );
+}
+
+const result = sumPositiveNegative(nums);
+console.log(result); // { positive: 74, negative: -54 }
