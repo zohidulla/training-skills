@@ -27,15 +27,15 @@ const personInfo2 = `My name is ${myFirstName} ${myLastName} and I am ${myProfes
 console.log(personInfo2);
 */
 
-// comments
+// Single line comments
 
 /*
-Comments
+Multi-line comments
 /*
 
 /**
- * Comments
- * comment
+ * Multi-line comments
+ * Multi-line comments
  */
 
 /*
@@ -73,6 +73,11 @@ console.log(hello("Jack"));
 */
 
 /*
+// Явный возврат результата
+const helloworld = () => {
+  return "Hello, World!";
+};
+// Неявный возврат результата
 const helloworld = () => "Hello, World!";
 console.log(helloworld());
 */
@@ -114,10 +119,15 @@ console.log(stringLength);
 
 /*
 const myFavoriteSeason = "summer";
-console.log(myFavoriteSeason instanceof String);
-console.log(typeof myFavoriteSeason);
+console.log(myFavoriteSeason instanceof String); // false
+console.log(typeof myFavoriteSeason); // string
 const seasonToUpperCase = myFavoriteSeason.toUpperCase();
 console.log(seasonToUpperCase);
+
+// //
+// const myFavoriteSeason = new String("summer");
+// console.log(myFavoriteSeason instanceof String); // true
+// console.log(typeof myFavoriteSeason); // object
 */
 
 /*
