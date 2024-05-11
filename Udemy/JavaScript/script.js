@@ -187,14 +187,14 @@ console.log(((100 % 23) % 5) % 3);
 */
 
 /*
-console.log(3 || (true && null) || false);
-console.log(true && null && 10);
-console.log(true && "abc" && 10);
-console.log(10 || false);
-console.log(false || undefined || null);
-console.log(false && undefined && null);
-console.log(false || undefined || null || true);
-console.log(false && undefined && null && true);
+console.log(3 || (true && null) || false); // 3
+console.log(true && null && 10); // null
+console.log(true && "abc" && 10); // 10
+console.log(10 || false); // 10
+console.log(false || undefined || null); // null
+console.log(false && undefined && null); // false
+console.log(false || undefined || null || true); // true
+console.log(false && undefined && null && true); // false
 */
 
 /*
