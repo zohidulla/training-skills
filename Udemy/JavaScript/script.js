@@ -659,6 +659,7 @@ const scores3 = [1.3, 2.5, 1.9];
 const scores4 = ["abc", 1.3, true, 2.5, 1.9];
 
 function meanScore(...numbers) {
+  console.log(numbers);
   if (numbers.some((num) => typeof num !== "number")) {
     console.error("Все аргументы в вызове функции должны быть числами!");
     return;
@@ -943,9 +944,11 @@ multiplyBy(5, 10); // 50
 /*
 function square(a) {
   // if (a === undefined) {
+  // if (!a) {
   //   throw new Error('Функция "square" не может быть вызвана без аргумента')
   // }
   if (arguments.length === 0) {
+  // if (!arguments.length) {
     throw new Error('Функция "square" не может быть вызвана без аргумента');
   }
   console.log(a * a);
