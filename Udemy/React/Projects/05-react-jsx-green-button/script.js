@@ -20,3 +20,5 @@ const App = (props) => {
 const container = document.getElementById("app");
 const root = ReactDOM.createRoot(container);
 root.render(<App initialButtonText="Click me" initialClassesList="" />);
+
+// npx live-server --open=05-react-jsx-green-button
