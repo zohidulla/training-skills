@@ -1,16 +1,16 @@
 let users = [
   {
     name: "Andrew",
-    email: "andrew@example.com"
+    email: "andrew@example.com",
   },
   {
     name: "Ashley",
-    email: "ashley@example.com"
+    email: "ashley@example.com",
   },
   {
     name: "Gaston",
-    email: "gaston@example.com"
-  }
+    email: "gaston@example.com",
+  },
 ];
 
 let currentUser = 2;
