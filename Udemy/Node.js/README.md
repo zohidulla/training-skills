@@ -24,3 +24,40 @@
 | Взаимодействие с ДОМ                              | Нет взаимодействия с веб браузером                     |
 | Код нужно адаптировать под различные веб браузеры | Можно использовать все функции, поддерживаемые Node.js |
 | Нет доступа к файловой системе клиентов           | Есть доступ к файловой системе                         |
+
+### NODE REPL - интерактивный интерпретатор
+
+- READ - Прочитать код, введенный пользоватедем
+- EVALUATE - Анализ и интерпретация
+- PRINT - Вывести результат в терминал
+- LOOP - Начать сначала. При этом переменные, созданные ранее, сохраняются
+
+**node filename.js** - Выполнение кода JavaScript в файле с помощью Node.js
+**node** - Запуск интерактивного интерпретатора Node.js
+
+> Взаимодействие с NODE REPL
+
+```js
+node > node
+Welcome to Node.js v18.9.0.
+Type ".help" for more information.
+> const name = "John"
+undefined
+> name
+'John'
+> .exit
+node >
+```
+
+> Получение помощи в NODE REPL
+
+```js
+> .help
+.break    Sometimes you get suck, this gets you out
+.clear    Alias for .break
+.editor   Enter editor mode
+.exit     Exit the REPL
+.help     Print this help message
+.load     Load JS from a file into the REPL session
+.save     Save all evaluated commands in this REPL session to a file
+```
