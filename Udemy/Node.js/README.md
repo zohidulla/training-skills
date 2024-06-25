@@ -221,7 +221,7 @@ console.log("Continue..."); // Выполняется до окончания ч
 ### События nextTick и колбэки промисов
 
 <p align="center">
-<img src="./images/next-tick.png" height="300">
+<img src="./images/next-tick.png" height="500">
 </p>
 
 > **nextTick** имеет приоритет перед другим событиями и обрабатывается на текущей итерации
