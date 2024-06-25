@@ -221,7 +221,7 @@ console.log("Continue..."); // Выполняется до окончания ч
 ### События nextTick и колбэки промисов
 
 <p align="center">
-<img src="./images/next-tick.png" height="500">
+<img src="./images/next-tick.png" height="600">
 </p>
 
 > **nextTick** имеет приоритет перед другим событиями и обрабатывается на текущей итерации
@@ -242,3 +242,21 @@ setImmediate(() => {
 
 > [!WARNING]
 > ! Код, который вы пишите, **не должен занимать** цикл событий слишком долго
+
+## Стек вызовов (Call Stack)
+
+```js
+function thirdFunction() {
+  return 10;
+}
+
+function secondFunction() {
+  return thirdFunction();
+}
+
+function firstFunction() {
+  return secondFunction();
+}
+
+console.log(firstFunction()); // 10
+```
