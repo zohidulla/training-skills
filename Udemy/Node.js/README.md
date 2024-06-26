@@ -260,3 +260,210 @@ function firstFunction() {
 
 console.log(firstFunction()); // 10
 ```
+
+## Модули
+
+### В Node.js каждый файл js является **модулем**
+
+> Преимущества модулей
+
+- Разделение приложения на части
+- Организация кода
+- Разделение ответственности
+- Упрощение поддержки приложения
+
+> Характеристики модулей
+
+1. По умолчанию ни одна из переменных в модуле не доступна для импорта в других модулях
+2. Чтобы переменная стала доступна для импорта в других модулях, её необходимо экспортировать из модуля
+3. Для использования в определённом модуле переменных из других модулей, их необходимо импортивать
+4. При импортировании названия переменных можно изменять
+
+> Варианты модулей в Node.js
+
+- CommonJS Modules - require ... // Включены по умолчанию
+- ECMAScript Modules (ESM) - import ...
+
+### Модули CommonJS
+
+> Модули CommonJS
+
+- module.exports - Объект для экспортирования из модуля
+- require() - Функция для импорта из другого модуля
+
+> Объект module.exports
+
+1. По умолчанию, любой файл с расширением **.js** в Node.js является модулем **CommonJS**
+2. **module** - это объект, который доступен в любом таком файле
+3. **module.exports** содержит значения, экспортируемые из модуля
+4. По умолчанию, **module.exports** - пустой объект и следовательно, из модуля ничего не экспортируется
+5. Переменная **exports** - это копия **module.exports**
+
+### Как устроен модуль CommonJS
+
+```js
+(function (exports, require, module, __filename, __dirname) {
+  // Содержимое модуля
+  // В Node.js каждый модуль CommonJS автоматически оборачивается в анонимную функцию
+});
+```
+
+> Проверка наличия анонимной функции
+
+```js
+console.log(arguments.callee.toString());
+```
+
+```js
+function (exports, require, module, __filename, __dirname) {
+  console.log(arguments.callee.toString());
+};
+```
+
+> Экспорт из модуля CommonJS
+
+```js
+function printHello() {
+  // Функция printHello становится доступна в других модулях
+  console.log("Hello world");
+}
+
+module.exports.printHello = printHello; // Добавление ключа с значением в объект module.exports
+```
+
+> Добавление экспорта без создания переменной
+
+```js
+module.exports.printHello = function () {
+  console.log("Hello world");
+};
+```
+
+```js
+module.exports.printHello = () => {
+  console.log("Hello world");
+};
+```
+
+> Переписывание значения **module.exports**
+
+```js
+Таким образом можно экспортировать только одну переменную
+
+module.exports = function () {
+  // Изменение значения module.exports с объекта на функцию
+  console.log("Hello world");
+};
+```
+
+### Алиас module.exports
+
+```js
+module.exports ==> {};
+По умолчанию, module.exports и exports ссылаются на один и тот же объект
+exports ==> {};
+```
+
+```js
+exports.printHello = function () {
+  console.log("Hello world");
+};
+```
+
+> Присвоение нового значения переменной **exports**
+
+```js
+Так делать нельзя, потому что exports
+больше не будет ссылаться на тот же объект, что и module.exports
+
+exports = function () {
+  console.log("Hello world");
+};
+```
+
+### Импорты в модулях CommonJS и функция require
+
+> Функция require
+
+1. **require** - это функция, которая доступна внутри каждого CommonJS модуля
+2. Функция **require** используется для импорта переменных, которые экспортируются из других модулей
+3. Можно импортировать из встроенных или внешних модулей, указывая имя модуля
+4. Можно имопртировать из модулей приложения, указывая путь к соответствующим файлам
+
+> Импорт из встроенных или внешних модулей
+
+> [!NOTE]
+>
+> Перед использованием внешних модулей их нужно установить с помощью **npm install**
+
+```js
+const fs = require("fs"); // Нужно указать только имя встроенного или внешного модуля
+```
+
+> Импорт единственного экспорта
+
+```js
+index.js;
+
+const usersArray = require("./users.js");
+```
+
+```js
+users.js
+
+const = [
+  'Bogdan',
+  'Alice',
+  'Bob'
+]
+
+module.exports = users // Значение module.exports переписывается
+```
+
+> Импорт нескольких переменных
+
+```js
+index.js;
+
+const { URL, USERNAME, PASSWORD } = require("./constants");
+```
+
+```js
+constants.js
+
+const URL = 'http://localhost:5000';
+const USERNAME = 'admin';
+conat PASSWORD = 'strong_pass';
+
+exports.URL = URL;
+exports.USERNAME= USERNAME;
+exports.PASSWORD = PASSWORD;
+
+// module.exports.URL = URL;
+// module.exports.USERNAME= USERNAME;
+// module.exports.PASSWORD = PASSWORD;
+```
+
+> Импорт функций
+
+```js
+index.js;
+
+const getData = require("./utils.js");
+
+getData("https://jsonplaceholder.typecode.com/posts")
+  .then((posts) => console.log(posts))
+  .catch((error) => console.log(error));
+```
+
+```js
+utils.js;
+
+async function getData(url) {
+  const res = await fetch(url);
+  const data = await res.json();
+  return data;
+}
+
+module.exports = getData;
+```
