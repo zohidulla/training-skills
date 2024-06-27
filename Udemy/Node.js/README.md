@@ -467,3 +467,231 @@ async function getData(url) {
 
 module.exports = getData;
 ```
+
+### Модули ES6
+
+> Модули ECMASCRIPT
+
+- export - Ключевое слово для экспортирования из модуля
+- import - Ключевое слово для импорта из другого модуля
+
+> Как перейти с **CommonJS** на **ES6**
+
+- Изменить расширения файлов на **.mjs**
+- Добавить **"type": "module"** в файле package.json
+  // Файл package.json содержит информацию о приложении Node.js, а также список внешних модулей
+
+> Внутри модуля **ES6 нет доступа** к переменным **module** и **require**
+
+```js
+console.log(module);
+// ReferenceError: module is not defined in ES module scope
+console.log(require);
+// ReferenceError: require is not defined in ES module scope, you can use import instead
+console.log(exports);
+// ReferenceError: exports is not defined in ES module scope
+console.log(__filename);
+// ReferenceError: __filename is not defined in ES module scope
+console.log(__dirname);
+// ReferenceError: __dirname is not defined in ES module scope
+```
+
+> Типы экспортов в **ES6**
+
+- Именованный экспорт
+- Экспорт по умолчанию
+- Смешанные экпорты // именованные экспорты и экспорт по умолчанию
+
+> Именованный экспорт из модуля **ES6**
+
+```js
+function printHello() {
+  console.log("Hello world");
+}
+
+export { printHello }; // Функция printHello становится доступна в других модулях
+```
+
+```js
+import { printHello } from "./hello.mjs"; // Относительный путь к файлу, из которого выполняется импорт
+```
+
+> Экспорт нескольких переменных
+
+```js
+function printHello() {
+  console.log("Hello world");
+}
+
+function printHi() {
+  console.log("Hi world");
+}
+
+export { printHello, printHi };
+```
+
+```js
+import { printHello, printHi } from "./hello.mjs";
+// Порядок следования переменных при импорте не имеет значения
+```
+
+> Пример с модулями в **ES6**
+
+```js
+index.mjs;
+
+const { URL, USERNAME, PASSWORD } = require("./constants.mjs");
+```
+
+```js
+constants.mjs
+
+const URL = 'http://localhost:5000';
+const USERNAME = 'admin';
+conat PASSWORD = 'strong_pass';
+
+export { URL, USERNAME, PASSWORD };
+```
+
+> Экспорт при объявлении переменных
+
+```js
+export function printHello() {
+  console.log("Hello world");
+}
+
+export function printHi() {
+  console.log("Hi world");
+}
+```
+
+> Экспорт по умолчанию
+
+```js
+function printHello() {
+  console.log("Hello world");
+}
+
+export default printHello;
+```
+
+> Импорт экспорта по умолчанию
+
+```js
+import printHello from "./hello.mjs"; // При импортировании дефолтного экспорта фигурные скобки не используются
+```
+
+> Пример с экспортом по умолчанию
+
+```js
+index.mjs;
+
+import users from "./users.mjs"; // Относительный путь к файлу
+
+import usersArray from "./users.mjs"; // Можно использовать другое имя переменной
+```
+
+```js
+users.mjs;
+
+const users = ["Bogdan", "Alice", "Bob"];
+
+export default users; // Экспорт по умолчанию
+```
+
+> Пример с импортом функций в **ES6**
+
+```js
+index.mjs;
+
+import getData from "./utils.mjs";
+
+getData("https://jsonplaceholder.typicode.com/posts")
+  .then((posts) => console.log(posts))
+  .catch((error) => console.log(error));
+```
+
+```js
+utils.mjs;
+
+async function getData(url) {
+  const res = await fetch(url);
+  const posts = await res.json();
+  return posts;
+}
+
+export default getData;
+```
+
+> Наличие многих импортов
+
+```js
+export { sayName, printHello, printHi, printHey, tellStory, findTreasure };
+```
+
+```js
+import {
+  printHello,
+  printHi,
+  printHey,
+  sayName,
+  tellStory,
+  findTreasure,
+} from "./helpers.mjs";
+```
+
+> Выборочный импорт в **ES6**
+
+```js
+export { sayName, printHello, printHi, printHey, tellStory, findTreasure };
+```
+
+```js
+import { printHello, sayName, tellStory } from "./helpers.mjs";
+```
+
+> Переименование при импорте в **ES6**
+
+```js
+import { printHello as greetFn } from "./hello.mjs";
+// Именованные импорты можно переименовывать, используя ключевое слово as
+
+greetFn();
+```
+
+> Импорт из встроенных или внешних модулей **ES6**
+
+```js
+import express from "express";
+```
+
+```js
+import fs from "fs";
+```
+
+> Префикс **node** при импортировании
+
+```js
+import fs = require("node:fs"); // При импортировании встроенных модулей можно добавлять префикс node:
+```
+
+```js
+import fs from "node:fs";
+```
+
+| **Именованные экспорты**                                       | **Экспорт по умолчанию**                                           |
+| -------------------------------------------------------------- | ------------------------------------------------------------------ |
+| export { city };                                               | export default city;                                               |
+|                                                                |                                                                    |
+| import { city } from "./mod.mjs";                              | import userCity from "./mod.mjs";                                  |
+|                                                                |                                                                    |
+| Имена переменных должны **совпадать**                          | Имена переменных могут быть **разные**                             |
+|                                                                |                                                                    |
+| Можно экспортировать **несколько** переменных из одного модуля | Экспорт по умолчанию в **одном** модуле может быть только **один** |
+|                                                                |                                                                    |
+
+> Кэширование модулей
+> **Модул 1** <== **Модул 2** ==> **Модул 3**
+
+- После загрузки и компиляции моудля, Node.js поместит его в **кэш**
+- Модуль 2 загружается с кэша, что повышает скорость загрузки приложения и уменьшает нагрузку на память
