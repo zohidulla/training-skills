@@ -707,3 +707,143 @@ import fs from "node:fs";
 - path
 - http
 - stream
+
+### Модуль FS
+
+### Модуль FS позволяет взаимодействовать с файловой системой
+
+> Стили использования модуля **FS**
+
+- Callback API - Функции в этих API асинхронны
+- Promise API - Функции в этих API асинхронны
+- Synchronous API
+
+> Функции в модуле **FS**
+
+| **async** | **sync**      |
+| --------- | ------------- |
+| readFile  | readFileSync  |
+|           |               |
+| writeFile | writeFileSync |
+|           |               |
+| unlink    | unlinkSync    |
+|           |               |
+
+> Чтение файла - вариант с колбэком
+
+```js
+const fs = require("fs");
+
+// Содержимое файла будет в виде строки вместо бинарного формата
+fs.readFile("./file.txt", "utf-8", (err, data) => {
+  // err будет null, если ошибка не возникла
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(data);
+  }
+});
+```
+
+> Чтение файла - вариант с промисами
+
+```js
+const fs = require("fs/promises"); // Импорт версии с промисами
+
+fs.readFile("./file.txt", "utf-8")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => console.log(error));
+```
+
+> Чтение файла - синхронная версия
+
+```js
+const fs = require("fs");
+
+try {
+  const data = fs.readFileSync("./file.txt", "utf-8"); // Блокирует дальнейшее выполнение кода до завершения операции чтения файла
+  console.log(data);
+} catch (error) {
+  console.log(error);
+}
+```
+
+> Запись в файл - вариант с колбэком
+
+```js
+const fs = require("fs");
+
+const dataToWrite = "Hello Node.js";
+
+fs.writeFile("./file.txt", dataToWrite, (err) => {
+  if (err) {
+    // err будет null, если ошибка не возникла
+    console.log(data);
+  }
+});
+```
+
+> Запись файла - вариант с промисами
+
+```js
+const fs = require("fs/promises");
+
+const dataToWrite = "Hello Node.js";
+
+fs.writeFile("./file.txt", dataToWrite);
+  .then(() => {
+    console.log("done");
+  })
+  .catch((error) => console.log(error));
+```
+
+> Запись в файла - синхронная версия
+
+```js
+const fs = require("fs");
+
+try {
+  const data = fs.writeFileSync("./file.txt", "utf-8"); // Блокирует дальнейшее выполнение кода до завершения операции запись файла
+  console.log(data);
+} catch (error) {
+  console.log(error);
+}
+```
+
+> Удаление файла - вариант с колбэкомя
+
+```js
+const fs = require("fs");
+
+fs.unlink("./file.txt", (error) => {
+  if (error) {
+    console.log(error);
+  }
+  console.log("file deleted");
+});
+```
+
+> Удаление файла - вариант с промисами
+
+```js
+const fs = require("fs/promises");
+
+fs.unlink("./file.txt")
+  .then(() => console.log("file deleted"))
+  .catch((error) => console.log(error));
+```
+
+> Удаление файла - синхронная версия
+
+```js
+const fs = require("fs");
+
+try {
+  fs.unlinkSync("./file.txt"); // Блокирует дальнейшее выполнение кода до завершения операции удаления файла
+  console.log("File was deleted");
+} catch (error) {
+  console.log(error);
+}
+```
