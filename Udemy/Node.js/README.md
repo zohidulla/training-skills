@@ -887,8 +887,42 @@ myEmitter.on("newUser", (userName) => {
 myEmitter.emit("newUser", "John");
 ```
 
-> Резюме по модулю events
+> Резюме по модулю **events**
 
 1. Встроенный модуль **events** используется для работы с событиями
 2. Экземпляры класса **EvenEmitter** наследуют метод **on**, с помощью которого можно создовать слушателей событий
 3. События создаются с помощью метода **emit**
+
+### Модуль path
+
+### Модул path позволяет работать с путями к файлам и папкам
+
+> Соединение сегментов пути
+
+```js
+const path = require("path");
+
+const linuxP = path.join("/usr", "node", "app.js");
+// "node" => Части пути для соединения
+// /usr/node/index.js (MacOS | Linux)
+
+const winP = path.join("D:\\", "node", "app.js");
+console.log(winP);
+
+// D:\node\index.js (Windows)
+```
+
+> Расчет абсолютного пути
+
+```js
+const path = require("path");
+
+const result = path.resolve("node", "index.js"); // Формирование абсолютного пути на основании частей пути
+console.log(result);
+// /Users/john/Desktop/node/node/index.js
+```
+
+> Резюме по модулю **path**
+
+1. Встроенный модуль **path** используется для выполнения операций с путями к файлам и папкам
+2. Модуль **path** учитывает операционную систему при формировании путей
