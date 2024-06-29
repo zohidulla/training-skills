@@ -926,3 +926,49 @@ console.log(result);
 
 1. Встроенный модуль **path** используется для выполнения операций с путями к файлам и папкам
 2. Модуль **path** учитывает операционную систему при формировании путей
+
+### Модуль http
+
+### Модуль http позволяет создать http сервер или отсылать http запросы
+
+> **http** сервер
+
+```js
+const server = http.createServer((req, res) => {
+  // Эта колбэк функция вызывается для каждого запароса от клиента
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/html");
+  res.write("<h1>Hello from the Node.js</h1>");
+  res.end();
+});
+
+server.listen(3000);
+```
+
+> Отправка **http** запроса
+
+```js
+const http = require("http");
+
+const url = "http://jsonplaceholder.typicode.com/todos/1";
+
+http.get(url, (res) => {
+  // Эта колбэк функция вызывается при получении ответа от удалённого сервера
+  let responseBody = "";
+
+  res.on("data", (chunk) => {
+    // Событие data возникает несколько раз в процессе получения ответа от сервера
+    responseBody += chunk;
+  });
+
+  res.on("end", () => {
+    // Событие end возникает после обработки всех данных
+    console.log(responseBody);
+  });
+});
+```
+
+> Резюме по модулю **http**
+
+1. Встроенный модуль **http** позволяет создать **http** сервер и обрабатывать **http** запросы от клиента
+2. С помощью модуля **http** также можно отправлять запросы на удаллённые серверы
