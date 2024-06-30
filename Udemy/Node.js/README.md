@@ -972,3 +972,126 @@ http.get(url, (res) => {
 
 1. Встроенный модуль **http** позволяет создать **http** сервер и обрабатывать **http** запросы от клиента
 2. С помощью модуля **http** также можно отправлять запросы на удаллённые серверы
+
+### Модуль stream
+
+### Поток представляет собой данные, которые доступны не все сразу, а частями
+
+> Потоки
+
+1. Потоки позволяют нам обрабатывать данные **частями**
+2. Это делает потоки идеальными для работы с большими объемами данных, которые могут не поместиться в памяти одновременно
+3. Пример: монжно прочитать файл частями, что позволит избежать чтения всего файла и записи его в память
+4. Потоки является экземплярами класса **EventEmitter**
+
+> Без потоков
+
+- Данные нужно полностью прочесть перед началом обработки
+
+> С потоками
+
+- Данные могут обрабатываться частями с помощью потока
+
+> Типы потоков
+
+- **Readable** - Для чтения данных
+- **Writable** - Для записи данных
+- **Duplex** - Как для чтения, так и для записи данных
+- **Transform** - Дуплексный поток, который преобразует входные данные
+
+> Запись в файл с помощью потока
+
+```js
+const fs = require("fs");
+
+const writeStream = fs.createWriteStream("./f.txt");
+
+writeStream.write("This is data ");
+writeStream.write("written to the file using stream!");
+writeStream.write("\n");
+writeStream.write("Stream are great!");
+
+writeStream.end();
+```
+
+> Чтение файла с помощью потока
+
+```js
+const fs = require("fs");
+
+const readStream = fs.createReadStream("./f.txt", "utf8");
+
+readStream.on("data", (dataChunk) => {
+  console.log(dataChunk);
+});
+
+readStream.on("end", () => {
+  console.log("File reading complete");
+});
+
+readStream.on("error", (err) => {
+  console.log(err);
+});
+```
+
+> Метод **PIPE**
+
+```js
+readableStream.pipe(writableStream); // Метод pipe перенаправляет один поток в другой
+```
+
+**Readable Stream** **pipe** **Writable Stream**
+
+> Цепочка методов **pipe**
+
+```js
+stream1.pipe(stream2).pipe(stream3);
+```
+
+Метод **pipe** возвращает целевой поток, что позволяет снова вызывать метод **pipe**
+
+```js
+stream1.pipe(stream2);
+stream2.pipe(stream3);
+```
+
+> Копирование файла с помощью потока
+
+```js
+const fs = require("fs");
+
+const readStream = fs.createReadStream("./f.txt", "utf8");
+const writeStream = fs.createWriteStream("./f_copy.txt");
+
+readStream.pipe(writeStream);
+
+writeStream.on("close", () => {
+  console.log("File copy completed");
+});
+```
+
+> Создание **transform** потока
+
+```js
+const stream = require("stream");
+
+const upperCaseStream = new stream.Transform({
+  transform(chunk, encoding, callback) {
+    const upperCased = chunk.toString().toUpperCase();
+    callback(null, upperCased); // Колбэк должен быть вызван с ошибкой или преобразованной частью потока
+  },
+});
+```
+
+> Использование **transform** потока
+
+```js
+process.stdin // Поток для чтения из стандартного ввода
+  .pipe(upperCaseStream) // Трансформирующий поток
+  .pipe(process.stdout); // Поток для вывода
+```
+
+> Резюме по модулю **ыекуфь**
+
+1. Потоки позволяют обрабатывать данные **частями**
+2. Часто потоки используются для обработки данных из других приложений или данных с удаллённых серверов
