@@ -1417,3 +1417,67 @@ app.post("/users", (req, res) => {
 // Маршрут для POST запроса для пути /users
 // Express поддерживает и другие HTTP методы, такие как delete, put, patch
 ```
+
+> Параметры маршрута
+
+```js
+app.get("/users/:userId", (req, res) => {
+  // Примеры путей при наличии параметра: /users/234 или /users/471
+  console.log(req.params); // { userId: "234" }
+  console.log(req.params.userId); // 234
+});
+```
+
+> Разные методы для одного пути
+
+```js
+app.get("/users", (req, res) => {
+  res.send("GET req at /users path");
+});
+
+app.post("/users", (req, res) => {
+  res.send("POST req at /users path");
+});
+```
+
+> Цепочка HTTP матодов
+
+```js
+app
+  .route("/users") // Путь указывается только один раз
+  .get((req, res) => {
+    res.send("GET req at /users path");
+  })
+  .post((req, res) => {
+    res.send("POST req at /users path");
+  });
+```
+
+> Маршруты в отдельных модулях
+
+```js
+// routes/users.js
+
+const express = require("express");
+
+const usersRouter = express.Router();
+
+usersRouter.get("/", (req, res) => {
+  // code
+});
+
+export default usersRouter;
+```
+
+> Использование маршрутов из модулей
+
+```js
+// app.js
+
+const express = require("express");
+const usersRouter = require("./routes/users.js");
+
+const app = express();
+
+app.use("/users", usersRouter);
+```
