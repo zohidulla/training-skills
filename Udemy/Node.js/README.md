@@ -1481,3 +1481,15 @@ const app = express();
 
 app.use("/users", usersRouter);
 ```
+
+### Паттерн программирования MVC
+
+### Model View Controller
+
+<p align="center">
+<img src="./images/mvc.webp" height="300">
+</p>
+
+> **Model** - Интерфейс взаимодействия с данными в базе данных
+> **View** - Видимый для пользователя интерфейс (презентационная часть)
+> **Controller** - Логика взаимодействия интерфейса с данными через модель
