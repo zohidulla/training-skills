@@ -1495,3 +1495,51 @@ app.use("/users", usersRouter);
 ### View - Видимый для пользователя интерфейс (презентационная часть)
 
 ### Controller - Логика взаимодействия интерфейса с данными через модель
+
+### Функции middleware в Express
+
+### Middleware функция выполняется в процессе обработки запроса и отправки ответа
+
+<p align="center">
+<img src="./images/middleware-chaining.png" height="300">
+</p>
+
+Любая **middleware функция** может отправить ответ клиенту
+
+> Что может делать **middleware функция**
+
+- Выполнять любой код
+- Изменять объекты request/response
+- Вызвать следующую middleware функцию
+- Завершать цикл запрос-ответ
+
+> Создание middleware функции
+
+```js
+function logger(req, res, next) {
+  console.log(`${req.method} request at ${req.path}`);
+  next();
+}
+// Middleware функция должна либо вызвать следующую функцию, либо завершить цикл заспрос-ответ
+```
+
+> Использование **middleware функции**
+
+```js
+app.use(logger);
+// Подключение middleware функции в приложении Express.js
+```
+
+> Использование анонимной функции
+
+```js
+app.use((req, res, next) => {
+  // Функцию можно не создавать отдельно
+  console.log(`${req.method} request at ${req.path}`);
+  next();
+});
+```
+
+> [!NOTE]
+>
+> ! Но принято все **middleware функции**, которые содержат логику приложения, выносить в папку **middleware**
