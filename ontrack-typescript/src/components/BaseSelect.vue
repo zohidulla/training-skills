@@ -9,10 +9,7 @@ import { ICON_X_MARK } from '../icons'
 
 const props = defineProps({
   selected: [String, Number],
-  placeholder: {
-    required: true,
-    type: String
-  },
+  placeholder: { required: true, type: String },
   options: {
     required: true,
     type: Array,
