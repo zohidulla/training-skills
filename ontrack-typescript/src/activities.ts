@@ -15,10 +15,12 @@ interface ActivitySelectOption {
 export const activities = ref<Activity[]>([])
 
 export const trackedActivities = computed<Activity[]>(() =>
-  activities.value.filter(({ secondsToComplete }): boolean => secondsToComplete !=== 0)
+  activities.value.filter(({ secondsToComplete }): boolean => secondsToComplete !== 0)
 )
 
-export const activitySelectOptions = computed<ActivitySelectOption[]>(() => generateActivitySelectOptions(activities.value))
+export const activitySelectOptions = computed<ActivitySelectOption[]>(() =>
+  generateActivitySelectOptions(activities.value)
+)
 
 export function initializeActivities(state: any): void {
   activities.value = state.activities || []
@@ -36,7 +38,10 @@ export function deleteActivity(activity: Activity): void {
   activities.value.splice(activities.value.indexOf(activity), 1)
 }
 
-export function calculateActivityCompletionPercentage({ secondsToComplete }: Activity, trackedSeconds: number) {
+export function calculateActivityCompletionPercentage(
+  { secondsToComplete }: Activity,
+  trackedSeconds: number
+) {
   return Math.floor((trackedSeconds * HUNDRED_PERCENT) / secondsToComplete)
 }
 
