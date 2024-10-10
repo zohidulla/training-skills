@@ -1,5 +1,5 @@
 <script setup>
-import { isTimelineItemValid } from '../validators.js'
+import { isTimelineItemValid } from '../validators'
 import BaseSelect from './BaseSelect.vue'
 import TimelineHour from './TimelineHour.vue'
 import TimelineStopwatch from './TimelineStopwatch.vue'
