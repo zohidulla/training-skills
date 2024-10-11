@@ -5,20 +5,9 @@ import {
   LOW_PERCENT,
   MEDIUM_PERCENT,
   HUNDRED_PERCENT
-} from './constants.js'
-import { isNull } from './validators.js'
-
-enum ProgressColorClass {
-  RED = 'bg-red-500',
-  YELLOW = 'bg-yellow-500',
-  BLUE = 'bg-blue-500',
-  GREEN = 'bg-green-500'
-}
-
-interface PeriodSelectOption {
-  value: number
-  label: string
-}
+} from './constants'
+import { type PeriodSelectOption, ProgressColorClass } from './types'
+import { isNull } from './validators'
 
 export function formatSecondsWithSign(seconds: number): string {
   return `${seconds >= 0 ? '+' : '-'}${formatSeconds(seconds)}`
