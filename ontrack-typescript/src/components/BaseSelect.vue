@@ -1,29 +1,26 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
 import BaseButton from './BaseButton.vue'
-import { validateSelectOptions, isUndefinedOrNull, isSelectValueValid } from '../validators'
+import { isUndefinedOrNull } from '../validators'
 import { BUTTON_TYPE_NEUTRAL } from '../constants'
 import { normalizeSelectValue } from '../functions'
 import BaseIcon from './BaseIcon.vue'
 import { ICON_X_MARK } from '../icons'
 
-const props = defineProps({
-  selected: [String, Number],
-  placeholder: { required: true, type: String },
-  options: {
-    required: true,
-    type: Array,
-    validator: validateSelectOptions
-  }
-})
+const props = defineProps<{
+  options: { value: number | string; label: string }[]
+  selected: number | string | null
+  placeholder: string
+}>()
 
-const emit = defineEmits({
-  select: isSelectValueValid
-})
+const emit = defineEmits<{
+  // (e: 'select', value: number | string | null): void
+  select: [value: number | string | null]
+}>()
 
-const isNotSelected = computed(() => isUndefinedOrNull(props.selected))
+const isNotSelected = computed((): boolean => isUndefinedOrNull(props.selected))
 
-function select(value) {
+function select(value: string | null): void {
   emit('select', normalizeSelectValue(value))
 }
 </script>
@@ -35,7 +32,7 @@ function select(value) {
     </BaseButton>
     <select
       class="w-full truncate rounded bg-gray-100 px-2 py-1 text-2xl"
-      @change="select($event.target.value)"
+      @change="select(($event.target as HTMLSelectElement).value)"
     >
       <option :selected="isNotSelected" disabled value="">
         {{ placeholder }}

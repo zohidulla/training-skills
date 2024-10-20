@@ -20,16 +20,8 @@ export function isHourValid(hour: any): boolean {
   return isNumber(hour) && isBetween(hour, MIDNIGHT_HOUR, HOURS_IN_DAY - 1)
 }
 
-export function validateSelectOptions(options: any): boolean {
-  return options.every(isSelectOptionValid)
-}
-
 export function isUndefinedOrNull(value: any): boolean {
   return isUndefined(value) || isNull(value)
-}
-
-export function isSelectValueValid(value: any): boolean {
-  return isNotEmptyString(value) || isNumberOrNull(value)
 }
 
 export function isActivityValid({ id, name, secondsToComplete }: any): boolean {
@@ -43,20 +35,12 @@ function isNotEmptyString(value: any): boolean {
   return isString(value) && value.length > 0
 }
 
-function isSelectOptionValid({ value, label }: any): boolean {
-  return (isNumber(value) || isNotEmptyString(value)) && isNotEmptyString(label)
-}
-
 function isString(value: any): boolean {
   return typeof value === 'string'
 }
 
 export function isNull(value: any): boolean {
   return value === null
-}
-
-function isNumberOrNull(value: any): boolean {
-  return isNumber(value) || isNull(value)
 }
 
 function isUndefined(value: any): boolean {
