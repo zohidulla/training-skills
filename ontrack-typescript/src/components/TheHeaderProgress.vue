@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { HUNDRED_PERCENT, PAGE_PROGRESS } from '../constants'
 import { navigate } from '../router'
 import { ICON_CHECK_CIRCLE } from '../icons'
