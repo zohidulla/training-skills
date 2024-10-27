@@ -36,6 +36,19 @@ export type Hour =
   | 23
   | 24
 
+export enum IconName {
+  CHECK_CIRCLE = 'CheckCircle',
+  LIST_BULLET = 'ListBullet',
+  ARROW_PATH = 'ArrowPath',
+  CHART_BAR = 'ChartBar',
+  CLOCK = 'Clock',
+  TRASH = 'Trash',
+  X_MARK = 'XMark',
+  PAUSE = 'Pause',
+  PLAY = 'Play',
+  PLUS = 'Plus'
+}
+
 export type PageName = typeof PAGE_TIMELINE | typeof PAGE_ACTIVITIES | typeof PAGE_PROGRESS
 
 export type ButtonType =
@@ -54,7 +67,7 @@ export interface TimelineItem {
 
 export interface NavItem {
   page: PageName
-  icon: string
+  icon: IconName
 }
 
 export interface Activity {
