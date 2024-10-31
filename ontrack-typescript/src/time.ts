@@ -11,7 +11,7 @@ export const now = ref(today())
 const midnight = computed((): number => new Date(now.value).setHours(0, 0, 0, 0))
 
 const secondsSinceMidnight = computed(
-  (): number => ((now.value as any) - midnight.value) / MILLISECONDS_IN_SECOND
+  (): number => (now.value.getTime() - midnight.value) / MILLISECONDS_IN_SECOND
 )
 
 export function today(): Date {
