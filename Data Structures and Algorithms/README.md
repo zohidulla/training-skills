@@ -166,15 +166,15 @@ function search(nums: number[], target: number): number {
 > Ba'zi algoritmlarning tezligi:
 
 <p align="center">
-<img src="./images/time-complexity.webp>
+<img src="./images/time-complexity.webp">
 </p>
 
 <p align="center">
-<img src="./images/array-sorting-algorithms.jpeg>
+<img src="./images/array-sorting-algorithms.jpeg">
 </p>
 
 > Turli vaqt murakkabliklarida talab qilinadigan operatsiyalar:
 
 <p align="center">
-<img src="./images/operations.png>
+<img src="./images/operations.png">
 </p>
