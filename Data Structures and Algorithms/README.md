@@ -150,3 +150,31 @@ function search(nums: number[], target: number): number {
 > [!NOTE]
 >
 > **Binary search** elementlar soni ko'p bo'lganda samarali bo'ladi, chunki u har bir bosqichda taqqoslash operatsiyalari sonini taxminan yarmiga qisqartiradi.
+
+### Big O notation (katta O belgisi)
+
+<p align="center">
+<img src="./images/bigO.jpeg">
+</p>
+
+- Big O (katta O) - algoritmning tezligini o'lchash uchun mezon
+- Big O eng yomon holatdagi tezlikni o'lchaydi
+- O'lchov birligi - operatsiyalar soni
+- Linear Search uchun O(n)
+- Binary Search uchun O(log2N)
+
+> Ba'zi algoritmlarning tezligi:
+
+<p align="center">
+<img src="./images/time-complexity.webp>
+</p>
+
+<p align="center">
+<img src="./images/array-sorting-algorithms.jpeg>
+</p>
+
+> Turli vaqt murakkabliklarida talab qilinadigan operatsiyalar:
+
+<p align="center">
+<img src="./images/operations.png>
+</p>
