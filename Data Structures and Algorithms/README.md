@@ -209,10 +209,6 @@ console.log("Element at index 0:", arr[0]); // Element at index 0: 0
 > ARRAY va Big O
 
 <p align="center">
-<img src="./images/array-memory.webp">
-</p>
-
-<p align="center">
 <img src="./images/big-o-operations.webp">
 </p>
 
