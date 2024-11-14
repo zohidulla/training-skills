@@ -259,3 +259,86 @@ console.log(dynamicArray.join(" "));
 <p align="center">
 <img src="./images/arrays-difference.jpg">
 </p>
+
+### LINKED LISTS
+
+- **LINKED LISTS** - bu ketma-ketligi xotiradagi joylashuviga bog'liq bo'lmagan **chiziqli** ma'lumotlar **to'plami**
+- Ro'yxatning har bir elementi keyingi elementga **ishora** qiladi
+- Ma'lumotlar tuzilmasi sifatida **LINKED LISTS**ni bir-biriga **bog'langan tugunlar** ko'rinishida tasavvur qilamiz
+- Har bir tugun o'z **qiymatini** va keyingi element **manzilini** saqlaydi
+
+<p align="center">
+<img src="./images/linked_lists.svg">
+</p>
+
+> **LINKED LISTS** - Bog'langan ro'yhatlar
+
+<p align="center">
+<img src="./images/array_memory.png">
+</p>
+
+<p align="center">
+<img src="./images/linkedlists_memory.png">
+</p>
+
+> Linked List Implementation in C
+
+<p align="center">
+<img src="./images/linkedlists_exwithvalues.svg">
+</p>
+
+> **ARRAYS** VS. **LINKED LISTS**
+
+|                                                   | ARRAYS                                                 | LINKED LISTS                                    |
+| ------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------- |
+| AFZALLIKLARI                                      | - Tez o'qish/qidirish                                  | - Tez yozish/o'chirish                          |
+|                                                   | - Har bir element kamroq xotira                        | - O'zgaruvchan hajmga ega                       |
+|                                                   | egallaydi                                              | - Xotiradan samarali foydalanish                |
+| ------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------- |
+| KAMCHILIKLARI                                     | - Sekin qo'shish/o'chirish                             | - Sekin qidirish                                |
+|                                                   | - O'zgarmas hajm (hajm o'zgartirish "qimmat")          | - Har bir tugun xotirada ko'proq                |
+|                                                   | - Xotiradan smarasiz foydalanish                       | joy egallaydi (qiymat + keyingi tugun mamnzili) |
+
+<p align="center">
+<img src="./images/array-vs-linked.png">
+</p>
+
+<p align="center">
+<img src="./images/difference-between-array-vs-linked-list.jpg">
+</p>
+
+> **LINKED LISTS** turlari:
+
+1. **Singly linked lists** - Bir tomonlama ro'yxat
+
+<p align="center">
+<img src="./images/linkedlists_singly.svg">
+</p>
+
+2. **Doubly linked lists** - Ikki marta bog'langan ro'yxat
+
+<p align="center">
+<img src="./images/linkedlists_doubly.svg">
+</p>
+
+3. **Circular linked lists** - Aylana ro'yxat
+
+3.1 **Circular singly linked list**
+
+<p align="center">
+<img src="./images/linkedlists_circsingly.svg">
+</p>
+
+3.2 **Circular doubly linked list**
+
+<p align="center">
+<img src="./images/linkedlists_circdoubly.svg">
+</p>
+
+> [!NOTE]
+>
+> **ABSTRAKT MA'LUMOT TURLARI**
+>
+> - Ma'lumot turiga **dasturlash tilidan uzilgan** holda qarash
+> - Abstrakt ma'lumot turi u saqlaydigan **qiymatlar** va uning ustida
+>   bajarish mumkin bo'lgan **operasiyalar** bilan aniqlanadi
