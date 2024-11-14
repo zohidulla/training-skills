@@ -289,14 +289,15 @@ console.log(dynamicArray.join(" "));
 
 > **ARRAYS** VS. **LINKED LISTS**
 
-|               | ARRAYS                                        | LINKED LISTS                                    |
-| ------------- | --------------------------------------------- | ----------------------------------------------- |
-| AFZALLIKLARI  | - Tez o'qish/qidirish                         | - Tez yozish/o'chirish                          |
-|               | - Har bir element kamroq xotira egallaydi     | - O'zgaruvchan hajmga ega                       |
-|               |                                               | - Xotiradan samarali foydalanish                |
-| KAMCHILIKLARI | - Sekin qo'shish/o'chirish                    | - Sekin qidirish                                |
-|               | - O'zgarmas hajm (hajm o'zgartirish "qimmat") | - Har bir tugun xotirada ko'proq                |
-|               | - Xotiradan smarasiz foydalanish              | joy egallaydi (qiymat + keyingi tugun mamnzili) |
+|               | ARRAYS                                      | LINKED LISTS                                    |
+| ------------- | ------------------------------------------- | ----------------------------------------------- |
+| AFZALLIKLARI  | Tez o'qish/qidirish                         | Tez yozish/o'chirish                            |
+|               | Har bir element kamroq xotira egallaydi     | O'zgaruvchan hajmga ega                         |
+|               |                                             | Xotiradan samarali foydalanish                  |
+| ------------- | ------------------------------------------- | ----------------------------------------------- |
+| KAMCHILIKLARI | Sekin qo'shish/o'chirish                    | Sekin qidirish                                  |
+|               | O'zgarmas hajm (hajm o'zgartirish "qimmat") | Har bir tugun xotirada ko'proq                  |
+|               | Xotiradan smarasiz foydalanish              | joy egallaydi (qiymat + keyingi tugun mamnzili) |
 
 <p align="center">
 <img src="./images/array-vs-linked.png">
