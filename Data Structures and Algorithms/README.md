@@ -292,8 +292,8 @@ console.log(dynamicArray.join(" "));
 |                                                   | ARRAYS                                                 | LINKED LISTS                                    |
 | ------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------- |
 | AFZALLIKLARI                                      | - Tez o'qish/qidirish                                  | - Tez yozish/o'chirish                          |
-|                                                   | - Har bir element kamroq xotira                        | - O'zgaruvchan hajmga ega                       |
-|                                                   | egallaydi                                              | - Xotiradan samarali foydalanish                |
+|                                                   | - Har bir element kamroq xotira egallaydi              | - O'zgaruvchan hajmga ega                       |
+|                                                   |                                                        | - Xotiradan samarali foydalanish                |
 | ------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------- |
 | KAMCHILIKLARI                                     | - Sekin qo'shish/o'chirish                             | - Sekin qidirish                                |
 |                                                   | - O'zgarmas hajm (hajm o'zgartirish "qimmat")          | - Har bir tugun xotirada ko'proq                |
@@ -323,13 +323,13 @@ console.log(dynamicArray.join(" "));
 
 3. **Circular linked lists** - Aylana ro'yxat
 
-3.1 **Circular singly linked list**
+- **Circular singly linked list**
 
 <p align="center">
 <img src="./images/linkedlists_circsingly.svg">
 </p>
 
-3.2 **Circular doubly linked list**
+- **Circular doubly linked list**
 
 <p align="center">
 <img src="./images/linkedlists_circdoubly.svg">
