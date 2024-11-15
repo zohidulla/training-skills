@@ -80,7 +80,7 @@
 <img src="./images/linear.png">
 </p>
 
-> Example linear search in JavaScript
+> Example **Linear search** in JavaScript
 
 ```js
 function search(arr, n, x) {
@@ -126,7 +126,7 @@ result == -1
 4. Biz elementni topmagunimizcha, algoritmni massivning tanlangan yarmiga qo'llaymiz
 5. Agar kerakli element massivda bo'lmasa, biz sikldan chiqamiz
 
-> Example binary search in JavaScript
+> Example **Binary search** in JavaScript
 
 ```js
 function search(nums: number[], target: number): number {
@@ -194,10 +194,10 @@ function search(nums: number[], target: number): number {
 > Array in JavaScript
 
 ```js
-let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; // Initializing an array with values
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // Initializing an array with values
 
 // Accessing elements
-console.log("Element at index 0:", arr[0]); // Element at index 0: 0
+console.log("Element at index 0:", arr[0]); // Element at index 0: 1
 ```
 
 > ARRAY va XOTIRA
@@ -341,3 +341,95 @@ console.log(dynamicArray.join(" "));
 > - Ma'lumot turiga **dasturlash tilidan uzilgan** holda qarash
 > - Abstrakt ma'lumot turi u saqlaydigan **qiymatlar** va uning ustida
 >   bajarish mumkin bo'lgan **operasiyalar** bilan aniqlanadi
+
+> Example **LINKED LISTS** in JavaScript
+
+```js
+class Node {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+
+  // Append: Insert a new node at the end of the linked list
+  append(data) {
+    const newNode = new Node(data);
+    if (!this.head) {
+      this.head = newNode;
+    } else {
+      let current = this.head;
+      while (current.next !== null) {
+        current = current.next;
+      }
+      current.next = newNode;
+    }
+  }
+
+  // Prepend: Insert a new node at the beginning of the linked list
+  prepend(data) {
+    const newNode = new Node(data);
+    newNode.next = this.head;
+    this.head = newNode;
+  }
+
+  // Delete: Remove the first occurrence of a node with the given data
+  delete(data) {
+    if (!this.head) {
+      return; // List is empty
+    }
+    if (this.head.data === data) {
+      this.head = this.head.next;
+      return;
+    }
+    let current = this.head;
+    while (current.next !== null) {
+      if (current.next.data === data) {
+        current.next = current.next.next;
+        return;
+      }
+      current = current.next;
+    }
+  }
+
+  // Search: Find the first occurrence of a node with the given data
+  search(data) {
+    let current = this.head;
+    while (current !== null) {
+      if (current.data === data) {
+        return true; // Data found
+      }
+      current = current.next;
+    }
+    return false; // Data not found
+  }
+
+  // Print: Display the elements of the linked list
+  print() {
+    let current = this.head;
+    const elements = [];
+    while (current !== null) {
+      elements.push(current.data);
+      current = current.next;
+    }
+    console.log(elements.join(" -> "));
+  }
+}
+
+// Example usage:
+const linkedList = new LinkedList();
+linkedList.append(10);
+linkedList.append(20);
+linkedList.append(30);
+linkedList.prepend(5);
+linkedList.print(); // Output: 5 -> 10 -> 20 -> 30
+linkedList.delete(20);
+linkedList.print(); // Output: 5 -> 10 -> 30
+console.log(linkedList.search(10)); // Output: true
+console.log(linkedList.search(50)); // Output: false
+```
