@@ -466,3 +466,81 @@ console.log(selectionSort([3, 5, 1, 2])); // [1, 2, 3, 5]
 <p align="center">
 <img src="./images/selection-sort-complexity.jpeg">
 </p>
+
+### RECURSION - REKURSIYA
+
+> Rekursiya — Funksiya oʻziga oʻzi toʻgʻridan-toʻgʻri yoki qandaydir vosita orqali murojaat qilish jarayoniga rekursiya deyiladi va bunday funksiya rekursiv funksiya deb ataladi
+
+> Rekursiv funksiyalar ikki qismdan iborat bo'ladi:
+
+- Rekursiya sharti (recursive case)
+- To'xtash sharti (base case)
+
+> Exapmle **Recursion** in JavaScript
+
+```js
+// Program to countdown till 1
+
+// recursive function
+function counter(count) {
+  // display count
+  console.log(count);
+
+  // condition for stopping
+  if (count > 1) {
+    // decrease count
+    count = count - 1;
+
+    // call counter with new value of count
+    counter(count);
+  } else {
+    // terminate execution
+    return;
+  }
+}
+
+// access function
+counter(5);
+```
+
+```js
+// recursion while loop
+const factorial = (x) => {
+  if (x < 0) {
+    throw new Error("x must be greater than or equal to 0");
+  }
+
+  if (x <= 1) {
+    return 1;
+  }
+
+  let result = 1;
+
+  while (x > 0) {
+    result *= x;
+    x--;
+  }
+
+  return result;
+};
+```
+
+```js
+// recursive function
+function factorial(num) {
+  // base case
+  // recurse only if num is greater than 0
+  if (num > 1) {
+    return num * factorial(num - 1);
+  } else {
+    return 1;
+  }
+}
+
+let x = 3;
+
+// store result of factorial() in variable
+let y = factorial(x);
+
+console.log(`The factorial of ${x} is ${y}`);
+```
