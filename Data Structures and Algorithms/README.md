@@ -433,3 +433,36 @@ linkedList.print(); // Output: 5 -> 10 -> 30
 console.log(linkedList.search(10)); // Output: true
 console.log(linkedList.search(50)); // Output: false
 ```
+
+### SELECTION SORT - RO'YXATLARNI TARTIBLASH
+
+<p align="center">
+<img src="./images/selection-sort.gif">
+</p>
+
+> Example **Selection Sort** in JavaScript
+
+```js
+function selectionSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let lowest = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[lowest]) {
+        lowest = j;
+      }
+    }
+    if (lowest !== i) {
+      // Swap
+      [arr[i], arr[lowest]] = [arr[lowest], arr[i]];
+    }
+  }
+  return arr;
+}
+console.log(selectionSort([3, 5, 1, 2])); // [1, 2, 3, 5]
+```
+
+> **Selection Sort** performance summary table
+
+<p align="center">
+<img src="./images/selection-sort-complexity.jpeg">
+</p>
