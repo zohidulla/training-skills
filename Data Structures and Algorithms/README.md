@@ -469,6 +469,10 @@ console.log(selectionSort([3, 5, 1, 2])); // [1, 2, 3, 5]
 
 ### RECURSION - REKURSIYA
 
+<p align="center">
+<img src="./images/recursion.jpeg">
+</p>
+
 > Rekursiya — Funksiya oʻziga oʻzi toʻgʻridan-toʻgʻri yoki qandaydir vosita orqali murojaat qilish jarayoniga rekursiya deyiladi va bunday funksiya rekursiv funksiya deb ataladi
 
 > Rekursiv funksiyalar ikki qismdan iborat bo'ladi:
@@ -544,3 +548,188 @@ let y = factorial(x);
 
 console.log(`The factorial of ${x} is ${y}`);
 ```
+
+### THE STACK
+
+<p align="center">
+<img src="./images/stack.png">
+</p>
+
+- **LIFO** Ma'lumotlar to'plami
+- **LIFO (Last In First Out)** - Oxirgi kirgan, birinchi chiqadi
+- Ma'lumotlar to'plam ustiga qo'shiladi va to'plam usridan olinadi
+
+> The Stack ustida amallar
+
+- Push - element qo'shish
+- Pop - element sug'urib olish
+- isEmpty - to'plam bo'sh ekanligini tekshirish
+- isFull - to'plam to'la ekanligini tekshirish
+- Peek - eng yuqoridagi element qiymatini ko'rish
+
+<p align="center">
+<img src="./images/stack-action.webp">
+</p>
+
+<p align="center">
+<img src="./images/stack-complexity.jpg">
+</p>
+
+> Example **Stack** in JavaScript
+
+```js
+// Stack class
+class Stack {
+  // Array is used to implement stack
+  constructor() {
+    this.items = [];
+  }
+
+  // Functions to be implemented
+  // push(item)
+  // pop()
+  // peek()
+  // isEmpty()
+  // printStack()
+}
+
+// push function
+push(element);
+{
+  // push element into the items
+  this.items.push(element);
+}
+
+// pop function
+pop();
+{
+  // return top most element in the stack
+  // and removes it from the stack
+  // Underflow if stack is empty
+  if (this.items.length == 0) return "Underflow";
+  return this.items.pop();
+}
+
+// peek function
+peek();
+{
+  // return the top most element from the stack
+  // but does'nt delete it.
+  return this.items[this.items.length - 1];
+}
+
+// isEmpty function
+isEmpty();
+{
+  // return true if stack is empty
+  return this.items.length == 0;
+}
+
+// printStack function
+printStack();
+{
+  let str = "";
+  for (let i = 0; i < this.items.length; i++) str += this.items[i] + " ";
+  return str;
+}
+```
+
+```js
+// creating object for stack class
+let stack = new Stack();
+
+// testing isEmpty and pop on an empty stack
+
+// returns false
+console.log(stack.isEmpty());
+
+// returns Underflow
+console.log(stack.pop());
+
+// Adding element to the stack
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+// Printing the stack element
+// prints [10, 20, 30]
+console.log(stack.printStack());
+
+// returns 30
+console.log(stack.peek());
+
+// returns 30 and remove it from stack
+console.log(stack.pop());
+
+// returns [10, 20]
+console.log(stack.printStack());
+```
+
+```js
+class Stack {
+  constructor() {
+    this.items = [];
+  }
+
+  push(element) {
+    this.items.push(element);
+  }
+
+  pop() {
+    if (this.items.length === 0) {
+      return "Underflow";
+    }
+    return this.items.pop();
+  }
+}
+
+function postFixEvaluation(exp) {
+  let stack = new Stack();
+  for (let i = 0; i < exp.length; i++) {
+    let c = exp[i];
+    if (!isNaN(c)) stack.push(c - "0");
+    else {
+      let val1 = stack.pop();
+      let val2 = stack.pop();
+      if (val1 == "Underflow" || val2 == "Underflow")
+        return "Can not perform postfix evaluation";
+      switch (c) {
+        case "+":
+          stack.push(val2 + val1);
+          break;
+        case "-":
+          stack.push(val2 - val1);
+          break;
+        case "/":
+          stack.push(val2 / val1);
+          break;
+        case "*":
+          stack.push(val2 * val1);
+          break;
+      }
+    }
+  }
+
+  return stack.pop();
+}
+
+// calling the above method
+// returns 9
+console.log(postFixEvaluation("235*+8-"));
+
+// returns "Can not perform postfix evaluation"
+console.log(postFixEvaluation("23*+"));
+```
+
+> **Stack va Rekursiya**
+
+- Rekursiv funksiyalar ham stack asosida ishlaydi
+- Dasturlashda bu **call stack** yoki **program stack** deyiladi
+
+<p align="center">
+<img src="./images/call-stack.jpg">
+</p>
+
+<p align="center">
+<img src="./images/call-stack-javascript.png">
+</p>
