@@ -733,3 +733,51 @@ console.log(postFixEvaluation("23*+"));
 <p align="center">
 <img src="./images/call-stack-javascript.png">
 </p>
+
+### QUICKSORT
+
+<p align="center">
+<img src="./images/quicksort.webp">
+</p>
+
+> Complexity Analysis of Quick Sort
+
+<p align="center">
+<img src="./images/quicksort-time-space.png">
+</p>
+
+> **DIVIDE & CONQUER** - Bo'lib tashlab, hukmronlik qil
+
+- Ba'zida muammolarga yechim ko'rinmaydi
+- Yaxshi dasturchi muammo oldida yengilmaydi
+- Katta muammoni mayda muammolarga bo'lib olib, har bir muammoni alohida hal qiladi
+- Bu **DIVIDE & CONQUER** metodi deb ataladi
+- **DIVIDE & CONQUER** metodi juda ko'p muammolarga yechim bo'lishi mumkin
+- Keyingi safar murakkab muammoga to'qnash kelganingizda shu metodni esga soling
+
+<p align="center">
+<img src="./images/Working-of-Divide-and-Conquer-Algorithm.webp">
+</p>
+
+> Examples of Divide and Conquer Algorithm in JavaScript
+
+```js
+// Function to find the maximum number
+// in a given array.
+function findMax(a, lo, hi) {
+  // If lo becomes greater than hi, then return minimum
+  // integer possible
+  if (lo > hi) return Number.MIN_VALUE;
+  // If the subarray has only one element, return the
+  // element
+  if (lo === hi) return a[lo];
+  const mid = Math.floor((lo + hi) / 2);
+  // Get the maximum element from the left half
+  const leftMax = findMax(a, lo, mid);
+  // Get the maximum element from the right half
+  const rightMax = findMax(a, mid + 1, hi);
+  // Return the maximum element from the left and right
+  // half
+  return Math.max(leftMax, rightMax);
+}
+```
