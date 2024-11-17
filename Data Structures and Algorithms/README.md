@@ -734,19 +734,7 @@ console.log(postFixEvaluation("23*+"));
 <img src="./images/call-stack-javascript.png">
 </p>
 
-### QUICKSORT
-
-<p align="center">
-<img src="./images/quicksort.webp">
-</p>
-
-> Complexity Analysis of Quick Sort
-
-<p align="center">
-<img src="./images/quicksort-time-space.png">
-</p>
-
-> **DIVIDE & CONQUER** - Bo'lib tashlab, hukmronlik qil
+### DIVIDE & CONQUER - Bo'lib tashlab, hukmronlik qil
 
 - Ba'zida muammolarga yechim ko'rinmaydi
 - Yaxshi dasturchi muammo oldida yengilmaydi
@@ -759,7 +747,7 @@ console.log(postFixEvaluation("23*+"));
 <img src="./images/Working-of-Divide-and-Conquer-Algorithm.webp">
 </p>
 
-> Examples of Divide and Conquer Algorithm in JavaScript
+> Examples of **Divide and Conquer** Algorithm in JavaScript
 
 ```js
 // Function to find the maximum number
@@ -780,4 +768,133 @@ function findMax(a, lo, hi) {
   // half
   return Math.max(leftMax, rightMax);
 }
+```
+
+### QUICKSORT
+
+- **Quicksort** ham ma'lumotlarni **tartiblash** algoritmi
+- **Selection sortga** nisbatan bir necha barobar tezroq
+- **Divide and Conquer** yordamida ishlaydi
+
+<p align="center">
+<img src="./images/quicksort.webp">
+</p>
+
+> Complexity Analysis of Quick Sort
+
+<p align="center">
+<img src="./images/quicksort-time-space.png">
+</p>
+
+> Examples **Quick Sort** **Select the First element as a pivot** in JavaScript
+
+```js
+function quicksort(array) {
+  if (array.length <= 1) {
+    return array;
+  }
+
+  var pivot = array[0];
+
+  var left = [];
+  var right = [];
+
+  for (var i = 1; i < array.length; i++) {
+    array[i] < pivot ? left.push(array[i]) : right.push(array[i]);
+  }
+
+  return quicksort(left).concat(pivot, quicksort(right));
+}
+
+var unsorted = [23, 45, 16, 37, 3, 99, 22];
+var sorted = quicksort(unsorted);
+
+console.log("Sorted array", sorted);
+```
+
+> Examples **Quick Sort** **Select the Last element as a pivot** in JavaScript
+
+```js
+function quicksort(array) {
+  if (array.length <= 1) {
+    return array;
+  }
+
+  var pivot = array[array.length - 1];
+
+  var left = [];
+  var right = [];
+
+  for (var i = 1; i < array.length; i++) {
+    array[i] < pivot ? left.push(array[i]) : right.push(array[i]);
+  }
+
+  return quicksort(left).concat(pivot, quicksort(right));
+}
+
+var unsorted = [23, 45, 16, 37, 3, 99, 22];
+var sorted = quicksort(unsorted);
+
+console.log("Sorted array", sorted);
+```
+
+> Examples **Quick Sort** **Select the Middle element as a pivot** in JavaScript
+
+```js
+function quickSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  let pivot = arr[Math.floor(arr.length / 2)];
+  let left = [];
+  let right = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (i !== Math.floor(arr.length / 2)) {
+      if (arr[i] < pivot) {
+        left.push(arr[i]);
+      } else {
+        right.push(arr[i]);
+      }
+    }
+  }
+
+  return quickSort(left).concat(pivot, quickSort(right));
+}
+
+// Example usage
+let array = [10, 7, 8, 9, 1, 5];
+console.log("Sorted array:", quickSort(array));
+```
+
+> Examples **Quick Sort** **Select a Random element as a pivot** in JavaScript
+
+```js
+function quickSort(arr) {
+  if (arr.length < 2) {
+    return arr;
+  }
+  const pivot = arr[Math.floor(Math.random() * arr.length)];
+
+  let left = [];
+  let right = [];
+  let equal = [];
+
+  for (let val of arr) {
+    if (val < pivot) {
+      left.push(val);
+    } else if (val > pivot) {
+      right.push(val);
+    } else {
+      equal.push(val);
+    }
+  }
+  return [...quickSort(left), ...equal, ...quickSort(right)];
+}
+
+// Unsorted Array
+const arr = [6, 9, 2, 5, 0, 7, 3, 1, 8, 4];
+
+console.log(quickSort(arr)); // [0,1,2,3,4,5,6,7,8,9]
 ```
