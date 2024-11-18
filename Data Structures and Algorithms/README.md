@@ -898,3 +898,177 @@ const arr = [6, 9, 2, 5, 0, 7, 3, 1, 8, 4];
 
 console.log(quickSort(arr)); // [0,1,2,3,4,5,6,7,8,9]
 ```
+
+### BUBBLE SORT
+
+- Eng sodda tartiblash algoritmi
+- Qo'shni elementlarni solishtirish va o'rnini almashtirish orqali ishlaydi
+
+<p align="center">
+<img src="./images/bubble-sort-slide.webp">
+</p>
+
+> Example **BUBBLE SORT** in JavaScript
+
+```js
+// Optimized javaScript implementation
+// of Bubble sort
+function bubbleSort(arr, n) {
+  var i, j, temp;
+  var swapped;
+  for (i = 0; i < n - 1; i++) {
+    swapped = false;
+    for (j = 0; j < n - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        // Swap arr[j] and arr[j+1]
+        temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+        swapped = true;
+      }
+    }
+
+    // IF no two elements were
+    // swapped by inner loop, then break
+    if (swapped == false) break;
+  }
+}
+
+// Function to print an array
+function printArray(arr, size) {
+  var i;
+  for (i = 0; i < size; i++) console.log(arr[i] + " ");
+}
+
+// Driver program
+var arr = [64, 34, 25, 12, 22, 11, 90];
+var n = arr.length;
+bubbleSort(arr, n);
+console.log("Sorted array: ");
+printArray(arr, n);
+```
+
+> Complexity Analysis of Bubble Sort:
+> Time Complexity: O(n2)
+> Auxiliary Space: O(1)
+
+> **Bubble Sort** afzalliklari:
+
+- **Bubble Sort** tushunish va amalga oshirish oson.
+- Bu qo'shimcha xotira maydonini talab qilmaydi.
+- Bu barqaror tartiblash algoritmidir, ya'ni bir xil kalit qiymatiga ega bo'lgan elementlar tartiblangan chiqishda o'zlarining nisbiy tartibini saqlab turadi.
+
+- **Bubble Sort** kamchiliklari:
+- **Bubble Sort** tartiblash O(n2) vaqt murakkabligiga ega, bu esa katta maʼlumotlar toʻplamlari uchun uni juda sekinlashtiradi.
+- **Bubble Sort** solishtirishga asoslangan tartiblash algoritmidir, ya'ni u kirish ma'lumotlar to'plamidagi elementlarning nisbiy tartibini aniqlash uchun taqqoslash operatorini talab qiladi. Ayrim hollarda algoritm samaradorligini cheklashi mumkin.
+
+### MERGE SORT
+
+- **Divide and Conquer** usuli yordamida ishlaydigan tartiblash algoritmi
+- Ro'yxatni ikkiga bo'lib, ikki tarafni alohida tartiblab jamlash asosida ishlaydi
+
+<p align="center">
+<img src="./images/merge-sort.webp">
+</p>
+
+<p align="center">
+<img src="./images/Merge-Sort-1.webp">
+</p>
+<p align="center">
+<img src="./images/Merge-Sort-2.webp">
+</p>
+<p align="center">
+<img src="./images/Merge-Sort-3.webp">
+</p>
+<p align="center">
+<img src="./images/Merge-Sort-4.webp">
+</p>
+
+> Example **MERGE SORT** in JavaScript
+
+```js
+function merge(arr, left, mid, right) {
+  const n1 = mid - left + 1;
+  const n2 = right - mid;
+
+  // Create temp arrays
+  const L = new Array(n1);
+  const R = new Array(n2);
+
+  // Copy data to temp arrays L[] and R[]
+  for (let i = 0; i < n1; i++) L[i] = arr[left + i];
+  for (let j = 0; j < n2; j++) R[j] = arr[mid + 1 + j];
+
+  let i = 0,
+    j = 0;
+  let k = left;
+
+  // Merge the temp arrays back into arr[left..right]
+  while (i < n1 && j < n2) {
+    if (L[i] <= R[j]) {
+      arr[k] = L[i];
+      i++;
+    } else {
+      arr[k] = R[j];
+      j++;
+    }
+    k++;
+  }
+
+  // Copy the remaining elements of L[], if there are any
+  while (i < n1) {
+    arr[k] = L[i];
+    i++;
+    k++;
+  }
+
+  // Copy the remaining elements of R[], if there are any
+  while (j < n2) {
+    arr[k] = R[j];
+    j++;
+    k++;
+  }
+}
+
+function mergeSort(arr, left, right) {
+  if (left >= right) return;
+
+  const mid = Math.floor(left + (right - left) / 2);
+  mergeSort(arr, left, mid);
+  mergeSort(arr, mid + 1, right);
+  merge(arr, left, mid, right);
+}
+
+function printArray(arr) {
+  console.log(arr.join(" "));
+}
+
+// Driver code
+const arr = [12, 11, 13, 5, 6, 7];
+console.log("Given array is");
+printArray(arr);
+
+mergeSort(arr, 0, arr.length - 1);
+
+console.log("\nSorted array is");
+printArray(arr);
+```
+
+> Complexity Analysis of **Merge Sort**:
+
+- Time Complexity:
+  - Best Case: O(n log n), When the array is already sorted or nearly sorted.
+  - Average Case: O(n log n), When the array is randomly ordered.
+  - Worst Case: O(n log n), When the array is sorted in reverse order.
+- Auxiliary Space: O(n), Additional space is required for the temporary array used during merging.
+
+> **Merge Sort** afzalliklari:
+
+- Barqarorlik: **Merge Sort** barqaror tartiblash algoritmidir, ya'ni u kirish massividagi teng elementlarning nisbiy tartibini saqlaydi.
+- Kafolatlangan eng yomon ishlash: **Merge Sort** eng yomon vaqt murakkabligi O(N logN) ga teng, ya'ni u hatto katta ma'lumotlar to'plamlarida ham yaxshi ishlaydi.
+- Amalga oshirish oson: **Divide and Conquer** yondashuvi oddiy.
+- Tabiiy parallel: Biz mustaqil ravishda pastki qatorlarni birlashtiramiz, bu esa uni parallel ishlov berish uchun mos qiladi.
+  > **Merge Sort** kamchiliklari:
+- Bo'shliqning murakkabligi: **Merge Sort** saralash jarayonida birlashtirilgan kichik massivlarni saqlash uchun qo'shimcha xotira talab qiladi.
+- Joyda emas: **Merge Sort** joyida tartiblash algoritmi emas, ya'ni tartiblangan ma'lumotlarni saqlash uchun qo'shimcha xotira talab qilinadi. Bu xotiradan foydalanish tashvish tug'diradigan ilovalarda kamchilik bo'lishi mumkin.
+- Umuman **QuickSort** dan sekinroq. **QuickSort** keshga qulayroq, chunki u joyida ishlaydi.
