@@ -905,7 +905,13 @@ console.log(quickSort(arr)); // [0,1,2,3,4,5,6,7,8,9]
 - Qo'shni elementlarni solishtirish va o'rnini almashtirish orqali ishlaydi
 
 <p align="center">
-<img src="./images/bubble-sort-slide.webp">
+<img src="./images/bubble-sort-1.webp">
+</p>
+<p align="center">
+<img src="./images/bubble-sort-2.webp">
+</p>
+<p align="center">
+<img src="./images/bubble-sort-3.webp">
 </p>
 
 > Example **BUBBLE SORT** in JavaScript
@@ -949,8 +955,9 @@ printArray(arr, n);
 ```
 
 > Complexity Analysis of Bubble Sort:
-> Time Complexity: O(n2)
-> Auxiliary Space: O(1)
+
+- Time Complexity: O(n2)
+- Auxiliary Space: O(1)
 
 > **Bubble Sort** afzalliklari:
 
@@ -1068,7 +1075,9 @@ printArray(arr);
 - Kafolatlangan eng yomon ishlash: **Merge Sort** eng yomon vaqt murakkabligi O(N logN) ga teng, ya'ni u hatto katta ma'lumotlar to'plamlarida ham yaxshi ishlaydi.
 - Amalga oshirish oson: **Divide and Conquer** yondashuvi oddiy.
 - Tabiiy parallel: Biz mustaqil ravishda pastki qatorlarni birlashtiramiz, bu esa uni parallel ishlov berish uchun mos qiladi.
-  > **Merge Sort** kamchiliklari:
+
+> **Merge Sort** kamchiliklari:
+
 - Bo'shliqning murakkabligi: **Merge Sort** saralash jarayonida birlashtirilgan kichik massivlarni saqlash uchun qo'shimcha xotira talab qiladi.
 - Joyda emas: **Merge Sort** joyida tartiblash algoritmi emas, ya'ni tartiblangan ma'lumotlarni saqlash uchun qo'shimcha xotira talab qilinadi. Bu xotiradan foydalanish tashvish tug'diradigan ilovalarda kamchilik bo'lishi mumkin.
 - Umuman **QuickSort** dan sekinroq. **QuickSort** keshga qulayroq, chunki u joyida ishlaydi.
