@@ -1081,3 +1081,105 @@ printArray(arr);
 - Bo'shliqning murakkabligi: **Merge Sort** saralash jarayonida birlashtirilgan kichik massivlarni saqlash uchun qo'shimcha xotira talab qiladi.
 - Joyda emas: **Merge Sort** joyida tartiblash algoritmi emas, ya'ni tartiblangan ma'lumotlarni saqlash uchun qo'shimcha xotira talab qilinadi. Bu xotiradan foydalanish tashvish tug'diradigan ilovalarda kamchilik bo'lishi mumkin.
 - Umuman **QuickSort** dan sekinroq. **QuickSort** keshga qulayroq, chunki u joyida ishlaydi.
+
+### HASH TABLES
+
+<p align="center">
+<img src="./images/Components-of-Hashing.webp">
+</p>
+
+- **Eng foydali va ko'p** ishlatiladigan ma'lumotlar tuzilmasi
+- Aksar dasturlash tillarida **tadbiq qilingan**
+  - Hash maps
+  - Maps
+  - Dictionaries (Python)
+
+> Hash funksiya
+
+- Hash funksiya **matnni** takrorlanmas, noyob **songa** o'tkazib beradi
+- Hash funksiyalarning **turi ko'p**
+- Yaxshi hash funksiya belgilari:
+  - **Bir xil matn** uchun **bir hil son** qaytaradi
+  - **Xar xil matnlar** uchun **xar xil son** qaytaradi
+- Hash funksiya **sizga kerakli oraliqdagi** sonlarni qaytaradi
+
+> Ikki yoki undan ortiq kalitlar bir xil massiv indeksiga ishora qilganda **Collisions** sodir bo'ladi.
+
+<p align="center">
+<img src="./images/collision-in-hashing.webp">
+</p>
+<p align="center">
+<img src="./images/chain-hashing-1.png">
+</p>
+
+> Example Implementation of Hash Table in JavaScript
+
+```js
+class Hash {
+  constructor(V) {
+    this.BUCKET = V; // No. of buckets
+    this.table = new Array(V); // Pointer to an array containing buckets
+    for (let i = 0; i < V; i++) {
+      this.table[i] = new Array();
+    }
+  }
+
+  // inserts a key into hash table
+  insertItem(x) {
+    const index = this.hashFunction(x);
+    this.table[index].push(x);
+  }
+
+  // deletes a key from hash table
+  deleteItem(key) {
+    // get the hash index of key
+    const index = this.hashFunction(key);
+
+    // find the key in (index)th list
+    const i = this.table[index].indexOf(key);
+
+    // if key is found in hash table, remove it
+    if (i !== -1) {
+      this.table[index].splice(i, 1);
+    }
+  }
+
+  // hash function to map values to key
+  hashFunction(x) {
+    return x % this.BUCKET;
+  }
+
+  // function to display hash table
+  displayHash() {
+    for (let i = 0; i < this.BUCKET; i++) {
+      let str = `${i}`;
+      for (let j = 0; j < this.table[i].length; j++) {
+        str += ` --> ${this.table[i][j]}`;
+      }
+      console.log(str);
+    }
+  }
+}
+
+// Driver program
+const a = [15, 11, 27, 8, 12];
+const n = a.length;
+
+// insert the keys into the hash table
+const h = new Hash(7); // 7 is count of buckets in hash table
+for (let i = 0; i < n; i++) {
+  h.insertItem(a[i]);
+}
+
+// delete 12 from hash table
+h.deleteItem(12);
+
+// display the Hash table
+h.displayHash();
+```
+
+> Complexity Analysis of a Hash Table
+
+<p align="center">
+<img src="./images/hash-time-complexity.jpg">
+</p>
