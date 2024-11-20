@@ -1183,3 +1183,39 @@ h.displayHash();
 <p align="center">
 <img src="./images/hash-time-complexity.jpg">
 </p>
+
+# GRAPH DATA STRUCTURE
+
+- **GRAPH** - bu cho'qqilar(vertices) va qirralardan(edges) iborat chiziqli bo'lmagan ma'lumotlar strukturasi.
+- **GRAPH** cho'qqilar(vertices) to'plami ( V ) va qirralardan(edges) to'plamidan ( E ) iborat. **GRAPH** G(V, E) bilan belgilanadi.
+
+<p align="center">
+<img src="./images/graph-data-structure.webp">
+</p>
+
+> Grafik ma'lumotlar strukturasining komponentlari:
+
+- Vertices: Vertices - bu grafikning asosiy birliklari.
+  Ba'zan, cho'qqilar(vertices) cho'qqi yoki tugunlar sifatida ham tanilgan.
+  Har bir tugun/cho'qqi (node/vertex) etiketli yoki yorliqsiz(labeled or unlabelled) bo'lishi mumkin.
+- Edges: Edges chiziladi yoki grafikning ikkita tugunini ulash uchun ishlatiladi.
+  Yo'naltirilgan grafikdagi juft tugunlarni buyurtma qilish mumkin.
+  Qirralar(edges) har qanday ikkita tugunni istalgan usulda ulashi mumkin.
+  Hech qanday qoidalar yo'q. Ba'zan qirralarning yoylari sifatida ham tanilgan.
+  Har bir chekka etiketli/yorliqsiz (labelled/unlabelled) bo'lishi mumkin.
+
+# Breadth-First Search (BFS) Algorithms
+
+- Breadth-first qidirish algoritmi **Graphlar** bilan ishlaydi
+- Ikki savolga javob beradi:
+  1. A va B node orasida yo'l bormi?
+  2. A dan B ga eng yaqin yo'l qaysi?
+
+> **GRAPH** dasturlash
+
+- Yo'naltirilgan **Graph (directed graph)**
+- Yo'naltirilmagan **Graph (undirected graph)**
+
+<p align="center">
+<img src="./images/graph-directed.jpg">
+</p>
