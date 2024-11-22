@@ -1551,3 +1551,52 @@ bfsDisconnected(adj);
 <p align="center">
 <img src="./images/bfs-complexity.jpg">
 </p>
+
+### Dijkstra algoritmi
+
+> Dijkstra's algorithm to find the shortest path between a and b.
+
+<p align="center">
+<img src="./images/Dijkstra_Animation.gif">
+</p>
+
+> Illustration of Dijkstra's algorithm finding a path from a start node (lower left, red)
+> to a target node (upper right, green) in a robot motion planning problem.
+
+<p align="center">
+<img src="./images/Dijkstras_progress_animation.gif">
+</p>
+
+> A demo of Dijkstra's algorithm based on Euclidean distance. Red lines are the shortest path covering, i.e.,
+> connecting u and prev[u]. Blue lines indicate where relaxing happens, i.e.,
+> connecting v with a node u in Q, which gives a shorter path from the source to v.
+
+<p align="center">
+<img src="./images/DijkstraDemo.gif">
+</p>
+
+> **Dijkstra algoritmi** vaznli graphlar(**Weighted Graph**)da **eng arzon** yo'lni topish uchun ishlatiladi
+
+- masofa
+- narx
+- vaqt
+- vazn
+- va boshqalar
+
+> **Dijkstra algoritmi** **manfiy vaznli graph**lar bilan ishlamaydi
+
+> **Dijkstra algoritmi** faqat **yo'naltirilgan Cyclic graph**lar bilan ishlaydi
+
+> **Breadth-First vs. Dijkstra**
+
+| Breadth-First                               | Dijkstra                                             |
+| ------------------------------------------- | ---------------------------------------------------- |
+| Bosh tugundan oxirgi tugungacha             | Har qadamda **eng arzon** tugunga o'tadi             |
+| **barcha tugunlarni** ko'rib chiqadi        |                                                      |
+| ------------------------------------------- | ---------------------------------------------------- |
+| Faqatgina **vaznsiz** (yoki bir hil vaznli) | **Musbat vaznli va vaznsiz** graphlar bilan ishlaydi |
+| graphlar bilan ishlaydi                     |                                                      |
+| ------------------------------------------- | ---------------------------------------------------- |
+| Natija: **Eng qisqa** yo'l                  | Natija: **Eng arzon** yo'l                           |
+| ------------------------------------------- | ---------------------------------------------------- |
+| Big O: **O(N+E)**                           | Big O: **O(N+E(LogN))**                              |
