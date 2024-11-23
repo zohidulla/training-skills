@@ -1600,3 +1600,26 @@ bfsDisconnected(adj);
 | Natija: **Eng qisqa** yo'l                  | Natija: **Eng arzon** yo'l                           |
 | ------------------------------------------- | ---------------------------------------------------- |
 | Big O: **O(N+E)**                           | Big O: **O(N+E(LogN))**                              |
+
+### GREEDY ALGORITHMS - OCHKO'Z ALGORITMLAR
+
+<p align="center">
+<img src="./images/Greedy_algorithm.svg">
+</p>
+
+- Ba'zi muammolar **hech qanday** algoritmga tushmaydi
+- Shunday holatda bizga **ochko'z algoritmlar** yordam beradi
+- Ochko'z algoritmlar **har qadamga** eng **optimal** yechimni tanlash
+- Har doim ham to'g'ri yechimni bermaydi
+- The Knapsack Problem (To'rvaxalta muammosi)
+- Ochko'z algoritmlar har doim ham **eng to'g'ri** yechimni **bermaydi**
+- Lekin **amalga oshirish (dasturlash) oson**
+- Agar to'g'ri yechimni topish juda **ko'p vaqt (resurs) talab qilsa**
+  qoniqarli yechimni topish uchun Greedy Algoritmlarni **tanlang**
+
+> **The set-covering problem**
+
+- To'plamni yopish muammosi
+<p align="center">
+<img src="./images/SetCover.svg.png">
+</p>
