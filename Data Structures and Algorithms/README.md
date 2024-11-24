@@ -1633,7 +1633,7 @@ NP-to'liq muammolarning mohiyati: hal qilish qiyin, lekin tekshirish oson.
 > **TRAVELING SALESPERSON PROBLEM**
 
 <p align="center">
-<img src="./images/travelling_salesman_problem.svg">
+<img src="./images/travelling_salesman_problem.svg.png">
 </p>
 
 > Musofir savdogar muammosi:
