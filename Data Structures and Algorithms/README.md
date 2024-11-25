@@ -1729,3 +1729,27 @@ console.log("The cost of most efficient tour " + ans);
 // This code is contributed by Potta Lokesh
 // The cost of most efficient tour = 80
 ```
+
+### DYNAMIC PROGRAMMING
+
+- **Dynamic Programming** - Muammoni **bir nechta mayda** muammolarga bo'lib,
+  ularga yechim topish orqali katta muammoga yechim topish usuli
+- The Knapsack Problem:
+- Optimal yechim: Dynamic Programming
+  - Muammoni bir nechta mayda muammolarga bo'lamiz
+- Longest common substring
+- Dynamic Programming chegaralangan vaqt (resurs) bilan optimal yechim topish imkonini beradi
+- Dynamic Programming muammoni mayda muammolarga bo'lish orqali yechim qidiradi
+  - Mayda muammolar bir-biridan **mustaqil bo'lishi shart!**
+- Dynamic Programming jadval tuzishdan boshlanadi
+  - Jadvalning har bir katagi alohida muammo
+  - Katagdagi qiymatlar siz optimizatsiya qilmoqchi bo'lgan qiymat (narx, masofa, vaqt, ...)
+- **Barcha muammolarga tushadigan yagona formula yo'q!**
+
+> **Dynamic Programming** qayerda ishlatiladi?
+
+- DNK solishtirishda (odamlar, hayvonlar, kasalliklar)
+- Imloviy xatolarni to'g'rilaydigan dasturlarda (Levenshtein masofasi)
+- Fayllar, web sahifalar, rasm va hujjatlarni solishtirishda
+- Matn muharrirlarida
+- va yana minglab muammolarda qo'llash mumkin
