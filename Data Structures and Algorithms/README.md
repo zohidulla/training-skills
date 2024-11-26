@@ -1753,3 +1753,140 @@ console.log("The cost of most efficient tour " + ans);
 - Fayllar, web sahifalar, rasm va hujjatlarni solishtirishda
 - Matn muharrirlarida
 - va yana minglab muammolarda qo'llash mumkin
+
+### KLASSIFIKASIYA
+
+### K-nearest neighbor algorithms
+
+### REGRESSIYA
+
+### K-nearest neighbor algorithms
+
+- K-NN algoritmini klassifikasiya va regressiya uchun qo'llash mumkin
+- K-NN to'g'ri ishlashi uchun parametrlarni to'g'ri tanlash o'ta muhim
+  - Bu ham alohida muammo va universal yechim yo'q
+- Masofani hisoblash uchun boshqa, aniqroq formulalar ham bor
+  (Masalan: kosinus o'xshashlik - cosine similarity)
+
+### **MACHINE LEARNING**
+
+- **Machine Learning** bu - mavjud ma'lumotlar asosida kompyuterlarni turli
+  muammolarga algoritm tuzishni **o'rgatish**
+- **Machine Learning** zamonaviy **Sun'iy Intellekt** dasturlarining asosi hisoblanadi
+- **K-NN Machine Learning**da keng qo'llanuvchi algoritmlardan biri
+- **OCCR (optical character recognition)** - rasmni yoki qo'lyozmani kompyuter matniga o'zgartirish texnologiyasi
+  (Bu yerda ham **K-NN ishlatiladi** va parametr sifatida belgidagi to'g'ri va egri chiziqlar va kesishmalar olinadi)
+- Object detection / identification - obyektlarni tanish
+- Spam filtr
+- Jarayonlarni bashorat qilish
+
+### TREES (SHAJARA) MA'LUMOTLAR TUZILMASI
+
+- Array ma'lumotlar tuzilmasi
+  - Afzalligi: **Binary search** yordamida tez qidirish
+  - Kamchiligi: Har ma'lumot qo'shgandan so'ng **arrayni tartiblash (sorting)**
+- Muammo: Ma'lumotlani **tartiblangan holda** qo'shish mumkinmi?
+- Yechim: **Binary Search Tree** ma'lumotlar tuzilmasi
+
+### Binary Search Tree
+
+<p align="center">
+<img src="./images/binary-search-tree.png">
+</p>
+
+> Big O
+
+|                   | Array    | Binary Search Tree |
+| ----------------- | -------- | ------------------ |
+| Qidirish          | O(log2n) | O(log2n)           |
+| Element qo'shish  | O(n)     | O(log2n)           |
+| Element o'chirish | O(n)     | O(log2n)           |
+
+- Binary Search Tree kamchiligi:
+
+  - Muvozanatni yo'qotish
+
+- Boshqa (tree) shajara turlari:
+  - Red-black tree (o'zini muvozanatga keltiradi)
+  - B-tree (ma'lumotlar bazasida ishlatiladi)
+  - Heap
+  - Splay tree
+
+### INVERTED INDEXES MA'LUMOTLAR TUZILMASI
+
+### FURYE ALMASHTIRISHLARI ALGORITMI
+
+- Signallarga ishlov berish uchun ishlatiladi
+- Audioni alohida chastotalarga ajratish
+- Rasmlarga ishlov berish
+- Jarayonlarni bashorat qilish
+- Turli sensorlar
+- DNK tahlili va hokazo
+
+### PARALLEL ALGORITMLAR
+
+- Ulkan ma'lumotlarga ishlov berishni tezlashtirish usuli
+- Zamonaviy kompyuterlarga bir nechta yadroli prosessorlar o'rnatilgan
+- Katta vazifani bir nechta mayda vazifalarga bo'lib parallel bajarish natijaga tezroq olib keladi
+- Lekin parallel algoritmlarni yaratish oson emas:
+  - Jarayonlar bir-biriga bog'liq bo'lishi mumkin
+  - Parallel bajarilgan vazifalarni jamlash vaqt oladi
+  - Jarayonlarni muvozanat qilish qiyinligi
+
+### BLOOM FILTERS
+
+- Google kuniga millionlab saytlarni indeksasiya qiladi
+- Har kuni yana millionlab yangi sahifalar (video/rasm/post) yaratiladi
+- Bitta sahifani qayta indeksasiya qilmaslik uchun indeksasiya qilingan saytlar ro'yxatini saqlab borish kerak
+- Oson yo'li indeksasiya qilingan saytlarni hash jadvali ko'rinishida sqlash
+  - Hash jadvalidan o'qish vaqti O(1)ga teng
+  - Muammo: Milliardlab saytlar haqidagi jadvalni saqlash uchun terabaytlab(TB) joy kerak
+  - Yechim: Bloom filter
+- Bloom filter bu ehtimoliy (probabilistic) ma'lumotlar tuzilmasi
+- Hash jadvali o'rniga Bloom filterga sayt manzilini berish va bu sayt indeksasiya qilinganligi ehtimolligi bilish mumkin
+  - Misol: 87% ehtimollik bilan indeksasiya qilingan
+- Bloom filterlari 100% aniqlik bermaydi, lekin juda kam joy egallaydi
+
+### HyperLogLog
+
+- Amazon e-bozori foydalanuvchi ko'rgan (izlagan) mahsulotlar ro'yxatini saqlab borishi kerak
+- Millionlab foydalanuvchilar milliardlab mahsulotlar qidiradi
+- Har bir foydalanuvchi haqida bu ma'lumotlarni saqlab borish
+  (logging) xotirada juda katta joy talab qiladi
+- Yechim: HyperLogLog
+- Bu yechim ham Bloom Filter ka'bi ehtimollar nazariyasiga asoslangan va tahminiy yechim qaytaradi
+
+### Secure Hash Algorithm (SHA)
+
+- Hash jadval
+- SHA berilgan matnni boshqa noyob matnga o'zgartiradi
+- Ishlatilishi:
+  - Katta fayllarni solishtirish
+  - Parollarni saqlash/solishtirish (Hash qiymatdan parolni tiklab bo'lmaydi)
+  * Mualliflik huquqini himoya qilish
+- Kuchli hash funksiya o'xshash matnlar uchun ham mutlaqo tasodifiy hash qiymatlari qaytaradi
+- Lekin ba'zida bizga o'xshash narsalarni solishtirish talab qilinadi
+- Bunday holatda Simhash (similar hash) funksiyasi yordam beradi
+  - Youtube - yuklangan videolarni solishtirish uchun
+  - Turli platformalar o'g'rilangan kitob/dasturlar yuklanganini tekshirish uchun
+
+### Diffie-Helman Algorithm
+
+- Tasavvur qiling siz biror kishiga kalit so'z bilan shifrlangan xabar yubordingiz
+- Bu odam xabarni ochishi uchun kalit so'zni bilishi kerak
+- Kalit so'zni qanday qilib yuborasiz?
+- Yechim: Diffie-Helman Algoritmi
+- Bu algoritmda foydalanuvchida 2 ta kalit bo'ladi: Ochiq va Maxfiy
+- Ochiq kalitdan istalgan odam foydalanishi va xabarlarni shifrlashi mumkin
+- Lekin xabarni qayta ochish uchun maxfiy kalitni bilish shart bo'ladi
+- Demak ochiq kalit ommaviy, yopiq kalit esa maxfiyligicha sizda turadi
+
+### Linear Programming
+
+- Chegaralangan resurslar bilna maksimal natijaga erishish algoritmlari
+- Misol:
+  - Duradgor rom yasash uchun 3m3 daraxt va 1L lak ishlatadi
+  - Eshik uchun 5m3 daraxt va 2L lak ishlatadi
+  - Har bir romdan 20$, eshikdan 35$ foyda oladi
+  - Savol: 40m3 daraxt va 10L lak bilan maksimum qancha daromad olish mumkin?
+- Yuqoridagi kabi muammolar Simplex Liner algoritmlari yordamida yechiladi
