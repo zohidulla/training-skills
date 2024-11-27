@@ -20,7 +20,7 @@ saqlanishi va boshqarilishini belgilaydi. Ma'lumotlar tuzilmalarini tushunish sa
    Examples: Trees and Graphs.
 
 - [Array](./array.md)
-  - Massiv - bir xil turdagi ma'lumotlarning elementlari to'plamini saqlaydigan chiziqli ma'lumotlar strukturasi. Elementlar qo'shni xotiraga ajratilgan,
+  - Massiv - elementlar to'plamini saqlaydigan chiziqli ma'lumotlar strukturasi. Elementlar qo'shni xotiraga ajratilgan,
     doimiy kirish imkonini beradi. Har bir element o'ziga xos indeks raqamiga ega.
 - Matrix/Grid
   - Matritsa - bu qatorlar va ustunlar shaklida joylashtirilgan ikki o'lchovli elementlar massivi. U to'rtburchaklar to'r shaklida ifodalanadi, har bir element satr va ustunning kesishmasida joylashgan.
