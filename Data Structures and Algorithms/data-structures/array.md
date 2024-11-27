@@ -3,7 +3,7 @@
 > Array (Massiv)
 
 <p align="center">
-<img src="./images/array.png">
+<img src="../images/array.png">
 </p>
 
 > Array in JavaScript
@@ -18,17 +18,17 @@ console.log("Element at index 0:", arr[0]); // Element at index 0: 1
 > ARRAY va XOTIRA
 
 <p align="center">
-<img src="./images/array-memory.webp">
+<img src="../images/array-memory.webp">
 </p>
 
 > ARRAY va Big O
 
 <p align="center">
-<img src="./images/big-o-operations.webp">
+<img src="../images/big-o-operations.webp">
 </p>
 
 <p align="center">
-<img src="./images/big-o-method-type.png">
+<img src="../images/big-o-method-type.png">
 </p>
 
 > **Array** turlari:
@@ -39,7 +39,7 @@ Asosan ikki turdagi **Array** mavjud:
 **Dynamic Array**: Ushbu turdagi massivda xotira ish vaqtida ajratiladi, lekin belgilangan hajmga ega emas. Aytaylik, foydalanuvchi massivning istalgan tasodifiy hajmini e'lon qilmoqchi bo'lsa, biz statik massivdan foydalanmaymiz, uning o'rniga qo'lda dinamik massiv ishlatiladi. U har qanday dasturning ishlash vaqtida uning hajmini belgilash uchun ishlatiladi.
 
 <p align="center">
-<img src="./images/arrays-static.png">
+<img src="../images/arrays-static.png">
 </p>
 
 > Example in JavaScript
@@ -66,11 +66,11 @@ console.log(dynamicArray.join(" "));
 ```
 
 <p align="center">
-<img src="./images/array-complexity.jpg">
+<img src="../images/array-complexity.jpg">
 </p>
 
 > **Static Array** va **Dynamic Array** o'rtasidagi asosiy farq:
 
 <p align="center">
-<img src="./images/arrays-difference.jpg">
+<img src="../images/arrays-difference.jpg">
 </p>
