@@ -17,7 +17,7 @@
 - Dastur - qo'yilgan muammoga yechim topish uchun, kompyuterga qaysi amallarni qanday ketma-ketlikda bajarishni aytuvchi **ko'rsatmalar to'plami**
 - Bevosita dastur yozish jarayoni dasturlash, dastur yozuvchi odam esa **dasturchi** deyiladi
 
-### [Data Structures](src/data-structures/README)
+* [Data Structures](/data-structures/README.md)
 
 ### ALGORITM
 
