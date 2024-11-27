@@ -17,6 +17,8 @@
 - Dastur - qo'yilgan muammoga yechim topish uchun, kompyuterga qaysi amallarni qanday ketma-ketlikda bajarishni aytuvchi **ko'rsatmalar to'plami**
 - Bevosita dastur yozish jarayoni dasturlash, dastur yozuvchi odam esa **dasturchi** deyiladi
 
+### [Data Structures](src/data-structures/README)
+
 ### ALGORITM
 
 - **Algoritm** - bu muammoni hal qilish uchun aniq ketma-ketlikda berilgan ko'rsatmalar to'plami
@@ -37,18 +39,6 @@
 > Bitta muammoga **bir nechta** yechim bo'lishi
 > Mavjud ma'lumotlar tuzilmasi va algoritmlardan xabardor bo'lish eng **samarali** yechimni topishda yordam beradi
 > Samaradorlik algoritmning **tezligi** va qancha **xotira** egallashi bilan o'lchanadi **(Time and Space complexity)**
-
-### MA'LUMOTLAR TUZILMASI
-
-- Array (ro'yxat)
-- 2-3-N o'lchamli ro'yxat
-- Linked list (bo'glangan ro'yxat)
-- Stacks
-- Queues
-- Graph (Graflar)
-- Shajara (Tree)
-- Hash jadvallari
-- Heap
 
 ### ALGORITMLAR
 
