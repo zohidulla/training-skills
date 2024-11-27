@@ -1,32 +1,9 @@
-# MA'LUMOTLAR TUZILMASI VA ALGORITMLAR (Data Structures and Algorithms)
+# DATA STRUCTURES AND ALGORITHMS - MA'LUMOTLAR TUZILMASI VA ALGORITMLAR
 
-### Kompyuter
+**Data Structures and Algorithms (DSA)** - Ma'lumotlar tuzilmalarida ishlaydigan muammolarni hal qilish algoritmlarini loyihalash bilan bir qatorda ma'lumotlarni tartibga solish va saqlash uchun foydalaniladigan ma'lumotlar tuzilmalarini o'rganishdir.
 
-- Kompyuter - **ma'lumotlar**ga ishlov beruvchi electron qurilma
-- Kompyuterning asosiy vazifasi **ma'lumotlar**ni o'qish,
-  ularning ustida turli hisob-kitoblarni bajarish va saqlash
-
-**Kompyuterlar 3 ta tarkibiy qismlardan iborat:**
-
-- Prosessor (CPU)
-- Xotira (RAM, HDD, SSD...)
-- Kirish-chiqish qurilmalari (keyboard, mouse, monitor...)
-
-### DASTUR
-
-- Dastur - qo'yilgan muammoga yechim topish uchun, kompyuterga qaysi amallarni qanday ketma-ketlikda bajarishni aytuvchi **ko'rsatmalar to'plami**
-- Bevosita dastur yozish jarayoni dasturlash, dastur yozuvchi odam esa **dasturchi** deyiladi
-
-* [Data Structures](./data-structures/README.md)
-
-### ALGORITM
-
-- **Algoritm** - bu muammoni hal qilish uchun aniq ketma-ketlikda berilgan ko'rsatmalar to'plami
-- Yaxshi algoritmning belgilari:
-  - kirish (muammo) va chiqish (yechim) aniq berilgan bo'lishi kerak
-  - Algoritmning har bir bosqichi aniq va ravshan bo'lishi kerak
-  - Algoritm muammoni hal qilishning turli usullari orasida eng samaralisi bo'lishi kerak
-  - Algoritmda kompyuter kodi bo'lmasligi kerak. Buning o'rniga algoritm turli xil dasturlash tillarida ishlatilishi mumkin bo'lgan tarzda yozilishi kerak
+- [Data Structures](./data-structures/README.md)
+- [Algorithms](./algorithms/README.md)
 
 ### MA'LUMOTLAR
 
