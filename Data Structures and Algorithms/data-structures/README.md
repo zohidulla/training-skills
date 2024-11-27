@@ -19,7 +19,7 @@ saqlanishi va boshqarilishini belgilaydi. Ma'lumotlar tuzilmalarini tushunish sa
    tuzilmalari deb ataladi. Chiziqli bo'lmagan ma'lumotlar tuzilmasida biz barcha elementlarni faqat bitta ishga o'tkaza olmaymiz.
    Examples: Trees and Graphs.
 
-- Array
+- [Array](./array.md)
   - Massiv - bir xil turdagi ma'lumotlarning elementlari to'plamini saqlaydigan chiziqli ma'lumotlar strukturasi. Elementlar qo'shni xotiraga ajratilgan,
     doimiy kirish imkonini beradi. Har bir element o'ziga xos indeks raqamiga ega.
 - Matrix/Grid
