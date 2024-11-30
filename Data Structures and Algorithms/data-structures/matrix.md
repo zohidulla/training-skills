@@ -295,8 +295,8 @@ end = Date.now();
 console.log(`Column major access time: ${end - start} ms`);
 ```
 
-**Time Complexity: O(MAX\*MAX)**
-**Auxiliary Space: O(MAX\*MAX)**
+- **Time Complexity: O(MAX\*MAX)**
+- **Auxiliary Space: O(MAX\*MAX)**
 
 ### Applications of Matrix Data Structure
 
