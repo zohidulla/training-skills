@@ -22,7 +22,7 @@ saqlanishi va boshqarilishini belgilaydi. Ma'lumotlar tuzilmalarini tushunish sa
 - [Array](./array.md)
   - Massiv - elementlar to'plamini saqlaydigan chiziqli ma'lumotlar strukturasi. Elementlar qo'shni xotiraga ajratilgan,
     doimiy kirish imkonini beradi. Har bir element o'ziga xos indeks raqamiga ega.
-- Matrix/Grid
+- [Matrix/Grid](./matrix.md)
   - Matritsa - bu qatorlar va ustunlar shaklida joylashtirilgan ikki o'lchovli elementlar massivi. U to'rtburchaklar to'r shaklida ifodalanadi, har bir element satr va ustunning kesishmasida joylashgan.
 - String
   - String - bu matnni ifodalash uchun ishlatiladigan belgilar ketma-ketligi. Bu kompyuter dasturlarida matnli ma'lumotlarni manipulyatsiya qilish va qayta ishlash imkonini beruvchi ma'lumotlar turi hisoblanadi.
