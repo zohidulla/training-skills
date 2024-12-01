@@ -24,7 +24,7 @@ saqlanishi va boshqarilishini belgilaydi. Ma'lumotlar tuzilmalarini tushunish sa
     doimiy kirish imkonini beradi. Har bir element o'ziga xos indeks raqamiga ega.
 - [Matrix/Grid](./matrix.md)
   - Matritsa - bu qatorlar va ustunlar shaklida joylashtirilgan ikki o'lchovli elementlar massivi. U to'rtburchaklar to'r shaklida ifodalanadi, har bir element satr va ustunning kesishmasida joylashgan.
-- String
+- [String](./string.md)
   - String - bu matnni ifodalash uchun ishlatiladigan belgilar ketma-ketligi. Bu kompyuter dasturlarida matnli ma'lumotlarni manipulyatsiya qilish va qayta ishlash imkonini beruvchi ma'lumotlar turi hisoblanadi.
 - Stack
   - Stack - bu oxirgi kirish, birinchi chiqish (LIFO) tamoyiliga amal qiluvchi chiziqli ma'lumotlar strukturasi. Steklar funktsiya chaqiruvlarini, xotirani boshqarishda muhim rol o'ynaydi va algoritmlarda, veb-ishlab chiqishda va kompilyatorlar va brauzerlar kabi tizimlarda keng qo'llaniladi.
