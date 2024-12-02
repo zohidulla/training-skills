@@ -26,7 +26,7 @@ saqlanishi va boshqarilishini belgilaydi. Ma'lumotlar tuzilmalarini tushunish sa
   - Matritsa - bu qatorlar va ustunlar shaklida joylashtirilgan ikki o'lchovli elementlar massivi. U to'rtburchaklar to'r shaklida ifodalanadi, har bir element satr va ustunning kesishmasida joylashgan.
 - [String](./string.md)
   - String - bu matnni ifodalash uchun ishlatiladigan belgilar ketma-ketligi. Bu kompyuter dasturlarida matnli ma'lumotlarni manipulyatsiya qilish va qayta ishlash imkonini beruvchi ma'lumotlar turi hisoblanadi.
-- Stack
+- [Stack](./stack.md)
   - Stack - bu oxirgi kirish, birinchi chiqish (LIFO) tamoyiliga amal qiluvchi chiziqli ma'lumotlar strukturasi. Steklar funktsiya chaqiruvlarini, xotirani boshqarishda muhim rol o'ynaydi va algoritmlarda, veb-ishlab chiqishda va kompilyatorlar va brauzerlar kabi tizimlarda keng qo'llaniladi.
 - Queue
   - Navbat – birinchi kirsa, birinchi chiqadi (FIFO) tamoyiliga amal qiluvchi chiziqli ma’lumotlar strukturasi. Navbatlar vazifalarni yoki ma'lumotlarni tartibda boshqarish, rejalashtirish va xabarlarni qayta ishlash tizimlarida muhim rol o'ynaydi.
