@@ -28,7 +28,7 @@ saqlanishi va boshqarilishini belgilaydi. Ma'lumotlar tuzilmalarini tushunish sa
   - String - bu matnni ifodalash uchun ishlatiladigan belgilar ketma-ketligi. Bu kompyuter dasturlarida matnli ma'lumotlarni manipulyatsiya qilish va qayta ishlash imkonini beruvchi ma'lumotlar turi hisoblanadi.
 - [Stack](./stack.md)
   - Stack - bu oxirgi kirish, birinchi chiqish (LIFO) tamoyiliga amal qiluvchi chiziqli ma'lumotlar strukturasi. Steklar funktsiya chaqiruvlarini, xotirani boshqarishda muhim rol o'ynaydi va algoritmlarda, veb-ishlab chiqishda va kompilyatorlar va brauzerlar kabi tizimlarda keng qo'llaniladi.
-- Queue
+- [Queue](./queue.md)
   - Navbat – birinchi kirsa, birinchi chiqadi (FIFO) tamoyiliga amal qiluvchi chiziqli ma’lumotlar strukturasi. Navbatlar vazifalarni yoki ma'lumotlarni tartibda boshqarish, rejalashtirish va xabarlarni qayta ishlash tizimlarida muhim rol o'ynaydi.
 - Linked list
   - Bog'langan ro'yxat - bu ko'rsatkichlar bilan bog'langan tugunlarda ma'lumotlarni saqlaydigan chiziqli ma'lumotlar tuzilmasi. Massivlardan farqli o'laroq, bog'langan ro'yxatlar tugunlari qo'shni xotira joylarida saqlanmaydi va ularga faqat ro'yxat boshidan boshlab ketma-ket kirish mumkin.
