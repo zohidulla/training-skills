@@ -836,14 +836,15 @@ Keng tarqalgan kriptografik xesh algoritmlaridan biri bu SHA 256. Shunday qilib 
 hajmi 32 baytga teng. Shunday qilib, ko'p sonli fayllarning xeshini hisoblash muammo bo'lmaydi.
 Siz ushbu xeshlarni mahalliy kompyuteringizda saqlaysiz.
 
-Endi fayllarni yuklab olganingizda, siz yana xeshni hisoblaysiz. Keyin uni oldingi hisoblangan xesh bilan moslashtirasiz.
-Shunday qilib, siz fayllaringiz buzilgan yoki o'zgartirilmaganligini bilasiz. Agar kimdir faylni o'zgartirsa,
-faylning xesh qiymati albatta o'zgaradi. Xeshni o'zgartirmasdan faylni buzish deyarli mumkin emas.
+Endi fayllarni yuklab olganingizda, siz yana xeshni hisoblaysiz. Keyin uni oldingi hisoblangan xesh bilan
+moslashtirasiz. Shunday qilib, siz fayllaringiz buzilgan yoki o'zgartirilmaganligini bilasiz.
+Agar kimdir faylni o'zgartirsa, faylning xesh qiymati albatta o'zgaradi.
+Xeshni o'zgartirmasdan faylni buzish deyarli mumkin emas.
 ```
 
 **Password Verification:** Parolni tekshirishda kriptografik xesh funksiyalari juda keng qo'llaniladi.
 
-> Example
+Example:
 
 ```
 Foydalanuvchiga kirishni talab qiladigan har qanday onlayn veb-saytdan foydalanganda siz foydalanmoqchi
