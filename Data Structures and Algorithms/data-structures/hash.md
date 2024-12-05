@@ -67,10 +67,12 @@ Xeshlash xesh funktsiyalari deb nomlanuvchi matematik formulalar yordamida o'zga
   - Xesh-jadvalning har bir katagini bir xil xesh funktsiyasi qiymatiga ega bo'lgan bog'langan yozuvlar ro'yxatiga ishora qilishdir. Zanjirlash oddiy, lekin stoldan tashqarida qo'shimcha xotira talab qiladi.
 
 ```
-**Linked List** ma'lumotlar strukturasi ushbu texnikani amalga oshirish uchun ishlatiladi. Shunday qilib, bir nechta elementlar bir xil slot indeksiga xeshlanganda, bu elementlar zanjir deb nomlanuvchi **singly-linked list**ga kiritiladi.
+**Linked List** ma'lumotlar strukturasi ushbu texnikani amalga oshirish uchun ishlatiladi.
+Shunday qilib, bir nechta elementlar bir xil slot indeksiga xeshlanganda, bu elementlar
+zanjir deb nomlanuvchi **singly-linked list**ga kiritiladi.
 ```
 
-> Misol: Biz xesh funksiyasini berdik va biz to'qnashuvni hal qilish texnikasi uchun alohida zanjirlash usuli yordamida xesh jadvaliga ba'zi elementlarni kiritishimiz kerak.
+Misol: Biz xesh funksiyasini berdik va biz to'qnashuvni hal qilish texnikasi uchun alohida zanjirlash usuli yordamida xesh jadvaliga ba'zi elementlarni kiritishimiz kerak:
 
 ```
 Hash function = key % 5,
@@ -155,7 +157,8 @@ Ochiq manzillash - bu to'qnashuvlarni hal qilish usuli. Ochiq manzillashda barch
 ```
 - **Insert(k):** Keep probing until an empty slot is found. Once an empty slot is found, insert k.
 - **Search(k):** Keep probing until the slot’s key doesn’t become equal to k or an empty slot is reached.
-- **Delete(k):** Delete operation is interesting. If we simply delete a key, then the search may fail. So slots of deleted keys are marked specially as “deleted”.
+- **Delete(k):** Delete operation is interesting. If we simply delete a key, then the search may fail.
+  So slots of deleted keys are marked specially as “deleted”.
   The insert can insert an item in a deleted slot, but the search doesn’t stop at a deleted slot.
 ```
 
@@ -823,12 +826,19 @@ key = 5, val = Portal
 
 Bu kriptografik xash funksiyalarining ilovasi. Kriptografik xesh-funksiyalar - bu kirishga erishish deyarli imkonsiz bo'lgan chiqishni ishlab chiqaradigan funktsiyalar. Xesh-funksiyalarning bu xossasiga qaytmaslik deyiladi.
 
-> Example
+Example:
 
 ```
-Aytaylik, siz fayllarni mavjud bulut xizmatlaridan birida saqlashingiz kerak. Siz saqlagan fayllar uchinchi tomon tomonidan o'zgartirilmaganligiga ishonch hosil qilishingiz kerak. Siz buni kriptografik xesh algoritmi yordamida ushbu faylning “xesh”ini hisoblash orqali amalga oshirasiz. Keng tarqalgan kriptografik xesh algoritmlaridan biri bu SHA 256. Shunday qilib hisoblangan xesh maksimal hajmi 32 baytga teng. Shunday qilib, ko'p sonli fayllarning xeshini hisoblash muammo bo'lmaydi. Siz ushbu xeshlarni mahalliy kompyuteringizda saqlaysiz.
+Aytaylik, siz fayllarni mavjud bulut xizmatlaridan birida saqlashingiz kerak.
+Siz saqlagan fayllar uchinchi tomon tomonidan o'zgartirilmaganligiga ishonch hosil qilishingiz kerak.
+Siz buni kriptografik xesh algoritmi yordamida ushbu faylning “xesh”ini hisoblash orqali amalga oshirasiz.
+Keng tarqalgan kriptografik xesh algoritmlaridan biri bu SHA 256. Shunday qilib hisoblangan xesh maksimal
+hajmi 32 baytga teng. Shunday qilib, ko'p sonli fayllarning xeshini hisoblash muammo bo'lmaydi.
+Siz ushbu xeshlarni mahalliy kompyuteringizda saqlaysiz.
 
-Endi fayllarni yuklab olganingizda, siz yana xeshni hisoblaysiz. Keyin uni oldingi hisoblangan xesh bilan moslashtirasiz. Shunday qilib, siz fayllaringiz buzilgan yoki o'zgartirilmaganligini bilasiz. Agar kimdir faylni o'zgartirsa, faylning xesh qiymati albatta o'zgaradi. Xeshni o'zgartirmasdan faylni buzish deyarli mumkin emas.
+Endi fayllarni yuklab olganingizda, siz yana xeshni hisoblaysiz. Keyin uni oldingi hisoblangan xesh bilan moslashtirasiz.
+Shunday qilib, siz fayllaringiz buzilgan yoki o'zgartirilmaganligini bilasiz. Agar kimdir faylni o'zgartirsa,
+faylning xesh qiymati albatta o'zgaradi. Xeshni o'zgartirmasdan faylni buzish deyarli mumkin emas.
 ```
 
 **Password Verification:** Parolni tekshirishda kriptografik xesh funksiyalari juda keng qo'llaniladi.
@@ -836,7 +846,11 @@ Endi fayllarni yuklab olganingizda, siz yana xeshni hisoblaysiz. Keyin uni oldin
 > Example
 
 ```
-Foydalanuvchiga kirishni talab qiladigan har qanday onlayn veb-saytdan foydalanganda siz foydalanmoqchi bo'lgan hisob sizga tegishli ekanligini tasdiqlash uchun elektron pochta va parolingizni kiritasiz. Parol kiritilganda, parolning xeshi hisoblab chiqiladi, keyin parolni tekshirish uchun serverga yuboriladi. Serverda saqlangan parollar aslida asl parollarning hisoblangan xesh qiymatlaridir. Bu parol mijozdan serverga yuborilganda hech qanday hidlash bo'lmasligini ta'minlash uchun amalga oshiriladi.
+Foydalanuvchiga kirishni talab qiladigan har qanday onlayn veb-saytdan foydalanganda siz foydalanmoqchi
+bo'lgan hisob sizga tegishli ekanligini tasdiqlash uchun elektron pochta va parolingizni kiritasiz.
+Parol kiritilganda, parolning xeshi hisoblab chiqiladi, keyin parolni tekshirish uchun serverga yuboriladi.
+Serverda saqlangan parollar aslida asl parollarning hisoblangan xesh qiymatlaridir.
+Bu parol mijozdan serverga yuborilganda hech qanday hidlash bo'lmasligini ta'minlash uchun amalga oshiriladi.
 ```
 
 **Data Structures(Programming Languages):**
@@ -1033,5 +1047,5 @@ h.displayHash();
 > Complexity Analysis of a Hash Table
 
 <p align="center">
-<img src="./images/hash-time-complexity.jpg">
+<img src="../images/hash-time-complexity.jpg">
 </p>
