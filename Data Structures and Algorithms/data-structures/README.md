@@ -34,7 +34,7 @@ saqlanishi va boshqarilishini belgilaydi. Ma'lumotlar tuzilmalarini tushunish sa
   - Bog'langan ro'yxat - bu ko'rsatkichlar bilan bog'langan tugunlarda ma'lumotlarni saqlaydigan chiziqli ma'lumotlar tuzilmasi. Massivlardan farqli o'laroq, bog'langan ro'yxatlar tugunlari qo'shni xotira joylarida saqlanmaydi va ularga faqat ro'yxat boshidan boshlab ketma-ket kirish mumkin.
 - [Hash](./hash.md)
   - Xeshlash - bu xesh funktsiyalari deb ataladigan matematik formulalar yordamida o'zgaruvchan o'lchamdagi kirishdan qat'iy o'lchamli chiqishni (xesh qiymati) hosil qiluvchi usul. Xeshlash odatda samarali qidirish, qo'shish va o'chirish uchun ma'lumotlar tuzilmalarida qo'llaniladi va xavfsiz ma'lumotlarni qidirish, parolni saqlash, kriptografiya, raqamli imzolar va boshqalar kabi dasturiy ilovalarda asosiy rol o'ynaydi.
-- Tree
+- [Tree](./tree.md)
   - Daraxt - bu qirralar bilan bog'langan tugunlardan iborat bo'lgan chiziqli bo'lmagan, ierarxik ma'lumotlar strukturasi bo'lib, yuqori tugun ildiz deb ataladi va tugunlar tugunlari bo'ladi. U fayl tizimlarida, ma'lumotlar bazalarida, qarorlar qabul qilish algoritmlarida va boshqalarda keng qo'llaniladi.
 - Binary Tree
   - Ikkilik daraxt - bu chiziqli bo'lmagan va ierarxik ma'lumotlar strukturasi bo'lib, unda har bir tugun chap va o'ng bola deb ataladigan eng ko'p ikkita bolaga ega.
