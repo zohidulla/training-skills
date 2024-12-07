@@ -36,7 +36,7 @@ saqlanishi va boshqarilishini belgilaydi. Ma'lumotlar tuzilmalarini tushunish sa
   - Xeshlash - bu xesh funktsiyalari deb ataladigan matematik formulalar yordamida o'zgaruvchan o'lchamdagi kirishdan qat'iy o'lchamli chiqishni (xesh qiymati) hosil qiluvchi usul. Xeshlash odatda samarali qidirish, qo'shish va o'chirish uchun ma'lumotlar tuzilmalarida qo'llaniladi va xavfsiz ma'lumotlarni qidirish, parolni saqlash, kriptografiya, raqamli imzolar va boshqalar kabi dasturiy ilovalarda asosiy rol o'ynaydi.
 - [Tree](./tree.md)
   - Daraxt - bu qirralar bilan bog'langan tugunlardan iborat bo'lgan chiziqli bo'lmagan, ierarxik ma'lumotlar strukturasi bo'lib, yuqori tugun ildiz deb ataladi va tugunlar tugunlari bo'ladi. U fayl tizimlarida, ma'lumotlar bazalarida, qarorlar qabul qilish algoritmlarida va boshqalarda keng qo'llaniladi.
-- Binary Tree
+- [Binary Tree](./binary-tree.md)
   - Ikkilik daraxt - bu chiziqli bo'lmagan va ierarxik ma'lumotlar strukturasi bo'lib, unda har bir tugun chap va o'ng bola deb ataladigan eng ko'p ikkita bolaga ega.
 - Binary Search Tree
   - Ikkilik qidiruv daraxti ikkilik daraxtning bir turi bo'lib, unda har bir tugunning chap pastki daraxti faqat tugundan kichikroq qiymatlarni o'z ichiga oladi va har bir tugunning o'ng pastki daraxti faqat tugundan kattaroq qiymatlarni o'z ichiga oladi. Bu xususiyat rekursiv ravishda qo'llaniladi, ya'ni har bir tugun uchun uning chap va o'ng pastki daraxtlari ham joriy Ikkilik qidiruv daraxti shartlarini qondirishi kerak.
