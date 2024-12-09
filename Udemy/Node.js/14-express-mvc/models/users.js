@@ -29,8 +29,9 @@ module.exports = class User {
   }
 
   static findByUid(uid) {
-    const data = () => fs.readFile(pathToFile, "utf8");
+    const data = () => fs.readFileSync(pathToFile, "utf8");
     const users = JSON.parse(data());
-    return users.find((el) => el.uid === uid);
+    const user = users.find((el) => el.uid === uid);
+    return user;
   }
 };
