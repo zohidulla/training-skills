@@ -53,6 +53,13 @@ button {
   cursor: pointer;
   font: inherit;
 }
+.btn {
+  color: green;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font: inherit;
+}
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 10px auto;
