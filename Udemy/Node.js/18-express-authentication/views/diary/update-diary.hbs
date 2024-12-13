@@ -20,6 +20,7 @@
             {{#if diary.imageUrl}}
               <img src="{{diary.imageUrl}}" class="card-img-bottom" alt="..." />
             {{/if}}
+            <input type="hidden" name="_csrf" value="{{csrfToken}}" />
             <button type="submit" class="btn btn-primary mt-3">Update</button>
           </form>
         </div>

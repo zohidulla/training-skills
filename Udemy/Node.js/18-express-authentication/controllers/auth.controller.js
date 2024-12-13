@@ -1,4 +1,5 @@
 const db = require("../models/index");
+const bcrypt = require("bcryptjs");
 const User = db.user;
 
 const getLoginPage = async (req, res) => {
@@ -13,20 +14,27 @@ const getLoginPage = async (req, res) => {
   }
 };
 
-const loginUser = (req, res) => {
+const loginUser = async (req, res) => {
   try {
-    // req.setHeader("Set-Cookie", "loggedIn=true");
-    req.session.isLogged = true;
-    req.session.user = {
-      id: 1,
-      email: "john@gmail.com",
-      name: "john",
-      password: "12345",
-    };
-    req.session.save((err) => {
-      if (err) throw err;
-      res.redirect("/diary/my");
-    });
+    const userExist = await User.findOne({ where: { email: req.body.email } });
+    if (userExist) {
+      const mathPassword = await bcrypt.compare(
+        req.body.password,
+        userExist.password
+      );
+      if (mathPassword) {
+        req.session.isLogged = true;
+        req.session.user = userExist;
+        req.session.save((err) => {
+          if (err) throw err;
+          return res.redirect("/diary/my");
+        });
+      } else {
+        return res.redirect("/auth/login");
+      }
+    } else {
+      return res.redirect("/auth/login");
+    }
   } catch (error) {
     console.log(error);
   }
@@ -54,14 +62,16 @@ const registerUser = async (req, res) => {
     if (password !== password2) {
       return res.redirect("/auth/registration");
     }
-    const userExist = await User.findOne({ email });
+    const userExist = await User.findOne({ where: { email } });
     if (userExist) {
       return res.redirect("/auth/registration");
     }
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
     await User.create({
       email,
       name,
-      password,
+      password: hashedPassword,
     });
     return res.redirect("/auth/login");
   } catch (error) {
