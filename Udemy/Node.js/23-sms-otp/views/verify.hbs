@@ -1,0 +1,27 @@
+<div class="container" style="padding-top: 100px;">
+  <div class="row">
+    <div
+      class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12"
+    >
+      <form action="/verify" method="POST" class="card shadow">
+        <div class="card-header">
+          <h1 class="card-title text-center">Register Page</h1>
+        </div>
+        <div class="card-body">
+          {{#if error}}
+            <div class="alert alert-danger" role="alert">
+              {{error}}
+            </div>
+          {{/if}}
+          <div class="mb-3">
+            <label for="code" class="form-label">Verification code</label>
+            <input type="text" class="form-control" id="code" name="code" />
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
