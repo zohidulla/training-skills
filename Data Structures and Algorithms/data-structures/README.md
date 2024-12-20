@@ -38,7 +38,7 @@ saqlanishi va boshqarilishini belgilaydi. Ma'lumotlar tuzilmalarini tushunish sa
   - Daraxt - bu qirralar bilan bog'langan tugunlardan iborat bo'lgan chiziqli bo'lmagan, ierarxik ma'lumotlar strukturasi bo'lib, yuqori tugun ildiz deb ataladi va tugunlar tugunlari bo'ladi. U fayl tizimlarida, ma'lumotlar bazalarida, qarorlar qabul qilish algoritmlarida va boshqalarda keng qo'llaniladi.
 - [Binary Tree](./binary-tree.md)
   - Ikkilik daraxt - bu chiziqli bo'lmagan va ierarxik ma'lumotlar strukturasi bo'lib, unda har bir tugun chap va o'ng bola deb ataladigan eng ko'p ikkita bolaga ega.
-- Binary Search Tree
+- [Binary Search Tree](./binary-search-tree.md)
   - Ikkilik qidiruv daraxti ikkilik daraxtning bir turi bo'lib, unda har bir tugunning chap pastki daraxti faqat tugundan kichikroq qiymatlarni o'z ichiga oladi va har bir tugunning o'ng pastki daraxti faqat tugundan kattaroq qiymatlarni o'z ichiga oladi. Bu xususiyat rekursiv ravishda qo'llaniladi, ya'ni har bir tugun uchun uning chap va o'ng pastki daraxtlari ham joriy Ikkilik qidiruv daraxti shartlarini qondirishi kerak.
 - Heap
   - Uyum - bu to'liq ikkilik daraxt ma'lumotlar strukturasi bo'lib, u yig'ish xususiyatini qondiradi. Uyumlar odatda ustuvor navbatlarni amalga oshirish uchun ishlatiladi, bu erda eng kichik yoki eng katta element har doim daraxtning ildizida joylashgan.

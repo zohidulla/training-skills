@@ -1402,30 +1402,6 @@ console.log("The cost of most efficient tour " + ans);
 - Muammo: Ma'lumotlani **tartiblangan holda** qo'shish mumkinmi?
 - Yechim: **Binary Search Tree** ma'lumotlar tuzilmasi
 
-### Binary Search Tree
-
-<p align="center">
-<img src="./images/binary-search-tree.png">
-</p>
-
-> Big O
-
-|                   | Array    | Binary Search Tree |
-| ----------------- | -------- | ------------------ |
-| Qidirish          | O(log2n) | O(log2n)           |
-| Element qo'shish  | O(n)     | O(log2n)           |
-| Element o'chirish | O(n)     | O(log2n)           |
-
-- Binary Search Tree kamchiligi:
-
-  - Muvozanatni yo'qotish
-
-- Boshqa (tree) shajara turlari:
-  - Red-black tree (o'zini muvozanatga keltiradi)
-  - B-tree (ma'lumotlar bazasida ishlatiladi)
-  - Heap
-  - Splay tree
-
 ### INVERTED INDEXES MA'LUMOTLAR TUZILMASI
 
 ### FURYE ALMASHTIRISHLARI ALGORITMI
