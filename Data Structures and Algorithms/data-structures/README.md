@@ -40,7 +40,7 @@ saqlanishi va boshqarilishini belgilaydi. Ma'lumotlar tuzilmalarini tushunish sa
   - Ikkilik daraxt - bu chiziqli bo'lmagan va ierarxik ma'lumotlar strukturasi bo'lib, unda har bir tugun chap va o'ng bola deb ataladigan eng ko'p ikkita bolaga ega.
 - [Binary Search Tree](./binary-search-tree.md)
   - Ikkilik qidiruv daraxti ikkilik daraxtning bir turi bo'lib, unda har bir tugunning chap pastki daraxti faqat tugundan kichikroq qiymatlarni o'z ichiga oladi va har bir tugunning o'ng pastki daraxti faqat tugundan kattaroq qiymatlarni o'z ichiga oladi. Bu xususiyat rekursiv ravishda qo'llaniladi, ya'ni har bir tugun uchun uning chap va o'ng pastki daraxtlari ham joriy Ikkilik qidiruv daraxti shartlarini qondirishi kerak.
-- Heap
+- [Heap](./heap.md)
   - Uyum - bu to'liq ikkilik daraxt ma'lumotlar strukturasi bo'lib, u yig'ish xususiyatini qondiradi. Uyumlar odatda ustuvor navbatlarni amalga oshirish uchun ishlatiladi, bu erda eng kichik yoki eng katta element har doim daraxtning ildizida joylashgan.
 - Graph
   - Grafik chiziqli bo'lmagan ma'lumotlar strukturasi bo'lib, ular bir juft tugunlarni bog'laydigan chekli uchlar (yoki tugunlar) va qirralarning (yoki bog'lamlar) to'plamidan iborat. Ob'ektlar o'rtasidagi munosabatlarni tasvirlash uchun grafiklardan keng foydalaniladi.
