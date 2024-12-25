@@ -1,4 +1,4 @@
 export enum PaymentProvider {
-    Payze = "PAYZE",
-    Payme = "PAYME",
+  Payze = "PAYZE",
+  Payme = "PAYME",
 }

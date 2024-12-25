@@ -1,39 +1,45 @@
-import { Document, model, Schema } from 'mongoose';
-import {PayzeTransactionStatus} from "@/enums/payze-transaction-status.enum";
-import {IPayzeTransaction} from "@/interfaces/payze-transaction.interface";
+import { Document, model, Schema } from "mongoose";
+import { PayzeTransactionStatus } from "@/enums/payze-transaction-status.enum";
+import { IPayzeTransaction } from "@/interfaces/payze-transaction.interface";
 
-const payzeTransactionSchema = new Schema({
+const payzeTransactionSchema = new Schema(
+  {
     transactionId: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     orderId: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     amount: {
-        type: Number,
-        required: true,
+      type: Number,
+      required: true,
     },
     status: {
-        type: String,
-        enum: Object.values(PayzeTransactionStatus),
-        default: PayzeTransactionStatus.Draft,
+      type: String,
+      enum: Object.values(PayzeTransactionStatus),
+      default: PayzeTransactionStatus.Draft,
     },
     cardMask: {
-        type: String,
+      type: String,
     },
     performTime: {
-        type: Number,
+      type: Number,
     },
     cancelTime: {
-        type: Number,
+      type: Number,
     },
     blockedTime: {
-        type: Number,
-    }
-}, {
+      type: Number,
+    },
+  },
+  {
     timestamps: true,
-});
+  }
+);
 
-export default model<IPayzeTransaction & Document>('payze-transaction', payzeTransactionSchema)
+export default model<IPayzeTransaction & Document>(
+  "payze-transaction",
+  payzeTransactionSchema
+);

@@ -1,19 +1,19 @@
-import {ErrorCode} from "@/enums/error-cede.enum";
-import {StatusCode} from "@/enums/status-code.enum";
+import { ErrorCode } from "@/enums/error-cede.enum";
+import { StatusCode } from "@/enums/status-code.enum";
 
 class BaseError extends Error {
-    public code: ErrorCode;
-    public statusCode: StatusCode;
-    public data?: any;
+  public code: ErrorCode;
+  public statusCode: StatusCode;
+  public data?: any;
 
-    constructor(code: ErrorCode, statusCode: StatusCode, data: any) {
-        super();
+  constructor(code: ErrorCode, statusCode: StatusCode, data: any) {
+    super();
 
-        this.name = code;
-        this.code = code;
-        this.statusCode = statusCode;
-        this.data = data;
-    }
+    this.name = code;
+    this.code = code;
+    this.statusCode = statusCode;
+    this.data = data;
+  }
 }
 
 export default BaseError;

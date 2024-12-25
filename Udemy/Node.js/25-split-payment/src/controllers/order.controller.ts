@@ -16,12 +16,10 @@ class OrderController {
 
       const paymentUrl = await this.orderService.create(createdData);
 
-      res
-        .status(StatusCode.Created)
-        .json({
-          message: SuccessCode.OrderCreated,
-          data: { paymentUrl: paymentUrl },
-        });
+      res.status(StatusCode.Created).json({
+        message: SuccessCode.OrderCreated,
+        data: { paymentUrl: paymentUrl },
+      });
     } catch (error) {
       next(error);
     }
