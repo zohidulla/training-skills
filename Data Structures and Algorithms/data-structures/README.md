@@ -44,5 +44,5 @@ saqlanishi va boshqarilishini belgilaydi. Ma'lumotlar tuzilmalarini tushunish sa
   - Uyum - bu to'liq ikkilik daraxt ma'lumotlar strukturasi bo'lib, u yig'ish xususiyatini qondiradi. Uyumlar odatda ustuvor navbatlarni amalga oshirish uchun ishlatiladi, bu erda eng kichik yoki eng katta element har doim daraxtning ildizida joylashgan.
 - [Graph](./graph.md)
   - Grafik chiziqli bo'lmagan ma'lumotlar strukturasi bo'lib, ular bir juft tugunlarni bog'laydigan chekli uchlar (yoki tugunlar) va qirralarning (yoki bog'lamlar) to'plamidan iborat. Ob'ektlar o'rtasidagi munosabatlarni tasvirlash uchun grafiklardan keng foydalaniladi.
-- Advanced Data Structures
+- [Advanced Data Structures](./advanced.md)
   - Murakkab ma'lumotlar tuzilmalari - bu ma'lumotlarni samarali tartibga solish, saqlash va manipulyatsiya qilish uchun ishlatiladigan, murakkab algoritmlarda tezroq va samaraliroq qayta ishlashga imkon beradigan ma'lumotlarning murakkab tartibi. Massivlar va bog'langan ro'yxatlar kabi asosiy ma'lumotlar turlaridan farqli o'laroq, bu tuzilmalar segment daraxtlari, Trie, ikkilik indekslangan daraxt, qo'shimchalar massivi va boshqalar kabi yanada murakkab variantlarni o'z ichiga oladi.
