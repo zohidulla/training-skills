@@ -54,6 +54,12 @@ sudo -u postgres psql
 <img src="./images/psql-help.jpg">
 </p>
 
+> postgres help
+
+<p align="center">
+<img src="./images/postgres-help.jpg">
+</p>
+
 **Create a new database with the following command**
 
 ```sql
@@ -666,7 +672,7 @@ CREATE TABLE products (
 ```
 
 **DELETE**
-**DELETE** deletes rows that satisfy the WHERE clause from the specified table. If the WHERE clause is absent,
+DELETE deletes rows that satisfy the WHERE clause from the specified table. If the WHERE clause is absent,
 the effect is to delete all rows in the table. The result is a valid, but empty table.
 
 ```
@@ -771,4 +777,109 @@ UPDATE summary s SET (sum_x, sum_y, avg_x, avg_y) =
 
 ```sql
 UPDATE films SET kind = 'Dramatic' WHERE CURRENT OF c_films;
+```
+
+**FOREIGN KEY**
+
+A foreign key constraint specifies that the values in a column (or a group of columns) must match the
+values appearing in some row of another table. We say this maintains the referential integrity between
+two related tables.
+
+> CREATE TABLE cars
+
+```sql
+CREATE TABLE cars (
+	id BIGSERIAL NOT NULL PRIMARY KEY,
+	make VARCHAR(100) NOT NULL,
+	model VARCHAR(100) NOT NULL,
+	price NUMERIC(19, 2) NOT NULL,
+);
+```
+
+> CREATE TABLE users
+
+```sql
+CREATE TABLE users (
+	id BIGSERIAL NOT NULL PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	email VARCHAR(100),
+	gender VARCHAR(50) NOT NULL,
+	date_of_birth DATE NOT NULL,
+	country VARCHAR(50) NOT NULL,
+	car_id BIGINT REFERENCES car(id),
+	UNIQUE(car_id)
+);
+```
+
+<p align="center">
+<img src="./images/foreign_key.jpg">
+</p>
+
+```shell
+new_db=# \i /tmp/cars.sql
+```
+
+<p align="center">
+<img src="./images/cars.jpg">
+</p>
+
+```shell
+new_db=# \i /tmp/users.sql
+```
+
+<p align="center">
+<img src="./images/users.jpg">
+</p>
+
+```sql
+UPDATE users SET car_id = 2 WHERE id = 1;
+```
+
+<p align="center">
+<img src="./images/update_car_id.jpg">
+</p>
+
+A foreign key must reference columns that either are a primary key or form a unique constraint, or are
+columns from a non-partial unique index. This means that the referenced columns always have an index
+to allow efficient lookups on whether a referencing row has a match. Since a DELETE of a row from the
+referenced table or an UPDATE of a referenced column will require a scan of the referencing table for rows
+matching the old value, it is often a good idea to index the referencing columns too. Because this is not
+always needed, and there are many choices available on how to index, the declaration of a foreign key
+constraint does not automatically create an index on the referencing columns.
+
+**INNER JOIN**
+
+<p align="center">
+<img src="./images/inner_join.png">
+</p>
+
+<p align="center">
+<img src="./images/inner-join.jpg">
+</p>
+
+**LEFT JOIN**
+
+<p align="center">
+<img src="./images/left_join.png">
+</p>
+
+<p align="center">
+<img src="./images/left-join.jpg">
+</p>
+
+**RIGHT JOIN**
+
+<p align="center">
+<img src="./images/right_join.png">
+</p>
+
+<p align="center">
+<img src="./images/right-join.jpg">
+</p>
+
+**IMPORT/EXPORT CSV FILE**
+
+```shell
+new_db=# \copy (SELECT * FROM users LEFT JOIN cars ON cars.id = users.car_id) TO '/tmp/results.csv' DELIMITER ',' CSV HEADER;
 ```
