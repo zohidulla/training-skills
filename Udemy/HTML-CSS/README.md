@@ -44,16 +44,16 @@ http://info.cern.ch
 - script
   ...
 
-<title>  - Открывающий HTML тег
-</title> - Закрывающий HTML тег
-<button class="btn">Click me</button> - Атрибут
-<img src="" class="rounded-img" alt="My photo" /> - Атрибут src, Атрибут class, Атрибут alt.
+1. <title>  - Открывающий HTML тег
+1. </title> - Закрывающий HTML тег
+1. <button class="btn">Click me</button> - Атрибут
+1. <img src="" class="rounded-img" alt="My photo" /> - Атрибут src, Атрибут class, Атрибут alt.
 
 Самозакрывающийся тегы (Self-Closing Tags):
 
-- <img />
-- <input/>
-- <hr/>
-- <br/>
-- <meta />
-- <link />
+1. <img />
+2. <input/>
+3. <hr/>
+4. <br/>
+5. <meta />
+6. <link />
