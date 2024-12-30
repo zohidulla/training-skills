@@ -47,7 +47,7 @@ http://info.cern.ch
 <title>  - Открывающий HTML тег
 </title> - Закрывающий HTML тег
 <button class="btn">Click me</button> - Атрибут
-<img src="img.jpg" class="rounded-img" alt="My photo" /> - Атрибут src, Атрибут class, Атрибут alt.
+<img src="" class="rounded-img" alt="My photo" /> - Атрибут src, Атрибут class, Атрибут alt.
 
 Самозакрывающийся тегы (Self-Closing Tags):
 
@@ -57,10 +57,3 @@ http://info.cern.ch
 - <br/>
 - <meta />
 - <link />
-
-The following code-block will be rendered as a Mermaid diagram:
-
-```mermaid
-flowchart LR
-  A --> B
-```
