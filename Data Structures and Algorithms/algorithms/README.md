@@ -25,7 +25,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 - **Optimizing solutions:** Algoritmlar muammolarning eng yaxshi yoki optimalga yaqin yechimlarini topadi.
 - **Automating tasks:** Algoritmlar vaqt va kuchni tejaydigan takrorlanuvchi yoki murakkab vazifalarni avtomatlashtirishi mumkin.
 
-1. **Analysis of Algorithms**
+1. [**Analysis of Algorithms**](./analysis.md)
    Algoritmlarni tahlil qilish algoritmlarning samaradorligini baholash jarayoni bo'lib, asosan vaqt va makon murakkabligiga e'tibor beradi. Bu kirish hajmi oshgani sayin algoritmning ishlash vaqti yoki bo'sh joy talablari qanday o'sishini baholashga yordam beradi.
 
 2. **Mathematical Algorithms**
