@@ -28,7 +28,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 1. [**Analysis of Algorithms**](./analysis.md)
    Algoritmlarni tahlil qilish algoritmlarning samaradorligini baholash jarayoni bo'lib, asosan vaqt va makon murakkabligiga e'tibor beradi. Bu kirish hajmi oshgani sayin algoritmning ishlash vaqti yoki bo'sh joy talablari qanday o'sishini baholashga yordam beradi.
 
-2. **Mathematical Algorithms**
+2. [**Mathematical Algorithms**](./mathematical.md)
    Ma'lumotlar tuzilmalari va algoritmlarini tahlil qilish va optimallashtirish uchun matematik algoritmlardan foydalaniladi. Bo'linuvchanlik, LCM, GCD va boshqalar kabi asosiy tushunchalarni bilish haqiqatan ham ma'lumotlar tuzilmalari qanday ishlashini tushunishga yordam beradi va samarali algoritmlarni loyihalash qobiliyatingizni oshiradi.
 
 3. **Bitwise Algorithms**
