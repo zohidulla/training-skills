@@ -31,7 +31,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 2. [**Mathematical Algorithms**](./mathematical.md)
    Ma'lumotlar tuzilmalari va algoritmlarini tahlil qilish va optimallashtirish uchun matematik algoritmlardan foydalaniladi. Bo'linuvchanlik, LCM, GCD va boshqalar kabi asosiy tushunchalarni bilish haqiqatan ham ma'lumotlar tuzilmalari qanday ishlashini tushunishga yordam beradi va samarali algoritmlarni loyihalash qobiliyatingizni oshiradi.
 
-3. **Bitwise Algorithms**
+3. [**Bitwise Algorithms**](./bitwise.md)
    Bitli algoritmlar - bu raqamlarning alohida bitlarida ishlaydigan algoritmlar. Ushbu algoritmlar raqamlarning ikkilik tasvirini manipulyatsiya qiladi, masalan, bitlarni o'zgartirish, raqamning ma'lum bitlarini o'rnatish yoki tozalash va bit bo'yicha operatsiyalarni (VA, OR, XOR) bajaradi. Bitli algoritmlar odatda past darajadagi dasturlash, kriptografiya va optimallashtirish vazifalarida qo'llaniladi, bu erda alohida bitlarni samarali manipulyatsiya qilish kerak.
 
 4. **Searching Algorithms**
