@@ -34,7 +34,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 3. [**Bitwise Algorithms**](./bitwise.md)
    Bitli algoritmlar - bu raqamlarning alohida bitlarida ishlaydigan algoritmlar. Ushbu algoritmlar raqamlarning ikkilik tasvirini manipulyatsiya qiladi, masalan, bitlarni o'zgartirish, raqamning ma'lum bitlarini o'rnatish yoki tozalash va bit bo'yicha operatsiyalarni (VA, OR, XOR) bajaradi. Bitli algoritmlar odatda past darajadagi dasturlash, kriptografiya va optimallashtirish vazifalarida qo'llaniladi, bu erda alohida bitlarni samarali manipulyatsiya qilish kerak.
 
-4. **Searching Algorithms**
+4. [**Searching Algorithms**](./searching.md)
    Qidiruv algoritmlari ma'lumotlar to'plamidagi ma'lum bir element yoki elementni topish uchun ishlatiladi. Ushbu algoritmlar katta ma'lumotlar to'plamidan ma'lumotlarni samarali olish uchun keng qo'llaniladi.
 
 5. **Sorting Algorithms**
