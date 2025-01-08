@@ -37,7 +37,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 4. [**Searching Algorithms**](./searching.md)
    Qidiruv algoritmlari ma'lumotlar to'plamidagi ma'lum bir element yoki elementni topish uchun ishlatiladi. Ushbu algoritmlar katta ma'lumotlar to'plamidan ma'lumotlarni samarali olish uchun keng qo'llaniladi.
 
-5. **Sorting Algorithms**
+5. [**Sorting Algorithms**](./sorting.md)
    Saralash algoritmlari ro'yxat elementlarini ma'lum bir tartibda, masalan, son yoki alifbo tartibida joylashtirish uchun ishlatiladi. U elementlarni tizimli ravishda tartibga solib, muayyan elementlarni qidirish va ularga kirishni osonlashtiradi.
 
 6. **Recursion**
