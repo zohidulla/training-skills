@@ -40,7 +40,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 5. [**Sorting Algorithms**](./sorting.md)
    Saralash algoritmlari ro'yxat elementlarini ma'lum bir tartibda, masalan, son yoki alifbo tartibida joylashtirish uchun ishlatiladi. U elementlarni tizimli ravishda tartibga solib, muayyan elementlarni qidirish va ularga kirishni osonlashtiradi.
 
-6. **Recursion**
+6. [**Recursion**](./recursion.md)
    Rekursiya - bu funksiya o'z ta'rifi doirasida o'zini chaqiradigan dasturlash usuli. Odatda bir xil muammoning kichikroq holatlariga bo'linishi mumkin bo'lgan muammolarni hal qilish uchun ishlatiladi.
 
 7. **Backtracking Algorithm**
