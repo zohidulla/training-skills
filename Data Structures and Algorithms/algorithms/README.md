@@ -43,7 +43,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 6. [**Recursion**](./recursion.md)
    Rekursiya - bu funksiya o'z ta'rifi doirasida o'zini chaqiradigan dasturlash usuli. Odatda bir xil muammoning kichikroq holatlariga bo'linishi mumkin bo'lgan muammolarni hal qilish uchun ishlatiladi.
 
-7. **Backtracking Algorithm**
+7. [**Backtracking Algorithm**](./backtracking.md)
    Backtracking algoritmi Rekursiya algoritmidan olingan bo'lib, agar rekursiv yechim muvaffaqiyatsizlikka uchrasa, uni qaytarish imkoniyati mavjud, ya'ni yechim muvaffaqiyatsiz bo'lgan taqdirda, dastur muvaffaqiyatsizlikka uchragan vaqtni kuzatib boradi va boshqa yechimga asoslanadi. Shunday qilib, u asosan barcha mumkin bo'lgan echimlarni sinab ko'radi va to'g'risini topadi.
 
 8. **Divide and Conquer Algorithm**
