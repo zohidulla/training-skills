@@ -46,7 +46,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 7. [**Backtracking Algorithm**](./backtracking.md)
    Backtracking algoritmi Rekursiya algoritmidan olingan bo'lib, agar rekursiv yechim muvaffaqiyatsizlikka uchrasa, uni qaytarish imkoniyati mavjud, ya'ni yechim muvaffaqiyatsiz bo'lgan taqdirda, dastur muvaffaqiyatsizlikka uchragan vaqtni kuzatib boradi va boshqa yechimga asoslanadi. Shunday qilib, u asosan barcha mumkin bo'lgan echimlarni sinab ko'radi va to'g'risini topadi.
 
-8. **Divide and Conquer Algorithm**
+8. [**Divide and Conquer Algorithm**](./divide-conquer.md)
    Bo‘l va zabt et algoritmlari muammolarni kichikroq kichik muammolarga bo‘lish, o‘sha kichik muammolarni yechish va yakuniy yechimni olish uchun yechimlarni birlashtirish orqali hal qilish uchun rekursiv strategiyaga amal qiladi.
 
 9. **Greedy Algorithm**
