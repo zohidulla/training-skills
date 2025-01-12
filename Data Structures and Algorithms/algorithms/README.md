@@ -49,7 +49,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 8. [**Divide and Conquer Algorithm**](./divide-conquer.md)
    Bo‘l va zabt et algoritmlari muammolarni kichikroq kichik muammolarga bo‘lish, o‘sha kichik muammolarni yechish va yakuniy yechimni olish uchun yechimlarni birlashtirish orqali hal qilish uchun rekursiv strategiyaga amal qiladi.
 
-9. **Greedy Algorithm**
+9. [**Greedy Algorithm**](./greedy.md)
    Ochko'zlik algoritmi bir vaqtning o'zida yechimni bir bo'lakdan tashkil qiladi va eng aniq va darhol foyda keltiradigan keyingi qismni tanlaydi, ya'ni o'sha paytda eng maqbul tanlovdir. Shunday qilib, mahalliy optimallikni tanlash global echimlarga olib keladigan muammolar Greedy uchun eng mos keladi.
 
 10. **Dynamic Programming**
