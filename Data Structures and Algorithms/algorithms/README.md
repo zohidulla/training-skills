@@ -52,7 +52,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 9. [**Greedy Algorithm**](./greedy.md)
    Ochko'zlik algoritmi bir vaqtning o'zida yechimni bir bo'lakdan tashkil qiladi va eng aniq va darhol foyda keltiradigan keyingi qismni tanlaydi, ya'ni o'sha paytda eng maqbul tanlovdir. Shunday qilib, mahalliy optimallikni tanlash global echimlarga olib keladigan muammolar Greedy uchun eng mos keladi.
 
-10. **Dynamic Programming**
+10. [**Dynamic Programming**](./dynamic.md)
     Dinamik dasturlash - murakkab masalalarni oddiy kichik muammolarga bo'lish orqali hal qilish uchun ishlatiladigan usul. Har bir kichik muammoni faqat bir marta yechish va natijalarni saqlash orqali u ortiqcha hisob-kitoblardan qochadi, bu esa keng doiradagi muammolar uchun samaraliroq yechimlarga olib keladi.
 
 11. **Graph Algorithms**
