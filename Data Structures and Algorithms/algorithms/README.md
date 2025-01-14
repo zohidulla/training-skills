@@ -55,7 +55,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 10. [**Dynamic Programming**](./dynamic.md)
     Dinamik dasturlash - murakkab masalalarni oddiy kichik muammolarga bo'lish orqali hal qilish uchun ishlatiladigan usul. Har bir kichik muammoni faqat bir marta yechish va natijalarni saqlash orqali u ortiqcha hisob-kitoblardan qochadi, bu esa keng doiradagi muammolar uchun samaraliroq yechimlarga olib keladi.
 
-11. **Graph Algorithms**
+11. [**Graph Algorithms**](./graph.md)
     Grafik algoritmlari - bu tugunlar va qirralarning yig'indisi bo'lgan grafiklar bilan bog'liq muammolarni hal qilish uchun ishlatiladigan texnika va usullar to'plami. Bu algoritmlar grafiklar ustida izlash, oʻtish, eng qisqa yoʻlni topish va ulanishni aniqlash kabi turli amallarni bajaradi. Ular tarmoqni marshrutlash, ijtimoiy tarmoqlarni tahlil qilish va resurslarni taqsimlash kabi keng ko'lamli real muammolarni hal qilish uchun zarurdir.
 
 12. **Pattern Searching**
