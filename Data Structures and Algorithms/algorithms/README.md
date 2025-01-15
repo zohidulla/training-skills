@@ -58,7 +58,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 11. [**Graph Algorithms**](./graph.md)
     Grafik algoritmlari - bu tugunlar va qirralarning yig'indisi bo'lgan grafiklar bilan bog'liq muammolarni hal qilish uchun ishlatiladigan texnika va usullar to'plami. Bu algoritmlar grafiklar ustida izlash, oʻtish, eng qisqa yoʻlni topish va ulanishni aniqlash kabi turli amallarni bajaradi. Ular tarmoqni marshrutlash, ijtimoiy tarmoqlarni tahlil qilish va resurslarni taqsimlash kabi keng ko'lamli real muammolarni hal qilish uchun zarurdir.
 
-12. **Pattern Searching**
+12. [**Pattern Searching**](./pattern.md)
     Pattern Searching DSA-da kattaroq matn ichida ma'lum bir naqshning paydo bo'lishini topish uchun ishlatiladigan asosiy usuldir. Shaklni qidirish algoritmlari keraksiz taqqoslashlarni minimallashtirish va qidiruvni tezroq qilish uchun oldindan ishlov berish kabi usullardan foydalanadi.
 
 13. **Branch and Bound Algorithm**
