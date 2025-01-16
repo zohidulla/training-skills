@@ -61,7 +61,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 12. [**Pattern Searching**](./pattern.md)
     Pattern Searching DSA-da kattaroq matn ichida ma'lum bir naqshning paydo bo'lishini topish uchun ishlatiladigan asosiy usuldir. Shaklni qidirish algoritmlari keraksiz taqqoslashlarni minimallashtirish va qidiruvni tezroq qilish uchun oldindan ishlov berish kabi usullardan foydalanadi.
 
-13. **Branch and Bound Algorithm**
+13. [**Branch and Bound Algorithm**](./branch-bound.md)
     Tarmoq va bog'langan algoritm - bu eng yaxshi yechimni muntazam ravishda izlash uchun kombinatoriy optimallashtirish masalalarida qo'llaniladigan usul. U muammoni kichikroq kichik muammolarga yoki filiallarga bo'lish orqali ishlaydi, so'ngra optimal yechim chegaralari asosida ma'lum filiallarni yo'q qiladi. Bu jarayon eng yaxshi yechim topilmaguncha yoki barcha filiallar o'rganilguncha davom etadi.
 
 14. **Geometric Algorithms**
