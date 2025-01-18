@@ -64,7 +64,7 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 13. [**Branch and Bound Algorithm**](./branch-bound.md)
     Tarmoq va bog'langan algoritm - bu eng yaxshi yechimni muntazam ravishda izlash uchun kombinatoriy optimallashtirish masalalarida qo'llaniladigan usul. U muammoni kichikroq kichik muammolarga yoki filiallarga bo'lish orqali ishlaydi, so'ngra optimal yechim chegaralari asosida ma'lum filiallarni yo'q qiladi. Bu jarayon eng yaxshi yechim topilmaguncha yoki barcha filiallar o'rganilguncha davom etadi.
 
-14. **Geometric Algorithms**
+14. [**Geometric Algorithms**](./geometric.md)
     Geometrik algoritmlar - bu shakllar, nuqtalar, chiziqlar va ko'pburchaklar bilan bog'liq muammolarni hal qiluvchi algoritmlar to'plami. Geometrik algoritmlar informatikaning keng doiradagi muammolarini, masalan, kesishuvlarni aniqlash, qavariq korpusni hisoblash va hokazolarni hal qilish uchun zarurdir.
 
 15. **Randomized Algorithms**
