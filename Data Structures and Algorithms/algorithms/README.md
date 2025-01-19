@@ -67,5 +67,5 @@ Algoritmlar murakkab hisoblash masalalarini samarali va samarali hal qilish uchu
 14. [**Geometric Algorithms**](./geometric.md)
     Geometrik algoritmlar - bu shakllar, nuqtalar, chiziqlar va ko'pburchaklar bilan bog'liq muammolarni hal qiluvchi algoritmlar to'plami. Geometrik algoritmlar informatikaning keng doiradagi muammolarini, masalan, kesishuvlarni aniqlash, qavariq korpusni hisoblash va hokazolarni hal qilish uchun zarurdir.
 
-15. **Randomized Algorithms**
+15. [**Randomized Algorithms**](./randomized.md)
     Tasodifiy algoritmlar - muammolarni hal qilish uchun tasodifiylikdan foydalanadigan algoritmlar. Ular o'z maqsadlariga erishish uchun tasodifiy ma'lumotlardan foydalanadilar, bu ko'pincha oddiyroq va samaraliroq echimlarga olib keladi. Bu algoritmlar bir xil natija bermasligi mumkin, lekin ehtimollik yondashuvi maqbul bo'lgan holatlarda ayniqsa foydalidir.
