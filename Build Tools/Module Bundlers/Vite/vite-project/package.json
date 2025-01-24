@@ -11,5 +11,8 @@
   "devDependencies": {
     "vite": "^6.0.5",
     "vite-plugin-inspect": "^10.1.0"
+  },
+  "dependencies": {
+    "collect.js": "^4.36.1"
   }
 }
