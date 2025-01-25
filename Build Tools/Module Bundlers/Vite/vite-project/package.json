@@ -13,6 +13,8 @@
     "vite-plugin-inspect": "^10.1.0"
   },
   "dependencies": {
-    "collect.js": "^4.36.1"
+    "@tailwindcss/vite": "^4.0.0",
+    "collect.js": "^4.36.1",
+    "tailwindcss": "^4.0.0"
   }
 }
