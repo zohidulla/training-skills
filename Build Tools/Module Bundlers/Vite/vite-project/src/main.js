@@ -1,6 +1,3 @@
-// import "../src/style.css";
-import styles from "./assets/06.module.sass";
+import data from "./assets/07.json";
 
-console.log(styles);
-
-document.body.className = styles.wrapper;
+console.log(data);
