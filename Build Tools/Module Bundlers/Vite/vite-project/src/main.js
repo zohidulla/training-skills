@@ -1,9 +1,5 @@
-import imageUrl from "./assets/vite.svg";
-// import imageUrl from "./assets/vite.svg?raw";
-
-import url from "./assets/07.json?url";
+import imageUrl from "../public/javascript.svg";
 
 console.log(imageUrl);
-console.log(url);
 
 document.getElementById("image").src = imageUrl;
