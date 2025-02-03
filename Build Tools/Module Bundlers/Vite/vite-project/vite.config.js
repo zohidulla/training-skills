@@ -8,5 +8,14 @@ export default defineConfig({
     jsxFactory: "create",
     jsxInject: "import { create } from '/src/12-create.js'",
   },
-  plugins: [Inspect(), tailwindcss(), checker({ typescript: true })],
+  plugins: [
+    Inspect(),
+    tailwindcss(),
+    checker({
+      typescript: true,
+      eslint: {
+        lintCommand: 'eslint "./**/*.{ts,tsx}"',
+      },
+    }),
+  ],
 });

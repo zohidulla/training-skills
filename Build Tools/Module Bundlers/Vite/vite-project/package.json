@@ -10,8 +10,11 @@
     "tsc": "tsc --noEmit"
   },
   "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "eslint": "^9.19.0",
     "sass": "^1.83.4",
     "typescript": "^5.7.3",
+    "typescript-eslint": "^8.22.0",
     "vite": "^6.0.5",
     "vite-plugin-checker": "^0.8.0",
     "vite-plugin-inspect": "^10.1.0"
