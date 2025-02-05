@@ -5,22 +5,17 @@ import checker from "vite-plugin-checker";
 import path from "path";
 
 export default defineConfig({
-  esbuild: {
-    jsxFactory: "create",
-    jsxInject: "import { create } from '/src/12-create.js'",
-  },
   plugins: [
     Inspect(),
     tailwindcss(),
     checker({
       typescript: true,
-      eslint: {
-        lintCommand: 'eslint "./**/*.{ts,tsx}"',
-      },
     }),
   ],
+  envPrefix: "APP_",
   resolve: {
     alias: {
+      // eslint-disable-next-line no-undef
       "@": path.resolve(__dirname, "./src/assets"),
     },
   },
