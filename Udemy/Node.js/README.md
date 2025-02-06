@@ -7,8 +7,8 @@
 - Традиционно язык JavaScript использовался только для работы в веб-браузерах
 - Node.js позволяет выполнять код JavaScript за пределами браузеров, например, на серверах
 
-[About Node.js® - https://nodejs.org/en/about](https://nodejs.org/en/about)
-[About Node.js JavaScript runtime - https://github.com/nodejs/node](https://github.com/nodejs/node)
+* [About Node.js® - https://nodejs.org/en/about](https://nodejs.org/en/about)
+* [About Node.js JavaScript runtime - https://github.com/nodejs/node](https://github.com/nodejs/node)
 
 ### Преимущества Node.js?
 
@@ -72,8 +72,8 @@ node >
 
 ## Архитектура Node.js
 
-https://www.turing.com/kb/understanding-the-nodejs-architecture
-https://medium.com/@ibrahimlanre1890/node-js-architecture-understanding-node-js-architecture-5fb32879b994
+- https://www.turing.com/kb/understanding-the-nodejs-architecture
+- https://medium.com/@ibrahimlanre1890/node-js-architecture-understanding-node-js-architecture-5fb32879b994
 
 ### Как работает Node.js
 
@@ -87,10 +87,10 @@ https://medium.com/@ibrahimlanre1890/node-js-architecture-understanding-node-js-
 - **C++ Bindings** - Позволяет коду, написанному на JavaScript, получать доступ к функциям, написанным в библиотеке LibUV
 - **Внешние модули Node.js:** например, express, mocha ...
 
-[libuv is a multi-platform support library with a focus on asynchronous I/O - https://libuv.org/](https://libuv.org/)
-[About Cross-platform asynchronous I/O - https://github.com/libuv/libuv](https://github.com/libuv/libuv)
-[About WASI syscall API built atop libuv - https://github.com/nodejs/uvwasi](https://github.com/nodejs/uvwasi)
-[About WebAssembly System Interface - https://github.com/WebAssembly/WASI](https://github.com/WebAssembly/WASI)
+* [libuv is a multi-platform support library with a focus on asynchronous I/O - https://libuv.org/](https://libuv.org/)
+* [About Cross-platform asynchronous I/O - https://github.com/libuv/libuv](https://github.com/libuv/libuv)
+* [About WASI syscall API built atop libuv - https://github.com/nodejs/uvwasi](https://github.com/nodejs/uvwasi)
+* [About WebAssembly System Interface - https://github.com/WebAssembly/WASI](https://github.com/WebAssembly/WASI)
 
 ### Потоки и процессы
 
