@@ -1,20 +1,9 @@
-export function pluck(collection, field) {
-  return collection.map((item) => item[field]);
+import collect from "collect.js";
+
+export function pluckAndLog(items, field) {
+  const plucked = collect(items).pluck(field);
+
+  console.log(plucked);
+
+  return plucked;
 }
-
-// const users = [
-//   {
-//     name: "John",
-//     age: 34,
-//   },
-//   {
-//     name: "Jane",
-//     age: 25,
-//   },
-//   {
-//     name: "Alex",
-//     age: 26,
-//   },
-// ];
-
-// console.log(pluck(users, "name"));

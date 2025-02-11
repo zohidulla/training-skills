@@ -1,5 +1,5 @@
-import { pluck } from "pluck";
-import { log } from "pluck/log";
+import { pluckAndLog } from "@zohidjon/pluck";
+import { log } from "@zohidjon/pluck/log";
 
 const users = [
   {
@@ -16,4 +16,4 @@ const users = [
   },
 ];
 
-log(pluck(users, "name"));
+pluckAndLog(users, "name");
