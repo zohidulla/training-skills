@@ -223,11 +223,11 @@ File reading finished
 
 ```mermaid
 stateDiagram-v2
-  state if_state
+  state if_state <<choice>>
   state1: Задача
   state2: Может ли OS выполнить задачу без блокирования?
   state1 --> state2
-  state2 --> if()
+  state2 --> if_state
   if_state --> OS: Да
   state2 --> if_state
   if_state --> ThreadPool: Нет
