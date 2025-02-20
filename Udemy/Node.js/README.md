@@ -224,9 +224,9 @@ File reading finished
 ```mermaid
 stateDiagram-v2
 state if_state <<choice>>
-Задача --> if_state: Может OS ли выполнить задачу без блокирования?
-if_state --> OS: Да
-if_state --> Thread Pool : Нет
+Задача --> Может ли OS выполнить задачу без блокирования?
+Может ли OS выполнить задачу без блокирования? --> OS: Да
+Может ли OS выполнить задачу без блокирования? --> Thread Pool: Нет
 ```
 
 ### Псевдокод для Event loop
