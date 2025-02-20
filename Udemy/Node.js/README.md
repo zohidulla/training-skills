@@ -221,12 +221,11 @@ File reading finished
 
 > Делегирование задач
 
-```stateDiagram-v2
-    state if_state <<choice>>
-    Задача --> if_state: Может OS ли выполнить задачу без блокирования?
-    if_state --> OS: Да
-    if_state --> Thread Pool : Нет
-```
+stateDiagram-v2
+state if_state <<choice>>
+Задача --> if_state: Может OS ли выполнить задачу без блокирования?
+if_state --> OS: Да
+if_state --> Thread Pool : Нет
 
 <!-- Задача
 Может OS ли выполнить задачу без блокирования?
