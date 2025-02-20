@@ -227,8 +227,10 @@ stateDiagram-v2
   state1: Задача
   state2: Может ли OS выполнить задачу без блокирования?
   state1 --> state2
-  state2 --> if_state --> OS: Да
-  state2 --> if_state --> ThreadPool: Нет
+  state2 --> if_state
+  if_state --> OS: Да
+  state2 --> if_state
+  if_state --> ThreadPool: Нет
 ```
 
 ### Псевдокод для Event loop
