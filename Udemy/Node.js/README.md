@@ -224,7 +224,9 @@ File reading finished
 ```mermaid
 stateDiagram-v2
   state if_state <<choice>>
-  Задача --> if_state ["Может ли OS выполнить задачу без блокирования?"]
+  state1: Задача
+  state2: Может ли OS выполнить задачу без блокирования?
+  state1 --> state2
   if_state --> OS: Да
   if_state --> ThreadPool: Нет
 ```
