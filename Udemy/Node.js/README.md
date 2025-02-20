@@ -226,7 +226,7 @@ stateDiagram-v2
   state if_state <<choice>>
   Задача --> if_state ["Может ли OS выполнить задачу без блокирования?"]
   if_state --> OS: Да
-  if_state --> Thread-Pool: Нет
+  if_state --> ThreadPool: Нет
 ```
 
 ### Псевдокод для Event loop
