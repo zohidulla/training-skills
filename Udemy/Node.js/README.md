@@ -72,9 +72,6 @@ node >
 
 ## Архитектура Node.js
 
-- https://www.turing.com/kb/understanding-the-nodejs-architecture
-- https://medium.com/@ibrahimlanre1890/node-js-architecture-understanding-node-js-architecture-5fb32879b994
-
 ### Как работает Node.js
 
 <p align="center">
