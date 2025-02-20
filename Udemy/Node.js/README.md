@@ -252,13 +252,17 @@ stateDiagram-v2
 
 > Начало работы Event loop
 
-- Timers - Колбэки для истёкших таймеров setTiemout? setInterval
+- Timers - Колбэки для истёкших таймеров setTiemout, setInterval
 - Pending - I/O колбэки, отложенные до следующей итерации
 - Idle, Prepare - Используются внутри Node.js
 - Poll - Получить и выполнить колбэки I/O
 - Check - Колбэки setImmediate
 - Close - close event callbacks
 - Продолжить ДА => Timers, НЕТ => Выход
+
+<p align="center">
+<img src="./images/group-event-loop.png" height="600">
+</p>
 
 ### События nextTick и колбэки промисов
 
