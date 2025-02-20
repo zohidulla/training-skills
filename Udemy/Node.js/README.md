@@ -223,7 +223,7 @@ File reading finished
 
 ```mermaid
 stateDiagram-v2
-  state if_state <<choice>>
+  state if_state
   state1: Задача
   state2: Может ли OS выполнить задачу без блокирования?
   state1 --> state2
