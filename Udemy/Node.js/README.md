@@ -224,9 +224,9 @@ File reading finished
 ```mermaid
 stateDiagram-v2
   state if_state <<choice>>
-  Задача --> B["Может ли OS выполнить задачу без блокирования?"]
-  B["Может ли OS выполнить задачу без блокирования?"] --> OS: Да
-  B["Может ли OS выполнить задачу без блокирования?"] --> Thread Pool: Нет
+  Задача --> if_state ["Может ли OS выполнить задачу без блокирования?"]
+  if_state --> OS: Да
+  if_state --> Thread Pool: Нет
 ```
 
 ### Псевдокод для Event loop
