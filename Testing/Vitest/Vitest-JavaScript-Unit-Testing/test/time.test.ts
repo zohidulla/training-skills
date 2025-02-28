@@ -1,5 +1,5 @@
 import { expect, it, vi } from 'vitest'
-import { today, tomorrow } from '../src/time'
+import { endOfHour, isToday, today, tomorrow, toSeconds } from '../src/time'
 
 it('gets the current time', () => {
   const date = new Date('2025-01-01')
@@ -14,6 +14,21 @@ it('gets date of tomorrow', () => {
   expect(tomorrow()).toEqual(tomorrowDate)
   vi.useRealTimers()
 })
-it.todo('gets end of hour date')
-it.todo('checks if passed date is today')
-it.todo('converts milliseconds to seconds')
+it('gets end of hour date', () => {
+  const date = new Date('2025-01-01T12:00:00')
+  const endOfHourDate = new Date('2025-01-01T12:59:59')
+  expect(endOfHour(date)).toEqual(endOfHourDate)
+})
+it('checks if passed date is today', () => {
+  const date = new Date('2025-01-01')
+  vi.setSystemTime(date)
+  expect(isToday(date)).toBe(false)
+  vi.useRealTimers()
+})
+it('converts milliseconds to seconds', () => {
+  expect(toSeconds(-10000)).toBe(-10)
+  expect(toSeconds(-1000)).toBe(-1)
+  expect(toSeconds(0)).toBe(0)
+  expect(toSeconds(1000)).toBe(1)
+  expect(toSeconds(10000)).toBe(10)
+})
