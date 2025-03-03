@@ -2,7 +2,7 @@ import { expect, it } from 'vitest'
 import { TimelineItem } from '../src/types'
 import { updateTimelineItem } from '../src/timeline-items'
 
-it('updates the timeline item', () => {
+it.only('updates the timeline item', () => {
   const timelineItem: TimelineItem = {
     hour: 1,
     activityId: '1',
