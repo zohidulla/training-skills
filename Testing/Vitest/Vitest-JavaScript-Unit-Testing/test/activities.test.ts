@@ -3,7 +3,7 @@ import { calculateActivityCompletionPercentage, updateActivity } from '../src/ac
 import { Activity } from '../src/types'
 import { HUNDRED_PERCENT, SECONDS_IN_HOUR } from '../src/constants'
 
-it('updates activity', () => {
+it('updates original activity', () => {
   // arrange (given)
   const activity: Activity = {
     id: '1',
@@ -17,11 +17,26 @@ it('updates activity', () => {
   }
 
   // act (when)
-  const updatedActivity = updateActivity(activity, updatedFields)
+  updateActivity(activity, updatedFields)
 
   // assert (then)
   expect(activity).toEqual(updatedFields)
-  expect(updatedActivity).toEqual(updatedFields)
+})
+
+it('returns updated activity', () => {
+  // arrange (given)
+  const activity: Activity = {
+    id: '1',
+    name: 'Training',
+    secondsToComplete: SECONDS_IN_HOUR * 1
+  }
+  const updatedFields: Activity = {
+    id: '2',
+    name: 'Reading',
+    secondsToComplete: SECONDS_IN_HOUR * 2
+  }
+
+  expect(updateActivity(activity, updatedFields)).toEqual(updatedFields)
 })
 
 it('calculates activity completion percentage', () => {
