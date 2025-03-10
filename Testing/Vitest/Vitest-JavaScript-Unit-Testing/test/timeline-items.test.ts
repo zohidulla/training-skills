@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { Activity, Hour, TimelineItem } from '../src/types'
 import {
   calculateTrackedActivitySeconds,
@@ -36,21 +36,22 @@ describe('updateTimelineItem', () => {
 })
 
 describe('timeline items', () => {
-  it('resets timeline item activities', () => {
-    const date = new Date('2025-01-01T02:00:00')
-    vi.setSystemTime(date)
+  const trainingActivity: Activity = {
+    id: '1',
+    name: 'Training',
+    secondsToComplete: SECONDS_IN_HOUR * 1
+  }
 
-    const trainingActivity: Activity = {
-      id: '1',
-      name: 'Training',
-      secondsToComplete: SECONDS_IN_HOUR * 1
-    }
-    const readingActivity: Activity = {
-      id: '2',
-      name: 'Reading',
-      secondsToComplete: SECONDS_IN_HOUR * 2
-    }
-    const timelineItems: TimelineItem[] = [
+  const readingActivity: Activity = {
+    id: '2',
+    name: 'Reading',
+    secondsToComplete: SECONDS_IN_HOUR * 2
+  }
+
+  let timelineItems: TimelineItem[]
+
+  beforeEach(() => {
+    timelineItems = [
       {
         hour: 1,
         activityId: trainingActivity.id,
@@ -70,6 +71,11 @@ describe('timeline items', () => {
         isActive: true
       }
     ]
+  })
+
+  it('resets timeline item activities', () => {
+    const date = new Date('2025-01-01T02:00:00')
+    vi.setSystemTime(date)
 
     resetTimelineItemActivities(timelineItems, trainingActivity)
 
@@ -98,37 +104,6 @@ describe('timeline items', () => {
   })
 
   it('calculates the tracked activity seconds', () => {
-    const trainingActivity: Activity = {
-      id: '1',
-      name: 'Training',
-      secondsToComplete: SECONDS_IN_HOUR * 1
-    }
-    const readingActivity: Activity = {
-      id: '2',
-      name: 'Reading',
-      secondsToComplete: SECONDS_IN_HOUR * 2
-    }
-    const timelineItems: TimelineItem[] = [
-      {
-        hour: 1,
-        activityId: trainingActivity.id,
-        activitySeconds: SECONDS_IN_HOUR * 0.5,
-        isActive: false
-      },
-      {
-        hour: 2,
-        activityId: trainingActivity.id,
-        activitySeconds: SECONDS_IN_HOUR * 1,
-        isActive: false
-      },
-      {
-        hour: 3,
-        activityId: readingActivity.id,
-        activitySeconds: SECONDS_IN_HOUR * 1,
-        isActive: true
-      }
-    ]
-
     const trackedTrainingActivitySeconds = calculateTrackedActivitySeconds(
       timelineItems,
       trainingActivity
