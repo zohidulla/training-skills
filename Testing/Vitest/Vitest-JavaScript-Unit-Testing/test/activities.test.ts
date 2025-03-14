@@ -37,11 +37,35 @@ describe('updateActivity', () => {
   //     HUNDRED_PERCENT
   //   )
   // })
-  test.each([
-    [SECONDS_IN_HOUR * 0, 0],
-    [SECONDS_IN_HOUR * 0.5, 50],
-    [SECONDS_IN_HOUR * 1, HUNDRED_PERCENT]
-  ])('calculateActivityCompletionPercentage(%i) -> %i', (trackedSeconds, percentage) => {
-    expect(calculateActivityCompletionPercentage(activity, trackedSeconds)).toBe(percentage)
-  })
 })
+
+test.each([
+  [SECONDS_IN_HOUR * 0, 0],
+  [SECONDS_IN_HOUR * 0.5, 50],
+  [SECONDS_IN_HOUR * 1, HUNDRED_PERCENT]
+])('calculateActivityCompletionPercentage(%i) -> %i', (trackedSeconds, percentage) => {
+  expect(calculateActivityCompletionPercentage(activity, trackedSeconds)).toBe(percentage)
+})
+
+test.each([
+  { trackedSeconds: SECONDS_IN_HOUR * 0, percentage: 0 },
+  { trackedSeconds: SECONDS_IN_HOUR * 0.5, percentage: 50 },
+  { trackedSeconds: SECONDS_IN_HOUR * 1, percentage: HUNDRED_PERCENT }
+])(
+  'calculateActivityCompletionPercentage($trackedSeconds) -> $percentage',
+  ({ trackedSeconds, percentage }) => {
+    expect(calculateActivityCompletionPercentage(activity, trackedSeconds)).toBe(percentage)
+  }
+)
+
+test.each`
+  trackedSeconds           | percentage
+  ${SECONDS_IN_HOUR * 0}   | ${0}
+  ${SECONDS_IN_HOUR * 0.5} | ${50}
+  ${SECONDS_IN_HOUR * 1}   | ${HUNDRED_PERCENT}
+`(
+  'calculateActivityCompletionPercentage($trackedSeconds) -> $percentage',
+  ({ trackedSeconds, percentage }) => {
+    expect(calculateActivityCompletionPercentage(activity, trackedSeconds)).toBe(percentage)
+  }
+)
