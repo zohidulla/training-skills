@@ -8,6 +8,7 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
+    "test:ui": "vitest --ui",
     "lint": "eslint . --ext .vue,.js,.jsx,.ts,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
