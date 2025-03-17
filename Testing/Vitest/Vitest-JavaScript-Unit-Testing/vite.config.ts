@@ -9,5 +9,12 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  test: {
+    reporters: ['junit', 'json', 'html', 'verbose'],
+    outputFile: {
+      junit: '/test-report.xml',
+      json: '/test-report.json'
+    }
   }
 })
