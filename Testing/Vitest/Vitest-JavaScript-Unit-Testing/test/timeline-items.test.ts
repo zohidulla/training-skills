@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { Activity, Hour, TimelineItem } from '../src/types'
+import type { Activity, TimelineItem } from '../src/types'
 import {
   calculateTrackedActivitySeconds,
   resetTimelineItemActivities,

@@ -1,28 +1,28 @@
-import { expect, it, test, vi } from 'vitest'
+import { expect, it, vi } from 'vitest'
 import { endOfHour, isToday, today, tomorrow, toSeconds } from '../src/time'
 import { MILLISECONDS_IN_SECOND } from '../src/constants'
 
-test.each([
+it.each([
   [new Date('2025-01-01'), new Date('2025-01-01')],
   [new Date('2025-01-02'), new Date('2025-01-02')],
   [new Date('2025-01-03'), new Date('2025-01-03')]
-])('today(%o) -> %o', (date, expectedDate) => {
+])('return current date: %o', (date, expectedDate) => {
   vi.setSystemTime(date)
   expect(today()).toEqual(expectedDate)
   vi.useRealTimers()
 })
 
-test.each([
+it.each([
   [new Date('2025-01-01'), new Date('2025-01-01')],
   [new Date('2025-01-02'), new Date('2025-01-02')],
   [new Date('2025-01-03'), new Date('2025-01-03')]
-])('tomorrow(%o) -> %o', (date, expectedDate) => {
+])('returns date of tomorrow: %o', (date, expectedDate) => {
   vi.setSystemTime(date)
   expect(tomorrow()).toEqual(expectedDate)
   vi.useRealTimers()
 })
 
-test.each([
+it.each([
   [new Date('2025-01-01T12:00:00'), new Date('2025-01-01T12:59:59')],
   [new Date('2025-01-01T12:00:00'), new Date('2025-01-01T12:59:59')],
   [new Date('2025-01-01T12:00:00'), new Date('2025-01-01T12:59:59')]
@@ -37,7 +37,7 @@ it('checks if passed date is today', () => {
   vi.useRealTimers()
 })
 
-test.each([
+it.each([
   [MILLISECONDS_IN_SECOND * 0, 0],
   [MILLISECONDS_IN_SECOND * 1, 1],
   [MILLISECONDS_IN_SECOND * 10, 10],
