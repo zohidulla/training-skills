@@ -14,6 +14,7 @@ describe('updateTimelineItem', () => {
     activitySeconds: SECONDS_IN_HOUR * 1,
     isActive: true
   }
+
   it('updates original timeline item', () => {
     const timelineItem: TimelineItem = {
       hour: 1,
@@ -21,9 +22,11 @@ describe('updateTimelineItem', () => {
       activitySeconds: SECONDS_IN_HOUR * 0,
       isActive: false
     }
+
     updateTimelineItem(timelineItem, updatedFields)
     expect(timelineItem).toEqual(updatedFields)
   })
+
   it('returns updated timeline item', () => {
     const timelineItem: TimelineItem = {
       hour: 1,
@@ -31,6 +34,7 @@ describe('updateTimelineItem', () => {
       activitySeconds: SECONDS_IN_HOUR * 0,
       isActive: false
     }
+
     expect(updateTimelineItem(timelineItem, updatedFields)).toEqual(updatedFields)
   })
 })
@@ -114,6 +118,7 @@ describe('timeline items', () => {
       timelineItems,
       readingActivity
     )
+
     expect(trackedTrainingActivitySeconds).toBe(SECONDS_IN_HOUR * 1.5)
     expect(trackedReadingActivitySeconds).toBe(SECONDS_IN_HOUR * 1)
   })
