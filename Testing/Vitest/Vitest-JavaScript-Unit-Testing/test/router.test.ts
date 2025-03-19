@@ -1,3 +1,5 @@
+// @vitest-environment happy-dom
+
 import { expect, it } from 'vitest'
 import { normalizePageHash } from '../src/router'
 import { PageName } from '../src/types'

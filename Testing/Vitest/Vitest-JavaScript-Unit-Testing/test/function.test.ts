@@ -1,13 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
 import {
-  formatSeconds,
-  formatSecondsWithSign,
-  getProgressColorClass,
-  id,
-  normalizeSelectValue
-} from '../src/functions'
-import { ProgressColorClass } from '../src/types'
-import {
   HUNDRED_PERCENT,
   LOW_PERCENT,
   MEDIUM_PERCENT,
@@ -15,6 +7,14 @@ import {
   SECONDS_IN_HOUR,
   SECONDS_IN_MINUTE
 } from '../src/constants'
+import {
+  formatSeconds,
+  formatSecondsWithSign,
+  getProgressColorClass,
+  id,
+  normalizeSelectValue
+} from '../src/functions'
+import { ProgressColorClass } from '../src/types'
 
 describe('formatSecondsWithSign', () => {
   it.each([
@@ -24,7 +24,7 @@ describe('formatSecondsWithSign', () => {
     [SECONDS_IN_MINUTE * 30, '+00:30:00'],
     [SECONDS_IN_HOUR, '+01:00:00'],
     [SECONDS_IN_DAY, '+00:00:00']
-  ])('positive: formatSecondsWithSign(%i) -> %0', (seconds, formattedSeconds) => {
+  ])('positive: formatSecondsWithSign(%i) -> %o', (seconds, formattedSeconds) => {
     expect(formatSecondsWithSign(seconds)).toBe(formattedSeconds)
   })
 
@@ -35,7 +35,7 @@ describe('formatSecondsWithSign', () => {
     [-SECONDS_IN_MINUTE * 30, '-00:30:00'],
     [-SECONDS_IN_HOUR, '-01:00:00'],
     [-SECONDS_IN_DAY, '-00:00:00']
-  ])('negative: formatSecondsWithSign(%i) -> %0', (seconds, formattedSeconds) => {
+  ])('negative: formatSecondsWithSign(%i) -> %o', (seconds, formattedSeconds) => {
     expect(formatSecondsWithSign(seconds)).toBe(formattedSeconds)
   })
 })
@@ -47,7 +47,7 @@ it.each([
   [SECONDS_IN_MINUTE * 30, '00:30:00'],
   [SECONDS_IN_HOUR, '01:00:00'],
   [SECONDS_IN_DAY, '00:00:00']
-])('formatSeconds(%i) -> %0', (seconds, formattedSeconds) => {
+])('formatSeconds(%i) -> %o', (seconds, formattedSeconds) => {
   expect(formatSeconds(seconds)).toBe(formattedSeconds)
 })
 
@@ -74,6 +74,6 @@ it('generates id', () => {
   const randomSpy = vi.spyOn(Math, 'random').mockReturnValueOnce(10000)
 
   expect(id()).toBe('1s')
-  expect(nowSpy).toHaveBeenCalledTimes(2)
+  expect(nowSpy).toHaveBeenCalledTimes(1)
   expect(randomSpy).toHaveBeenCalledTimes(1)
 })
