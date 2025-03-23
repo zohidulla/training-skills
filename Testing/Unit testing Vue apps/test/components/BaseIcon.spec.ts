@@ -11,7 +11,7 @@ it('renders icon with default classes', () => {
   expect(wrapper.classes()).toContain('h-8')
 })
 
-it.only('renders icon with custom classes', () => {
+it('renders icon with custom classes', () => {
   const classes = 'h-12 text-purple-600'
   const wrapper = shallowMount(BaseIcon, {
     attrs: { class: classes },
