@@ -1,18 +1,32 @@
 import { mount, shallowMount } from '@vue/test-utils'
 import { it, expect } from 'vitest'
-import { ButtonType, IconName } from '../../src/types'
+import { ButtonType, IconName, SelectOption } from '../../src/types'
 import BaseSelect from '../../src/components/BaseSelect.vue'
 import BaseButton from '../../src/components/BaseButton.vue'
 import BaseIcon from '../../src/components/BaseIcon.vue'
 
-it('renders select with reset button', () => {
-  const wrapper = mount(BaseSelect, {
+type MountOptions = {
+  options?: SelectOption[]
+  placeholder?: string
+}
+
+function shallowMountSelect(mountOptions?: MountOptions) {
+  return mountSelect(mountOptions, true)
+}
+
+function mountSelect(mountOptions: MountOptions = {}, shallow = false) {
+  return mount(BaseSelect, {
+    shallow,
     props: {
-      placeholder: '',
-      options: [],
+      placeholder: mountOptions.placeholder || '',
+      options: mountOptions.options ?? [],
       selected: null
     }
   })
+}
+
+it('renders select with reset button', () => {
+  const wrapper = mountSelect()
 
   expect(wrapper.findComponent(BaseButton).vm.type).toBe(ButtonType.NEUTRAL)
   expect(wrapper.findComponent(BaseIcon).vm.name).toBe(IconName.X_MARK)
@@ -20,15 +34,8 @@ it('renders select with reset button', () => {
 
 it('renders select with placeholder', () => {
   const placeholder = 'Placeholder'
-  const wrapper = shallowMount(BaseSelect, {
-    props: {
-      placeholder,
-      options: [],
-      selected: null
-    }
-  })
 
-  expect(wrapper.text()).toContain(placeholder)
+  expect(shallowMountSelect({ placeholder }).text()).toContain(placeholder)
 })
 
 it('renders select with options', () => {
@@ -37,13 +44,7 @@ it('renders select with options', () => {
     { value: '2', label: 'Reading' },
     { value: '3', label: 'Coding' }
   ]
-  const wrapper = shallowMount(BaseSelect, {
-    props: {
-      placeholder: '',
-      options,
-      selected: null
-    }
-  })
+  const wrapper = shallowMountSelect({ options })
 
   options.forEach(({ value, label }) => {
     expect(wrapper.find(`option[value=${value}]`).exists()).toBe(true)
@@ -52,13 +53,7 @@ it('renders select with options', () => {
 })
 
 it('fires "select" event when option is selected', () => {
-  const wrapper = shallowMount(BaseSelect, {
-    props: {
-      placeholder: '',
-      selected: null,
-      options: []
-    }
-  })
+  const wrapper = shallowMountSelect()
 
   wrapper.find('select').trigger('change')
 
@@ -66,13 +61,7 @@ it('fires "select" event when option is selected', () => {
 })
 
 it('fires "select" event when reset button is pressed', () => {
-  const wrapper = mount(BaseSelect, {
-    props: {
-      placeholder: '',
-      selected: null,
-      options: []
-    }
-  })
+  const wrapper = mountSelect()
 
   wrapper.find('button').trigger('click')
 
