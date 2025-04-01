@@ -6,8 +6,11 @@
 2. Нюансы - Nuances
 3. Упрощение - Simplification
 
+```mermaid
 flowchart LR
-State -- code --> UI
-UI -- events --> State
-Timer --> State
-WebSocket --> State
+  A[Raw Data] --> B[Reactive Proxy]
+  B --> C[Dependencies]
+  C --> D[Updates UI]
+  D --> E[Re-render]
+  E -.-> B
+```
