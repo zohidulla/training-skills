@@ -3,11 +3,8 @@ import { computed, ref, watchEffect } from "vue";
 const counterButton = document.querySelector("button#counter");
 const resetButton = document.querySelector("button#reset");
 
-const initialState = {
-  counter: 1,
-};
-const counterState = ref(initialState);
-const isCounterTooBig = computed(() => counterState.value.counter > 10);
+const counterState = ref(5);
+const isCounterTooBig = computed(() => counterState.value > 10);
 
 watchEffect(() => {
   renderCounter();
@@ -18,7 +15,7 @@ watchEffect(() => {
 });
 
 function renderCounter() {
-  counterButton.textContent = `Counter: ${counterState.value.counter}`;
+  counterButton.textContent = `Counter: ${counterState.value}`;
 }
 
 function updateCounterColor() {
@@ -26,13 +23,13 @@ function updateCounterColor() {
 }
 
 counterButton.addEventListener("click", () => {
-  counterState.value.counter += 1;
+  counterState.value += 1;
 });
 
 resetButton.addEventListener("click", () => {
-  counterState.value.counter = 0;
+  counterState.value = 0;
 });
 
 setInterval(() => {
-  initialState.counter += 1;
+  counterState.value += 1;
 }, 1000);
