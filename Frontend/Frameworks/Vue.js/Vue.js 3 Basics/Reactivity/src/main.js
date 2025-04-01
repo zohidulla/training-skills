@@ -6,12 +6,11 @@ const counterState = new Proxy(
     counter: 5,
   },
   {
-    get(target, property) {
-      return target[property];
-    },
-    set(target, property, value) {
-      target[property] = value;
-      renderCounter();
+    set(target, prop, value) {
+      if (target[prop] !== value) {
+        target[prop] = value;
+        renderCounter();
+      }
       return true;
     },
   }
