@@ -1,18 +1,21 @@
 const counterButton = document.querySelector("button#counter");
 const resetButton = document.querySelector("button#reset");
 
-const counterState = {
-  _counter: 5,
-
-  get counter() {
-    return this._counter;
+const counterState = new Proxy(
+  {
+    counter: 5,
   },
-
-  set counter(newCounter) {
-    this._counter = newCounter;
-    renderCounter();
-  },
-};
+  {
+    get(target, property) {
+      return target[property];
+    },
+    set(target, property, value) {
+      target[property] = value;
+      renderCounter();
+      return true;
+    },
+  }
+);
 
 function renderCounter() {
   counterButton.textContent = `Counter: ${counterState.counter}`;
