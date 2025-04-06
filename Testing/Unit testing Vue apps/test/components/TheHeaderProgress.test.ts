@@ -1,10 +1,12 @@
-import { expect, it, vi } from 'vitest'
+import { afterEach, expect, it, vi } from 'vitest'
 import { shallowMount } from '@vue/test-utils'
 import TheHeaderProgress from '../../src/components/TheHeaderProgress.vue'
-import { PageName, ProgressColorClass } from '../../src/types'
+import { IconName, PageName, ProgressColorClass } from '../../src/types'
 import { computed } from 'vue'
-import { MEDIUM_PERCENT } from '../../src/constants'
+import { HUNDRED_PERCENT, MEDIUM_PERCENT } from '../../src/constants'
 import * as router from '../../src/router'
+import { useTotalProgress } from '../../src/composables/total-progress'
+import BaseIcon from '../../src/components/BaseIcon.vue'
 
 vi.mock('../../src/composables/total-progress', () => {
   return {
@@ -15,6 +17,10 @@ vi.mock('../../src/composables/total-progress', () => {
       }
     })
   }
+})
+
+afterEach(() => {
+  vi.restoreAllMocks()
 })
 
 it('has href attribute with progress page hash', () => {
@@ -36,6 +42,16 @@ it('navigates to progress page on click', () => {
 
   expect(navigateSpy).toBeCalledTimes(1)
   expect(navigateSpy).toBeCalledWith(PageName.PROGRESS)
+})
 
-  vi.resetAllMocks()
+it('shows completion label when day is complete', () => {
+  vi.mocked(useTotalProgress).mockReturnValue({
+    percentage: computed(() => HUNDRED_PERCENT),
+    colorClass: computed(() => ProgressColorClass.BLUE)
+  })
+
+  const wrapper = shallowMount(TheHeaderProgress)
+
+  expect(wrapper.text()).toContain('Day complete!')
+  expect(wrapper.findComponent(BaseIcon).vm.name).toBe(IconName.CHECK_CIRCLE)
 })
