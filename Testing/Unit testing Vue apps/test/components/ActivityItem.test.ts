@@ -8,6 +8,7 @@ import * as timelineItems from '../../src/timeline-items'
 import * as activities from '../../src/activities'
 import BaseSelect from '../../src/components/BaseSelect.vue'
 import { PERIOD_SELECT_OPTIONS, SECONDS_IN_HOUR } from '../../src/constants'
+import { formatSecondsWithSign } from '../../src/functions'
 
 function mountActivityItem(activityOverrides: Partial<Activity> = {}) {
   return mount(ActivityItem, {
@@ -63,4 +64,28 @@ it('has period select', () => {
     options: PERIOD_SELECT_OPTIONS,
     selected: secondsToComplete
   })
+})
+
+it('updates seconds to complete field of activity', async () => {
+  const updateActivitySpy = vi.spyOn(activities, 'updateActivity')
+  const secondsToComplete = SECONDS_IN_HOUR * 1
+  const updatedSecondsToComplete = secondsToComplete / 2
+  const activity = createActivity({ secondsToComplete })
+  const wrapper = mountActivityItem(activity)
+
+  expect(wrapper.text()).toContain(formatSecondsWithSign(-secondsToComplete))
+
+  await wrapper.findComponent(BaseSelect as any).vm.$emit('select', updatedSecondsToComplete)
+
+  expect(wrapper.text()).toContain(formatSecondsWithSign(-updatedSecondsToComplete))
+  expect(updateActivitySpy).toBeCalledTimes(1)
+  expect(updateActivitySpy).toBeCalledWith(
+    {
+      ...activity,
+      secondsToComplete: updatedSecondsToComplete
+    },
+    { secondsToComplete: updatedSecondsToComplete }
+  )
+
+  vi.resetAllMocks
 })
