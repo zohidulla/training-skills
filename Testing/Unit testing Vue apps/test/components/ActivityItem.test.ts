@@ -9,6 +9,7 @@ import * as activities from '../../src/activities'
 import BaseSelect from '../../src/components/BaseSelect.vue'
 import { PERIOD_SELECT_OPTIONS, SECONDS_IN_HOUR } from '../../src/constants'
 import { formatSecondsWithSign } from '../../src/functions'
+import RemainingActivitySeconds from '../../src/components/RemainingActivitySeconds.vue'
 
 function mountActivityItem(activityOverrides: Partial<Activity> = {}) {
   return mount(ActivityItem, {
@@ -111,4 +112,17 @@ it('updates seconds to complete field of activity to 0 if no period is selected'
   )
 
   vi.resetAllMocks
+})
+
+it('shows remaining activity seconds', () => {
+  const activity = createActivity({ secondsToComplete: SECONDS_IN_HOUR * 1 })
+  const wrapper = mountActivityItem(activity)
+
+  expect(wrapper.findComponent(RemainingActivitySeconds).props('activity')).toEqual(activity)
+})
+
+it('does not show remaining activity seconds if seconds to complete field of activity = 0', () => {
+  const wrapper = mountActivityItem({ secondsToComplete: 0 })
+
+  expect(wrapper.findComponent(RemainingActivitySeconds).exists()).toBe(false)
 })
