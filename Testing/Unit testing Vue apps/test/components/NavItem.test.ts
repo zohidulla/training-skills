@@ -6,11 +6,10 @@ import BaseIcon from '../../src/components/BaseIcon.vue'
 
 const timelineNavItem = NAV_ITEMS[0]
 
-it.only('renders nav item', () => {
+it('renders nav item', () => {
   const wrapper = shallowMount(NavItem, {
     props: {
       navItem: timelineNavItem
-      // isActive: false
     }
   })
 
