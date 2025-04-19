@@ -33,3 +33,12 @@ git init
 ```
 
 После инициализации создается скрытая папка .git
+
+> Области Git - Git areas
+
+```mermaid
+flowchart TD
+    A@{ shape: lin-cyl, label: "Working directory" }
+    B@{ shape: lin-cyl, label: "Staging area" }
+    C@{ shape: lin-cyl, label: "Repository" }
+```
