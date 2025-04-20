@@ -34,7 +34,7 @@ git init
 
 После инициализации создается скрытая папка .git
 
-> Области Git - Git areas
+### Области Git - Git areas
 
 ```mermaid
 flowchart TD
