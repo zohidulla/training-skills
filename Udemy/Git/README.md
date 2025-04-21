@@ -63,3 +63,9 @@ flowchart TD
 </p>
 
 > Git сохраняет различные версии одного и того же файла
+
+> Рабочий процесс Git
+
+<p align="left">
+<img src="./images/working-process-git-1024.png" height="500">
+</p>
