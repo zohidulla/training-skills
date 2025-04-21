@@ -77,10 +77,10 @@ Git сохраняет различные версии одного и того 
 flowchart LR
     id1(Untracked - неотслеживаемый) ~~~ id2(Unmodified - немодифицированный)
     id3(Modified - модифицированный) ~~~ id4(Staged - подготовленный)
-    style id1 fill:#0072E3,stroke:#000,stroke-width:4px
-    style id2 fill:#00A374,stroke:#000,stroke-width:4px
-    style id3 fill:#34397A,stroke:#000,stroke-width:4px
-    style id4 fill:#00B0DB,stroke:#000,stroke-width:4px
+    style id1 fill:#0072E3,stroke:#000,stroke-width:4px,color:#fff
+    style id2 fill:#00A374,stroke:#000,stroke-width:4px,color:#fff
+    style id3 fill:#34397A,stroke:#000,stroke-width:4px,color:#fff
+    style id4 fill:#00B0DB,stroke:#000,stroke-width:4px,color:#fff
 ```
 
 - **Неотслеживаемым (untracked)**. О неотслеживаемых файлах Git не знает, поэтому изменения в них не будут добавлены в коммит. Это любые файлы в вашем рабочем каталоге, которые не входили в последний коммит и не подготовлены к текущему коммиту.
