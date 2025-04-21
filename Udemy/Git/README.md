@@ -54,3 +54,12 @@ flowchart TD
 <p align="left">
 <img src="./images/staging-area.webp" height="200">
 </p>
+
+> Репозиторий - repository
+> Сохраненные объекты в репозитории
+
+<p align="left">
+<img src="./images/repository-git.jpg" height="200">
+</p>
+
+> Git сохраняет различные версии одного и того же файла
