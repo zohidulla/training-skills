@@ -63,10 +63,20 @@ flowchart TD
 <img src="./images/repository-git.jpg" height="500">
 </p>
 
-### Git сохраняет различные версии одного и того же файла
+Git сохраняет различные версии одного и того же файла
 
 ### Рабочий процесс Git
 
 <p align="left">
 <img src="./images/working-process-git.png" height="500">
 </p>
+
+### Статусы отслеживания файлов
+
+```mermaid
+flowchart LR
+    id1(Untracked - неотслеживаемый)
+    id2(Unmodified - немодифицированный)
+    id3(Modified - модифицированный)
+    id4(Staged - подготовленный)
+```
