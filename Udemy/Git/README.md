@@ -46,5 +46,5 @@ flowchart TD
 > Рабочая директория - working directory
 
 <p align="left">
-<img src="./images/working-directory-git.jpg">
+<img src="./images/working-directory-git.jpg" height="200">
 </p>
