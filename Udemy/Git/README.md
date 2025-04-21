@@ -88,3 +88,29 @@ flowchart LR
   - **Неизмененным (unmodified)**. То есть с момента последнего коммита в файле не было никаких изменений
   - **Измененным (modified)**. То есть с последнего коммита в файле были произведены какие-то изменения
   - **Подготовленным к коммиту (staged)**. Это значит, что вы внесли изменения в этот файл и затем проиндексировали их, и эти изменения будут добавлены в следующий коммит
+
+### Типы объектов в Git
+
+```mermaid
+flowchart LR
+    id1(Blob - файл) ~~~ id2(Tree - папка)
+    id3(Commit - коммит) ~~~ id4(Annotated Tag - аннотированный тег)
+    style id1 fill:#0072E3,stroke:#000,stroke-width:4px,color:#fff
+    style id2 fill:#00A374,stroke:#000,stroke-width:4px,color:#fff
+    style id3 fill:#34397A,stroke:#000,stroke-width:4px,color:#fff
+    style id4 fill:#00B0DB,stroke:#000,stroke-width:4px,color:#fff
+```
+
+### Хэши объектов и SHA1 хэш-функция
+
+Каждый объект в Git имеет уникальный ID (SHA1 ХЭШ)
+
+```mermaid
+%%{init: {"flowchart": {"htmlLabels": false}} }%%
+flowchart LR
+subgraph "`**Two**`"
+  c("`Входные данные
+  переменной длины`") -- "`SHA1 хэш-функция`" --> d("553AE74GFDHH747896DHGD877F8F790S0987F6GF") -- "`Фиксированная длина (160 бит) 40 шестнадцатеричных символов`"
+end
+
+```
