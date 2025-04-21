@@ -75,8 +75,6 @@ Git сохраняет различные версии одного и того 
 
 ```mermaid
 flowchart LR
-    id1(Untracked - неотслеживаемый)
-    id2(Unmodified - немодифицированный)
-    id3(Modified - модифицированный)
-    id4(Staged - подготовленный)
+    id1(Untracked - неотслеживаемый) ~~~ id2(Unmodified - немодифицированный)
+    id3(Modified - модифицированный) ~~~ id4(Staged - подготовленный)
 ```
