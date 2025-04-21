@@ -106,10 +106,9 @@ flowchart LR
 Каждый объект в Git имеет уникальный ID (SHA1 ХЭШ)
 
 ```mermaid
-%%{init: {"flowchart": {"htmlLabels": false}} }%%
 flowchart LR
-subgraph "`**Two**`"
-  c("`Входные данные
+subgraph "`****`"
+  a("`Входные данные
   переменной длины`") -- "`SHA1 хэш-функция`" --> d("553AE74GFDHH747896DHGD877F8F790S0987F6GF") -- "`Фиксированная длина (160 бит) 40 шестнадцатеричных символов`"
 end
 
