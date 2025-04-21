@@ -43,28 +43,29 @@ flowchart TD
     C@{ shape: lin-cyl, label: "Repository" }
 ```
 
-> Рабочая директория - working directory
+### Рабочая директория - working directory
 
 <p align="left">
 <img src="./images/working-directory-git.jpg" height="500">
 </p>
 
-> Индекс - staging area
+### Индекс - staging area
 
 <p align="left">
 <img src="./images/staging-area.webp" height="200">
 </p>
 
-> Репозиторий - repository
-> Сохраненные объекты в репозитории
+### Репозиторий - repository
+
+Сохраненные объекты в репозитории
 
 <p align="left">
 <img src="./images/repository-git.jpg" height="500">
 </p>
 
-> Git сохраняет различные версии одного и того же файла
+### Git сохраняет различные версии одного и того же файла
 
-> Рабочий процесс Git
+### Рабочий процесс Git
 
 <p align="left">
 <img src="./images/working-process-git-1024.png" height="500">
