@@ -68,5 +68,5 @@ flowchart TD
 ### Рабочий процесс Git
 
 <p align="left">
-<img src="./images/working-process-git-1024.png" height="500">
+<img src="./images/working-process-git.png" height="500">
 </p>
