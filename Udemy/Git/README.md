@@ -46,5 +46,11 @@ flowchart TD
 > Рабочая директория - working directory
 
 <p align="left">
-<img src="./images/working-directory-git.jpg" height="200">
+<img src="./images/working-directory-git.jpg" height="500">
+</p>
+
+> Индекс - staging area
+
+<p align="left">
+<img src="./images/working-directory-git.jpg" height="500">
 </p>
