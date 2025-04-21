@@ -52,5 +52,5 @@ flowchart TD
 > Индекс - staging area
 
 <p align="left">
-<img src="./images/working-directory-git.jpg" height="500">
+<img src="./images/staging-area.webp" height="200">
 </p>
