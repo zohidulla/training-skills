@@ -42,3 +42,9 @@ flowchart TD
     B@{ shape: lin-cyl, label: "Staging area" }
     C@{ shape: lin-cyl, label: "Repository" }
 ```
+
+> Рабочая директория - working directory
+
+<p align="left">
+<img src="./images/working-directory-git.jpg">
+</p>
