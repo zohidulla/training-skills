@@ -127,13 +127,13 @@ end
 Коммит - указатель на дерево
 
 <p align="left">
-<img src="./images/git-commit.png" height="500">
+<img src="./images/git-commit.png" height="200">
 </p>
 
 Внутренние устройство коммита
 
 <p align="left">
-<img src="./images/commit-2.png" height="500">
+<img src="./images/commit-2.png" height="400">
 </p>
 
 - Указатель коммита — SHA1-хеш, который идентифицирует коммит;
