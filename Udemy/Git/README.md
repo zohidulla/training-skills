@@ -163,3 +163,11 @@ end
 <p align="left">
 <img src="./images/git-head-pic4.png">
 </p>
+
+### Ветка (branch) - ссылка на коммит
+
+Ветка ссылается на последний коммит
+
+<p align="left">
+<img src="./images/git-branch.webp">
+</p>
