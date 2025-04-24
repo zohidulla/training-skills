@@ -245,3 +245,11 @@ temp/
 - **git config --global init.defaultBranch [branch name]** — задать название метки по умолчанию;
 - **git config --global user.name [имя пользователя]** — задать имя пользователя глобально, для всех репозиториев на локальной машине;
 - **git config --global user.email [электронная почта пользователя]** — задать электронную почту пользователя глобально, для всех репозиториев на локальной машине.
+
+### Сервисы хостинга Git репозиториев
+
+<p align="center">
+<img src="./images/GitHub_Logo.webp" height="200">
+<img src="./images/BitBucket_Logo.png" height="200">
+<img src="./images/GitLab_logo.png" height="200">
+</p>
