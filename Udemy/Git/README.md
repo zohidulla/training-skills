@@ -248,7 +248,7 @@ temp/
 
 ### Сервисы хостинга Git репозиториев
 
-<p align="left" style="display: flex; gap: 40px; justify-content: center; align-items: anchor-center">
+<p align="left" style="display: flex; gap-x: 40px; justify-content: center; align-items: anchor-center">
   <img src="./images/GitHub_Logo.webp" width="200" style="vertical-align: center;">
   <img src="./images/BitBucket_Logo.png" width="200" style="vertical-align: center;">
   <img src="./images/GitLab_logo.png" width="200" style="vertical-align: center;">
