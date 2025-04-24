@@ -248,7 +248,7 @@ temp/
 
 ### Сервисы хостинга Git репозиториев
 
-<p align="center" justify="center">
+<p align="center">
   <img src="./images/GitHub_Logo.webp" width="200">
   <img src="./images/BitBucket_Logo.png" width="200">
   <img src="./images/GitLab_logo.png" width="200">
