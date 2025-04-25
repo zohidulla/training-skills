@@ -253,3 +253,35 @@ temp/
   <img src="./images/logo-BitBucket.png" width="200">
   <img src="./images/logo-GitLab.png" width="200">
 </p>
+
+> репозитории на удаленных серверах
+
+<p align="center">
+  <img src="./images/git_remote-repository.png" width="400">
+</p>
+
+> локальные и удаленные репозитории
+
+<p align="center">
+  <img src="./images/local-and-remote-repo.webp" width="400">
+</p>
+
+**origin** - имя удаленного репозитория по-умолчанию
+
+> Связь существующего локального репозитория с удаленным
+
+```
+git remote add origin <url>
+```
+
+> Загрузка изменений из локальной ветки в удаленную с созданием связи между ними
+
+```
+git push -u origin <branch-name>
+```
+
+> Дальнейшие загрузки изменений в ветку удаленного репозитория после установки связи между локальной и удаленной ветками
+
+```
+git push
+```
