@@ -256,13 +256,13 @@ temp/
 
 > репозитории на удаленных серверах
 
-<p align="center">
+<p align="left">
   <img src="./images/git_remote-repository.png" width="400">
 </p>
 
 > локальные и удаленные репозитории
 
-<p align="center">
+<p align="left">
   <img src="./images/local-and-remote-repo.webp" width="400">
 </p>
 
