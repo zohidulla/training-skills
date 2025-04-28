@@ -26,6 +26,12 @@ git config --global user.name "Your Name"
 git config --global user.email "Your Email"
 ```
 
+```zsh
+git config --list
+user.email=xxxxxx@xxxxxx.com
+user.name=xxxxxx
+```
+
 > Создание нового Git репозитория
 
 ```bash
