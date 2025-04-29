@@ -280,6 +280,20 @@ temp/
 git remote add origin <url>
 ```
 
+> Example Add a remote repo called "origin" via "git remote add <remote-name> <remote-url>"
+
+```bash
+git remote add origin https://github.com/your-username/test.git
+```
+
+> List all remote names and their corresponding URLs
+
+```bash
+git remote -v
+origin  https://github.com/your-username/test.git (fetch)
+origin  https://github.com/your-username/test.git (push)
+```
+
 > Загрузка изменений из локальной ветки в удаленную с созданием связи между ними
 
 ```bash
@@ -290,4 +304,117 @@ git push -u origin <branch-name>
 
 ```bash
 git push
+```
+
+> Example Push all commits of the branch "master" to remote repo "origin"
+
+```bash
+git push origin master
+Username for 'https://github.com': ******
+Password for 'https://your-username@github.com': *******
+Counting objects: 10, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.13 KiB | 0 bytes/s, done.
+Total 10 (delta 1), reused 0 (delta 0)
+To https://github.com/your-username/test.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+```
+
+### Тегирование - Tagging
+
+> Creating an Annotated Tag
+
+```bash
+git tag -a <tag-name> -m <message>
+```
+
+> Create an annotated tag at the latest commit
+
+```bash
+git tag -a v1.0.0 -m "First production system"
+```
+
+> List all tags
+
+```bash
+git tag
+v1.0.0
+```
+
+> Show tag details
+
+```bash
+git show v1.0.0
+```
+
+```bash
+git log
+......
+commit 7e7cb40a9340691e2b16a041f7185cee5f7ba92e
+......
+    Commit 3
+
+git tag -a "v0.9.0" -m "Last pre-production release" 7e7cb40
+
+// List all tags
+git tag
+v0.9.0
+v1.0.0
+
+// Show details of a tag
+git show v0.9.0
+......
+```
+
+> Deleting Tags
+
+```bash
+git tag -d v1.4-lw
+Deleted tag 'v1.4-lw' (was e7d5add)
+Note that this does not remove the tag from any remote servers. There are two common variations for deleting a tag from a remote server.
+
+The first variation is git push <remote> :refs/tags/<tagname>:
+
+git push origin :refs/tags/v1.4-lw
+To /git@github.com:schacon/simplegit.git
+ - [deleted]         v1.4-lw
+The way to interpret the above is to read it as the null value before the colon is being pushed to the remote tag name, effectively deleting it.
+
+The second (and more intuitive) way to delete a remote tag is with:
+
+git push origin --delete <tagname>
+```
+
+> Checking out Tags
+
+```bash
+git checkout v2.0.0
+Note: switching to 'v2.0.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 99ada87... Merge pull request #89 from schacon/appendix-final
+
+git checkout v2.0-beta-0.1
+Previous HEAD position was 99ada87... Merge pull request #89 from schacon/appendix-final
+HEAD is now at df3f601... Add atlas.json and cover image
+In “detached HEAD” state, if you make changes and then create a commit, the tag will stay the same, but your new commit won’t belong to any branch and will be unreachable, except by the exact commit hash. Thus, if you need to make changes — say you’re fixing a bug on an older version, for instance — you will generally want to create a branch:
+
+git checkout -b version2 v2.0.0
+Switched to a new branch 'version2'
 ```
