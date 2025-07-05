@@ -351,3 +351,15 @@ Approximate round trip times in milli-seconds:
 <p align="left">
 <img src="./images/network-switch-3.png">
 </p>
+
+Example:
+**Data - 46 Bytes**
+(min data size if VLAN Tag is absent)
+**+**
+**Overhead - 26 Bytes**
+**=**
+**72 Bytes**
+
+**Throughtput = 46/72 = 64%**
+
+Note: Preamble and SFD are not counted here
