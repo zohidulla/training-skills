@@ -339,3 +339,15 @@ Approximate round trip times in milli-seconds:
 <p align="left">
 <img src="./images/network-switch.png">
 </p>
+
+## Принцип работы сетевого коммутатора
+
+<p align="left">
+<img src="./images/network-switch-2.png">
+</p>
+
+## Заголовок кадра Ethernet
+
+<p align="left">
+<img src="./images/network-switch-3.png">
+</p>
