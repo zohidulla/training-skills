@@ -369,3 +369,9 @@ Note: Preamble and SFD are not counted here
 <p align="left">
 <img src="./images/type-comm.png">
 </p>
+
+## Типы MAC-адресов
+
+<p align="left">
+<img src="./images/type-mac-address.png">
+</p>
