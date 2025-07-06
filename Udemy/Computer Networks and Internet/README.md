@@ -363,3 +363,9 @@ Example:
 **Throughtput = 46/72 = 64%**
 
 Note: Preamble and SFD are not counted here
+
+## Типы передачи данных
+
+<p align="left">
+<img src="./images/type-comm.png">
+</p>
