@@ -375,3 +375,9 @@ Note: Preamble and SFD are not counted here
 <p align="left">
 <img src="./images/type-mac-address.png">
 </p>
+
+## Полный дуплекс против полудуплекса
+
+<p align="left">
+<img src="./images/duplex.png">
+</p>
