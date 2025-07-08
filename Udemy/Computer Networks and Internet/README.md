@@ -381,3 +381,9 @@ Note: Preamble and SFD are not counted here
 <p align="left">
 <img src="./images/duplex.png">
 </p>
+
+## Коллизия
+
+<p align="left">
+<img src="./images/collision.png">
+</p>
