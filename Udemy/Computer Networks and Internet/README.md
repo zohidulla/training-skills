@@ -382,8 +382,14 @@ Note: Preamble and SFD are not counted here
 <img src="./images/duplex.png">
 </p>
 
-## Коллизия
+## Коллизия - Collision
 
 <p align="left">
 <img src="./images/collision.png">
+</p>
+
+## Механизмы обработки коллизий - Handling Collisions
+
+<p align="left">
+<img src="./images/handling-collisions.png">
 </p>
