@@ -393,3 +393,9 @@ Note: Preamble and SFD are not counted here
 <p align="left">
 <img src="./images/handling-collisions.png">
 </p>
+
+## Домены коллизий - Collision Domains
+
+<p align="left">
+<img src="./images/collision-domains.png">
+</p>
