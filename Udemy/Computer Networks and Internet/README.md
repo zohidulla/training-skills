@@ -399,3 +399,9 @@ Note: Preamble and SFD are not counted here
 <p align="left">
 <img src="./images/collision-domains.png">
 </p>
+
+## Согласование скорости и дуплекса - Speed and duplex negotiation
+
+<p align="left">
+<img src="./images/speed-duplex-negotiation.png">
+</p>
