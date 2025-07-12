@@ -405,3 +405,17 @@ Note: Preamble and SFD are not counted here
 <p align="left">
 <img src="./images/speed-duplex-negotiation.png">
 </p>
+
+## Анализ заголовков unicast кадров Ethernet - Analysis of unicast Ethernet frame headers
+
+<p align="left">
+<img src="./images/unicast.png">
+</p>
+
+**Examples EtherType**
+
+- **IPv4: 0x0800**
+- **IPv6: 0x86DD**
+- **ARP: 0x0806**
+- **VLAN Tag: 0x8100**
+- **MPLS: 0x8847**
