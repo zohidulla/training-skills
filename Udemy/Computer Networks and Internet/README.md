@@ -437,3 +437,9 @@ Note: Preamble and SFD are not counted here
 <p align="left">
 <img src="./images/ip-address.png">
 </p>
+
+## IPv4 против IPv6 IP-адресов - IPv4 vs IPv6
+
+<p align="left">
+<img src="./images/ipv4-vs-ipv6.png">
+</p>s
