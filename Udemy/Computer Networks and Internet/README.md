@@ -419,3 +419,13 @@ Note: Preamble and SFD are not counted here
 - **ARP: 0x0806**
 - **VLAN Tag: 0x8100**
 - **MPLS: 0x8847**
+
+## Недостатки коммутируемой сети - Disadvantages of a switched network
+
+<p align="left">
+<img src="./images/disadvantages.png">
+</p>
+
+<p align="left">
+<img src="./images/diffirent-networks.png">
+</p>
