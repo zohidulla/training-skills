@@ -455,3 +455,9 @@ Note: Preamble and SFD are not counted here
 <p align="left">
 <img src="./images/mac-vs-ip.png">
 </p>
+
+## Типы IP-адресов - Types of IP Addresses
+
+<p align="left">
+<img src="./images/types-ip.png">
+</p>
