@@ -449,3 +449,9 @@ Note: Preamble and SFD are not counted here
 <p align="left">
 <img src="./images/ipv4-format.png">
 </p>
+
+## MAC-адрес против IP-адреса - MAC Address vs IP Address
+
+<p align="left">
+<img src="./images/mac-vs-ip.png">
+</p>
