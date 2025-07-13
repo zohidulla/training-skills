@@ -461,3 +461,9 @@ Note: Preamble and SFD are not counted here
 <p align="left">
 <img src="./images/types-ip.png">
 </p>
+
+## Маршрутизатор - Router
+
+<p align="left">
+<img src="./images/router.png">
+</p>
