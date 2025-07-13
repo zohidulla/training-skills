@@ -420,6 +420,8 @@ Note: Preamble and SFD are not counted here
 - **VLAN Tag: 0x8100**
 - **MPLS: 0x8847**
 
+# Маршрутизаторы и сетевой уровень - Routers and Network Layer
+
 ## Недостатки коммутируемой сети - Disadvantages of a switched network
 
 <p align="left">
@@ -428,4 +430,10 @@ Note: Preamble and SFD are not counted here
 
 <p align="left">
 <img src="./images/diffirent-networks.png">
+</p>
+
+## IP-адрес - IP address
+
+<p align="left">
+<img src="./images/ip-address.png">
 </p>
