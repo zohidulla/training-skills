@@ -442,4 +442,10 @@ Note: Preamble and SFD are not counted here
 
 <p align="left">
 <img src="./images/ipv4-vs-ipv6.png">
-</p>s
+</p>
+
+## Формат IPv4-адреса - IPv4 Address Format
+
+<p align="left">
+<img src="./images/ipv4-format.png">
+</p>
