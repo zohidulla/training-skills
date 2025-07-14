@@ -499,3 +499,9 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/private-public-ip.png">
 </p>
+
+## Что такое сеть - What is a Network
+
+<p align="left"></p>
+<img src="./images/network.png">
+</p>
