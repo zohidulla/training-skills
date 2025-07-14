@@ -493,3 +493,9 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/localhost.png">
 </p>
+
+## Частные и публичные IP-адреса - Private and Public IP Addresses
+
+<p align="left">
+<img src="./images/private-public-ip.png">
+</p>
