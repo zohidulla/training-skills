@@ -487,3 +487,9 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/ip-address-classes.png">
 </p>
+
+## Локальный хост localhost
+
+<p align="left">
+<img src="./images/localhost.png">
+</p>
