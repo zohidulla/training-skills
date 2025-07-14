@@ -479,3 +479,11 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/routers.png">
 </p>
+
+# IP-адресация и IP-пакеты - IP Addressing and IP Packets
+
+## Классы IP-адресов - IP Address Classes
+
+<p align="left">
+<img src="./images/ip-address-classes.png">
+</p>
