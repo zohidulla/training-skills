@@ -535,3 +535,19 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/ipv4-header.png">
 </p>
+
+# Сети - Networks
+
+**Examples:**
+
+<p align="left">
+<img src="./images/network-1.png">
+</p>
+
+<p align="left">
+<img src="./images/network-2.png">
+</p>
+
+<p align="left">
+<img src="./images/network-3.png">
+</p>
