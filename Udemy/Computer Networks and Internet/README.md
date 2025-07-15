@@ -517,3 +517,9 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/public-ip-ranges.png">
 </p>
+
+## Статические IP-адреса - Static IP Addresses
+
+<p align="left">
+<img src="./images/static-ip.png">
+</p>
