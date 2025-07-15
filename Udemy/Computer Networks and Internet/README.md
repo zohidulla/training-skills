@@ -529,3 +529,9 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/dynamic-ip.png">
 </p>
+
+## Заголовок IPv4 - IPv4 Header
+
+<p align="left">
+<img src="./images/ipv4-header.png">
+</p>
