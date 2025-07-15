@@ -511,3 +511,9 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/private-ip-ranges.png">
 </p>
+
+## Диапазоны публичных IP-адресов - Public IP Address Ranges
+
+<p align="left">
+<img src="./images/public-ip-ranges.png">
+</p>
