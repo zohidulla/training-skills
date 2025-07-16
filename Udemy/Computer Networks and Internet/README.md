@@ -565,3 +565,13 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/decimal-to-binary.png">
 </p>
+
+## Бинарные операторы И и ИЛИ - Binary AND and OR Operators
+
+<p align="left">
+<img src="./images/binary-and-operator.png">
+</p>
+
+<p align="left">
+<img src="./images/binary-or-operator.png">
+</p>
