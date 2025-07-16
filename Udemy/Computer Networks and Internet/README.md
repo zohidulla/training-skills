@@ -650,3 +650,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/subnetting-4.png">
 </p>
+
+## Вложенная подсеть - Nested Subnetting
+
+<p align="left">
+<img src="./images/subnetting-5.png">
+</p>
