@@ -632,3 +632,11 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/subnetting.png">
 </p>
+
+<p align="left">
+<img src="./images/subnetting-1.png">
+</p>
+
+<p align="left">
+<img src="./images/subnetting-2.png">
+</p>
