@@ -551,3 +551,11 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/network-3.png">
 </p>
+
+# Двоичная математика - Binary Math
+
+## Преобразование из двоичной системы в десятичную - Binary to Decimal Conversion
+
+<p align="left">
+<img src="./images/bBinary-to-decimal.png">
+</p>
