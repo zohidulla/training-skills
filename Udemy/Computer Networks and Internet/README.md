@@ -575,3 +575,5 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/binary-or-operator.png">
 </p>
+
+# Сетевые маски и подсети - Subnetting and Network Masks
