@@ -583,3 +583,7 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/network-mask.png">
 </p>
+
+<p align="left">
+<img src="./images/network-mask-1.png">
+</p>
