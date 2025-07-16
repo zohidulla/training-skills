@@ -557,5 +557,11 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 ## Преобразование из двоичной системы в десятичную - Binary to Decimal Conversion
 
 <p align="left">
-<img src="./images/bBinary-to-decimal.png">
+<img src="./images/binary-to-decimal.png">
+</p>
+
+## Преобразование из десятичной системы в двоичную - Decimal to Binary Conversion
+
+<p align="left">
+<img src="./images/decimal-to-binary.png">
 </p>
