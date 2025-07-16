@@ -640,3 +640,13 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/subnetting-2.png">
 </p>
+
+Subnetting Example:
+
+<p align="left">
+<img src="./images/subnetting-3.png">
+</p>
+
+<p align="left">
+<img src="./images/subnetting-4.png">
+</p>
