@@ -613,3 +613,22 @@ WAN (Wide Area Network) — это сеть, которая охватывает
 <p align="left">
 <img src="./images/network-host-3.png">
 </p>
+
+## Подсети - Subnetting
+
+**There are classes of IP addresses -A, B and C with default masks /8, /16 and /24 correspondingly.**
+
+**Quantity of the available for assignment to the devices IP addresses in each network is calculated using formula**
+**2^(host bits qty) - 2**
+
+**Ipv4 addressing space is limited, especially space of the public Ipv4 addresses**
+
+**Subnetting allows to use other network masks, not just default /8, /16 or /24**
+
+**Subnetting decreases quantity of the host IP addresses in the networks**
+
+**Optimize usage of the public Ipv4 addresses**
+
+<p align="left">
+<img src="./images/subnetting.png">
+</p>
