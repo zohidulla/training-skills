@@ -686,3 +686,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/arp-sent-packet.png">
 </p>
+
+## Протокол ICMP - ICMP (Internet Control Message Protocol)
+
+<p align="left">
+<img src="./images/icmp.png">
+</p>
