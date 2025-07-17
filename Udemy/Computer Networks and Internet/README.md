@@ -700,3 +700,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/transport-layer.png">
 </p>
+
+## Клиент и сервер - Client and Server
+
+<p align="left">
+<img src="./images/client-server.png">
+</p>
