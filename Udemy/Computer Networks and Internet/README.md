@@ -680,3 +680,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/arp-request-response-2.png">
 </p>
+
+## Как отправляются пакеты на удаленные узлы - How packets are sent to remote networks
+
+<p align="left">
+<img src="./images/arp-sent-packet.png">
+</p>
