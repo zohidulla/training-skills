@@ -656,3 +656,11 @@ Subnetting Example:
 <p align="left">
 <img src="./images/subnetting-5.png">
 </p>
+
+# ARP и ICMP
+
+## Шлюз по умолчанию - Default Gateway
+
+<p align="left">
+<img src="./images/default-gateway.png">
+</p>
