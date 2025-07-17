@@ -694,3 +694,9 @@ Subnetting Example:
 </p>
 
 # Транспортный уровень — TCP и UDP - Transport Layer - TCP and UDP
+
+## Задачи транспортного уровня - Tasks of the Transport Layer
+
+<p align="left">
+<img src="./images/transport-layer.png">
+</p>
