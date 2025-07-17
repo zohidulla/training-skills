@@ -670,3 +670,13 @@ Subnetting Example:
 <p align="left">
 <img src="./images/arp.png">
 </p>
+
+## ARP-запрос и ответ - ARP Request and Response
+
+<p align="left">
+<img src="./images/arp-request-response-1.png">
+</p>
+
+<p align="left">
+<img src="./images/arp-request-response-2.png">
+</p>
