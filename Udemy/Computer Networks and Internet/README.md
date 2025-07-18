@@ -706,3 +706,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/client-server.png">
 </p>
+
+## Соединение транспортного уровня - Transport Layer Connection
+
+<p align="left">
+<img src="./images/transport-layer-connection.png">
+</p>
