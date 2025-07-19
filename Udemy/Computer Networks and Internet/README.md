@@ -712,3 +712,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/transport-layer-connection.png">
 </p>
+
+## Порты приложений и протоколов - Application and Protocol Ports
+
+<p align="left">
+<img src="./images/application-ports.png">
+</p>
