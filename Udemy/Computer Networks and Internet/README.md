@@ -718,3 +718,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/application-ports.png">
 </p>
+
+## Мультиплексирование и де-мультиплексирование - Multiplexing and Demultiplexing
+
+<p align="left">
+<img src="./images/multiplexing-demultiplexing.png">
+</p>
