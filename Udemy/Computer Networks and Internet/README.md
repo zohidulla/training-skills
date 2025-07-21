@@ -724,3 +724,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/multiplexing-demultiplexing.png">
 </p>
+
+## Диапазоны портов - Ports Ranges
+
+<p align="left">
+<img src="./images/ports-ranges.png">
+</p>
