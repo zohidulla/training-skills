@@ -742,3 +742,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/network-socket-examples.png">
 </p>
+
+## Множественные сокеты - Multiple Sockets
+
+<p align="left">
+<img src="./images/multiple-sockets.png">
+</p>
