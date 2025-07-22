@@ -766,3 +766,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/tcp-connection.png">
 </p>
+
+## Заголовок TCP - TCP Header
+
+<p align="left">
+<img src="./images/tcp-header.png">
+</p>
