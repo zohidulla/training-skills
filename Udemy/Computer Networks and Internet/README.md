@@ -760,3 +760,9 @@ Subnetting Example:
 <p align="left" width="300">
 <img src="./images/tcp-vs-udp.jpg">
 </p>
+
+## Установление TCP-соединения - Transmission Control Protocol (TCP) Connection Establishment
+
+<p align="left">
+<img src="./images/tcp-connection.png">
+</p>
