@@ -730,3 +730,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/ports-ranges.png">
 </p>
+
+## Сетевой сокет - Network Socket
+
+<p align="left">
+<img src="./images/network-socket.png">
+</p>
