@@ -754,3 +754,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/same-port.png">
 </p>
+
+## TCP против UDP - TCP vs UDP
+
+<p align="left" width="300">
+<img src="./images/tcp-vs-udp.jpg">
+</p>
