@@ -736,3 +736,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/network-socket.png">
 </p>
+
+**Network Socket Examples**
+
+<p align="left">
+<img src="./images/network-socket-examples.png">
+</p>
