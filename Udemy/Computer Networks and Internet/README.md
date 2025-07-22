@@ -748,3 +748,9 @@ Subnetting Example:
 <p align="left">
 <img src="./images/multiple-sockets.png">
 </p>
+
+## Одни и те же порты в разных приложениях - Same Ports in Different Applications
+
+<p align="left">
+<img src="./images/same-port.png">
+</p>
