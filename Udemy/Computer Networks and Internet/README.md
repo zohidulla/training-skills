@@ -809,3 +809,25 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 <p align="left">
 <img src="./images/routing-between-networks-1.png">
 </p>
+
+1. **PC1** finds out that **PC2** is located in **different** network (by applying network mask to the own and foreign IP addresses)
+2. On network layer **PC1** adds IP header with source IP **172.16.3.7**, destination IP **192.168.1.15** and TTL 64
+3. **PC1** checks local ARP table to find MAC address of the **default gateway** (if absent - send ARP Request)
+4. On Data Link layer **PC1** adds Ethernet header (source **a6:37:2b:5f:be:47**, dest **31:a1:2c:51:3a:1b**) and sends Ethernet frame
+5. **Switch1** receives Ethernet frame from **PC1** on **Fa0/3** interface, verifies **FCS**, checks MAC address table to find where destination MAC is located and finds it behind **Gi1/1**
+6. **Switch1** adds MAC address of **PC1** to the MAC address table to and maps it to the **Fa0/3** (if MAC of **PC1** not yet in the table)
+7. **Switch1** sends Ethernet frame to **Gi1/1**
+8. **Router** receives Ethernet frame on its **Gi0/0**, on Data Link layer verifies **FCS**, checks **destination MAC** address field and sees that MAC matches with MAC of it's **Gi0/0** interface
+9. **Router** removes Ethernet header and examines Network layer **IPv4** header, checks header checksum and TTL
+10. **Router** sees that destination IP address in the IP packet **192.168.1.15** doesn't match with any of its own IP addresses. That's why router must send it further
+11. **Router** checks routing table to find matching route for the **192.168.1.15** IP address. For **each route** it applies network mask to the destination IP address and compares result to the prefix
+12. **Router** finds matching route **192.168.1.0/24** and sees that it is directly connected. It means destinaton host is directly attached to the router
+13. **Router** sends ARP request for MAC address of the **192.168.1.15** IP address (if MAC of **PC2** is absent in the ARP cache on the **Router**). **PC2** responds to this ARP request with its MAC address **20:af:41:26:56:ab**
+14. On the Network layer **Router** decrements **TTL** by one (it becomes 63 = 64 - 1) and calculates new IPv4 header **checksum**
+15. On the Data Link layer **Router** adds new Ethernet header and calculates FCS (source **18:a1:11:21:a1:ab**, dest **20:af:41:26:56:ab**)
+16. **Router** sends Ethernet frame via **Gi0/1** interface (according to the route in the routing table)
+17. **Switch2** receives Ethernet frame from **Router** on **Gi1/2** interface, verifies **FCS**, checks MAC address table to find where destination MAC is located and finds it behind **Fa0/5**
+18. **Switch2** adds MAC address of **Router's Gi0/1** interface to the MAC address table to and maps it to the **Gi1/2** (if MAC of **Router** not yet in the table)
+19. **Switch2** sends Ethernet frame to **Fa0/5**
+20. **PC2** receives frame and on the Data Link layer verifies **FCS**, compares destination MAC address to its own MAC, finds that they are **equal**. Removes Ethernet header
+21. On the Network layer **PC2** checks header checksum and TTL, compares destination IP to it's own IP. They are equal. Strips IPv4 header and sends segment to the **transport** layer for further processing
