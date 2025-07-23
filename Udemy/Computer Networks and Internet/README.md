@@ -799,3 +799,9 @@ Subnetting Example:
 
 Destination IP address **10.2.10.5** will match first route **10.2.10.0/24**
 Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** **BUT** will match **10.2.0.0/20** route
+
+## Маршрутизация между двумя сетями - Routing Between Two Networks
+
+<p align="left">
+<img src="./images/routing-between-networks.png">
+</p>
