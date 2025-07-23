@@ -787,8 +787,15 @@ Subnetting Example:
 
 ## Маршрутизаторы - Routers
 
-Маршрутизаторы — это устройства, которые направляют пакеты данных между различными сетями. Они принимают решения о маршрутизации на основе IP-адресов и таблиц маршрутизации.
-
 <p align="left">
 <img src="./images/routing.png">
 </p>
+
+## Таблица маршрутизации - Routing table
+
+<p align="left">
+<img src="./images/routing-table.png">
+</p>
+
+Destination IP address **10.2.10.5** will match first route **10.2.10.0/24**
+Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** **BUT** will match **10.2.0.0/20** route
