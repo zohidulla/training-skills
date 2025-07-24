@@ -837,3 +837,9 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 <p align="left">
 <img src="./images/multiple-routers.png">
 </p>
+
+## Статические и динамические маршруты - Static and Dynamic Routes
+
+<p align="left">
+<img src="./images/static-dynamic-routes.png">
+</p>
