@@ -831,3 +831,9 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 19. **Switch2** sends Ethernet frame to **Fa0/5**
 20. **PC2** receives frame and on the Data Link layer verifies **FCS**, compares destination MAC address to its own MAC, finds that they are **equal**. Removes Ethernet header
 21. On the Network layer **PC2** checks header checksum and TTL, compares destination IP to it's own IP. They are equal. Strips IPv4 header and sends segment to the **transport** layer for further processing
+
+## Несколько маршрутизаторов - Multiple Routers
+
+<p align="left">
+<img src="./images/multiple-routers.png">
+</p>
