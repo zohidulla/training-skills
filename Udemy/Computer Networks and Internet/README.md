@@ -843,3 +843,9 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 <p align="left">
 <img src="./images/static-dynamic-routes.png">
 </p>
+
+## Маршрут по умолчанию - Default Route
+
+<p align="left" width="300">
+<img src="./images/default-route.png">
+</p>
