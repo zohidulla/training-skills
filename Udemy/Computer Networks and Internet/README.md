@@ -855,3 +855,9 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 <p align="left">
 <img src="./images/default-route-match.png">
 </p>
+
+## Использование маршрутов по умолчанию - Using Default Routes
+
+<p align="left">
+<img src="./images/default-route-usage.png">
+</p>
