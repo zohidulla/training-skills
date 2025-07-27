@@ -861,3 +861,9 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 <p align="left">
 <img src="./images/default-route-usage.png">
 </p>
+
+## Протоколы динамической маршрутизации - Dynamic Routing Protocols
+
+<p align="left">
+<img src="./images/dynamic-routing-protocols.png">
+</p>
