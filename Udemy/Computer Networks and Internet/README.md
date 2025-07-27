@@ -873,3 +873,9 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 <p align="left">
 <img src="./images/classless-inter-domain-routing.png">
 </p>
+
+## Суммаризация маршрутов - Routes aggregation (summarization)
+
+<p align="left">
+<img src="./images/routes-aggregation.png">
+</p>
