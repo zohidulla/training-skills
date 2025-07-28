@@ -879,3 +879,9 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 <p align="left">
 <img src="./images/routes-aggregation.png">
 </p>
+
+## Частные IP-адреса диапазонов RFC1918 - Private IP Address Ranges RFC1918
+
+<p align="left">
+<img src="./images/rfc1918.png">
+</p>
