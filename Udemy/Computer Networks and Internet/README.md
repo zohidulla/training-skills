@@ -903,3 +903,9 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 <p align="left">
 <img src="./images/igp-vs-egp.png">
 </p>
+
+## Типы протоколов маршрутизации Distance vector и Link state - Distance Vector and Link State Routing Protocols
+
+<p align="left">
+<img src="./images/distance-vector-vs-link-state.png">
+</p>
