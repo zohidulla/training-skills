@@ -933,3 +933,9 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 <p align="left">
 <img src="./images/routing-protocol-metrics.png">
 </p>
+
+## Балансировка нагрузки по равной стоимости - Equal-Cost Load Balancing
+
+<p align="left">
+<img src="./images/equal-cost-load-balancing.png">
+</p>
