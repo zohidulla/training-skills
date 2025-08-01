@@ -927,3 +927,9 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 <p align="left">
 <img src="./images/multiple-routes.png">
 </p>
+
+## Метрики протоколов маршрутизации - Routing Protocol Metrics
+
+<p align="left">
+<img src="./images/routing-protocol-metrics.png">
+</p>
