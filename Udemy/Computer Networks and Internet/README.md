@@ -939,3 +939,9 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 <p align="left">
 <img src="./images/equal-cost-load-balancing.png">
 </p>
+
+## Маршрутизация через несколько маршрутизаторов - Routing via multiple routers
+
+<p align="left">
+<img src="./images/routing-via-multiple-routers.png">
+</p>
