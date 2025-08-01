@@ -945,3 +945,11 @@ Destination IP address **10.2.7.1** will **SKIP** first route **10.2.10.0/24** *
 <p align="left">
 <img src="./images/routing-via-multiple-routers.png">
 </p>
+
+## Использование утилиты traceroute для отслеживания пути к удаленным серверам - Using traceroute Utility to Trace Path to Remote Servers
+
+**Example**
+
+```bash
+traceroute google.com
+```
