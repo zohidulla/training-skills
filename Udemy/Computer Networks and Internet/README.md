@@ -1001,3 +1001,9 @@ NAT (Network Address Translation) используется для:
 <p align="left">
 <img src="./images/dynamic-pat.png">
 </p>
+
+## Статический PAT - Static PAT
+
+<p align="left">
+<img src="./images/static-pat.png">
+</p>
