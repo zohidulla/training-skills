@@ -967,3 +967,13 @@ NAT (Network Address Translation) используется для:
 <p align="left">
 <img src="./images/why-nat.png">
 </p>
+
+## Типы NAT - Types of NAT
+
+<p align="left">
+<img src="./images/pat.png">
+</p>
+
+<p align="left">
+<img src="./images/types-nat.png">
+</p>
