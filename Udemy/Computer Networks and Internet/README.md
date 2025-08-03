@@ -989,3 +989,9 @@ NAT (Network Address Translation) используется для:
 <p align="left">
 <img src="./images/static-nat.png">
 </p>
+
+## Динамический NAT - Dynamic NAT
+
+<p align="left">
+<img src="./images/dynamic-nat.png">
+</p>
