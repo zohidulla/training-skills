@@ -971,7 +971,7 @@ NAT (Network Address Translation) используется для:
 ## Типы NAT - Types of NAT
 
 <p align="left">
-<img src="./images/pat.png">
+<img src="./images/dynamic-pat.png">
 </p>
 
 <p align="left">
@@ -994,4 +994,10 @@ NAT (Network Address Translation) используется для:
 
 <p align="left">
 <img src="./images/dynamic-nat.png">
+</p>
+
+## Динамический PAT - Dynamic PAT
+
+<p align="left">
+<img src="./images/dynamic-pat.png">
 </p>
