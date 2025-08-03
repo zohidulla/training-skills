@@ -983,3 +983,9 @@ NAT (Network Address Translation) используется для:
 <p align="left">
 <img src="./images/nat-works.png">
 </p>
+
+## Статический NAT - Static NAT
+
+<p align="left">
+<img src="./images/static-nat.png">
+</p>
