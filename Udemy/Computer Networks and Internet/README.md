@@ -977,3 +977,9 @@ NAT (Network Address Translation) используется для:
 <p align="left">
 <img src="./images/types-nat.png">
 </p>
+
+## Как работает NAT - How NAT Works
+
+<p align="left">
+<img src="./images/nat-works.png">
+</p>
