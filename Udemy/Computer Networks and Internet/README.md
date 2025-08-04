@@ -1007,3 +1007,9 @@ NAT (Network Address Translation) используется для:
 <p align="left">
 <img src="./images/static-pat.png">
 </p>
+
+# DHCP и DNS
+
+DHCP (Dynamic Host Configuration Protocol)
+
+DNS (Domain Name System) — это система, которая переводит доменные имена в IP-адреса и наоборот. Она позволяет пользователям обращаться к ресурсам в интернете по понятным именам, а не по числовым адресам.
