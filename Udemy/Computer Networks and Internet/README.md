@@ -1047,3 +1047,9 @@ DHCP (Dynamic Host Configuration Protocol) — это протокол, кото
 <p align="left">
 <img src="./images/dns.png">
 </p>
+
+## Доменное имя - Domain Name
+
+<p align="left">
+<img src="./images/domain-name.png">
+</p>
