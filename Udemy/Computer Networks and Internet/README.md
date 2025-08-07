@@ -1113,3 +1113,9 @@ DNS (Domain Name System) — это система, которая перево�
 <p align="left">
 <img src="./images/dns-registrars.png">
 </p>
+
+## Типы серверов реестра DNS - Types of DNS Registry Servers
+
+<p align="left">
+<img src="./images/dns-registry-servers.png">
+</p>
