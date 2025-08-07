@@ -1053,3 +1053,9 @@ DHCP (Dynamic Host Configuration Protocol) — это протокол, кото
 <p align="left">
 <img src="./images/domain-name.png">
 </p>
+
+## Единый локатор ресурсов (URL) - Uniform Resource Locator (URL)
+
+<p align="left">
+<img src="./images/url.png">
+</p>
