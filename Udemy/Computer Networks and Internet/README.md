@@ -1149,3 +1149,9 @@ DNS (Domain Name System) — это система, которая перево�
 <p align="left">
 <img src="./images/dns-record-types.png">
 </p>
+
+## Кэширование DNS - DNS Caching
+
+<p align="left">
+<img src="./images/dns-caching.png">
+</p>
