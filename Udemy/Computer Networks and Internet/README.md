@@ -1091,3 +1091,9 @@ DNS (Domain Name System) — это система, которая перево�
 <p align="left">
 <img src="./images/dns-client-server.png">
 </p>
+
+## 178. Утилита Nslookup - Nslookup Utility
+
+<p align="left">
+<img src="./images/nslookup.png">
+</p>
