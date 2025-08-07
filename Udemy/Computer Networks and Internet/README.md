@@ -1119,3 +1119,9 @@ DNS (Domain Name System) — это система, которая перево�
 <p align="left">
 <img src="./images/dns-registry-servers.png">
 </p>
+
+## Обязанности серверов DNS - Responsibilities of DNS Servers
+
+<p align="left">
+<img src="./images/dns-responsibilities.png">
+</p>
