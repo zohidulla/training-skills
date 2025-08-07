@@ -1125,3 +1125,9 @@ DNS (Domain Name System) — это система, которая перево�
 <p align="left">
 <img src="./images/dns-responsibilities.png">
 </p>
+
+## Реестр DNS в сравнении с библиотекой - DNS Registry vs Library
+
+<p align="left">
+<img src="./images/dns-registry-vs-library.png">
+</p>
