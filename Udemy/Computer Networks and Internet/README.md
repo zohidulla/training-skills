@@ -1071,3 +1071,9 @@ DHCP (Dynamic Host Configuration Protocol) — это протокол, кото
 <p align="left">
 <img src="./images/domain-name-levels.png">
 </p>
+
+## FQDN - Fully Qualified Domain Name
+
+<p align="left">
+<img src="./images/fqdn.png">
+</p>
