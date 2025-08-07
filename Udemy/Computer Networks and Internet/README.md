@@ -1059,3 +1059,9 @@ DHCP (Dynamic Host Configuration Protocol) — это протокол, кото
 <p align="left">
 <img src="./images/url.png">
 </p>
+
+## Порты и фрагменты URL - Ports and URL Fragments
+
+<p align="left">
+<img src="./images/ports-url-fragments.png">
+</p>
