@@ -1161,3 +1161,9 @@ DNS (Domain Name System) — это система, которая перево�
 <p align="left">
 <img src="./images/dns-round-robin.png">
 </p>
+
+## Обратный DNS - Reverse DNS
+
+<p align="left">
+<img src="./images/reverse-dns.png">
+</p>
