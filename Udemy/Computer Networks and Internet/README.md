@@ -1155,3 +1155,9 @@ DNS (Domain Name System) — это система, которая перево�
 <p align="left">
 <img src="./images/dns-caching.png">
 </p>
+
+## DNS Round Robin - DNS Round Robin
+
+<p align="left">
+<img src="./images/dns-round-robin.png">
+</p>
