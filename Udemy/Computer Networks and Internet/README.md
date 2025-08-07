@@ -1167,3 +1167,9 @@ DNS (Domain Name System) — это система, которая перево�
 <p align="left">
 <img src="./images/reverse-dns.png">
 </p>
+
+## Как работает обратный DNS - How Reverse DNS Works
+
+<p align="left">
+<img src="./images/reverse-dns-works.png">
+</p>
