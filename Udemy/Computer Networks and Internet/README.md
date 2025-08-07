@@ -1092,8 +1092,18 @@ DNS (Domain Name System) — это система, которая перево�
 <img src="./images/dns-client-server.png">
 </p>
 
-## 178. Утилита Nslookup - Nslookup Utility
+## Утилита Nslookup - Nslookup Utility
 
 <p align="left">
 <img src="./images/nslookup.png">
 </p>
+
+## Факты о доменных именах - Facts About Domain Names
+
+**DNS Facts:**
+
+- Around 400 Million active **Domains**
+- Each **Domain** name has expiration time
+- Each **Domain** has usually multiple DNS records
+- DNS records for each **Domain** may change over time
+- Multiple **Domain** registrars in the world
