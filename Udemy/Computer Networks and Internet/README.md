@@ -1085,3 +1085,9 @@ DNS (Domain Name System) — это система, которая перево�
 <p align="left">
 <img src="./images/dns.png">
 </p>
+
+## Как работает DNS между клиентом и сервером - How DNS Works Between Client and Server
+
+<p align="left">
+<img src="./images/dns-client-server.png">
+</p>
