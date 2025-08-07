@@ -1107,3 +1107,9 @@ DNS (Domain Name System) — это система, которая перево�
 - Each **Domain** has usually multiple DNS records
 - DNS records for each **Domain** may change over time
 - Multiple **Domain** registrars in the world
+
+## Регистраторы DNS и реестр DNS - DNS Registrars and DNS Registry
+
+<p align="left">
+<img src="./images/dns-registrars.png">
+</p>
