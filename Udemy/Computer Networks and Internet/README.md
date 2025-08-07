@@ -1137,3 +1137,9 @@ DNS (Domain Name System) — это система, которая перево�
 <p align="left">
 <img src="./images/dns-registry-structure-vs-library.png">
 </p>
+
+## Процесс разрешения DNS-запросов - DNS Query Resolution Process
+
+<p align="left">
+<img src="./images/dns-query-resolution.png">
+</p>
