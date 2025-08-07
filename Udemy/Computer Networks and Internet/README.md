@@ -1077,3 +1077,11 @@ DHCP (Dynamic Host Configuration Protocol) — это протокол, кото
 <p align="left">
 <img src="./images/fqdn.png">
 </p>
+
+## Что такое DNS - What is DNS
+
+DNS (Domain Name System) — это система, которая переводит доменные имена в IP-адреса и наоборот. Она позволяет пользователям обращаться к ресурсам в интернете по понятным именам, а не по числовым адресам.
+
+<p align="left">
+<img src="./images/dns.png">
+</p>
