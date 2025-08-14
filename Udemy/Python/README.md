@@ -83,18 +83,30 @@ print(dir(my_list))
 
 Атрибуты объекта - это переменные, которые хранят данные, связанные с объектом. Их можно получить с помощью точечной нотации:
 
+Примеры получения списка атрибутов объекта.
+
 ```python
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+>>> x = 5
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__',
+'__name__', '__package__', '__spec__', 'x']
+>>> import struct
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__',
+'__name__', '__package__', '__spec__', 'struct', 'x']
 
-person = Person("Alice", 30)
-print(person.name)  # Вывод: Alice
-print(person.age)   # Вывод: 30
+>>> dir(struct)
+['Struct', '__all__', '__builtins__', '__cached__', '__doc__',
+'__file__', '__loader__', '__name__', '__package__', '__spec__',
+'_clearcache', 'calcsize', 'error', 'iter_unpack', 'pack', 'pack_into',
+'unpack', 'unpack_from']
+>>> class Shape:
+...     def __dir__(self):
+...         return ['area', 'perimeter', 'location']
+>>> s = Shape()
+>>> dir(s)
+['area', 'location', 'perimeter']
 ```
-
-Атрибуты объекта
 
 Встроенная функция `dir()` позволяет увидеть все атрибуты и методы объекта, включая те, которые были определены в классе:
 
