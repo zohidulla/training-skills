@@ -21,6 +21,7 @@
 def sum_nums(a, b):
     sum = a + b
     return sum
+    print('Line is not executed')
 
 
 first_num = sum_nums(5, 10)
