@@ -169,3 +169,5 @@ print(name)
 
 print("Hello, World!")  # Код с комментарием
 ```
+
+# Введение в функции - Introduction to Functions
