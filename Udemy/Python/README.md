@@ -219,3 +219,44 @@ a > b # True или false
 ```python
 my_func(10, 5) # результат функции
 ```
+
+## Инструкции - Statements
+
+**Инструкция - это команда, которая выполняет действие.**
+**Инструкция - это строка кода, которая выполняет какое-то действие. Например:**
+
+```python
+print("Hello, World!")  # Выводит строку на экран
+```
+
+```python
+x = 5  # Присваивает значение 5 переменной x
+```
+
+```python
+# Условная инструкция
+if my_name:
+    print(my_name)
+```
+
+```python
+# Импортирование модуля
+import datetime
+```
+
+```python
+# Цикл
+for i in range(5):
+    print(i)
+```
+
+```python
+# Функция
+def greet(name):
+    print("Hello,", name)
+```
+
+```python
+if a > b:
+    print("a больше b")
+```

@@ -32,6 +32,11 @@
 # print(sum_nums(sum_nums(50.5, 20), 30))
 
 
-print(10 + 5)  # 15
-print(print(10 + 5))  # 15 None
-input("Enter your name: ")  # str
+# print(10 + 5)  # 15
+# print(print(10 + 5))  # 15 None
+# input("Enter your name: ")  # str
+
+
+import datetime
+
+print(datetime.datetime.now())  # 2023-10-01 12:00:00.000000
