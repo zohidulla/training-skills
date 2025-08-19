@@ -18,15 +18,20 @@
 # hello('Alice')  # Call the hello function
 # hello("Bob")
 
-def sum_nums(a, b):
-    sum = a + b
-    return sum
-    print('Line is not executed')
+# def sum_nums(a, b):
+#     sum = a + b
+#     return sum
+#     print('Line is not executed')
 
 
-first_num = sum_nums(5, 10)
-print(first_num)
+# first_num = sum_nums(5, 10)
+# print(first_num)
 
-print(sum_nums(50.5, 20))
+# print(sum_nums(50.5, 20))
 
-print(sum_nums(sum_nums(50.5, 20), 30))
+# print(sum_nums(sum_nums(50.5, 20), 30))
+
+
+print(10 + 5)  # 15
+print(print(10 + 5))  # 15 None
+input("Enter your name: ")  # str
