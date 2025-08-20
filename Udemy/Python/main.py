@@ -37,6 +37,6 @@
 # input("Enter your name: ")  # str
 
 
-import datetime
+# import datetime
 
-print(datetime.datetime.now())  # 2023-10-01 12:00:00.000000
+# print(datetime.datetime.now())  # 2023-10-01 12:00:00.000000
