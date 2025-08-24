@@ -40,3 +40,12 @@
 # import datetime
 
 # print(datetime.datetime.now())  # 2023-10-01 12:00:00.000000
+
+# my_name = "Alice"
+# print(id(my_name))  # e.g., 140123456789456
+
+# my_number = 42
+# print(id(my_number))  # e.g., 140123456789456
+
+# other_number = my_number
+# print(id(other_number))  # e.g., 140123456789456
