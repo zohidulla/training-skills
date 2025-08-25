@@ -490,3 +490,33 @@ print(my_bio)  # Вывод: Hello, my name is Alice.
                #         I am a software developer.
                #         I love coding in Python.
 ```
+
+# Встроенные функции и методы строк - Built-in Functions and String Methods
+
+Python предоставляет множество встроенных функций и методов для работы со строками. Вот некоторые из них:
+
+> Методы строк
+
+- `len(s)` - возвращает длину строки `s`.
+- `s.lower()` - возвращает строку в нижнем регистре.
+- `s.upper()` - возвращает строку в верхнем регистре.
+- `s.capitalize()` - возвращает строку с заглавной буквы.
+- `s.count(substring)` - возвращает количество вхождений подстроки `substring` в строке `s`.
+- `s.strip()` - удаляет пробелы в начале и конце строки.
+- `s.split(separator)` - разбивает строку на список подстрок по разделителю.
+- `s.replace(old, new)` - заменяет все вхождения подстроки `old` на `new`.
+- `s.index(substring)` - возвращает индекс первого вхождения подстроки `substring` в строке `s` или -1, если не найдено.
+
+Примеры использования:
+
+```python
+my_string = "  Hello, World!  "
+print(len(my_string))  # Вывод: 15
+print(my_string[3])  # Вывод: H
+print(my_string[7:12])  # Вывод: World
+print(my_string.lower())  # Вывод: "  hello, world!  "
+print(my_string.upper())  # Вывод: "  HELLO, WORLD!  "
+print(my_string.strip())  # Вывод: "Hello, World!"
+print(my_string.split(","))  # Вывод: ["  Hello", " World!  "]
+print(my_string.replace("World", "Python"))  # Вывод: "  Hello, Python!  "
+```
