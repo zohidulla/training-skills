@@ -49,3 +49,9 @@
 
 # other_number = my_number
 # print(id(other_number))  # e.g., 140123456789456
+
+# long_str = "This is a long string that spans multiple lines. \
+# It is still considered a single string because of the backslash at the end of the line."
+# print(long_str)
+# print(type(long_str))
+# print(id(long_str))
