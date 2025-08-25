@@ -55,3 +55,11 @@
 # print(long_str)
 # print(type(long_str))
 # print(id(long_str))
+
+# my_comment = "This is my short comment"
+# print(len(my_comment))
+# print(my_comment.replace("short", "long"))
+# print(my_comment)
+# print(my_comment.count('is'))
+# print(my_comment[-1])
+# print(my_comment[2:7])
