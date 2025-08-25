@@ -454,3 +454,39 @@ b = a
 print(id(a))  # Вывод: уникальный идентификатор для списка # 15664777634
 print(id(b))  # Вывод: тот же уникальный идентификатор, что и для a # 15664777634
 ```
+
+# Строки - Strings
+
+## Строки - str
+
+Строка - это последовательность символов, заключенная в одинарные или двойные кавычки. Строки являются неизменяемыми объектами в Python.
+
+**Структура и синтаксис**
+
+```python
+s = "Hello, World!" # Двойные кавычки обычно используют для многословных строк
+print(s[0])  # Вывод: H
+print(s[7:12])  # Вывод: World
+```
+
+**Тип строк**
+
+```python
+my_name = 'Alice'
+print(my_name)  # Вывод: Alice
+
+print(type(my_name))  # Вывод: <class 'str'> # Каждая строка - это экземпляр класса str
+
+print(id(my_name))  # Вывод: уникальный идентификатор для строки 164487987098
+```
+
+Многострочные строки можно создавать с помощью тройных кавычек:
+
+```python
+my_bio = """Hello, my name is Alice.
+I am a software developer.
+I love coding in Python."""
+print(my_bio)  # Вывод: Hello, my name is Alice.
+               #         I am a software developer.
+               #         I love coding in Python.
+```
