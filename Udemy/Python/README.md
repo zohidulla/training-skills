@@ -520,3 +520,64 @@ print(my_string.strip())  # Вывод: "Hello, World!"
 print(my_string.split(","))  # Вывод: ["  Hello", " World!  "]
 print(my_string.replace("World", "Python"))  # Вывод: "  Hello, Python!  "
 ```
+
+# Целые и другие числа в Python - Integers and Other Numbers in Python
+
+## Целые числа - int
+
+Структура и синтаксис
+
+```python
+friends_qty = 50
+print(friends_qty) # 50
+
+print(type(friends_qty))  # Вывод: <class 'int'> # Каждое целое число - это экземпляр класса int
+```
+
+Конвертация строки в число
+
+```python
+age_str = "30"
+age = int(age_str)
+print(age)  # Вывод: 30
+print(type(age))  # Вывод: <class 'int'>
+```
+
+Возведение в степень
+
+```python
+base = 5
+power = 3
+
+print(pow(base, power))  # Вывод: 125
+```
+
+Длинные числа
+
+```python
+one_million = 1_000_000
+print(one_million)  # Вывод: 1000000
+
+my_number = 3_427
+print(my_number)  # 3427
+```
+
+```python
+# Целые числа
+a = 10
+b = 20
+c = a + b
+print(c)  # Вывод: 30
+
+# Вещественные числа
+x = 10.5
+y = 20.3
+z = x + y
+print(z)  # Вывод: 30.8
+
+# Комплексные числа
+d = 1 + 2j
+e = 3 + 4j
+f = d + e
+print(f)  # Вывод: (4+6j)
+```
