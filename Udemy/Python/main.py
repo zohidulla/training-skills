@@ -63,3 +63,12 @@
 # print(my_comment.count('is'))
 # print(my_comment[-1])
 # print(my_comment[2:7])
+
+# input_str = input("Enter a string:    ")
+# input_int = int(input("Enter an integer: "))
+
+# print(input_str)
+# print(type(input_str))
+
+# print(input_int)
+# print(type(input_int))
