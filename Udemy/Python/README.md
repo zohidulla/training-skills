@@ -581,3 +581,44 @@ e = 3 + 4j
 f = d + e
 print(f)  # Вывод: (4+6j)
 ```
+
+## Числа с десятичной точкой - float
+
+Структура и синтаксис
+
+```python
+average_price = 17.25
+
+print(average_price)  # Вывод: 17.25
+
+print(type(average_price))  # Вывод: <class 'float'>
+Каждое число с десятичной точкой - это экземпляр класса float.
+```
+
+Конвертация чисел
+
+```python
+average_price = 28.75
+price = int(average_price)
+
+print(price)  # Вывод: 28
+print(type(price))  # Вывод: <class 'int'>
+
+str_temperature = '14.5'
+temperature = float(str_temperature)
+
+print(temperature)  # Вывод: 14.5
+print(type(temperature))  # Вывод: <class 'float'>
+```
+
+Округление чисел
+
+```python
+average_price = 17.25
+print(round(average_price)) # 17
+
+rate = 0.78
+
+print(round(rate))  # 1
+print(type(round(rate)))  # Вывод: <class 'int'>
+```
