@@ -622,3 +622,20 @@ rate = 0.78
 print(round(rate))  # 1
 print(type(round(rate)))  # Вывод: <class 'int'>
 ```
+
+## Комплексные числа - complex
+
+Комплексное число состоит из действительной и мнимой частей. В Python комплексные числа обозначаются с помощью суффикса `j` или `J`.
+
+Структура и синтаксис
+
+```python
+complex_a = 3 + 5j
+complex_b = 4 + 7j
+
+sum = complex_a + complex_b
+print(sum)  # Вывод: (7+12j)
+
+print(type(sum))  # Вывод: <class 'complex'>
+Каждое комплексное число - это экземпляр класса complex.
+```
