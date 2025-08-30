@@ -639,3 +639,34 @@ print(sum)  # Вывод: (7+12j)
 print(type(sum))  # Вывод: <class 'complex'>
 Каждое комплексное число - это экземпляр класса complex.
 ```
+
+# Логический тип
+
+## Логический тип - bool
+
+Структура и синтаксис
+
+```python
+is_authorized = True
+
+print(is_authorized)  # Вывод: True
+print(type(is_authorized))  # Вывод: <class 'bool'>
+Каждое логическое значение - это экземпляр класса bool.
+```
+
+**BOOL** часто используется при проверке правдивости выражения
+
+Результат выражений
+
+```python
+print(100 > 24) # True
+print(-5 > 0) # False
+print('Long string' > 'Long') # True
+print([1, 2, 3] == [1, 2, 3]) # True
+```
+
+Конвертация в логическое значения
+
+```python
+bool(my_value)
+```
