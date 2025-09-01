@@ -670,3 +670,5 @@ print([1, 2, 3] == [1, 2, 3]) # True
 ```python
 bool(my_value)
 ```
+
+# Магические методы - Magic Methods
