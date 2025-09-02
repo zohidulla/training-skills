@@ -99,3 +99,20 @@
 # print({'a': 3} == {'a': 5})
 
 # print('a' + 3) # TypeError: can only concatenate str (not "int") to str
+
+# int_num = 50
+# float_num = 7.5
+# print(int_num * float_num)  # 375.0
+# print(int_num.__mul__(float_num))  # NotImplemented
+# print(float_num.__rmul__(int_num))  # 375.0
+
+# str_val = 'abc'
+# print(str_val * int_num)  # abcabcabcabcabcabcabc...
+# print(int_num.__mul__(str_val))  # NotImplemented
+# print(str_val.__rmul__(int_num))  # abcabcabcabcabcabcabc...
+
+# float_num = 50.5
+# str_val = 'abc'
+# print(float_num.__mul__(str_val))  # NotImplemented
+# print(str_val.__rmul__(float_num))
+# # TypeError: 'float' object cannot be interpreted as an integer
