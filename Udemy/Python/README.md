@@ -672,3 +672,50 @@ bool(my_value)
 ```
 
 # Магические методы - Magic Methods
+
+## Конвертация типов - Type Conversion
+
+**Python не выполняет неявную конвертацию типов значений.**
+Все конвертации типов должны быть явными.
+Конвертация типов - это процесс преобразования значения из одного типа данных в другой. В Python есть несколько встроенных функций для конвертации типов:
+
+- `int()` - преобразует значение в целое число.
+- `float()` - преобразует значение в число с плавающей запятой.
+- `str()` - преобразует значение в строку.
+- `bool()` - преобразует значение в логическое значение.
+
+В других случаях **возникает ошибка TypeError**
+
+```python
+print('a' + 3)
+# TypeError: can only concatenate str (not "int") to str
+```
+
+В некоторых случаях **ошибок нет**
+
+```python
+int_num = 5
+float_num = 4.5
+print(int_num + float_num) # 9.5
+
+bool_val = True
+int_val = 7
+print(bool_val + int_val) # 8
+```
+
+**Как выполняется сложение?**
+
+```python
+int_num = 5
+float_num = 4.5
+print(int_num + float_num) # 9.5
+
+print(int_num.__add__(float_num))
+# NotImplemented
+# Магический метод (magic method)
+# Метод __add__ класса int
+
+print(float_num.__radd__(int_num))
+# 9.5
+# Метод __radd__ класса float
+```

@@ -97,3 +97,5 @@
 # print('Long string' > 'Short')
 # print([] == [])
 # print({'a': 3} == {'a': 5})
+
+# print('a' + 3) # TypeError: can only concatenate str (not "int") to str
