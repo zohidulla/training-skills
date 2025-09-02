@@ -65,6 +65,10 @@
 <img src="./images/osi-vs-tcp-ip-ru.png">
 </p>
 
+<p align="left">
+<img src="./images/osi-vs-tcp-ip-map.png">
+</p>
+
 # Bits and Bytes - Биты и байты
 
 <p align="left">
