@@ -116,3 +116,26 @@
 # print(float_num.__mul__(str_val))  # NotImplemented
 # print(str_val.__rmul__(float_num))
 # # TypeError: 'float' object cannot be interpreted as an integer
+
+# print(bool.__doc__)
+# Returns True when the argument is true, False otherwise.
+# The builtins True and False are the only two instances of the class bool.
+# The class bool is a subclass of the class int, and cannot be subclassed.
+
+# print(str.__doc__)
+# str(object='') -> str
+# str(bytes_or_buffer[, encoding[, errors]]) -> str
+# Create a new string object from the given object. If encoding or
+# errors is specified, then the object must expose a data buffer
+# that will be decoded using the given encoding and error handler.
+# Otherwise, returns the result of object.__str__() (if defined)
+# or repr(object).
+# encoding defaults to 'utf-8'.
+# errors defaults to 'strict'.
+
+# my_list = []
+# print(help(my_list.__eq__))
+# Help on method-wrapper:
+# __eq__(value, /) unbound builtins.list method
+#     Return self==value.
+# None
