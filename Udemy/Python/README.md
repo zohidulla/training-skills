@@ -898,3 +898,55 @@ print(posts_ids)  # Вывод: [151, 167, 245, 762]
 posts_ids.sort(reverse=True)
 print(posts_ids)  # Вывод: [762, 245, 167, 151]
 ```
+
+## Разные операции со списками - List comprehensions
+
+**Конвертация в список**
+
+```python
+greeting = "Hello from Python"
+greeting_letters = list(greeting)
+print(greeting_letters)  # Вывод: ['H', 'e', 'l', 'l', 'o', ' ', 'f', 'r', 'o', 'm', ' ', 'P', 'y', 't', 'h', 'o', 'n']
+
+my_dict = {'a': 10, 'b': True}
+my_dict_keys = list(my_dict)
+print(my_dict_keys)  # Вывод: ['a', 'b']
+```
+
+**Арифметические операции со списками**
+
+```python
+ratings = [2.5, 5.0, 4.3, 3.7]
+
+print(min(ratings))  # Вывод: 2.5
+print(max(ratings))  # Вывод: 5.0
+print(sum(ratings))  # Вывод: 15.5
+
+print(sum(ratings) / len(ratings))  # Вывод: 3.875
+```
+
+**Объединение списков**
+
+```python
+my_ratings = [2.5, 5.0]
+other_ratings = [3.7, 4.5, 4.9]
+
+all_ratings = my_ratings + other_ratings
+# При использовании оператора + вызывается метод списков __add__
+print(all_ratings)  # Вывод: [2.5, 5.0, 3.7, 4.5, 4.9]
+```
+
+**Нарезка списков**
+
+```python
+ratings = [2.5, 5.0, 4.3, 3.7, 4.5]
+
+first_two_ratings = ratings[:2]
+print(first_two_ratings)  # Вывод: [2.5, 5.0]
+
+middle_ratings = ratings[1:-1]
+print(middle_ratings)  # Вывод: [5.0, 4.3, 3.7]
+
+last_two_ratings = ratings[-2:]
+print(last_two_ratings)  # Вывод: [3.7, 4.5]
+```
