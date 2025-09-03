@@ -730,3 +730,119 @@ print(float_num.__radd__(int_num))
 # Списки - Lists
 
 ## Списки - list
+
+**Список - упорядоченная последовательность элементов**, которая может содержать элементы разных типов. Списки в Python создаются с помощью квадратных скобок `[]`.
+
+Структура и синтаксис
+
+```python
+fruits = ['apple', 'banana', 'cherry']
+
+posts_ids = [151, 245, 762, 167]
+
+user_inputs = [True, 'hi', 'symbol', 10.5]
+```
+
+**Порядок элементов в списке имеет значение**
+
+```python
+fruits = ['apple', 'banana', 'cherry']
+
+other_fruits = ['banana', 'apple', 'cherry']
+
+print(fruits == other_fruits)  # Вывод: False
+```
+
+**Длина списка**
+
+```python
+empty_list = []
+print(len(empty_list))  # Вывод: 0
+
+my_fruits = ['apple', 'banana', 'cherry']
+print(len(my_fruits))  # Вывод: 3
+
+posts_ids = [151, 245, 762, 167]
+print(len(posts_ids))  # Вывод: 4
+
+user_inputs = [True, 'hi', 'symbol', 10.5]
+print(len(user_inputs))  # Вывод: 4
+```
+
+**Получение значений из списка**
+
+```python
+posts_ids = [151, 245, 762, 167]
+
+print(posts_ids[0])  # Вывод: 151
+print(posts_ids[1])  # Вывод: 245
+print(posts_ids[-1])  # Вывод: 167
+```
+
+**Изменение элементов списка**
+
+```python
+my_fruits = ['apple', 'banana', 'cherry']
+
+my_fruits[1] = 'blueberry'
+print(my_fruits)  # Вывод: ['apple', 'blueberry', 'cherry']
+```
+
+**Добавление элементов в список**
+
+```python
+my_fruits = ['apple', 'banana', 'cherry']
+
+my_fruits.append('orange')
+print(my_fruits)  # Вывод: ['apple', 'blueberry', 'cherry', 'orange']
+```
+
+**Удаление элементов из списка**
+
+```python
+my_fruits = ['apple', 'banana', 'cherry']
+
+del my_fruits[1]
+print(my_fruits)  # Вывод: ['apple', 'cherry']
+```
+
+**Срезы списков**
+
+```python
+my_fruits = ['apple', 'banana', 'cherry', 'orange']
+
+print(my_fruits[1:3])  # Вывод: ['banana', 'cherry']
+```
+
+**Список словарей**
+
+```python
+users = [
+    {'user_id': 831, 'user_name': 'Alice'},
+    {'user_id': 832, 'user_name': 'Bob'},
+    {'user_id': 833, 'user_name': 'John'}
+]
+
+print(len(users)) # 3
+print(users[1]['user_id']) # 832
+```
+
+**Использование переменных**
+
+```python
+my_fruit = 'apple'
+other_fruit = 'banana'
+new_fruit = 'lime'
+
+all_fruits = [my_fruit, other_fruit, new_fruit]
+
+print(all_fruits) # ['apple', 'banana', 'lime']
+```
+
+**Несуществующие элементы**
+
+```python
+posts_ids = [151, 245, 762, 167]
+
+print(posts_ids[10]) # IndexError: list index out of range
+```
