@@ -788,15 +788,6 @@ my_fruits[1] = 'blueberry'
 print(my_fruits)  # Вывод: ['apple', 'blueberry', 'cherry']
 ```
 
-**Добавление элементов в список**
-
-```python
-my_fruits = ['apple', 'banana', 'cherry']
-
-my_fruits.append('orange')
-print(my_fruits)  # Вывод: ['apple', 'blueberry', 'cherry', 'orange']
-```
-
 **Удаление элементов из списка**
 
 ```python
@@ -845,4 +836,65 @@ print(all_fruits) # ['apple', 'banana', 'lime']
 posts_ids = [151, 245, 762, 167]
 
 print(posts_ids[10]) # IndexError: list index out of range
+```
+
+## Методы списков - List methods
+
+Методы списков объекты наследуют от класса **list**.
+Методы списков - это функции, которые позволяют выполнять различные операции над списками. Вот некоторые из них:
+
+- `append(item)` - добавляет элемент в конец списка.
+- `insert(index, item)` - вставляет элемент на указанную позицию.
+- `remove(item)` - удаляет первый встреченный элемент со значением item.
+- `pop(index)` - удаляет элемент по индексу и возвращает его.
+- `clear()` - удаляет все элементы из списка.
+- `index(item)` - возвращает индекс первого встреченного элемента со значением item.
+- `count(item)` - возвращает количество вхождений элемента со значением item.
+- `sort()` - сортирует элементы списка.
+- `reverse()` - разворачивает элементы списка.
+
+**APPEND Добавление новых элементов в список**
+
+```python
+my_fruits = []
+
+my_fruits.append('apple')
+my_fruits.append('banana')
+my_fruits.append('cherry')
+my_fruits.append('orange')
+
+print(my_fruits)  # Вывод: ['apple', 'banana', 'cherry', 'orange']
+print(len(my_fruits))  # Вывод: 4
+```
+
+**POP удаление элементов из списка**
+
+```python
+my_fruits = ['apple', 'banana', 'cherry', 'orange']
+
+my_fruits.pop() # removed: orange Удаление последного элемента списка
+print(my_fruits)  # Вывод: ['apple', 'banana', 'cherry']
+
+my_fruits.pop(0) # removed: apple Удаление элемента по индексу
+print(my_fruits)  # Вывод: ['banana', 'cherry']
+
+removed_element = my_fruits.pop()
+print(removed_element)  # Вывод: cherry
+print(my_fruits)  # Вывод: ['banana']
+```
+
+**SORT Сортировка элементов списка**
+
+```python
+my_fruits = ['banana', 'cherry', 'apple', 'orange']
+
+my_fruits.sort()
+print(my_fruits)  # Вывод: ['apple', 'banana', 'cherry', 'orange']
+
+posts_ids = [151, 245, 762, 167]
+posts_ids.sort()
+print(posts_ids)  # Вывод: [151, 167, 245, 762]
+
+posts_ids.sort(reverse=True)
+print(posts_ids)  # Вывод: [762, 245, 167, 151]
 ```
