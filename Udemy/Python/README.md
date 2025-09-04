@@ -1000,3 +1000,20 @@ print(my_cars)  # Вывод: ['Toyota', 'Honda', 'Ford']
 
 print(id(my_cars) == id(copied_cars))  # Вывод: False
 ```
+
+Копирование в **новый** список
+
+```python
+# version 3
+my_cars = ['Toyota', 'Honda', 'Ford']
+
+copied_cars = list(my_cars) # Создание нового списка, используя встроенную функцию list()
+
+copied_cars.append('Audi')
+
+print(copied_cars)  # Вывод: ['Toyota', 'Honda', 'Ford', 'Audi']
+
+print(my_cars)  # Вывод: ['Toyota', 'Honda', 'Ford']
+
+print(id(my_cars) == id(copied_cars))  # Вывод: False
+```
