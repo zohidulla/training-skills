@@ -950,3 +950,36 @@ print(middle_ratings)  # Вывод: [5.0, 4.3, 3.7]
 last_two_ratings = ratings[-2:]
 print(last_two_ratings)  # Вывод: [3.7, 4.5]
 ```
+
+## Копирование списков - List copying
+
+```python
+my_cars = ['Toyota', 'Honda', 'Ford']
+
+copied_cars = my_cars
+
+copied_cars = my_cars.append('Audi')
+
+print(copied_cars)  # Вывод: ['Toyota', 'Honda', 'Ford', 'Audi']
+
+print(my_cars)  # Вывод: ['Toyota', 'Honda', 'Ford', 'Audi']
+
+print(id(my_cars) == id(copied_cars))  # Вывод: True
+```
+
+Копирование в **новый** список
+
+```python
+# version 1
+my_cars = ['Toyota', 'Honda', 'Ford']
+
+copied_cars = my_cars[:]
+
+copied_cars.append('Audi')
+
+print(copied_cars)  # Вывод: ['Toyota', 'Honda', 'Ford', 'Audi']
+
+print(my_cars)  # Вывод: ['Toyota', 'Honda', 'Ford']
+
+print(id(my_cars) == id(copied_cars))  # Вывод: False
+```
