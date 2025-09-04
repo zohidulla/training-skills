@@ -973,7 +973,7 @@ print(id(my_cars) == id(copied_cars))  # Вывод: True
 # version 1
 my_cars = ['Toyota', 'Honda', 'Ford']
 
-copied_cars = my_cars[:]
+copied_cars = my_cars[:] # Создание нового списка, используя slice
 
 copied_cars.append('Audi')
 
