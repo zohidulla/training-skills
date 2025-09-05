@@ -139,3 +139,52 @@
 # __eq__(value, /) unbound builtins.list method
 #     Return self==value.
 # None
+
+# my_nums = [10, 50, 0, 5, 100]
+# print(dir(my_nums))
+# ['__add__', '__class__', '__class_getitem__',
+# '__contains__', '__delattr__', '__delitem__',
+#  '__dir__', '__doc__', '__eq__', '__format__',
+#  '__ge__', '__getattribute__', '__getitem__',
+#  '__getstate__', '__gt__', '__hash__', '__iadd__',
+#  '__imul__', '__init__', '__init_subclass__', '__iter__',
+#  '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__',
+#  '__reduce__', '__reduce_ex__', '__repr__', '__reversed__',
+#  '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__',
+#  '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend',
+#  'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+
+# res = my_nums.count(5)
+# print(res)  # 1
+
+# my_nums.append(500)
+# print(my_nums)  # [10, 50, 0, 5, 100, 500]
+
+# my_nums.insert(2, 25)
+# print(my_nums)  # [10, 50, 25, 0, 5, 100, 500]
+
+# my_nums.clear()
+# print(my_nums)  # []
+
+# my_nums.extend([1, 2, 3])
+# print(my_nums)  # [1, 2, 3]
+
+# my_nums.extend('abc')
+# print(my_nums)  # [1, 2, 3, 'a', 'b', 'c']
+
+# other_nums = my_nums
+# print(id(my_nums))     # e.g., 140123456789456
+# print(id(other_nums))  # e.g., 140123456789456
+
+# other_nums = my_nums.copy()
+# print(id(my_nums))     # e.g., 140123456789456
+# print(id(other_nums))  # e.g., 140123456789789
+
+# my_nums.append(3)
+# other_nums.clear()
+# print(id(my_nums))    # e.g., 140123456789456
+# print(id(other_nums))  # e.g., 140123456789789
+
+# print(my_nums, other_nums)  # [10, 50, 25, 0, 5, 100, 500, 3] []
+
+# print(len(my_nums))  # 8
