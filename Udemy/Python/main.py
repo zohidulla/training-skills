@@ -189,18 +189,53 @@
 
 # print(len(my_nums))  # 8
 
-# Задача 1
 # 1. Создайте список с 5 элементами разных типов
-# 2. Удалите третий элемент
-# 3. Выведите в терминал длину списка
-# 4. Поменяйте порядок следования элементов в списке
-# 5. Создайте еще один список с двумя элементами
-# 6. Расширьте первый список элементами второго списка
-# 7. Выведите в терминал расширенный список из 6 элементов
+my_list = [42, "Python", 3.14, True, [1, 2, 3]]
+print("Original list:", my_list)  # [42, 'Python', 3.14, True, [1, 2, 3]]
 
-# Задача 2
+# 2. Удалите третий элемент
+my_list.pop(2)  # Удаляем элемент с индексом 2 (третий элемент)
+print("After deletion:", my_list)  # [42, 'Python', True, [1, 2, 3]]
+
+# 3. Выведите в терминал длину списка
+print("List length:", len(my_list))  # 4
+
+# 4. Поменяйте порядок следования элементов в списке
+my_list.reverse()
+print("Reversed list:", my_list)  # [[1, 2, 3], True, 'Python', 42]
+
+# 5. Создайте еще один список с двумя элементами
+second_list = ["hello", 100]
+print("Second list:", second_list)  # ['hello', 100]
+
+# 6. Расширьте первый список элементами второго списка
+my_list.extend(second_list)
+# [[1, 2, 3], True, 'Python', 42, 'hello', 100]
+print("Extended list:", my_list)
+
+# 7. Выведите в терминал расширенный список из 6 элементов
+# [[1, 2, 3], True, 'Python', 42, 'hello', 100]
+print("Final list with 6 elements:", my_list)
+
+
 # 1. Создайте два списока
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+print("First list:", list1)  # [1, 2, 3]
+print("Second list:", list2)  # [4, 5, 6]
+
 # 2. Объедините два списка, используя оператор +
+combined_list = list1 + list2
+print("Combined using + operator:", combined_list)  # [1, 2, 3, 4, 5, 6]
+
 # 3. Определите, какой магический метод списков вызывается при использовании оператора +
+# При использовании оператора + для списков вызывается магический метод __add__
+print("Magic method called with + operator: __add__")  # __add__
+
 # 4. Выполните слияние списков, используя этот магический метод
+combined_with_method = list1.__add__(list2)
+print("Combined using __add__ method:",
+      combined_with_method)  # [1, 2, 3, 4, 5, 6]
+
 # 5. Результат выведите в терминал
+print("Final combined list:", combined_with_method)  # [1, 2, 3, 4, 5, 6]
