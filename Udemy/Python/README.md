@@ -1017,3 +1017,5 @@ print(my_cars)  # Вывод: ['Toyota', 'Honda', 'Ford']
 
 print(id(my_cars) == id(copied_cars))  # Вывод: False
 ```
+
+# Словари - Dictionaries
