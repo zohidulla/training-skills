@@ -210,32 +210,33 @@ print("Second list:", second_list)  # ['hello', 100]
 
 # 6. Расширьте первый список элементами второго списка
 my_list.extend(second_list)
-# [[1, 2, 3], True, 'Python', 42, 'hello', 100]
 print("Extended list:", my_list)
+# [[1, 2, 3], True, 'Python', 42, 'hello', 100]
 
 # 7. Выведите в терминал расширенный список из 6 элементов
-# [[1, 2, 3], True, 'Python', 42, 'hello', 100]
 print("Final list with 6 elements:", my_list)
+# [[1, 2, 3], True, 'Python', 42, 'hello', 100]
 
 
 # 1. Создайте два списока
-list1 = [1, 2, 3]
-list2 = [4, 5, 6]
-print("First list:", list1)  # [1, 2, 3]
-print("Second list:", list2)  # [4, 5, 6]
+first_list = [10, True, 'abc']
+second_list = [[1, 2], {'b': True}]
+print("First list:", first_list)  # [10, True, 'abc']
+print("Second list:", second_list)  # [[1, 2], {'b': True}]
 
 # 2. Объедините два списка, используя оператор +
-combined_list = list1 + list2
-print("Combined using + operator:", combined_list)  # [1, 2, 3, 4, 5, 6]
+merged_list = first_list + second_list
+print("Combined using + operator:", merged_list)
+# [10, True, 'abc', [1, 2], {'b': True}]
+
 
 # 3. Определите, какой магический метод списков вызывается при использовании оператора +
 # При использовании оператора + для списков вызывается магический метод __add__
 print("Magic method called with + operator: __add__")  # __add__
 
 # 4. Выполните слияние списков, используя этот магический метод
-combined_with_method = list1.__add__(list2)
-print("Combined using __add__ method:",
-      combined_with_method)  # [1, 2, 3, 4, 5, 6]
+other_merged_list = first_list.__add__(second_list)
 
 # 5. Результат выведите в терминал
-print("Final combined list:", combined_with_method)  # [1, 2, 3, 4, 5, 6]
+# [10, True, 'abc', [1, 2], {'b': True}]
+print("Final combined list:", other_merged_list)
