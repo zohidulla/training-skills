@@ -1019,3 +1019,42 @@ print(id(my_cars) == id(copied_cars))  # Вывод: False
 ```
 
 # Словари - Dictionaries
+
+## Словари - dict
+
+**Словарь - набор элементов ключ:значение**, где ключи уникальны. Словари в Python создаются с помощью фигурных скобок `{}`.
+
+**Словари**
+
+**Структара и синтаксис**
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30
+}
+print(type(user))  # Вывод: <class 'dict'>
+```
+
+**Порядок элементов в словаре не имеет значения**
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30
+}
+other_user = {
+    'age': 30,
+    'is_authorized': True,
+    'user_name': 'Alice',
+    'user_id': 831
+}
+print(user == other_user)  # Вывод: True
+# Технически одинаковые словари.
+# Технически это разные объекты, но они равны по значению
+print(id(user) == id(other_user))  # Вывод: False
+```
