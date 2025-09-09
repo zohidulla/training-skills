@@ -692,6 +692,14 @@ Subnetting Example:
 <img src="./images/subnetting-5.png">
 </p>
 
+<p align="left">
+<img src="./images/subnetting-6.png">
+</p>
+
+<p align="left">
+<img src="./images/subnetting-7.png">
+</p>
+
 # ARP и ICMP
 
 ## Шлюз по умолчанию - Default Gateway
