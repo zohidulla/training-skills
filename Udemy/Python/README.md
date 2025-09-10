@@ -1058,3 +1058,63 @@ print(user == other_user)  # Вывод: True
 # Технически это разные объекты, но они равны по значению
 print(id(user) == id(other_user))  # Вывод: False
 ```
+
+## Изменение и удаление значений в словарях - Modifying and Deleting Dictionary Values
+
+**Получение значений из словаря**
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30
+}
+
+print(user['user_name'])  # Вывод: Alice
+print(user['age'])  # Вывод: 30
+print(user.get('age'))  # Вывод: 30
+```
+
+**Изменение значений в словаре**
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30
+}
+
+user['age'] = 31
+print(user['age'])  # Вывод: 31
+```
+
+**Добавление новых значений в словарь**
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30
+}
+
+user['email'] = 'alice@example.com'
+print(user)
+# Вывод: {'user_id': 831, 'user_name': 'Alice', 'is_authorized': True, 'age': 30, 'email': 'alice@example.com'}
+```
+
+**Удаление значений из словаря**
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30
+}
+
+del user['is_authorized']
+print(user) # Вывод: {'user_id': 831, 'user_name': 'Alice', 'age': 30}
+```

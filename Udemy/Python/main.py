@@ -190,53 +190,71 @@
 # print(len(my_nums))  # 8
 
 # 1. Создайте список с 5 элементами разных типов
-my_list = [42, "Python", 3.14, True, [1, 2, 3]]
-print("Original list:", my_list)  # [42, 'Python', 3.14, True, [1, 2, 3]]
+# my_list = [42, "Python", 3.14, True, [1, 2, 3]]
+# print("Original list:", my_list)  # [42, 'Python', 3.14, True, [1, 2, 3]]
 
 # 2. Удалите третий элемент
-my_list.pop(2)  # Удаляем элемент с индексом 2 (третий элемент)
-print("After deletion:", my_list)  # [42, 'Python', True, [1, 2, 3]]
+# my_list.pop(2)  # Удаляем элемент с индексом 2 (третий элемент)
+# print("After deletion:", my_list)  # [42, 'Python', True, [1, 2, 3]]
 
 # 3. Выведите в терминал длину списка
-print("List length:", len(my_list))  # 4
+# print("List length:", len(my_list))  # 4
 
 # 4. Поменяйте порядок следования элементов в списке
-my_list.reverse()
-print("Reversed list:", my_list)  # [[1, 2, 3], True, 'Python', 42]
+# my_list.reverse()
+# print("Reversed list:", my_list)  # [[1, 2, 3], True, 'Python', 42]
 
-# 5. Создайте еще один список с двумя элементами
-second_list = ["hello", 100]
-print("Second list:", second_list)  # ['hello', 100]
+# # 5. Создайте еще один список с двумя элементами
+# second_list = ["hello", 100]
+# print("Second list:", second_list)  # ['hello', 100]
 
-# 6. Расширьте первый список элементами второго списка
-my_list.extend(second_list)
-print("Extended list:", my_list)
-# [[1, 2, 3], True, 'Python', 42, 'hello', 100]
+# # 6. Расширьте первый список элементами второго списка
+# my_list.extend(second_list)
+# print("Extended list:", my_list)
+# # [[1, 2, 3], True, 'Python', 42, 'hello', 100]
 
-# 7. Выведите в терминал расширенный список из 6 элементов
-print("Final list with 6 elements:", my_list)
-# [[1, 2, 3], True, 'Python', 42, 'hello', 100]
-
-
-# 1. Создайте два списока
-first_list = [10, True, 'abc']
-second_list = [[1, 2], {'b': True}]
-print("First list:", first_list)  # [10, True, 'abc']
-print("Second list:", second_list)  # [[1, 2], {'b': True}]
-
-# 2. Объедините два списка, используя оператор +
-merged_list = first_list + second_list
-print("Combined using + operator:", merged_list)
-# [10, True, 'abc', [1, 2], {'b': True}]
+# # 7. Выведите в терминал расширенный список из 6 элементов
+# print("Final list with 6 elements:", my_list)
+# # [[1, 2, 3], True, 'Python', 42, 'hello', 100]
 
 
-# 3. Определите, какой магический метод списков вызывается при использовании оператора +
-# При использовании оператора + для списков вызывается магический метод __add__
-print("Magic method called with + operator: __add__")  # __add__
+# # 1. Создайте два списока
+# first_list = [10, True, 'abc']
+# second_list = [[1, 2], {'b': True}]
+# print("First list:", first_list)  # [10, True, 'abc']
+# print("Second list:", second_list)  # [[1, 2], {'b': True}]
 
-# 4. Выполните слияние списков, используя этот магический метод
-other_merged_list = first_list.__add__(second_list)
+# # 2. Объедините два списка, используя оператор +
+# merged_list = first_list + second_list
+# print("Combined using + operator:", merged_list)
+# # [10, True, 'abc', [1, 2], {'b': True}]
 
-# 5. Результат выведите в терминал
-# [10, True, 'abc', [1, 2], {'b': True}]
-print("Final combined list:", other_merged_list)
+
+# # 3. Определите, какой магический метод списков вызывается при использовании оператора +
+# # При использовании оператора + для списков вызывается магический метод __add__
+# print("Magic method called with + operator: __add__")  # __add__
+
+# # 4. Выполните слияние списков, используя этот магический метод
+# other_merged_list = first_list.__add__(second_list)
+
+# # 5. Результат выведите в терминал
+# # [10, True, 'abc', [1, 2], {'b': True}]
+# print("Final combined list:", other_merged_list)
+
+
+my_motorbike = {
+    'brand': 'Honda',
+    'price ': 10000
+}
+
+print(my_motorbike['brand'])  # Honda
+print(dir(my_motorbike))
+# ['__class__', '__contains__', '__delattr__', '__delitem__',
+#  '__dir__', '__doc__', '__eq__', '__format__', '__ge__',
+#  '__getattribute__', '__getitem__', '__getstate__', '__gt__',
+#  '__hash__', '__init__', '__init_subclass__', '__iter__',
+#  '__le__', '__lt__', '__ne__', '__new__', '__reduce__',
+#  '__reduce_ex__', '__repr__', '__setattr__', '__setitem__',
+#  '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy',
+#  'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem',
+#  'setdefault', 'update', 'values']
