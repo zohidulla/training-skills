@@ -1118,3 +1118,63 @@ user = {
 del user['is_authorized']
 print(user) # Вывод: {'user_id': 831, 'user_name': 'Alice', 'age': 30}
 ```
+
+## Использование переменных в словарях - Using Variables in Dictionaries
+
+**Доступ к значению элемента с помощью переменной**
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30
+}
+
+user_name_key = 'user_name'
+
+user[user_name_key] = 'Bob'
+
+print(user)
+# Вывод: {'user_id': 831, 'user_name': 'Bob', 'is_authorized': True, 'age': 30}
+```
+
+**Вложенные словари**
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30,
+    'address': {
+        'city': 'Wonderland',
+        'zip': '12345'
+    }
+}
+
+print(user['address']['city'])  # Вывод: Wonderland
+```
+
+**Использование переменных в вложенных словарях**
+
+```python
+user_name = 'Alice'
+age = 30
+city = 'city'
+
+
+user = {
+    'user_id': 831,
+    'user_name': user_name,
+    'is_authorized': True,
+    'age': age,
+    'address': {
+        'city': city,
+        'zip': '12345'
+    }
+}
+
+print(user)
+# Вывод: {'user_id': 831, 'user_name': 'Alice', 'is_authorized': True, 'age': 30, 'address': {'city': 'city', 'zip': '12345'}}
+```
