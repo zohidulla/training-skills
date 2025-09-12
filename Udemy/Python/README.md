@@ -1178,3 +1178,17 @@ user = {
 print(user)
 # Вывод: {'user_id': 831, 'user_name': 'Alice', 'is_authorized': True, 'age': 30, 'address': {'city': 'city', 'zip': '12345'}}
 ```
+
+## Длина словаря - Dictionary Length
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30
+}
+print(len(user))  # Вывод: 5
+del user['age']
+print(len(user))  # Вывод: 4
+```
