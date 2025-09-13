@@ -1192,3 +1192,66 @@ print(len(user))  # Вывод: 5
 del user['age']
 print(len(user))  # Вывод: 4
 ```
+
+## Несуществующие ключи и метод get - Non-Existent Keys and the get Method
+
+**Несуществующие ключи**
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30
+}
+print(user['email'])
+# KeyError: 'email'
+# Ошибка ключа
+# Такого ключа нет в словаре
+```
+
+**Метод "get" для получения значений ключей**
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30
+}
+
+print(user.get('email'))  # Вывод: None
+print(user.get('user_name'))  # Вывод: Alice
+```
+
+**Значение по умолчанию для метода "get"**
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30
+}
+
+print(user.get('email', 'Неизвестный пользователь'))  # Вывод: Неизвестный пользователь
+print(user.get('user_name', 'Неизвестный пользователь'))  # Вывод: Alice
+```
+
+**Метод "get" для получения значений ключей**
+
+```python
+user = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'is_authorized': True,
+    'age': 30
+}
+
+print(user.get('user_id'))  # Вывод: 831
+print(user.get('user_name'))  # Вывод: Alice
+print(user.get('is_authorized'))  # Вывод: True
+print(user.get('age'))  # Вывод: 30
+print(user.get('email', 'Неизвестный пользователь'))  # Вывод: Неизвестный пользователь
+# Всегда стоит использовать метод get для получения значений ключей
+```
