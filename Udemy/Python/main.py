@@ -242,13 +242,13 @@
 # print("Final combined list:", other_merged_list)
 
 
-my_motorbike = {
-    'brand': 'Honda',
-    'price ': 10000
-}
+# my_motorbike = {
+#     'brand': 'Honda',
+#     'price ': 10000
+# }
 
-print(my_motorbike['brand'])  # Honda
-print(dir(my_motorbike))
+# print(my_motorbike['brand'])  # Honda
+# print(dir(my_motorbike))
 # ['__class__', '__contains__', '__delattr__', '__delitem__',
 #  '__dir__', '__doc__', '__eq__', '__format__', '__ge__',
 #  '__getattribute__', '__getitem__', '__getstate__', '__gt__',
@@ -258,3 +258,17 @@ print(dir(my_motorbike))
 #  '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy',
 #  'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem',
 #  'setdefault', 'update', 'values']
+
+
+my_dict = {}
+
+print(my_dict.__doc__)
+# dict() -> new empty dictionary
+# dict(mapping) -> new dictionary initialized from a mapping object's
+#     (key, value) pairs
+# dict(iterable) -> new dictionary initialized as if via:
+#     d = {}
+#     for k, v in iterable:
+#         d[k] = v
+# dict(**kwargs) -> new dictionary initialized with the name=value pairs
+#     in the keyword argument list.  For example:  dict(one=1, two=2)
