@@ -260,9 +260,8 @@
 #  'setdefault', 'update', 'values']
 
 
-my_dict = {}
-
-print(my_dict.__doc__)
+# my_dict = {}
+# print(my_dict.__doc__)
 # dict() -> new empty dictionary
 # dict(mapping) -> new dictionary initialized from a mapping object's
 #     (key, value) pairs
@@ -272,3 +271,34 @@ print(my_dict.__doc__)
 #         d[k] = v
 # dict(**kwargs) -> new dictionary initialized with the name=value pairs
 #     in the keyword argument list.  For example:  dict(one=1, two=2)
+
+# my_disk = {}
+
+# print(id(my_disk))  # e.g., 140123456789456
+# print(type(my_disk))  # <class 'dict'>
+
+# my_disk['brand'] = 'Seagate'
+# my_disk['capacity'] = 2000  # in GB
+# my_disk['price'] = 75.5  # in USD
+
+# print(my_disk)  # {'brand': 'Seagate', 'capacity': 2000, 'price': 75.5}
+# print(id(my_disk))  # e.g., 140123456789456
+
+# print(my_disk.__dir__())
+# ['__new__', '__repr__', '__hash__', '__getattribute__', '__lt__', '__le__',
+#  '__eq__', '__ne__', '__gt__', '__ge__', '__iter__', '__init__', '__or__',
+#  '__ror__', '__ior__', '__len__', '__getitem__', '__setitem__', '__delitem__',
+#  '__contains__', '__sizeof__', 'get', 'setdefault', 'pop', 'popitem', 'keys',
+#  'items', 'values', 'update', 'fromkeys', 'clear', 'copy', '__reversed__',
+#  '__class_getitem__', '__doc__', '__str__', '__setattr__', '__delattr__',
+#  '__reduce_ex__', '__reduce__', '__getstate__', '__subclasshook__',
+#  '__init_subclass__', '__format__', '__dir__', '__class__']
+
+# print(my_disk.items())
+# dict_items([('brand', 'Seagate'), ('capacity', 2000), ('price', 75.5)])
+# print(type(my_disk.items()))  # <class 'dict_items'>
+# print(my_disk.keys())
+# dict_keys(['brand', 'capacity', 'price'])
+# print(type(my_disk.keys()))  # <class 'dict_keys'>
+# print(list(my_disk.keys()))  # ['brand', 'capacity', 'price']
+# print(my_disk.get('hdd'))  # None
