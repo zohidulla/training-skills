@@ -272,14 +272,14 @@
 # dict(**kwargs) -> new dictionary initialized with the name=value pairs
 #     in the keyword argument list.  For example:  dict(one=1, two=2)
 
-# my_disk = {}
+my_disk = {}
 
 # print(id(my_disk))  # e.g., 140123456789456
 # print(type(my_disk))  # <class 'dict'>
 
-# my_disk['brand'] = 'Seagate'
-# my_disk['capacity'] = 2000  # in GB
-# my_disk['price'] = 75.5  # in USD
+my_disk['brand'] = 'Seagate'
+my_disk['capacity'] = 2000  # in GB
+my_disk['price'] = 75.5  # in USD
 
 # print(my_disk)  # {'brand': 'Seagate', 'capacity': 2000, 'price': 75.5}
 # print(id(my_disk))  # e.g., 140123456789456
@@ -302,3 +302,9 @@
 # print(type(my_disk.keys()))  # <class 'dict_keys'>
 # print(list(my_disk.keys()))  # ['brand', 'capacity', 'price']
 # print(my_disk.get('hdd'))  # None
+
+new_disk = my_disk.copy()
+new_disk['type'] = 'ssd'
+
+# {'brand': 'Seagate', 'capacity': 2000, 'price': 75.5, 'type': 'ssd'}
+print(new_disk)
