@@ -272,18 +272,14 @@
 # dict(**kwargs) -> new dictionary initialized with the name=value pairs
 #     in the keyword argument list.  For example:  dict(one=1, two=2)
 
-my_disk = {}
-
+# my_disk = {}
 # print(id(my_disk))  # e.g., 140123456789456
 # print(type(my_disk))  # <class 'dict'>
-
-my_disk['brand'] = 'Seagate'
-my_disk['capacity'] = 2000  # in GB
-my_disk['price'] = 75.5  # in USD
-
+# my_disk['brand'] = 'Seagate'
+# my_disk['capacity'] = 2000  # in GB
+# my_disk['price'] = 75.5  # in USD
 # print(my_disk)  # {'brand': 'Seagate', 'capacity': 2000, 'price': 75.5}
 # print(id(my_disk))  # e.g., 140123456789456
-
 # print(my_disk.__dir__())
 # ['__new__', '__repr__', '__hash__', '__getattribute__', '__lt__', '__le__',
 #  '__eq__', '__ne__', '__gt__', '__ge__', '__iter__', '__init__', '__or__',
@@ -293,7 +289,6 @@ my_disk['price'] = 75.5  # in USD
 #  '__class_getitem__', '__doc__', '__str__', '__setattr__', '__delattr__',
 #  '__reduce_ex__', '__reduce__', '__getstate__', '__subclasshook__',
 #  '__init_subclass__', '__format__', '__dir__', '__class__']
-
 # print(my_disk.items())
 # dict_items([('brand', 'Seagate'), ('capacity', 2000), ('price', 75.5)])
 # print(type(my_disk.items()))  # <class 'dict_items'>
@@ -302,9 +297,21 @@ my_disk['price'] = 75.5  # in USD
 # print(type(my_disk.keys()))  # <class 'dict_keys'>
 # print(list(my_disk.keys()))  # ['brand', 'capacity', 'price']
 # print(my_disk.get('hdd'))  # None
-
-new_disk = my_disk.copy()
-new_disk['type'] = 'ssd'
-
+# new_disk = my_disk.copy()
+# new_disk['type'] = 'ssd'
 # {'brand': 'Seagate', 'capacity': 2000, 'price': 75.5, 'type': 'ssd'}
-print(new_disk)
+# print(new_disk)
+
+# my_list = [0, True, 'abc']
+# my_list = [['first', 0], ['second', True]]
+# my_dict = dict(my_list)
+# print(my_dict)  # {0: True, 1: 'abc'}
+# print(my_dict)  # {'first': 0, 'second': True}
+
+# my_str = 'abc'
+# my_dict = dict(my_str)
+# print(my_dict)
+# Traceback (most recent call last):
+#   File "main.py", line 311, in <module>
+#     my_dict = dict(my_str)
+# ValueError: dictionary update sequence element #0 has length 1; 2 is required
