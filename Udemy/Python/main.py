@@ -315,3 +315,20 @@
 #   File "main.py", line 311, in <module>
 #     my_dict = dict(my_str)
 # ValueError: dictionary update sequence element #0 has length 1; 2 is required
+
+# Задача
+# 1. Создайте пустой словарь
+# 2. Трижды попросите пользователя сначала ввести название ключа, а потом ввести значение для этого ключа. Всего должно быть 6 запросов на ввод текста.
+# 3. Во время получения данных от пользователя добавляйте в словарь ключи с значениями согласно тому, что ввел пользователь.
+# 4. Выведите результирующий словарь в терминал
+
+# my_dict = {}
+
+# for i in range(3):
+
+#     key = input(f"Enter key name #{i+1}: ")
+#     value = input(f"Enter value for key '{key}': ")
+
+#     my_dict[key] = value
+
+# print(my_dict)
