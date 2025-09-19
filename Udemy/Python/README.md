@@ -1277,7 +1277,7 @@ print(my_dict.__doc__)
 
 # Кортежи - Tuples
 
-## Кортежи - tuple
+## Кортежи - Tuples
 
 **Кортеж - упорядоченная и неизменяемая последовательность элементов**, которая может содержать элементы разных типов. Кортежи в Python создаются с помощью круглых скобок `()`.
 
@@ -1296,6 +1296,29 @@ user_inputs = (True, 'hi', 'symbol', 10.5)
 **Порядок элементов в кортеже имеет значение**
 
 ```python
-my_tuple = ('apple', 'banana', 'lime')
-other_tuple = ('banana', 'apple', 'lime')
+my_fruits = ('apple', 'banana', 'lime')
+other_fruits = ('banana', 'apple', 'lime')
+print(my_fruits == other_fruits)  # Вывод: False
+```
+
+**Длина кортежа**
+
+```python
+my_fruits = ('apple', 'banana', 'lime')
+print(len(my_fruits))  # Вывод: 3
+
+posts_ids = (151, 245, 762, 167)
+print(len(posts_ids))  # Вывод: 4
+
+user_inputs = (True, 'hi', 'symbol', 10.5)
+print(len(user_inputs))  # Вывод: 4
+```
+
+**Получение значений из кортежа**
+
+```python
+posts_ids = (151, 245, 762, 167)
+print(posts_ids[0])  # Вывод: 151
+print(posts_ids[1])  # Вывод: 245
+print(posts_ids[-1])  # Вывод: 167
 ```
