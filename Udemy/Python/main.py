@@ -332,3 +332,15 @@
 #     my_dict[key] = value
 
 # print(my_dict)
+
+
+# my_nums = (10, 5, 100, 0)
+
+# print(type(my_nums))  # <class 'tuple'>
+
+# my_nums[1] = 7
+# Traceback (most recent call last):
+#   File "main.py", line 341, in <module>
+#     my_nums[1] = 7
+#     ~~~~~~~^^^
+# TypeError: 'tuple' object does not support item assignment
