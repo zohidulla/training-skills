@@ -1322,3 +1322,11 @@ print(posts_ids[0])  # Вывод: 151
 print(posts_ids[1])  # Вывод: 245
 print(posts_ids[-1])  # Вывод: 167
 ```
+
+**Изменение элементов кортежа невозможно**
+
+```python
+posts_ids = (151, 245, 762, 167)
+
+posts_ids[1] = 300  # TypeError: 'tuple' object does not support item assignment
+```
