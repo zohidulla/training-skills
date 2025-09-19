@@ -1330,3 +1330,11 @@ posts_ids = (151, 245, 762, 167)
 
 posts_ids[1] = 300  # TypeError: 'tuple' object does not support item assignment
 ```
+
+**Удаление элементов из кортежа невозможно**
+
+```python
+posts_ids = (151, 245, 762, 167)
+
+del posts_ids[1]  # TypeError: 'tuple' object doesn't support item deletion
+```
