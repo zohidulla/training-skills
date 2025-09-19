@@ -1338,3 +1338,48 @@ posts_ids = (151, 245, 762, 167)
 
 del posts_ids[1]  # TypeError: 'tuple' object doesn't support item deletion
 ```
+
+**Кортеж словарей**
+
+```python
+users = (
+    {'user_id': 831, 'user_name': 'Alice'},
+    {'user_id': 832, 'user_name': 'Bob'},
+    {'user_id': 833, 'user_name': 'John'}
+)
+
+print(users[1]['user_id'])  # Вывод: 832
+users[1]['user_id'] = 900  # Изменение значения внутри словаря возможно
+print(users[1]['user_id'])  # Вывод: 900
+```
+
+**Использование переменных**
+
+```python
+my_fruit = 'apple'
+other_fruit = 'banana'
+new_fruit = 'lime'
+
+all_fruits = (my_fruit, other_fruit, new_fruit)
+
+print(all_fruits)  # Вывод: ('apple', 'banana', 'lime')
+```
+
+**Несуществующие элементы**
+
+```python
+posts_ids = (151, 245, 762, 167)
+print(posts_ids[10])  # IndexError: tuple index out of range
+```
+
+**Объединение кортежей**
+
+```python
+fruits = ('apple', 'banana')
+other_fruits = ('lime', 'orange')
+
+all_fruits = fruits + other_fruits
+# При использовании оператора + вызывается метод кортежей __add__
+
+print(all_fruits)  # Вывод: ('apple', 'banana', 'lime', 'orange')
+```

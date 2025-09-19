@@ -334,9 +334,9 @@
 # print(my_dict)
 
 
-my_nums = (10, 5, 100, 0)
+# my_nums = (10, 5, 100, 0)
 
-print(type(my_nums))  # <class 'tuple'>
+# print(type(my_nums))  # <class 'tuple'>
 
 # my_nums[1] = 7
 # Traceback (most recent call last):
@@ -345,7 +345,7 @@ print(type(my_nums))  # <class 'tuple'>
 #     ~~~~~~~^^^
 # TypeError: 'tuple' object does not support item assignment
 
-del my_nums[1]
+# del my_nums[1]
 # Traceback (most recent call last):
 #   File "main.py", line 348, in <module>
 #     del my_nums[1]
