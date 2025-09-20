@@ -1383,3 +1383,44 @@ all_fruits = fruits + other_fruits
 
 print(all_fruits)  # Вывод: ('apple', 'banana', 'lime', 'orange')
 ```
+
+## Методы кортежей - Tuple Methods
+
+**count и index - два метода кортежей**
+
+Методы кортежей наследуется от класса **tuple**
+
+**Подсчёт количества элементов**
+
+```python
+my_tuple = (1, 2, 3, 4, 5, 3)
+
+# Метод count - подсчет количества вхождений элемента
+print(my_tuple.count(3))  # Вывод: 2
+print(my_tuple.count(4))  # Вывод: 1
+```
+
+**Поиск индекса элемента**
+
+```python
+my_tuple = (1, 2, 3, 4, 5, 3)
+
+# Метод index - поиск индекса первого вхождения элемента
+print(my_tuple.index(4))  # Вывод: 3
+print(my_tuple.index(3))  # Вывод: 1 Если элемент встречается несколько раз, возвращается индекс первого вхождения
+print(my_tuple.index(6))  # ValueError: tuple.index(x): x not in tuple
+```
+
+Конвертация в список
+
+```python
+my_tuple = (1, 2, 3, 4, 5)
+my_list = list(my_tuple)
+my_list.append(6)
+
+print(my_list)  # Вывод: [1, 2, 3, 4, 5, 6]
+
+my_list_tuple = tuple(my_list)
+# Список можно конвертировать обратно в кортеж
+print(my_list_tuple) # Вывод: (1, 2, 3, 4, 5, 6)
+```
