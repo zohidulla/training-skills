@@ -1411,7 +1411,7 @@ print(my_tuple.index(3))  # Вывод: 1 Если элемент встреча
 print(my_tuple.index(6))  # ValueError: tuple.index(x): x not in tuple
 ```
 
-Конвертация в список
+**Конвертация в список**
 
 ```python
 my_tuple = (1, 2, 3, 4, 5)
