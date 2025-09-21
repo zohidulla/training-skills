@@ -354,3 +354,9 @@ my_nums = (10, 5, 100, 0, 5, 5)
 
 print(my_nums.count(5))  # 3
 print(my_nums.index(5))  # 1
+
+index_first = my_nums.index(5)
+index_second = my_nums.index(5, index_first + 1)
+index_third = my_nums.index(5, index_second + 1)
+
+print(index_third)  # 5
