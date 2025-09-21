@@ -334,7 +334,7 @@
 # print(my_dict)
 
 
-my_nums = (10, 5, 100, 0, 5, 5)
+# my_nums = (10, 5, 100, 0, 5, 5)
 
 # print(type(my_nums))  # <class 'tuple'>
 
@@ -352,11 +352,28 @@ my_nums = (10, 5, 100, 0, 5, 5)
 #         ~~~~~~~^^^
 # TypeError: 'tuple' object doesn't support item deletion
 
-print(my_nums.count(5))  # 3
-print(my_nums.index(5))  # 1
+# print(my_nums.count(5))  # 3
+# print(my_nums.index(5))  # 1
 
-index_first = my_nums.index(5)
-index_second = my_nums.index(5, index_first + 1)
-index_third = my_nums.index(5, index_second + 1)
+# index_first = my_nums.index(5)
+# index_second = my_nums.index(5, index_first + 1)
+# print(index_second)  # 4
 
-print(index_third)  # 5
+# index_third = my_nums.index(5, index_second + 1)
+# print(index_third)  # 5
+
+
+# my_list = list(my_nums)
+# my_list.append(7)
+
+# print(my_list)  # [10, 5, 100, 0, 5, 5, 7]
+# print(my_nums)  # (10, 5, 100, 0, 5, 5)
+
+# my_nums = tuple(my_list)
+# print(my_nums)  # (10, 5, 100, 0, 5, 5, 7)
+
+# my_tuple = tuple('abcd')
+# print(my_tuple)  # ('a', 'b', 'c', 'd')
+
+# my_tuple = tuple({'first': 'a', 'second': 'b', 'third': 'c', 'fourth': 'd'})
+# print(my_tuple)  # ('first', 'second', 'third', 'fourth')
