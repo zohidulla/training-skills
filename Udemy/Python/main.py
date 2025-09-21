@@ -334,7 +334,7 @@
 # print(my_dict)
 
 
-# my_nums = (10, 5, 100, 0)
+my_nums = (10, 5, 100, 0, 5, 5)
 
 # print(type(my_nums))  # <class 'tuple'>
 
@@ -351,3 +351,6 @@
 #     del my_nums[1]
 #         ~~~~~~~^^^
 # TypeError: 'tuple' object doesn't support item deletion
+
+print(my_nums.count(5))  # 3
+print(my_nums.index(5))  # 1
