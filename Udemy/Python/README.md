@@ -1424,3 +1424,66 @@ my_list_tuple = tuple(my_list)
 # Список можно конвертировать обратно в кортеж
 print(my_list_tuple) # Вывод: (1, 2, 3, 4, 5, 6)
 ```
+
+# Наборы - Set
+
+## Наборы - Set
+
+**Набор - неупорядоченная последовательность элементов.**
+Набор содержит только **уникальные** элементы.
+**Изменять** наборы можно, добавляя или удаляя элементы.
+В наборах обычно сохраняются элементы **однотипные** объекты.
+Наборы в Python создаются с помощью фигурных скобок `{}` или функции `set()`.
+**Порядок** элементов в наборе **не имеет** значения
+
+**Структура и синтаксис**
+
+```python
+my_fruits = {'apple', 'banana', 'cherry'}
+posts_ids = {151, 245, 762, 167}
+user_inputs = {True, 'hi', 'symbol', 10.5} # Все элементы одного типа - не обязательно
+
+print(my_fruits)  # Вывод: {'banana', 'cherry', 'apple'}
+
+print(type(my_fruits))  # Вывод: <class 'set'>
+```
+
+**Уникальные элементы**
+
+```python
+posts_ids = {151, 245, 167, 167, 151}
+
+print(posts_ids)  # Вывод: {167, 245, 151} - дубликаты удалены
+
+print(type(posts_ids))  # Вывод: <class 'set'>
+```
+
+```python
+my_fruits = {'apple', 'banana', 'cherry'}
+other_fruits = {'banana', 'apple', 'cherry'}
+
+print(my_fruits == other_fruits)  # Вывод: True
+```
+
+Длина набора
+
+```python
+my_fruits = {'apple', 'banana', 'cherry'}
+print(len(my_fruits))  # Вывод: 3
+
+posts_ids = {151, 245, 762, 167}
+print(len(posts_ids))  # Вывод: 4
+
+user_inputs = {True, 'hi', 'symbol', 10.5, True}
+print(len(user_inputs))  # Вывод: 4
+```
+
+**У элементов нет индексов**
+
+```python
+posts_ids = {151, 245, 762, 167}
+
+print(posts_ids[0])
+# TypeError: 'set' object is not subscriptable
+# Получить значение по индексу в наборе нельзя
+```
