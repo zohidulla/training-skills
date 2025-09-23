@@ -377,3 +377,15 @@
 
 # my_tuple = tuple({'first': 'a', 'second': 'b', 'third': 'c', 'fourth': 'd'})
 # print(my_tuple)  # ('first', 'second', 'third', 'fourth')
+
+# posts_ids = {10, 25, 16, 73}
+# posts_ids[0]
+# Traceback (most recent call last):
+#   File "main.py", line 382, in <module>
+#     posts_ids[0]
+#     ~~~~~~~~~^^^
+# TypeError: 'set' object is not subscriptable
+
+# posts_ids = [10, 25, 16, 73]
+# print(posts_ids.__getitem__(0))  # 10
+# print(posts_ids[0])  # 10
