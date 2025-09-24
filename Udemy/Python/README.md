@@ -1487,3 +1487,13 @@ print(posts_ids[0])
 # TypeError: 'set' object is not subscriptable
 # Получить значение по индексу в наборе нельзя
 ```
+
+**Изменяемые объекты в наборах**
+
+```python
+lists_set = {[1, 2], [20, 5]}
+
+print(lists_set)
+# TypeError: unhashable type: 'list'
+# В наборы нельзя добавлять изменяемые объекты, такие как list, dict, set
+```
