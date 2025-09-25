@@ -389,3 +389,28 @@
 # posts_ids = [10, 25, 16, 73]
 # print(posts_ids.__getitem__(0))  # 10
 # print(posts_ids[0])  # 10
+
+# my_set = {10, 10, 5, 15, 15}
+# print(my_set)  # {10, 5, 15}
+# print(len(my_set))  # 3
+
+# del my_set[0]  # TypeError: 'set' object doesn't support item deletion
+
+
+# my_set = {[10, 10], 5, 15, 15}
+# print(my_set)  # TypeError: unhashable type: 'list'
+
+# my_set = {(10, 10), 5, 15, 15}
+# print(my_set) # {(10, 10), 5, 15}
+
+
+# my_set = {{}, 5, 15, 15}
+# print(my_set)  # TypeError: unhashable type: 'dict'
+
+# my_set = {}
+# print(my_set)  # {}
+# print(type(my_set))  # <class 'dict'>
+
+# my_set = set()
+# print(my_set)  # set()
+# print(type(my_set))  # <class 'set'>

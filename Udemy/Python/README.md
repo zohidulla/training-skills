@@ -1497,3 +1497,14 @@ print(lists_set)
 # TypeError: unhashable type: 'list'
 # В наборы нельзя добавлять изменяемые объекты, такие как list, dict, set
 ```
+
+**Удалять элементы с помощью del нельзя**
+
+```python
+photo_dimensions = {'1920x1080', '800x600'}
+print(len(photo_dimensions))  # Вывод: 2
+
+del photo_dimensions[1]
+# TypeError: 'set' object doesn't support item deletion
+# Удалить элемент по индексу в наборе нельзя
+```
