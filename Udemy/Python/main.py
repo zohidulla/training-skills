@@ -414,3 +414,39 @@
 # my_set = set()
 # print(my_set)  # set()
 # print(type(my_set))  # <class 'set'>
+
+my_set = {'abc', 'd', 'f', 'y'}
+other_set = {'a', 'f', 'd'}
+
+# print(my_set.intersection(other_set))  # {'d', 'f'}
+# print(other_set.intersection(my_set))  # {'d', 'f'}
+# print(my_set & other_set)  # {'d', 'f'}
+# print(my_set.intersection('abcd'))  # {'d'}
+# print(my_set.intersection('abc'))  # set()
+# print(my_set.intersection(['a', 'b', 'c', 'd']))  # {'d'}
+# print(my_set.intersection(('a', 'b', 'c', 'd')))  # {'d'}
+
+# print(my_set.union(other_set))  # {'abc', 'y', 'd', 'f', 'a'}
+
+# print(other_set.issubset(my_set))  # False
+
+# print(my_set.issuperset(other_set))  # False
+# print(my_set == other_set)  # False
+
+# print(my_set.difference(other_set))  # {'abc', 'y'}
+# print(my_set - other_set)  # {'abc', 'y'}
+
+# print(my_set | other_set)  # {'abc', 'y', 'd', 'f', 'a'}
+
+# my_set.discard('d')
+# print(my_set)  # {'abc', 'y', 'f'}
+
+# my_set.remove('abc')
+# print(my_set)  # {'y', 'd', 'f'}
+
+# copied_set = my_set.copy()
+# my_set.add('t')
+# copied_set.add('l')
+# print(copied_set)  # {'abc', 'y', 'd', 'f', 'l'}
+# print(my_set)  # {'abc', 'y', 'd', 'f', 't'}
+# print(my_set & copied_set)  # {'abc', 'y', 'd', 'f'}
