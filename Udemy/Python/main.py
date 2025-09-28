@@ -444,9 +444,11 @@ other_set = {'a', 'f', 'd'}
 # my_set.remove('abc')
 # print(my_set)  # {'y', 'd', 'f'}
 
-# copied_set = my_set.copy()
-# my_set.add('t')
-# copied_set.add('l')
+copied_set = my_set.copy()
+my_set.add('t')
+copied_set.add('l')
 # print(copied_set)  # {'abc', 'y', 'd', 'f', 'l'}
 # print(my_set)  # {'abc', 'y', 'd', 'f', 't'}
 # print(my_set & copied_set)  # {'abc', 'y', 'd', 'f'}
+
+print(my_set.symmetric_difference(copied_set))  # {'l', 't'}
