@@ -415,8 +415,8 @@
 # print(my_set)  # set()
 # print(type(my_set))  # <class 'set'>
 
-my_set = {'abc', 'd', 'f', 'y'}
-other_set = {'a', 'f', 'd'}
+# my_set = {'abc', 'd', 'f', 'y'}
+# other_set = {'a', 'f', 'd'}
 
 # print(my_set.intersection(other_set))  # {'d', 'f'}
 # print(other_set.intersection(my_set))  # {'d', 'f'}
@@ -444,11 +444,17 @@ other_set = {'a', 'f', 'd'}
 # my_set.remove('abc')
 # print(my_set)  # {'y', 'd', 'f'}
 
-copied_set = my_set.copy()
-my_set.add('t')
-copied_set.add('l')
+# copied_set = my_set.copy()
+# my_set.add('t')
+# copied_set.add('l')
 # print(copied_set)  # {'abc', 'y', 'd', 'f', 'l'}
 # print(my_set)  # {'abc', 'y', 'd', 'f', 't'}
 # print(my_set & copied_set)  # {'abc', 'y', 'd', 'f'}
 
-print(my_set.symmetric_difference(copied_set))  # {'l', 't'}
+# print(my_set.symmetric_difference(copied_set))  # {'l', 't'}
+
+a = {'abc', 'd', 'f', 'y'}
+b = {'abc', 'd', 'f', 'l'}
+
+print((a | b) - (a & b))  # {'y', 'l'}
+print(a.symmetric_difference(b))  # {'y', 'l'}
