@@ -1578,3 +1578,59 @@ print(other_nums.issubset(nums))  # Вывод: False
 print(nums <= other_nums)  # Вывод: True
 print(other_nums <= nums)  # Вывод: False
 ```
+
+# Диапазоны - Ranges
+
+## Диапазоны - Ranges
+
+Диапазон - упорядоченная неизменяемая последовательность элементов.
+
+Диапазоны обычно используются для циклах.
+
+**Структура и синтаксис**
+
+```python
+my_range = range(7)
+
+print(type(my_range))  # Вывод: <class 'range'>
+print(my_range)  # Вывод: range(0, 7)
+print(list(my_range))  # Вывод: [0, 1, 2, 3, 4, 5, 6]
+```
+
+**Добавление шага в диапазонах**
+
+```python
+my_range = range(10, 20, 3) # шаг для диапазона
+
+print(type(my_range))  # Вывод: <class 'range'>
+print(my_range)  # Вывод: range(10, 20, 3)
+print(list(my_range))  # Вывод: [10, 13, 16, 19]
+```
+
+**Индексы элементов в диапазонах**
+
+```python
+my_range = range(10, 20, 3)
+
+print(my_range[0])  # Вывод: 10
+print(my_range[1])  # Вывод: 13
+print(my_range[2])  # Вывод: 16
+print(my_range[3])  # Вывод: 19
+print(my_range[4])  # IndexError: range object index out of range
+print(my_range[-1])  # Вывод: 19
+print(my_range[-2])  # Вывод: 16
+```
+
+**Использование диапазонов в циклах**
+
+```python
+my_range = range(10, 20, 3)
+
+for n in my_range:
+    print(n)
+# Вывод:
+# 10
+# 13
+# 16
+# 19
+```
