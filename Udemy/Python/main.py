@@ -466,16 +466,27 @@
 # 4. Найдите общие элементы в двух наборах и поместите их в новый набор
 # 5. Конвертируйте результирующий набор в список и выведите список  в терминал
 
-set_one = {10, 5, 7, 15, 100}
-set_one.add(200)
+# set_one = {10, 5, 7, 15, 100}
+# set_one.add(200)
 
-set_two = {20, 7, 300, 100, 200}
+# set_two = {20, 7, 300, 100, 200}
 
-set_common = set_one.intersection(set_two)
-print(set_common)  # {200, 100, 7}
+# set_common = set_one.intersection(set_two)
+# print(set_common)  # {200, 100, 7}
 
-list_common = list(set_common)
-print(list_common)  # [200, 100, 7]
+# list_common = list(set_common)
+# print(list_common)  # [200, 100, 7]
 
-print(set_one)  # {100, 5, 7, 10, 200, 15}
-print(set_two)  # {200, 100, 20, 7, 300}
+# print(set_one)  # {100, 5, 7, 10, 200, 15}
+# print(set_two)  # {200, 100, 20, 7, 300}
+
+
+my_range = range(5)
+
+print(my_range)  # range(0, 5)
+print(type(my_range))  # <class 'range'>
+print(my_range[0])  # 0
+print(my_range[-1])  # 4
+
+for n in my_range:
+    print(n)
