@@ -481,12 +481,54 @@
 # print(set_two)  # {200, 100, 20, 7, 300}
 
 
-my_range = range(5)
+# my_range = range(5)
+# print(my_range)  # range(0, 5)
+# print(type(my_range))  # <class 'range'>
+# print(my_range[0])  # 0
+# print(my_range[-1])  # 4
 
-print(my_range)  # range(0, 5)
-print(type(my_range))  # <class 'range'>
-print(my_range[0])  # 0
-print(my_range[-1])  # 4
+# for n in my_range:
+#     print(n)
 
-for n in my_range:
-    print(n)
+# for n in range(12, 25, 5):
+#     print(n)
+# 12
+# 17
+# 22
+
+# print(list(range(12, 25, 5)))  # [12, 17, 22]
+# print(tuple(range(12, 25, 5)))  # (12, 17, 22)
+# print(set(range(12, 25, 5)))  # {17, 22, 12}
+
+# print(dict(range(12, 25, 5)))
+# Traceback (most recent call last):
+#   File "main.py", line 502, in <module>
+#     print(dict(range(12, 25, 5)))
+#           ~~~~^^^^^^^^^^^^^^^^^^
+# TypeError: cannot convert dictionary update sequence element #0 to a sequence
+
+# my_range = range(5)
+# print(dir(my_range))
+# ['__bool__', '__class__', '__contains__', '__delattr__',
+#  '__dir__', '__doc__', '__eq__', '__format__', '__ge__',
+#  '__getattribute__', '__getitem__', '__getstate__', '__gt__',
+#  '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__',
+#  '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__',
+#  '__repr__', '__reversed__', '__setattr__', '__sizeof__', '__str__',
+#  '__subclasshook__', 'count', 'index', 'start', 'step', 'stop']
+
+# my_range = range(10, 30, 3)
+# print(my_range.start)  # 10
+# print(my_range.stop)   # 30
+# print(my_range.step)   # 3
+# print(my_range.index(13))  # 1
+
+# print(my_range.index(20))
+# Traceback (most recent call last):
+#   File "main.py", line 526, in <module>
+#     print(my_range.index(20))  # 4
+#           ~~~~~~~~~~~~~~^^^^
+# ValueError: 20 is not in range
+
+# print(my_range.count(3))  # 0
+# print(my_range.count(10))  # 1
