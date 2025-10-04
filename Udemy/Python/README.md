@@ -1647,3 +1647,23 @@ for n in my_range:
 | range | Нет       | Да      | Нет                 |
 | dict  | Да        | Нет     | Нет                 |
 | str   | Нет       | Да      | Да                  |
+
+# Функция zip - zip function
+
+## Встроенная функция zip - Built-in Function zip
+
+> Example
+
+```python
+fruits = ['apple', 'banana', 'lime']
+
+quantities = [100, 70, 50]
+
+fruit_qtys_zip = zip(fruits, quantities)
+print(fruit_qtys_zip) # <zip object at 0x7f9c8c0c8c80>
+
+fruit_qtys_list = list(fruit_qtys_zip)
+print(fruit_qtys_list) # [('apple', 100), ('banana', 70), ('lime', 50)]
+```
+
+**Функция zip** - это встроенная функция Python, которая принимает несколько итерируемых объектов (например, списки, кортежи) и возвращает итератор кортежей. Каждый кортеж содержит элементы из переданных итерируемых объектов, объединенные по индексам.
