@@ -532,3 +532,22 @@
 
 # print(my_range.count(3))  # 0
 # print(my_range.count(10))  # 1
+
+# fruits = ['apple', 'banana', 'lime', 'orange']
+
+# quantities = [100, 70, 50, 20]
+# quantities = {100, 70, 50, 20}
+# quantities = '1234'
+
+# availability = [True, False, False, True]
+# availability = (True, False, False, True)
+
+# fruit_qtys_zip = zip(fruits, quantities, availability)
+# print(fruit_qtys_zip)  # <zip object at 0x7f9c8c0c8c80>
+
+# print(type(fruit_qtys_zip))  # <class 'zip'>
+
+# fruit_qtys_list = list(fruit_qtys_zip)
+# print(fruit_qtys_list)
+# [('apple', 100, True), ('banana', 70, False), ('lime', 50, False), ('orange', 20, True)]
+# [('apple', '1', True), ('banana', '2', False), ('lime', '3', False), ('orange', '4', True)]
