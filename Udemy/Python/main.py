@@ -551,3 +551,15 @@
 # print(fruit_qtys_list)
 # [('apple', 100, True), ('banana', 70, False), ('lime', 50, False), ('orange', 20, True)]
 # [('apple', '1', True), ('banana', '2', False), ('lime', '3', False), ('orange', '4', True)]
+
+# fruit_qtys_dict = dict(fruit_qtys_zip)
+# print(fruit_qtys_dict)
+# Traceback (most recent call last):
+#   File "main.py", line 555, in <module>
+#     fruit_qtys_dict = dict(fruit_qtys_zip)
+# ValueError: dictionary update sequence element #0 has length 3; 2 is required
+
+# fruit_qtys_zip = zip(quantities, availability)
+# fruit_qtys_dict = dict(fruit_qtys_zip)
+# print(fruit_qtys_dict)
+# # {100: True, 70: False, 50: False, 20: True}

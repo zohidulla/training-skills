@@ -1667,3 +1667,18 @@ print(fruit_qtys_list) # [('apple', 100), ('banana', 70), ('lime', 50)]
 ```
 
 **Функция zip** - это встроенная функция Python, которая принимает несколько итерируемых объектов (например, списки, кортежи) и возвращает итератор кортежей. Каждый кортеж содержит элементы из переданных итерируемых объектов, объединенные по индексам.
+
+## Конвертация zip в dict - Converting zip to dict
+
+```python
+fruits = ['apple', 'banana', 'lime']
+
+quantities = [100, 70, 50]
+
+fruit_qtys_zip = zip(fruits, quantities)
+print(fruit_qtys_zip) # <zip object at 0x7f9c8c0c8c80>
+
+fruit_qtys_dict = dict(fruit_qtys_zip)
+# При конвертации zip объекта в словарь допускается только 2 аргумента в вызове функции zip
+print(fruit_qtys_dict) # {'apple': 100, 'banana': 70, 'lime': 50}
+```
