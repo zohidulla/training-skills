@@ -1682,3 +1682,40 @@ fruit_qtys_dict = dict(fruit_qtys_zip)
 # При конвертации zip объекта в словарь допускается только 2 аргумента в вызове функции zip
 print(fruit_qtys_dict) # {'apple': 100, 'banana': 70, 'lime': 50}
 ```
+
+# Изменение объектов в Python - Modifying Objects in Python
+
+## Изменение объектов в Python - Modifying Objects in Python
+
+**Переменная содержит ссылку на объект в памяти.**
+
+**Переменные могут ссылаться на один и тот же объект.**
+
+**Адреса неизменяемых объектов**
+
+```python
+my_number = 10
+print(id(my_number)) # 140706823588208
+
+other_number = 10
+print(id(other_number)) # 140706823588208
+
+print(id(10)) # 140706823588208
+```
+
+**Неизменяемые объекты**
+
+```python
+first_num = 10
+second_num = first_num
+
+print(id(first_num)) # 140706823588208
+print(id(second_num)) # 140706823588208
+
+second_num += 5
+print(second_num) # 15
+print(first_num) # 10 Значение не изменилось
+
+print(id(second_num)) # 140706823588240
+print(id(first_num)) # 140706823588208
+```
