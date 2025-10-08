@@ -1719,3 +1719,63 @@ print(first_num) # 10 Значение не изменилось
 print(id(second_num)) # 140706823588240
 print(id(first_num)) # 140706823588208
 ```
+
+## Поведение изменяемых объектов - Behavior of Mutable Objects
+
+**Адреса изменяемых объектов**
+
+```python
+my_list = [1, 2, 3] # Список list
+print(id(my_list)) # 140706823588208
+
+other_list = [1, 2, 3]
+print(id(other_list)) # 140706823588544
+
+print(id([1, 2, 3])) # 140706823588880
+```
+
+```python
+my_list = [1, 2, 3]
+other_list = [1, 2, 3]
+other_list.append(4)
+
+print(my_list) # [1, 2, 3]
+
+print(other_list) # [1, 2, 3, 4] Значение изменилось
+```
+
+```python
+info = {'user_id': 831, 'user_name': 'Alice'}
+
+other_info = info
+info['age'] = 30
+
+print(info['age']) # 30
+print(other_info['age']) # 30
+```
+
+```python
+info = {'user_id': 831, 'user_name': 'Alice'}
+
+other_info = info
+info['age'] = 30
+other_info['age'] = 40
+
+print(info['age']) # 40
+print(other_info['age']) # 40
+```
+
+```python
+info = {'user_id': 831, 'user_name': 'Alice'}
+
+other_info = {'user_id': 831, 'user_name': 'Alice'}
+other_info['age'] = 40
+
+print(id(info)) # 140706823588208
+print(id(other_info)) # 140706823588544
+
+print(info) # {'user_id': 831, 'user_name': 'Alice'}
+print(other_info) # {'user_id': 831, 'user_name': 'Alice', 'age': 40}
+```
+
+**После копирования изменяемых объектов изменения отражаются на всех копиях**
