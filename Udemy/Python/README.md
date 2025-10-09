@@ -1779,3 +1779,55 @@ print(other_info) # {'user_id': 831, 'user_name': 'Alice', 'age': 40}
 ```
 
 **После копирования изменяемых объектов изменения отражаются на всех копиях**
+
+## Как избежать изменения копий - How to Avoid Modifying Copies
+
+Вариант 1
+
+```python
+info = {
+    'user_id': 831,
+    'user_name': 'Alice'
+}
+
+info_copy = info.copy()
+# Создание нового словаря, используя метод copy()
+# Если у словаря есть вложенные словари, то ссылка на них сохраняются
+info_copy['age'] = 40
+
+print(info_copy) # {'user_id': 831, 'user_name': 'Alice', 'age': 40}
+print(info) # {'user_id': 831, 'user_name': 'Alice'}
+```
+
+Вариант 2
+
+```python
+info = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'reviews': []
+}
+
+info_copy = info.copy()
+info_copy['reviews'].append('Great product!')
+
+print(info) # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Great product!']}
+print(info_copy) # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Great product!']}
+```
+
+```python
+from copy import deepcopy
+
+info = {
+    'user_id': 831,
+    'user_name': 'Alice',
+    'reviews': []
+}
+
+info_copy = deepcopy(info)
+# Если у словаря есть вложенные словари, то ссылка на них не сохраняются
+info_copy['reviews'].append('Great product!')
+
+print(info) # {'user_id': 831, 'user_name': 'Alice', 'reviews': []}
+print(info_copy) # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Great product!']}
+```
