@@ -563,3 +563,54 @@
 # fruit_qtys_dict = dict(fruit_qtys_zip)
 # print(fruit_qtys_dict)
 # # {100: True, 70: False, 50: False, 20: True}
+
+# from copy import deepcopy
+
+# info = {
+#     'user_id': 831,
+#     'user_name': 'Alice',
+#     'reviews': []
+# }
+
+# info_copy = deepcopy(info)
+
+# info_copy['reviews'].append('Great product!')
+# info_copy['reviews'].append('Will buy again!')
+# info['reviews'].append('Not good')
+
+# print(info)  # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Not good']}
+# print(info_copy)
+# # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Great product!', 'Will buy again!']}
+
+# info = {
+#     'user_id': 831,
+#     'user_name': 'Alice',
+#     'reviews': []
+# }
+
+# info_copy = info.copy()
+
+# info_copy['reviews'].append('Great product!')
+# info['reviews'].append('Not good')
+
+# print(info)
+# # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Great product!', 'Not good']}
+# print(info_copy)
+# # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Great product!', 'Not good']}
+
+# info = {
+#     'user_id': 831,
+#     'user_name': 'Alice',
+#     'reviews': []
+# }
+
+# info_shallow_copy = info.copy()
+
+# info_shallow_copy['reviews'].append('Great product!')
+# info['reviews'].append('Not good')
+# info['new_key'] = 10
+
+# print(info)
+# # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Great product!', 'Not good'], 'new_key': 10}
+# print(info_shallow_copy)
+# # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Great product!', 'Not good']}
