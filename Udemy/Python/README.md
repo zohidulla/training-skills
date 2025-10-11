@@ -1831,3 +1831,78 @@ info_copy['reviews'].append('Great product!')
 print(info) # {'user_id': 831, 'user_name': 'Alice', 'reviews': []}
 print(info_copy) # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Great product!']}
 ```
+
+# Функции - Functions
+
+## Функции - Functions
+
+**Функция - блок кода, который можно выполнять многоратно.**
+
+```python
+a = 5
+b = 3
+
+c = a + b
+print(c) # 8
+
+a = 8
+b = 12
+
+c = a + b
+print(c) # 20
+# Одинаковые блоки кода
+```
+
+```python
+def sum(a, b):
+    c = a + b
+    print(c)
+
+a = 5
+b = 3
+
+sum(a, b) # 8
+
+a = 8
+b = 12
+sum(a, b) # 20
+```
+
+**Функция - это объект**
+
+```python
+def sum(a, b):
+    c = a + b
+    print(c)
+
+print(type(sum))
+# <class 'function'>
+# Каждая функция - это экземпляр класса function
+```
+
+<p align="center">
+<img src="./images/function.png" height="300"/>
+</p>
+
+**Функция возвращает значение None если нет ключевого слова return**
+
+**Функцию нужно вызвать для выполнения кода внутри функции**
+
+**Вызов функции**
+
+```python
+def my_fn(a, b):
+    a = a + 1
+    c = a + b
+    return c
+
+result = my_fn(10, 3)
+print(result) # 14
+```
+
+1. Параметрам **a** и **b** присваиваются значения 10 и 3
+2. Значение **a** увеличивается на 1
+3. Сумма **a** и **b** присваивается новой переменной **c**
+4. Возвращается значение **c**
+5. Результат вызова функции присваивается переменной **result**
+6. Значение переменной **result** выводится на экран
