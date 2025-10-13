@@ -1917,3 +1917,20 @@ print(my_fn()) # None
 # Функция ничего не делает
 # Ключевое слово pass используется для создания пустых блоков кода
 ```
+
+## Передача неизменяемых объектов в функцию - Passing Immutable Objects to a Function
+
+```python
+def my_fn(a, b):
+    a = a + 1 # Создается новый объект
+    c = a + b
+    return c
+
+new_one = 10
+new_two = 5
+
+res = my_fn(new_one, new_two)
+print(res) # 16
+print(new_one) # 10
+print(new_two) # 5
+```
