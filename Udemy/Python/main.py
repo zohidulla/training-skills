@@ -614,3 +614,19 @@
 # # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Great product!', 'Not good'], 'new_key': 10}
 # print(info_shallow_copy)
 # # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Great product!', 'Not good']}
+
+
+def increase_person_age(person):
+    print(id(person))  # e.g., 140123456789456
+    person['age'] += 1
+    return person
+
+
+person_one = {
+    'name': 'Alice',
+    'age': 21
+}
+print(id(person_one))  # e.g., 140123456789456
+
+increase_person_age(person_one)
+print(person_one['age'])  # 22

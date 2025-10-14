@@ -1934,3 +1934,21 @@ print(res) # 16
 print(new_one) # 10
 print(new_two) # 5
 ```
+
+## Передача изменяемых объектов в функцию - Passing Mutable Objects to a Function
+
+```python
+def increase_person_age(person): # Функция изменяет внешний объект
+    person['age'] += 1
+    return person
+
+person_one= {
+    'name': 'Alice',
+    'age': 21
+}
+
+increase_person_age(person_one) # Передача словаря по ссылке
+print(person_one['age']) # 22
+```
+
+**Вунтри функции не рекомендуется изменять внешние объекты**
