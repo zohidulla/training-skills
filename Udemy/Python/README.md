@@ -1951,4 +1951,24 @@ increase_person_age(person_one) # Передача словаря по ссыл�
 print(person_one['age']) # 22
 ```
 
-**Вунтри функции не рекомендуется изменять внешние объекты**
+**Внутри функции не рекомендуется изменять внешние объекты**
+
+## Как избежать изменения внешних объектов в функции - How to Avoid Modifying External Objects in a Function
+
+> Создание копии объекта
+
+```python
+def increase_person_age(person):
+    person_copy = person.copy() # Копирование объекта
+    person_copy['age'] += 1
+    return person_copy
+
+person_one= {
+    'name': 'Alice',
+    'age': 21
+}
+
+new_person = increase_person_age(person_one)
+print(new_person['age']) # 22
+print(person_one['age']) # 21
+```
