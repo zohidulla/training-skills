@@ -615,18 +615,38 @@
 # print(info_shallow_copy)
 # # {'user_id': 831, 'user_name': 'Alice', 'reviews': ['Great product!', 'Not good']}
 
+# def increase_person_age(person):
+#     print(id(person))  # e.g., 140123456789456
+#     person['age'] += 1
+#     return person
 
-def increase_person_age(person):
-    print(id(person))  # e.g., 140123456789456
-    person['age'] += 1
-    return person
+
+# person_one = {
+#     'name': 'Alice',
+#     'age': 21
+# }
+# print(id(person_one))  # e.g., 140123456789456
+
+# increase_person_age(person_one)
+# print(person_one['age'])  # 22
+
+# Задача
+# 1. Создайте функцию merge_lists_to_dict
+# 2. У функция должна быть два параметра
+# 3. Функция должна объединять два списка, используя встроенную функцию zip
+# 4. Конвертируйте объект zip в словарь и верните его из функции
+# 5. Вызовите функцию, передав ей два списка в качестве аргументов
+# 6. Выведите результат вызова функции в терминал
+
+def merge_lists_to_dict(list_one, list_two):
+    return dict(zip(list_one, list_two))
 
 
-person_one = {
-    'name': 'Alice',
-    'age': 21
-}
-print(id(person_one))  # e.g., 140123456789456
+res_one = merge_lists_to_dict(['a', 'b', 'c'], [10, True, []])
+print(res_one)  # {'a': 10, 'b': True, 'c': []}
 
-increase_person_age(person_one)
-print(person_one['age'])  # 22
+res_two = merge_lists_to_dict(['abc'], [{}, True, 100])
+print(res_two)  # {'abc': {}}
+
+res_three = merge_lists_to_dict([{}, True, 100], ['abc'])
+print(res_three)  # TypeError: unhashable type: 'dict'
