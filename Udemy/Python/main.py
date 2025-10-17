@@ -638,15 +638,15 @@
 # 5. Вызовите функцию, передав ей два списка в качестве аргументов
 # 6. Выведите результат вызова функции в терминал
 
-def merge_lists_to_dict(list_one, list_two):
-    return dict(zip(list_one, list_two))
+# def merge_lists_to_dict(list_one, list_two):
+#     return dict(zip(list_one, list_two))
 
 
-res_one = merge_lists_to_dict(['a', 'b', 'c'], [10, True, []])
-print(res_one)  # {'a': 10, 'b': True, 'c': []}
+# res_one = merge_lists_to_dict(['a', 'b', 'c'], [10, True, []])
+# print(res_one)  # {'a': 10, 'b': True, 'c': []}
 
-res_two = merge_lists_to_dict(['abc'], [{}, True, 100])
-print(res_two)  # {'abc': {}}
+# res_two = merge_lists_to_dict(['abc'], [{}, True, 100])
+# print(res_two)  # {'abc': {}}
 
-res_three = merge_lists_to_dict([{}, True, 100], ['abc'])
-print(res_three)  # TypeError: unhashable type: 'dict'
+# res_three = merge_lists_to_dict([{}, True, 100], ['abc'])
+# print(res_three)  # TypeError: unhashable type: 'dict'

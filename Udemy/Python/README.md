@@ -1972,3 +1972,40 @@ new_person = increase_person_age(person_one)
 print(new_person['age']) # 22
 print(person_one['age']) # 21
 ```
+
+# Аргументы функций - Function Arguments
+
+## Аргументы функций - Function Arguments
+
+**Параметры - переменные, указанные в определении функции.**
+**Аргументы - значения, которые передаются в функцию при её вызове.**
+
+```python
+def my_fn(a, b): # a и b - параметры функции
+    c = a + b
+    return c
+
+result = my_fn(10, 5) # 10 и 5 - аргументы функции
+```
+
+Ошибка отсутствия аргументов
+
+```python
+def sum_nums(a, b): # При вызове этой функции нужно обязательно передать два аргумента
+    c = a + b
+    return c
+
+print(sum_nums(10, 5)) # 15
+print(sum_nums(10)) # TypeError: sum_nums() missing 1 required positional argument 'b'
+print(sum_nums()) # TypeError: sum_nums() missing 2 required positional arguments: 'a' and 'b'
+```
+
+Ошибка чрезмерного количества аргументов
+
+```python
+def sum_nums(a, b): # При вызове этой функции нужно передавать точно два аргумента
+    c = a + b
+    return (c)
+
+print(sum_nums(10, 5, 7)) # TypeError: sum_nums() takes 2 positional arguments but 3 were given
+```
