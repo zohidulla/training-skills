@@ -2009,3 +2009,29 @@ def sum_nums(a, b): # При вызове этой функции нужно п�
 
 print(sum_nums(10, 5, 7)) # TypeError: sum_nums() takes 2 positional arguments but 3 were given
 ```
+
+## Объединение всех аргументов в кортеж в функции - Combining All Arguments into a Tuple in a Function
+
+> Объединение аргументов в Tuple
+
+```python
+def sum_nums(*args): # Все переданные аргументы объединяются в кортеж args
+    print(args) # (10, 5, 3, 8)
+    print(type(args)) # <class 'tuple'>
+    print(args[0]) # 10
+    return sum(args) # Функция sum() возвращает сумму всех элементов в итер
+
+print(sum_nums(10, 5, 3, 8)) # 26
+```
+
+> Позиционные аргументы
+
+```python
+def get_posts_info(name, posts_qty):
+    info = f"{name} wrote {posts_qty} posts"
+    return info
+
+print(get_posts_info("Alice", 5))
+# Порядок аргументов имеет значение
+# Alice wrote 5 posts
+```

@@ -650,3 +650,21 @@
 
 # res_three = merge_lists_to_dict([{}, True, 100], ['abc'])
 # print(res_three)  # TypeError: unhashable type: 'dict'
+
+# def sum_nums(*args):
+# print(args)  # (10, 5, 3, 8)
+# print(type(args))  # <class 'tuple'>
+# print(args[0])  # 10
+# return sum(args)
+
+
+# print(sum_nums(10, 5, 3, 8))  # 26
+# print(sum_nums())  # 0
+
+# Позиционные аргументы
+# def get_posts_info(name, posts_qty):
+#     info = f"{name} wrote {posts_qty} posts"
+#     return info
+
+
+# print(get_posts_info("Alice", 5))  # Alice wrote 5 posts
