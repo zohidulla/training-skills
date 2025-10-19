@@ -2035,3 +2035,19 @@ print(get_posts_info("Alice", 5))
 # Порядок аргументов имеет значение
 # Alice wrote 5 posts
 ```
+
+## Аргументы с ключевыми словами - Keyword Arguments
+
+> Аргументы с ключевыми словами
+
+```python
+def get_posts_info(name, posts_qty):
+    info = f"{name} wrote {posts_qty} posts"
+    return info
+
+print(get_posts_info(posts_qty=5, name="Alice"))
+# Аргументы можно передавать в любом порядке
+# Alice wrote 5 posts
+```
+
+**Использование аргументов с ключевыми словами делает код более читаемым и понятным**
