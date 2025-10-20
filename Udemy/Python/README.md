@@ -2062,6 +2062,7 @@ def get_posts_info(**person): # Все переданные именованны
     print(type(person)) # <class 'dict'>
     info = (
         f"{person['name']} wrote "
+        # Если не ставить запятую, Python автомачически объединит две строки
         f"{person['posts_qty']} posts"
         )
     return info

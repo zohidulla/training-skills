@@ -668,3 +668,16 @@
 
 
 # print(get_posts_info("Alice", 5))  # Alice wrote 5 posts
+
+# Именованные аргументы
+def get_posts_info(**person):
+    print(person)  # {'posts_qty': 30, 'name': 'Alice', 'id': 831}
+    info = (
+        f"{person['name']} wrote "
+        f"{person['posts_qty']} posts"
+    )
+    return info
+
+
+print(get_posts_info(posts_qty=30, name='Alice', id=831))
+# Alice wrote 30 posts
