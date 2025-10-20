@@ -2051,3 +2051,21 @@ print(get_posts_info(posts_qty=5, name="Alice"))
 ```
 
 **Использование аргументов с ключевыми словами делает код более читаемым и понятным**
+
+## Объединение именованых аргументов в словарь - Combining Named Arguments into a Dictionary
+
+> Объединение аргументов в DICT
+
+```python
+def get_posts_info(**person): # Все переданные именованные аргументы объединяются в словарь person
+    print(person) # {'name': 'Alice', 'posts_qty': 30}
+    print(type(person)) # <class 'dict'>
+    info = (
+        f"{person['name']} wrote "
+        f"{person['posts_qty']} posts"
+        )
+    return info
+
+print(get_posts_info(name='Alice', posts_qty=30))
+# Alice wrote 30 posts
+```
