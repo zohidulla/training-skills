@@ -669,15 +669,29 @@
 
 # print(get_posts_info("Alice", 5))  # Alice wrote 5 posts
 
-# Именованные аргументы
-def get_posts_info(**person):
-    print(person)  # {'posts_qty': 30, 'name': 'Alice', 'id': 831}
-    info = (
-        f"{person['name']} wrote "
-        f"{person['posts_qty']} posts"
-    )
-    return info
+# # Именованные аргументы
+# def get_posts_info(**person):
+#     print(person)  # {'posts_qty': 30, 'name': 'Alice', 'id': 831}
+#     info = (
+#         f"{person['name']} wrote "
+#         f"{person['posts_qty']} posts"
+#     )
+#     return info
 
 
-print(get_posts_info(posts_qty=30, name='Alice', id=831))
-# Alice wrote 30 posts
+# print(get_posts_info(posts_qty=30, name='Alice', id=831))
+# # Alice wrote 30 posts
+
+# ЗАДАЧА 1
+# 1. Перепишите вызов функции merge_lists_to_dict из предыдущей задачи так,
+#  чтобы в нём использовались аргументы с ключевыми словами.
+# 2. Добавьте ещё один вызов функции, в котором будет один позиционный аргумент,
+# а второй - аргумент с ключевым словом.
+
+
+# ЗАДАЧА 2
+# 1. Создайте функцию update_car_info, в которой все именованные аргументы
+#  будут объединяться в словарь car.
+# 2. Добавьте в словарь новый ключ is_available со значением True.
+# 3. Верните из функции изменённый словарь.
+# 4. Вызовите функцию с именованными аргументами brand и price, их значения могут быть любыми.
