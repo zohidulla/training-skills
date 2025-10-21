@@ -688,20 +688,20 @@
 # 2. Добавьте ещё один вызов функции, в котором будет один позиционный аргумент,
 # а второй - аргумент с ключевым словом.
 
-def merge_lists_to_dict(list_one, list_two):
-    return dict(zip(list_one, list_two))
+# def merge_lists_to_dict(list_one, list_two):
+#     return dict(zip(list_one, list_two))
 
 
-result_one = merge_lists_to_dict(
-    list_one=['a', 'b', 'c'], list_two=[10, True, []])
-print(result_one)  # {'a': 10, 'b': True, 'c': []}
+# result_one = merge_lists_to_dict(
+#     list_one=['a', 'b', 'c'], list_two=[10, True, []])
+# print(result_one)  # {'a': 10, 'b': True, 'c': []}
 
-result_two = merge_lists_to_dict(list_two=[{}, True, 100], list_one=['abc'])
-print(result_two)  # {'abc': {}}
+# result_two = merge_lists_to_dict(list_two=[{}, True, 100], list_one=['abc'])
+# print(result_two)  # {'abc': {}}
 
-result_three = merge_lists_to_dict(
-    ['a', True, 100], list_two=['abc'])
-print(result_three)  # {'a': 'abc'}
+# result_three = merge_lists_to_dict(
+#     ['a', True, 100], list_two=['abc'])
+# print(result_three)  # {'a': 'abc'}
 
 # result_three = merge_lists_to_dict(
 #     list_two=['abc'], ['a', True, 100])
@@ -715,21 +715,17 @@ print(result_three)  # {'a': 'abc'}
 # 3. Верните из функции изменённый словарь.
 # 4. Вызовите функцию с именованными аргументами brand и price, их значения могут быть любыми.
 
-
 # def update_car_info(**car):
-#     # Add the new key is_available with value True
 #     car['is_available'] = True
-#     # Return the modified dictionary
 #     return car
 
 
-# Call the function with named arguments brand and price
-# result = update_car_info(brand='Toyota', price=25000)
-# print("Updated car info:", result)
-# {'brand': 'Toyota', 'price': 25000, 'is_available': True}
+# print(update_car_info(brand='Toyota', price=250000))
+# {'brand': 'Toyota', 'price': 250000, 'is_available': True}
 
-# You can also call it with additional named arguments
-# result_two = update_car_info(
-#     brand='Honda', price=30000, color='blue', year=2023)
-# print("Updated car info with more details:", result_two)
-# {'brand': 'Honda', 'price': 30000, 'color': 'blue', 'year': 2023, 'is_available': True}
+# print(update_car_info('Toyota', 250000))
+# TypeError: update_car_info() takes 0 positional arguments but 2 were given
+
+# print(update_car_info(
+# brand='Honda', price=300000, color='blue', year=2023))
+# {'brand': 'Honda', 'price': 300000, 'color': 'blue', 'year': 2023, 'is_available': True}
