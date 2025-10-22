@@ -2074,3 +2074,37 @@ print(get_posts_info(name='Alice', posts_qty=30))
 # Параметры функций по умолчанию - Function Default Parameters
 
 ## Значения параметров функции по умолчанию - Function Default Parameter Values
+
+> Пример 1
+
+```python
+def mult_by_factor(value, multiplier=2): # Параметр multiplier имеет значение по умолчанию 2
+    return value * multiplier
+
+print(mult_by_factor(5, 3)) # 15
+print(mult_by_factor(5)) # 10
+# Наличие значения по умолчанию для параметра функции делает его необязательным
+```
+
+> Пример 2
+
+```python
+from datetime import date
+
+def get_weekday():
+    return date.today().strftime('%A')
+
+def create_new_post(post, weekday=get_weekday()):
+    post_copy = post.copy()
+    post_copy['created_on_weekday'] = weekday
+    return post_copy
+
+initial_post = {
+    'id': 243,
+    'author': 'Alice',
+}
+
+post_with_weekday = create_new_post(initial_post)
+print(post_with_weekday)
+# {'id': 243, 'author': 'Alice', 'created_on_weekday': 'Monday'}
+```
