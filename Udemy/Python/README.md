@@ -2070,3 +2070,7 @@ def get_posts_info(**person): # Все переданные именованны
 print(get_posts_info(name='Alice', posts_qty=30))
 # Alice wrote 30 posts
 ```
+
+# Параметры функций по умолчанию - Function Default Parameters
+
+## Значения параметров функции по умолчанию - Function Default Parameter Values
