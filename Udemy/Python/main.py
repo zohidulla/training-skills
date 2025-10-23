@@ -729,3 +729,30 @@
 # print(update_car_info(
 # brand='Honda', price=300000, color='blue', year=2023))
 # {'brand': 'Honda', 'price': 300000, 'color': 'blue', 'year': 2023, 'is_available': True}
+
+# # Значения параметров функции по умолчанию
+# from datetime import date
+
+
+# def get_weekday():
+#     return date.today().strftime('%A')
+#     # return date.today().strftime('%c')  # Wed Oct 22 00:00:00 2025
+#     # return date.today().strftime('%x')  # 10/22/25
+
+
+# def create_new_post(post, weekday=get_weekday()):
+#     post_copy = post.copy()
+#     post_copy['created_on_weekday'] = weekday
+#     return post_copy
+
+
+# initial_post = {
+#     'id': 243,
+#     'author': 'Alice',
+# }
+
+# post_with_weekday = create_new_post(initial_post)
+# print(post_with_weekday)
+# # {'id': 243, 'author': 'Alice', 'created_on_weekday': 'Wednesday'}
+# print(initial_post)
+# # {'id': 243, 'author': 'Alice'}
