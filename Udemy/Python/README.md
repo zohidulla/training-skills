@@ -2108,3 +2108,35 @@ post_with_weekday = create_new_post(initial_post)
 print(post_with_weekday)
 # {'id': 243, 'author': 'Alice', 'created_on_weekday': 'Monday'}
 ```
+
+# Колбэк функции - Callback Functions
+
+## Колбэк функции - Callback Functions
+
+**Колбэк функция - это функция, которая передается в другую функцию в качестве аргумента и вызывается внутри этой функции для выполнения определенной задачи.**
+
+```python
+def other_fn():
+    # some actions...
+    pass
+
+def fn_with_callback(callback_fn): # В теле функции вызывается колбэк функция
+    callback_fn()
+
+fn_with_callback(other_fn)
+```
+
+```python
+def print_number_info(num):
+    if num % 2 == 0:
+        print(f"{num} is even")
+    else:
+        print(f"{num} is odd")
+
+def process_number(number, callback_fn):
+    callback_fn(number) # Функция вызывается внутри другой функции
+
+entered_number = int(input("Enter any number: "))
+
+process_number(entered_number, print_number_info)
+```
