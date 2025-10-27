@@ -2150,3 +2150,17 @@ process_number(entered_number, print_number_info)
 - Параметры функций должны иметь значения по умолчанию, если это возможно.
 - Используйте аргументы с ключевыми словами для повышения читаемости кода.
 - Избегайте изменения внешних объектов внутри функций.
+
+## Документация функции (docstring) - Function Documentation (docstring)
+
+**docstring** используется для документирования функций, классов и модулей.
+
+Описание функции
+
+```python
+def multi_by_factor(value, mult=1):
+    """Multiplies number by multiplicator"""
+    return value * mult
+
+multi_by_factor(5)
+```
