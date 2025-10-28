@@ -2164,3 +2164,20 @@ def multi_by_factor(value, mult=1):
 
 multi_by_factor(5)
 ```
+
+Описание аргументов
+
+```python
+def print_number_info(num):
+    """
+    Prints whether a number is even or odd.
+
+    Args:
+        num (int): Number to be evaluated # Типы и описание аргументов
+    """
+    if num % 2 == 0:
+        print(f"{num} is even")
+    else:
+        print(f"{num} is odd")
+print_number_info(20)
+```

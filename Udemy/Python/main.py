@@ -791,3 +791,24 @@
 
 
 # process_data({'name': 'Alice'}, send_data)
+
+# # Документация функции (docstring)
+# def print_number_info(num):
+#     """
+#     Prints num information
+
+#     Args:
+#         num (int): Integer number
+
+#     Returns:
+#         int: Same number
+#     """
+#     if num % 2 == 0:
+#         print(f"{num} is even")
+#     else:
+#         print(f"{num} is odd")
+
+#     return num
+
+
+# print_number_info(10)
