@@ -812,3 +812,19 @@
 
 
 # print_number_info(10)
+
+# # Практика - Глобальные и локальные переменные
+# c = 5
+
+
+# def my_fn(a, b):
+#     d = 10
+#     print(c)  # 5
+#     print(a, b)  # abc xyz # 3 5
+#     # print(dir())  # ['a', 'b', 'd']
+
+
+# # my_fn('abc', 'xyz')
+# my_fn(3, 5)
+# # print(a)  # NameError: name 'a' is not defined
+# # print(dir())  # ['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'c', 'my_fn']
