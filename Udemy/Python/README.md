@@ -2318,3 +2318,24 @@ c = a + b # + Оператор сложения
 print(a is b) # True
 print(c is a) # False
 ```
+
+## Операторы и магические методы - Operators and Magic Methods
+
+**У операторов есть соответствующие магические методы классов**
+(method) **eq**: (**0: object, **1: object) -> bool
+
+```python
+a = [1, 2]
+b = [1, 2]
+
+print(a == b) # True
+print(a.__eq__(b)) # True
+# Метод, который вызывается при использовании оператора ==
+
+print(a.__eq__) # <method-wrapper '__eq__' of list object at 0x7f9c8c0c8c80>
+
+print(id(a) == id(b)) # False
+
+print(id(a)) # 140706823588208
+print(hex(id(b))) # 0x7f9c8c0c8c80
+```
