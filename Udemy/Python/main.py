@@ -855,3 +855,25 @@
 # 4. Проверьте, есть ли определенные элементы в наборе, используя оператор in.
 # print(1 in set_a)  # True
 # print(5 in set_a)  # False
+
+# Ложные значения
+# print(bool(0))  # False
+# print(bool(0.0))  # False
+# print(bool(0j))  # False
+# print(bool(None))  # False
+# print(bool({}))  # False
+# print(bool([]))  # False
+# print(bool(()))  # False
+# print(bool(set()))  # False
+# print(bool(range(0)))  # False
+# print(bool(''))  # False
+
+# print(not not {})  # False
+# print(not not {1, 2, 3})  # True
+# print(not not [])  # False
+# print(not not [0])  # True
+# print(not not '')  # False
+# print(not not 'abc')  # True
+
+# my_list = []
+# print(len(my_list)) > 0  # False
