@@ -2445,3 +2445,36 @@ my_list = [1, 2]
 if my_list:
     print("List has elements")
 ```
+
+# Логические операторы - Logical Operators
+
+## Логические операторы - Logical Operators
+
+**not** - **не** Всегда возвращает значение типа **bool**
+**and** - **и** Возвращают значение одного из операндов
+**or** - **или** Возвращают значение одного из операндов
+
+Оператор **not** чаще всего используется в условных инструкциях **if**
+
+Примеры с оператором **not**
+
+```python
+not 10      # False
+not 0       # True
+not 'abc'   # False
+not ''      # True
+not True    # False
+not False   # True
+```
+
+Отрицание отрицания **not not**
+
+```python
+# Позволяет проверить ложность значения
+not not 10      # True
+not not 0       # False
+not not 'abc'   # True
+not not ''      # False
+not not True    # True
+not not None    # False
+```
