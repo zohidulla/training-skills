@@ -877,3 +877,22 @@
 
 # my_list = []
 # print(len(my_list)) > 0  # False
+
+# Практика - Логические операторы
+# my_list = []
+# print(not my_list) # True
+
+# my_list = [1, 2]
+# print(not my_list)  # False
+
+# my_list = [1, 2]
+# other_list = ['a', 'b']
+# print(len(my_list) > 0 or other_list)  # True
+# print(len(my_list) < 0 or other_list)  # ['a', 'b']
+
+# my_list = [1, 2]
+# my_dict = {}
+# print(my_list and my_dict)  # {}
+
+# my_list = [1, 2]
+# my_list and print("List is not empty")  # List is not empty
