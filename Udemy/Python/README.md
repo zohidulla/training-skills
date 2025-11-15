@@ -2512,3 +2512,29 @@ a or b or c or d
 
 a or b and c or d
 ```
+
+# Распаковка словарей - Dictionary Unpacking
+
+## Оператор распаковки словаря - Dictionary Unpacking Operator
+
+Оператор \*\*
+
+```python
+button = {
+    'width': 200,
+    'text': 'Buy'
+}
+
+red_button = {
+    **button,
+    'color': 'red'
+    # Если у словаря button есть ключ 'color',
+    # то его значение будет перезаписано
+}
+
+print(red_button)
+# {'width': 200, 'text': 'Buy', 'color': 'red'}
+
+print(button)
+# {'width': 200, 'text': 'Buy'}
+```

@@ -896,3 +896,21 @@
 
 # my_list = [1, 2]
 # my_list and print("List is not empty")  # List is not empty
+
+# # Оператор распаковки словаря
+# button = {
+#     'width': 200,
+#     'text': 'Buy',
+#     'color': 'blue'
+# }
+
+# red_button = {
+#     'color': 'red',
+#     ** button,
+# }
+
+# print(red_button)
+# # {'color': 'blue', 'width': 200, 'text': 'Buy'}
+
+# print(button)
+# # {'width': 200, 'text': 'Buy', 'color': 'blue'}
