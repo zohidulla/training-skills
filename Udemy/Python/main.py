@@ -914,3 +914,39 @@
 
 # print(button)
 # # {'width': 200, 'text': 'Buy', 'color': 'blue'}
+
+# # Объединение словарей
+# button_info = {
+#     'text': 'Buy',
+#     'color': 'black',
+#     'width': 0,
+#     'height': 0
+# }
+
+# button_style = {
+#     'color': 'yellow',
+#     'width': 200,
+#     'height': 300
+# }
+
+# button = {
+#     **button_info,
+#     **button_style,
+# }
+# print(button)
+# #{'text': 'Buy', 'color': 'yellow', 'width': 200, 'height': 300}
+
+# button = {
+#     **button_style,
+#     **button_info,
+# }
+# print(button)
+# # {'color': 'black', 'width': 0, 'height': 0, 'text': 'Buy'}
+
+# button = button_info | button_style
+# print(button)
+# # {'text': 'Buy', 'color': 'yellow', 'width': 200, 'height': 300}
+
+# button = button_style | button_info
+# print(button)
+# # {'color': 'black', 'width': 0, 'height': 0, 'text': 'Buy'}

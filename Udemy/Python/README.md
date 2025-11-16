@@ -2538,3 +2538,46 @@ print(red_button)
 print(button)
 # {'width': 200, 'text': 'Buy'}
 ```
+
+## Объединение словарей - Merging Dictionaries
+
+Объединение словарей с помощью оператора \*\*
+
+```python
+button_info = {
+    'text': 'Buy'
+}
+
+button_style = {
+    'color': 'yellow',
+    'width': 200,
+    'height': 300
+}
+
+button = {
+    **button_info,
+    **button_style,
+}
+
+print(button)
+# {'text': 'Buy', 'color': 'yellow', 'width': 200, 'height': 300}
+```
+
+Объединение словарей с помощью оператора |
+
+```python
+button_info = {
+    'text': 'Buy'
+}
+
+button_style = {
+    'color': 'yellow',
+    'width': 200,
+    'height': 300
+}
+
+button = button_info | button_style
+
+print(button)
+# {'text': 'Buy', 'color': 'yellow', 'width': 200, 'height': 300}
+```
