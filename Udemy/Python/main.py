@@ -950,3 +950,12 @@
 # button = button_style | button_info
 # print(button)
 # # {'color': 'black', 'width': 0, 'height': 0, 'text': 'Buy'}
+
+# # Инструкция del
+# my_list = [1, 2]
+
+# del my_list[0]
+
+# my_list.__delitem__(0)
+
+# print(my_list)  # []

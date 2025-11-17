@@ -2581,3 +2581,20 @@ button = button_info | button_style
 print(button)
 # {'text': 'Buy', 'color': 'yellow', 'width': 200, 'height': 300}
 ```
+
+# Инструкция del - The del Statement
+
+## Инструкция del - The del Statement
+
+del my_dict['a'] - удаляет элемент из словаря по ключу 'a'
+
+```python
+my_dict = { 'a': True, 'b': 10 }
+del my_dict['a']
+my_dict.__delitem__('b')
+
+print(my_dict)  # Вывод: {}
+# Инструкция del удаляет элемент из словаря по ключу
+pritn(my_dict.__delitem__)
+# Вывод: <built-in method __delitem__ of dict object at 0x7f9c8c0c8c80>
+```
