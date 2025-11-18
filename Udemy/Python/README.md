@@ -2598,3 +2598,21 @@ print(my_dict)  # Вывод: {}
 pritn(my_dict.__delitem__)
 # Вывод: <built-in method __delitem__ of dict object at 0x7f9c8c0c8c80>
 ```
+
+# Соединение строк - Joining Strings
+
+## Соединение строк - Joining Strings
+
+Оператор + для соединения строк
+
+```python
+'Hello ' + 'World!'  # 'Hello World!'
+```
+
+Переменные в соединении строк
+
+```python
+greeting = 'Hello '
+name = 'Alice'
+print(greeting + name)  # 'Hello Alice'
+```
