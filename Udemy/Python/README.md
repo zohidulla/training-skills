@@ -2616,3 +2616,16 @@ greeting = 'Hello '
 name = 'Alice'
 print(greeting + name)  # 'Hello Alice'
 ```
+
+## Форматирование строк с f-strings - String Formatting with f-strings
+
+```python
+hello = 'Hello'
+world = 'World'
+
+greeting = f'{hello} {world}!'
+# Также называется f-string
+# Здесь может быть любое выражение внутри {}, например, вызов функции
+
+print(greeting)  # 'Hello World!'
+```
