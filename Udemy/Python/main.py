@@ -959,3 +959,13 @@
 # my_list.__delitem__(0)
 
 # print(my_list)  # []
+
+
+# Форматирование строк с f-strings
+my_name = 'Alice'
+my_hobby = 'painting'
+time = 8
+
+info = my_name + ". I like " + my_hobby + \
+    ". I spend " + str(time) + " hours a week on it."
+print(info)
