@@ -966,6 +966,11 @@ my_name = 'Alice'
 my_hobby = 'painting'
 time = 8
 
-info = my_name + ". I like " + my_hobby + \
-    ". I spend " + str(time) + " hours a week on it."
+# info = my_name + ". I like " + my_hobby + \
+#     ". I spend " + str(time) + " hours a week on it."
+# print(info)
+# My name is Alice. I like painting. I spend 8 hours a week on it
+
+info = f"My name is {my_name}. I like {my_hobby}. I spend {time} hours a week on it."
 print(info)
+# My name is Alice. I like painting. I spend 8 hours a week on it
