@@ -2629,3 +2629,40 @@ greeting = f'{hello} {world}!'
 
 print(greeting)  # 'Hello World!'
 ```
+
+# Лямбда функции - Lambda Functions
+
+## Лямбда функции - Lambda Functions
+
+```python
+lambda parameters: expression
+# lambda ключевое слово
+# parameters - параметры функции, может иметь несколько параметров, разделенных запятыми
+# expression - выражение, которое возвращает значение, допускается только одно выражение
+```
+
+**Лямбда функции всегда анонимные**
+
+Функция
+
+```python
+def mult(a, b):
+    return a * b
+```
+
+Лямбда функция
+
+```python
+lambda a, b: a * b
+```
+
+```python
+def greeting(greet):
+    return lambda name: f"{greet}, {name}!"
+
+morning_greeting = greeting("Good morning")
+print(morning_greeting("Alice"))  # "Good morning, Alice!"
+
+evening_greeting = greeting("Good evening")
+print(evening_greeting("Bob"))  # "Good evening, Bob!"
+```
