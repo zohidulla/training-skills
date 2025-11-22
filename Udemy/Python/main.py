@@ -974,3 +974,14 @@
 # info = f"My name is {my_name}. I like {my_hobby}. I spend {time} hours a week on it."
 # print(info)
 # # My name is Alice. I like painting. I spend 8 hours a week on it
+
+# # Лямбда функции
+# def greeting(greet):
+#     return lambda name: f"{greet}, {name}!"
+
+
+# morning_greeting = greeting("Good morning")
+# print(morning_greeting("Alice"))  # "Good morning, Alice!"
+
+# evening_greeting = greeting("Good evening")
+# print(evening_greeting("Alice"))  # "Good evening, Alice!"
