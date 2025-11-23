@@ -2666,3 +2666,7 @@ print(morning_greeting("Alice"))  # "Good morning, Alice!"
 evening_greeting = greeting("Good evening")
 print(evening_greeting("Bob"))  # "Good evening, Bob!"
 ```
+
+# Обработка ошибок - Error Handling
+
+## Обработка ошибок - Error Handling
