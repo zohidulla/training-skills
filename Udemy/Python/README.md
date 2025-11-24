@@ -2670,3 +2670,25 @@ print(evening_greeting("Bob"))  # "Good evening, Bob!"
 # Обработка ошибок - Error Handling
 
 ## Обработка ошибок - Error Handling
+
+Что происходит в случае ошибок
+
+```python
+print(10 / 0)
+# ZeroDivisionError: division by zero
+# Выполнение кода остановится после появления ошибки
+
+print('Continue...')
+# Этот код не выполнится из-за ошибки выше
+```
+
+**TRY/EXCEPT**
+
+```python
+try:
+    # Выполнение блока кода
+    pass
+except ErrorType:
+    # Этот блок выполняется в случае возникновения ошибок в блоке try
+    pass
+```
