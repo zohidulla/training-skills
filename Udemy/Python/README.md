@@ -2692,3 +2692,14 @@ except ErrorType:
     # Этот блок выполняется в случае возникновения ошибок в блоке try
     pass
 ```
+
+**EXCEPT с определенным типом ошибки**
+
+```python
+try:
+    print(10 / 0)
+except ZeroDivisionError:
+    print("Error - Division by zero!")
+
+print("Continue...") # Continue...
+```
