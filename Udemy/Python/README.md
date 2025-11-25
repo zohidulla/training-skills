@@ -2703,3 +2703,15 @@ except ZeroDivisionError:
 
 print("Continue...") # Continue...
 ```
+
+## Получение информации об ошибке - Getting Error Information
+
+```python
+try:
+    print(10 / 0)
+except ZeroDivisionError as e: # Переменная e содержит информацию об ошибке
+    print(type(e))  # <class 'ZeroDivisionError'>
+    print(e)  # division by zero
+
+print("Continue...") # Continue...
+```

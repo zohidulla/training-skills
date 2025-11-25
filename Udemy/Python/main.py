@@ -995,3 +995,16 @@
 #     print("Error - Division by zero!")  # Error - Division by zero!
 
 # print("Continue...")  # Continue...
+
+
+# # Получение информации об ошибке
+
+# try:
+#     print(10 / 0)
+# except ZeroDivisionError as e:
+#     print(type(e))  # <class 'ZeroDivisionError'>
+#     print(dir(e))  # ['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__
+#     print(e.__str__())  # division by zero
+#     print(e)  # division by zero
+
+# print("Continue...")  # Continue...
