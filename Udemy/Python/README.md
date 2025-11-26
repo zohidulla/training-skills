@@ -2715,3 +2715,30 @@ except ZeroDivisionError as e: # Переменная e содержит инф�
 
 print("Continue...") # Continue...
 ```
+
+## Разные типы ошибок в разных блоках except - Different Error Types in Different except Blocks
+
+```python
+try:
+    print('10' / 0)
+    # Деление строки на ноль вызовет ошибку TypeError
+    # Эта ошибка не попадает в блок except
+except ZeroDivisionError as e:
+    print(e) # division by zero
+
+print("Continue...") # Continue...
+```
+
+Несколько блоков except
+
+```python
+try:
+    print('10' / 0)
+except ZeroDivisionError as e:
+    print(e)
+except TypeError as e:
+    print(e) # unsupported operand type(s) for /: 'str' and 'int'
+    # Выполняется этот блок кода, потому сто первой возникает ошибка TypeError
+
+print("Continue...") # Continue...
+```

@@ -1008,3 +1008,15 @@
 #     print(e)  # division by zero
 
 # print("Continue...")  # Continue...
+
+
+# # Разные типы ошибок в разных блоках except
+# try:
+#     print('10' / 0)
+# except ZeroDivisionError as e:
+#     print(e)
+# except TypeError as e:
+#     print(type(e))  # <class 'TypeError'>
+#     print(e)  # unsupported operand type(s) for /: 'str' and 'int'
+
+# print("Continue...")  # Continue...
