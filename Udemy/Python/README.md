@@ -2742,3 +2742,37 @@ except TypeError as e:
 
 print("Continue...") # Continue...
 ```
+
+## Блоки else и finally в обработке ошибок - else and finally Blocks in Error Handling
+
+Блок else
+
+```python
+try:
+    print(10 / 5) # 2.0
+except ZeroDivisionError as e:
+    print(e)
+except TypeError as e:
+    print(e)
+else:
+    print("There was no error")  # There was no error
+    # Этот блок выполняется, если в блоке try не возникло ошибок
+
+print("Continue...")  # Continue...
+```
+
+Блок finally
+
+```python
+try:
+    print(10 / 5) # 2.0
+except ZeroDivisionError as e:
+    print(e)
+except TypeError as e:
+    print(e)
+else:
+    print("There was no error")  # There was no error
+finally:
+    print("Continue...")  # Continue...
+    # Этот блок выполняется в любом случае, независимо от наличия ошибок
+```
