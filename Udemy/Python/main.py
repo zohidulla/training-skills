@@ -1020,3 +1020,25 @@
 #     print(e)  # unsupported operand type(s) for /: 'str' and 'int'
 
 # print("Continue...")  # Continue...
+
+
+# # Отсутствие типа ошибки и класс Exception
+# try:
+#     print(10 / 0)
+# except ZeroDivisionError as e:
+#     # print(isinstance(e, ZeroDivisionError))  # True
+#     # print(isinstance(e, str))  # False
+#     # print(isinstance(e, Exception))  # True
+#     print(isinstance(e, object))  # True
+#     print(e)  # division by zero
+# except TypeError as e:
+#     print(e)
+
+# print("Continue...")  # Continue...
+
+try:
+    print("10" / 0)
+except Exception as e:
+    print(e)  # unsupported operand type(s) for /: 'str' and 'int'
+
+print("Continue...")  # Continue...

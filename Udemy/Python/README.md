@@ -2776,3 +2776,22 @@ finally:
     print("Continue...")  # Continue...
     # Этот блок выполняется в любом случае, независимо от наличия ошибок
 ```
+
+## Отсутствие типа ошибки и класс Exception - Absence of Error Type and Exception Class
+
+Любые ошибки в блоке EXCEPT
+
+```python
+try:
+    print('10' / 0)
+except Exception as e:  # Класс Exception является базовым для всех встроенных исключений
+    print(e)  # division by zero
+```
+
+```python
+try:
+    print('10' / 0)
+except:
+    print("Some error occurred")  # Some error occurred
+    # Не рекомендуется использовать, так как нет информации об ошибке
+```
