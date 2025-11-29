@@ -1036,9 +1036,25 @@
 
 # print("Continue...")  # Continue...
 
-try:
-    print("10" / 0)
-except Exception as e:
-    print(e)  # unsupported operand type(s) for /: 'str' and 'int'
+# try:
+#     print("10" / 0)
+# except Exception as e:
+#     print(e)  # unsupported operand type(s) for /: 'str' and 'int'
 
-print("Continue...")  # Continue...
+# print("Continue...")  # Continue...
+
+
+# # Создание ошибок
+# def divide_numbers(a, b):
+#     if b == 0:
+#         raise ValueError("Second argument cannot be zero")
+#     return a / b
+
+
+# try:
+#     divide_numbers(10, 0)
+# except ValueError as e:
+#     print(e)
+#     # Second argument cannot be zero
+
+# print("Continue...")  # Continue...

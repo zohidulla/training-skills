@@ -2795,3 +2795,39 @@ except:
     print("Some error occurred")  # Some error occurred
     # Не рекомендуется использовать, так как нет информации об ошибке
 ```
+
+## Создание ошибок - Raising Errors
+
+Генерация ошибки с помощью RAISE
+
+```python
+def divide_numbers(a, b):
+    if b == 0:
+        raise TypeError("Second argument cannot be zero")
+        # Лучше в данном случае создать ошибку ValueError
+    return a / b
+```
+
+```python
+try:
+    divide_numbers(10, 0)
+except ZeroDivisionError as e:
+    print(e)
+except TypeError as e:
+    print(e)
+    # Second argument cannot be zero
+    # Сгенерированная ошибка попадает в этот блок
+
+print("Continue...")  # Continue...
+```
+
+```python
+try:
+    divide_numbers(10, 0)
+except TypeError as e:
+    print(e)
+    # Second argument cannot be zero
+    # Теперь ошибка ZeroDivisionError не возникнет
+
+print("Continue...")  # Continue...
+```
