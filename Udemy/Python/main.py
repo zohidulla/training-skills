@@ -1065,3 +1065,18 @@
 # 3. Функция должна возвращать строку такого вида "Image 'my cat' has id '5136'"
 # 4. Если хотя бы одного из этих ключей в словаре нет, функция должна генерировать ошибку TypeError
 # 5. Вызовите функцию и корректно обработайте ошибку в случае возникновения
+
+# def image_info(image_dict):
+#     if 'image_id' not in image_dict or 'image_title' not in image_dict:
+#         raise TypeError(
+#             "The dictionary must contain 'image_id' and 'image_title' keys")
+#     return f"Image '{image_dict['image_title']}' has id '{image_dict['image_id']}'"
+
+
+# try:
+#     # result = image_info({'image_id': 5136, 'image_title': 'my cat'})
+#     # print(result)  # Image 'my cat' has id '5136'
+#     result = image_info({'image_title': 'my cat'})
+#     print(result)
+# except TypeError as e:
+#     print(e)  # The dictionary must contain 'image_id' and 'image_title' keys
