@@ -1080,3 +1080,14 @@
 #     print(result)
 # except TypeError as e:
 #     print(e)  # The dictionary must contain 'image_id' and 'image_title' keys
+
+
+# # Распаковка списков и кортежей
+
+# my_list = [1, 2, 3]
+
+# second, first, third = my_list
+
+# print(first)  # 2
+# print(second)  # 1
+# print(third)  # 3

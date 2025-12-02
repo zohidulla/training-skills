@@ -2831,3 +2831,65 @@ except TypeError as e:
 
 print("Continue...")  # Continue...
 ```
+
+# Распаковка списков и кортежей - Unpacking Lists and Tuples
+
+## Распаковка списков и кортежей - Unpacking Lists and Tuples
+
+**Распаковка** - извлечение значений и присвоение их переменным
+
+Присвоение значений из списка переменным
+
+```python
+my_fruits = ['apple', 'banana', 'lime']
+
+fruit_one = my_fruits[0]
+fruit_two = my_fruits[1]
+fruit_three = my_fruits[2]
+
+print(fruit_one)   # apple
+print(fruit_two)   # banana
+print(fruit_three) # lime
+```
+
+**LIST, TUPLE** - упорядочкнные последовательности элементов
+
+Распаковка списков (LIST)
+
+```python
+my_fruits = ['apple', 'banana', 'lime']
+
+fruit_one, fruit_two, fruit_three = my_fruits
+# Объявление новых переменных и присвоение им значений элементов из списка
+
+print(fruit_one)   # apple
+print(fruit_two)   # banana
+print(fruit_three) # lime
+```
+
+Распаковка кортежей (TUPLE)
+
+```python
+my_fruits = ('apple', 'banana', 'lime')
+# В tuple новые элементы не могут быть добавлены или удалены
+print(type(my_fruits)) # <class 'tuple'>
+
+fruit_one, fruit_two, fruit_three = my_fruits
+
+print(fruit_one)   # apple
+print(fruit_two)   # banana
+print(fruit_three) # lime
+```
+
+Использование \* при распаковке
+
+```python
+my_fruits = ['apple', 'banana', 'lime']
+
+fruit_one, *other_fruits = my_fruits
+
+print(fruit_one)   # apple
+print(other_fruits)   # ['banana', 'lime']
+
+print(type(other_fruits)) # <class 'list'>
+```
