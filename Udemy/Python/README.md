@@ -2893,3 +2893,22 @@ print(other_fruits)   # ['banana', 'lime']
 
 print(type(other_fruits)) # <class 'list'>
 ```
+
+## Распаковка словаря в именованые аргументы - Unpacking Dictionary into Named Arguments
+
+Распаковка словаря в аргументы с ключевыми словами
+
+```python
+user_profile = {
+    'name': 'Alice',
+    'comments_qty': 23,
+}
+
+def user_info(name, comments_qty=0): # В таком случае в словаре не может быть больше двух ключей
+    if not comments_qty:
+        return f"{name} has no comments"
+
+    return f"{name} has {comments_qty} comments"
+
+print(user_info(**user_profile))  # Alice has 23 comments
+```
