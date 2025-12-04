@@ -2912,3 +2912,32 @@ def user_info(name, comments_qty=0): # В таком случае в слова�
 
 print(user_info(**user_profile))  # Alice has 23 comments
 ```
+
+## Распаковка списка в позиционные аргументы - Unpacking List into Positional Arguments
+
+```python
+user_data = ['Alice', 23]
+
+def user_info(name, comments_qty): # В таком случае в списке должно быть точно два аргумента
+    if not comments_qty:
+        return f"{name} has no comments"
+
+    return f"{name} has {comments_qty} comments"
+
+print(user_info(*user_data))  # Alice has 23 comments
+```
+
+Несовпадение количества аргументов
+
+```python
+user_data = ['Alice', 23, True]
+
+def user_info(name, comments_qty):
+    if not comments_qty:
+        return f"{name} has no comments"
+
+    return f"{name} has {comments_qty} comments"
+
+print(user_info(*user_data)) # Аргументов больше чем параметров
+# TypeError: user_info() takes 2 positional arguments but 3 were given
+```
