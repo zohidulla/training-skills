@@ -2941,3 +2941,12 @@ def user_info(name, comments_qty):
 print(user_info(*user_data)) # Аргументов больше чем параметров
 # TypeError: user_info() takes 2 positional arguments but 3 were given
 ```
+
+# Условные инструкции if - Conditional Statements if
+
+## Условные инструкции - Conditional Statements
+
+**if**
+**if ... else**
+**if ... elif**
+**тернарный оператор** - Выражение
