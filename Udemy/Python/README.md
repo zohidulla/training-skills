@@ -3019,3 +3019,12 @@ if not person_info.get('name'):
     # Результат выражения с оператором not и ложным операндом всегда будет True
     print("Name is missing")  # Name is missing
 ```
+
+## Инструкция if else - The if else Statement
+
+```python
+if condition:
+    # Блок кода, который выполняется, если условие истинно
+else:
+    # Блок кода, который выполняется, если условие ложно
+```
