@@ -3028,3 +3028,13 @@ if condition:
 else:
     # Блок кода, который выполняется, если условие ложно
 ```
+
+```python
+my_number = 21.5
+
+if type(my_number) is int:
+    print(f"{my_number} is integer number")
+else:
+    print(f"{my_number} is not integer number")
+    # 21.5 is not integer number
+```

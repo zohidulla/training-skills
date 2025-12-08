@@ -1155,3 +1155,19 @@
 
 
 # ************************************************************************************************************************
+# # Инструкция if else
+
+# my_phone = {
+#     'price': 1000,
+#     # 'brand': 'Xiomi',
+# }
+
+# print(my_phone.get('brand'))  # None
+# print(bool(my_phone.get('brand')))  # False
+
+# if my_phone.get('brand'):
+#     print("Phone's brand is", my_phone['brand'])
+#     # Phone's brand is Xiomi
+# else:
+#     print("There is no phone brand")
+#     # There is no phone brand
