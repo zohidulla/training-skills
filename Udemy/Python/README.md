@@ -3038,3 +3038,37 @@ else:
     print(f"{my_number} is not integer number")
     # 21.5 is not integer number
 ```
+
+## Инструкция if elif - The if elif Statement
+
+```python
+if condition1:
+    # Блок кода, который выполняется, если условие1 истинно
+elif condition2:
+    # Блок кода, который выполняется, если условие1 ложно и условие2 истинно
+else:
+    # Блок кода, который выполняется, если условие1 и условие2 ложны
+```
+
+```python
+my_number = -10
+
+if my_number > 0:
+    print(f"{my_number} is positive number")
+elif my_number < 0:
+    print(f"{my_number} is negative number")
+else:
+    print(f"{my_number} is zero")
+    # -10 is negative number
+```
+
+Предпочтитеьный формат if
+
+```python
+if condition1:
+    # Блок кода, который выполняется, если условие1 истинно
+if condition2:
+    # Блок кода, который выполняется, если условие2 истинно
+if condition3:
+    # Блок кода, который выполняется, если условие3 истинно
+```
