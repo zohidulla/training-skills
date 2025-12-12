@@ -1197,3 +1197,21 @@
 # 3. Иначе, если в словаре есть ключи speed и time, верните строку "Distance to your destination is <speed * time>"
 # 4. Иначе верните строку "No distance info is available"
 # 5. Вызовите функцию несколько раз с разными аргументами
+def route_info(route_dict):
+    if 'distance' in route_dict and isinstance(route_dict['distance'], int):
+        return f"Distance to your destination is {route_dict['distance']}"
+    elif 'speed' in route_dict and 'time' in route_dict:
+        return f"Distance to your destination is {route_dict['speed'] * route_dict['time']}"
+    else:
+        return "No distance info is available"
+
+
+print(route_info({'distance': 150}))  # Distance to your destination is 150
+# Distance to your destination is 120
+print(route_info({'speed': 60, 'time': 2}))
+print(route_info({'speed': 60}))  # No distance info is available
+print(route_info({'time': 2}))  # No distance info is available
+print(route_info({}))  # No distance info is available
+
+
+# ************************************************************************************************************************
