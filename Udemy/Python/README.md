@@ -3089,3 +3089,62 @@ print(nums_info(True, 10)) # Один из аргументов не целое 
 print(nums_info(10, 2))   # 10 больше или равно 2
 print(nums_info(5, 15))   # 5 меньше 15
 ```
+
+# Тернарный оператор - The Ternary Operator
+
+## Тернарный оператор - The Ternary Operator
+
+**У тернарного оператора три операнда**
+
+**Конструкция с тернарным оператором - выражение**
+
+**Результатом выражения является значение**
+
+```python
+Expression1 if condition else Expression2
+# Expression1 - выражение, которое возвращает значение, если условие истинно
+# condition - здесь может быть любое выражение, которое возвращает значение типа bool
+# Expression2 - выражение, которое возвращает значение, если условие ложно
+```
+
+```python
+Variable = Expression1 if condition else Expression2
+# Результат выражения присваивается переменной Variable
+```
+
+Пример 1
+
+```python
+my_number = 21.5
+
+print("is int") if type(my_number) is int else print("is not int")
+
+if type(my_number) is int:
+    print("is int")
+else:
+    print("is not int")
+```
+
+Пример 2
+
+```python
+send_img(img) if img.get['is_processed'] else process_and_send_img(img)
+# Вызов разных функций зависимо от наличия ключа is_processed в словаре img
+```
+
+Пример 3
+
+```python
+product_qty = 10
+
+print("in stock" if product_qty > 0 else "out of stock")
+# in stock
+```
+
+```python
+product_qty = 10
+
+result = "in stock" if product_qty > 0 else "out of stock"
+
+print(result) # in stock
+```
