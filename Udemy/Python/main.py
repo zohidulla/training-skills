@@ -1216,14 +1216,21 @@
 
 # ************************************************************************************************************************
 # # Тернарный оператор
-# my_img = ('1920', '1080', True)
+# my_img = ('1920', '1080', 5)
 
 # info = f"{my_img[0]}x{my_img[1]}" if len(
 #     my_img) == 2 else "Incorrect image formatting"
 
-# print(info)
-# # 1920x1080
-# # Incorrect image formatting
+# if len(my_img) == 2:
+#     info = f"{my_img[0]}x{my_img[1]}"
+# else:
+#     info = "Incorrect image formatting"
+
+# print(info) # Incorrect image formatting
+
+# my_str = "lorem, ipsum, dolor, sit, amet, consectetur, adipiscing, elit, sed, do, eiusmod, tempor, incididunt, ut, labore, et, dolore, magna, aliqua"
+# res = "String is long" if len(my_str) > 50 else "String is short"
+# print(res)  # String is long
 
 
 # ************************************************************************************************************************
