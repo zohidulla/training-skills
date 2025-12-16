@@ -3148,3 +3148,53 @@ result = "in stock" if product_qty > 0 else "out of stock"
 
 print(result) # in stock
 ```
+
+# Цикл for in - The for in Loop
+
+## Циклы - Loops
+
+Без циклов
+
+```python
+i = 10
+print(i) # 10
+i *= 2
+print(i) # 20
+i *= 2
+print(i) # 40
+i *= 2
+```
+
+Перебор всех элементов списка без цикла
+
+```python
+my_fruits = ['apple', 'banana', 'lime']
+print(my_fruits[0]) # apple
+print(my_fruits[1]) # banana
+print(my_fruits[2]) # lime
+```
+
+Перебор всех ключей словаря без цикла
+
+```python
+my_object = {
+    'a': 1,
+    'b': 2,
+    'c': 3
+}
+print(my_object['a']) # 1
+print(my_object['b']) # 2
+print(my_object['c']) # 3
+```
+
+**Циклы используются для перебора элементов последовательностей**
+
+```python
+Последовательности:
+dict, list, tuple, set, range, str
+```
+
+**Типы циклов**
+
+- **for ... in ...**
+- **while**
