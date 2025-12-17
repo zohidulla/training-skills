@@ -3198,3 +3198,50 @@ dict, list, tuple, set, range, str
 
 - **for ... in ...**
 - **while**
+
+## Цикл for in - The for in Loop
+
+```python
+for item in sequence:
+    # Блок кода, который выполняется для каждого элемента из sequence
+```
+
+**for in для списков (list)**
+
+```python
+my_fruits = ['apple', 'banana', 'lime']
+
+for fruit in my_fruits:
+    print(fruit)
+# apple
+# banana
+# lime
+```
+
+**for in для кортежей (tuple)**
+
+```python
+my_fruits = ('apple', 'banana', 'lime')
+
+for fruit in my_fruits:
+    print(fruit)
+# apple
+# banana
+# lime
+```
+
+**for in для словарей (dict)**
+
+```python
+my_object = {
+    'a': 1,
+    'b': 2,
+    'c': 3
+}
+
+for key in my_object:
+    print(f"{key}: {my_object[key]}")
+# a: 1
+# b: 2
+# c: 3
+```
