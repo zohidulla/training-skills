@@ -3245,3 +3245,32 @@ for key in my_object:
 # b: 2
 # c: 3
 ```
+
+## Итерация по ключам с значениями в словаре - Iterating Over Keys with Values in a Dictionary
+
+**for in для словарей и метод items()**
+
+```python
+my_object = {
+    'a': 1,
+    'b': True,
+}
+
+for item in my_object.items():
+    key, value = item # Распаковка кортежа (tuple)
+    print(f"{key}: {value}")
+# a: 1
+# b: True
+```
+
+```python
+my_object = {
+    'a': 1,
+    'b': True,
+}
+
+for key, value in my_object.items():
+    print(f"{key}: {value}")
+# a: 1
+# b: True
+```
