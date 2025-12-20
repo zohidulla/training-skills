@@ -3274,3 +3274,47 @@ for key, value in my_object.items():
 # a: 1
 # b: True
 ```
+
+## Цикл for in для наборов - The for in Loop for Set
+
+**for in для наборов (set)**
+
+```python
+video_ids = {1435, 4317, 2761, 5721}
+for id in video_ids:
+    print(id)
+# 1435
+# 4317
+# 2761
+# 5721
+```
+
+```python
+my_name = "Alice"
+for char in my_name:
+    print(char)
+# A
+# l
+# i
+# c
+# e
+```
+
+**for in для диапазонов (range)**
+
+```python
+for number in range(5):
+    print(number)
+# 0
+# 1
+# 2
+# 3
+# 4
+
+for odd_numm in range(3, 10, 2):
+    print(odd_numm)
+# 3
+# 5
+# 7
+# 9
+```
