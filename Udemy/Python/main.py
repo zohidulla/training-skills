@@ -1272,8 +1272,11 @@
 # 4. Фукнцию можно будет вызвать например так: filter_list([35, True, 'abc', 10], int) -> [35, 10]
 # def filter_list(items, value_type):
 #     return [item for item in items if type(item) is value_type]
-# print(filter_list([35, True, 'abc', 10], int))   # [35, 10]
-# print(filter_list([35, True, 'abc', 10], bool))  # [True]
-# print(filter_list([35, True, 'abc', 10], str))   # ['abc']
+# def filter_list(list_to_filter, value_type):
+#     return [elem for elem in list_to_filter if isinstance(elem, value_type)]
+
+#     print(filter_list([35, True, 'abc', 10], int))   # [35, 10]
+#     print(filter_list([35, True, 'abc', 10], bool))  # [True]
+#     print(filter_list([35, True, 'abc', 10], str))   # ['abc']
 
 # ************************************************************************************************************************
