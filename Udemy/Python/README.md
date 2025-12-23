@@ -3318,3 +3318,37 @@ for odd_numm in range(3, 10, 2):
 # 7
 # 9
 ```
+
+# Цикл while - The while Loop
+
+## Цикл while - The while Loop
+
+```python
+while condition:
+    # Блок кода, который выполняется, пока условие истинно
+```
+
+```python
+counter = 0
+while counter < 3:
+    print(counter)
+    counter += 1
+# 0
+# 1
+# 2
+```
+
+```python
+while True:
+    print("Infinite loop")
+# Бесконечный цикл
+```
+
+**Выход из цикла с помощью break**
+
+```python
+while True:
+    answer = input("Enter yes or no: ")
+    if answer == 'no':
+        break
+```
