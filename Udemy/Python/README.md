@@ -3352,3 +3352,22 @@ while True:
     if answer == 'no':
         break
 ```
+
+## Использование continue в циклах - Using continue in Loops
+
+Переход к следующей итерации цикла с помощью continue
+
+```python
+import random
+
+random_number = random.randint(1, 10)
+
+while True:
+    number = int(input("Enter a number between 1 and 10: "))
+    if number != random_number:
+        print("Number is out of range, try again")
+        continue  # Переход к следующей итерации цикла
+
+    print("You guessed the number!")
+    break  # Выход из цикла
+```
