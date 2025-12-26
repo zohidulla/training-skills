@@ -1287,6 +1287,20 @@
 # 3. После этого спросите пользователя, хочет ли он продолжить yes/no
 # 4. Если ответ no, то нужно выйти из цикла
 # 5. Иначе нужно повторить всё сначала
+# while True:
+#     try:
+#         num1 = float(input("Enter the first number: "))
+#         num2 = float(input("Enter the second number: "))
+#     except ValueError as e:
+#         print(e)
+#         print("Error: Please enter valid numbers!")
+#         continue
 
+#     print(num1 / num2)
+
+#     answer = input("Do you want to continue? (yes/no): ")
+#     if answer == 'no':
+#         print("Goodbye!")
+#         break
 
 # ************************************************************************************************************************
