@@ -3375,3 +3375,20 @@ while True:
 # Сокращенный цикл for in - The Compressed for in Loop
 
 ## Сокращенный цикл for in - The Compressed for in Loop
+
+**Сокращенный цикл for in используется для создания новых последовательностей**
+
+- list (список) list
+- dictionary (словарь) dict
+- tuple (кортеж) tuple
+- set (набор) set
+
+**Сокращенный цикл for in **
+
+```python
+[expression for item in sequence if condition]
+# expression - выражение, которое возвращает значение для каждого элемента
+# item - переменная для каждого элемента из sequence
+# sequence - последовательность элементов (list, dict, tuple, set, range, str)
+# condition - условие, по которому будет отобран элемент из sequence
+```
