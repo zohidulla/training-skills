@@ -3392,3 +3392,54 @@ while True:
 # sequence - последовательность элементов (list, dict, tuple, set, range, str)
 # condition - условие, по которому будет отобран элемент из sequence
 ```
+
+**Формирование нового списка в обычном for in**
+
+```python
+all_numbers = [-3, 1, 0, 10, -20, 5]
+
+absolute_nums = []
+
+for num in all_numbers:
+   absolute_nums.append(abs(num))
+
+print(absolute_nums)  # [3, 1, 0, 10, 20, 5]
+print(all_numbers)     # [-3, 1, 0, 10, -20, 5]
+```
+
+**Сокращенный for in списков (list)**
+
+```python
+all_numbers = [-3, 1, 0, 10, -20, 5]
+
+absolute_nums = [abs(num) for num in all_numbers]
+
+print(absolute_nums)  # [3, 1, 0, 10, 20, 5]
+print(all_numbers)     # [-3, 1, 0, 10, -20, 5]
+```
+
+**Формирование нового списка с фильтрацией в обычном for in**
+
+```python
+all_numbers = [-3, 1, 0, 10, -20, 5]
+
+positive_nums = []
+
+for num in all_numbers:
+    if num > 0:
+        positive_nums.append(num)
+
+print(positive_nums)    # [1, 10, 5]
+print(all_numbers)      # [-3, 1, 0, 10, -20, 5]
+```
+
+**Сокращенный for in с фильтрацией для списков (list)**
+
+```python
+all_numbers = [-3, 1, 0, 10, -20, 5]
+
+positive_nums = [num for num in all_numbers if num > 0]
+
+print(positive_nums)  # [1, 10, 5]
+print(all_numbers)     # [-3, 1, 0, 10, -20, 5]
+```
