@@ -3371,3 +3371,7 @@ while True:
     print("You guessed the number!")
     break  # Выход из цикла
 ```
+
+# Сокращенный цикл for in - The Compressed for in Loop
+
+## Сокращенный цикл for in - The Compressed for in Loop
