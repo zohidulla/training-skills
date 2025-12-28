@@ -1304,3 +1304,23 @@
 #         break
 
 # ************************************************************************************************************************
+import time
+import requests
+
+URL = "http://localhost:8080/health"
+MAX_RETRIES = 5
+DELAY = 3
+
+for attempt in range(1, MAX_RETRIES + 1):
+    try:
+        response = requests.get(URL, timeout=2)
+        if response.status_code == 200:
+            print("Service is healthy")
+            break
+    except requests.RequestException:
+        pass
+
+    print(f"Attempt {attempt} failed, retrying...")
+    time.sleep(DELAY)
+else:
+    raise RuntimeError("Service did not become healthy")
