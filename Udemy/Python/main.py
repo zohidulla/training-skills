@@ -1305,16 +1305,21 @@
 
 # ************************************************************************************************************************
 # Сокращенный цикл for in
-my_scores = {
-    'a': 10,
-    'b': 7,
-    'm': 14
-}
+# my_scores = {
+#     '0': 10,
+#     '1': 7,
+#     '2': 14
+# }
+# scores = {k: v * 10 for k, v in my_scores.items()}
+# print(scores)      # {'a': 100, 'b': 70, 'm': 140}
+# print(type(scores))  # <class 'dict'>
+# print(my_scores)   # {'a': 10, 'b': 7, 'm': 14}
 
-scores = {k: v * 10 for k, v in my_scores.items()}
+# my_scores = [10, 7, 14]
+# scores = {index: elem * 2 for index, elem in enumerate(my_scores)}
+# print(scores)      # {0: 20, 1: 14, 2: 28}
+# print(type(scores))  # <class 'dict'>
+# print(my_scores)   # [10, 7, 14]
 
-print(scores)      # {'a': 100, 'b': 70, 'm': 140}
-print(type(scores))  # <class 'dict'>
-print(my_scores)   # {'a': 10, 'b': 7, 'm': 14}
 
 # ************************************************************************************************************************
