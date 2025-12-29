@@ -3443,3 +3443,63 @@ positive_nums = [num for num in all_numbers if num > 0]
 print(positive_nums)  # [1, 10, 5]
 print(all_numbers)     # [-3, 1, 0, 10, -20, 5]
 ```
+
+## Примеры с сокращенным циклом for in - Examples with Compressed for in Loop
+
+**Формирование нового набора в обычном for in**
+
+```python
+my_set = {1, 10, 15}
+
+new_set = set()
+
+for val in my_set:
+    new_set.add(val * val)
+
+print(new_set)  # {1, 100, 225}
+print(my_set)   # {1, 10, 15}
+```
+
+**Сокращенный for in для наборов (set)**
+
+```python
+my_set = {1, 10, 15}
+
+new_set = {val * val for val in my_set}
+
+print(new_set)  # {1, 100, 225}
+print(my_set)   # {1, 10, 15}
+```
+
+**Формирование нового словаря в обычном for in**
+
+```python
+my_scores = {
+    'a': 10,
+    'b': 7,
+    'm': 14
+}
+
+scores = {}
+
+for key, value in my_scores.items():
+    scores[key] = value * 10
+
+print(scores)      # {'a': 100, 'b': 70, 'm': 140}
+print(my_scores)   # {'a': 10, 'b': 7, 'm': 14}
+```
+
+**Сокращенный for in для словарей (dict)**
+
+```python
+my_scores = {
+    'a': 10,
+    'b': 7,
+    'm': 14
+}
+
+scores = {k: v * 10 for k, v in my_scores.items()}
+
+print(scores)      # {'a': 100, 'b': 70, 'm': 140}
+print(my_scores)   # {'a': 10, 'b': 7, 'm': 14}
+```
