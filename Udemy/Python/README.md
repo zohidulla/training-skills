@@ -3503,3 +3503,73 @@ scores = {k: v * 10 for k, v in my_scores.items()}
 print(scores)      # {'a': 100, 'b': 70, 'm': 140}
 print(my_scores)   # {'a': 10, 'b': 7, 'm': 14}
 ```
+
+## Генераторы в сокращенном for in - Generators in Compressed for in Loop
+
+```python
+numbers = (3, 5, 10)
+
+squares = (num * num for num in numbers) # Это не кортеж, а генератор
+
+print(squares)  # <generator object <genexpr> at 0x7f9c8c0c8d00>
+print(type(squares))  # <class 'generator'>
+```
+
+```python
+squares = (num * num for num in range(6))
+# Можно выполнять итерацию по любой последовательности
+
+print(squares)  # <generator object <genexpr> at 0x7f9c8c0c8d00>
+print(type(squares))  # <class 'generator'>
+
+for num in squares:
+    print(num)
+# 0
+# 1
+# 4
+# 9
+# 16
+# 25
+```
+
+**Конвертация генератора в список**
+
+```python
+numbers = [3, 5, 10]
+
+generator = (num * num for num in numbers)
+
+squares = list(generator)
+
+print(squares)  # [9, 25, 100]
+print(type(squares))  # <class 'list'>
+```
+
+**Конвертация генератора в кортеж**
+
+```python
+numbers = [3, 5, 10]
+
+generator = (num * num for num in numbers)
+
+squares = tuple(generator)
+
+print(squares)  # [9, 25, 100]
+print(type(squares))  # <class 'list'>
+```
+
+**Преимущество генератора - размер**
+
+```python
+from sys import getsizeof
+
+squares_generator = (num * num for num in range(10000))
+
+print(getsizeof(squares_generator))  # 112 Размер генератора в байтах
+print(type(squares_generator))  # <class 'generator'>
+
+squares_list = [num * num for num in range(1000)]
+
+print(getsizeof(squares_list))  # 8856
+print(type(squares_list))  # <class 'list'>
+```
