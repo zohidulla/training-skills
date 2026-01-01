@@ -1341,32 +1341,32 @@
 
 # ************************************************************************************************************************
 # Генераторы в сокращенном for in
-from sys import getsizeof
+# from sys import getsizeof
 
-squares_generator = (num * num for num in range(100_000_000))
+# squares_generator = (num * num for num in range(100_000_000))
 
-print(getsizeof(squares_generator))  # 200 Размер генератора в байтах
-print(type(squares_generator))  # <class 'generator'>
+# print(getsizeof(squares_generator))  # 200 Размер генератора в байтах
+# print(type(squares_generator))  # <class 'generator'>
 
-for elem in squares_generator:
-    print(elem)
-    # 0
-    # 1
-    # 4
-    # 9
-    # 16
-    # 25
-    # 36
-    # 49
-    # 64
-    # 81
-    # 100
-    if elem == 100:
-        break
+# for elem in squares_generator:
+#     print(elem)
+#     # 0
+#     # 1
+#     # 4
+#     # 9
+#     # 16
+#     # 25
+#     # 36
+#     # 49
+#     # 64
+#     # 81
+#     # 100
+#     if elem == 100:
+#         break
 
-squares_list = [num * num for num in range(100_000_000)]
+# squares_list = [num * num for num in range(100_000_000)]
 
-print(getsizeof(squares_list))  # 835128600 Размер списка в байтах
+# print(getsizeof(squares_list))  # 835128600 Размер списка в байтах
 print(type(squares_list))  # <class 'list'>
 
 # ************************************************************************************************************************
