@@ -1367,6 +1367,6 @@
 # squares_list = [num * num for num in range(100_000_000)]
 
 # print(getsizeof(squares_list))  # 835128600 Размер списка в байтах
-print(type(squares_list))  # <class 'list'>
+# print(type(squares_list))  # <class 'list'>
 
 # ************************************************************************************************************************
