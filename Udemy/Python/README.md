@@ -3573,3 +3573,26 @@ squares_list = [num * num for num in range(1000)]
 print(getsizeof(squares_list))  # 8856
 print(type(squares_list))  # <class 'list'>
 ```
+
+# Классы - Объекты и классы - Classes - Objects and Classes
+
+## Объекты и классы - Objects and Classes
+
+**Классы - это шаблоны для создания объектов**
+**на основании шаблонов создаются экземпляры**
+**экземпляры могут иметь собственные атрибуты**
+**экземпляры наследуют атрибуты классов**
+
+```python
+class ... ClassName:
+    # Тело класса
+```
+
+```python
+class Car:
+    def move(self):
+        print("The car is moving")
+
+    def stop(self):
+        print("The car has stopped")
+```
