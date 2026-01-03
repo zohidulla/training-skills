@@ -3591,8 +3591,32 @@ class ... ClassName:
 ```python
 class Car:
     def move(self):
-        print("The car is moving")
+        print("Car is moving")
 
     def stop(self):
-        print("The car has stopped")
+        print("Car stopped")
+```
+
+**Создание экземпляра класса**
+
+```python
+my_car = Car()
+```
+
+**Проверка типа экземпляра класса**
+
+```python
+my_car = Car()
+
+print(type(my_car))  # <class '__main__.Car'>
+print(isinstance(my_car, Car))  # True
+```
+
+**Вызов методов экземпляра класса**
+
+```python
+my_car = Car()
+
+my_car.move()  # Car is moving
+my_car.stop()  # Car stopped
 ```
