@@ -1370,3 +1370,38 @@
 # print(type(squares_list))  # <class 'list'>
 
 # ************************************************************************************************************************
+# Классы - Объекты и классы
+# class Car:
+#     def move(self):
+#         print("Car is moving")
+
+#     def stop(self):
+#         print("Car stopped")
+
+
+# my_car = Car()  # создание экземпляра класса Car
+
+# print(my_car)  # <__main__.Car object at 0x7f9c8c0c8d30>
+# print(type(my_car))  # <class '__main__.Car'>
+# print(isinstance(my_car, Car))  # True
+# print(isinstance(my_car, object))  # True
+
+# print(dir(my_car))
+# ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__firstlineno__', '__format__', '__ge__', '__getattribute__',
+# '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__',
+# '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__static_attributes__', '__str__', '__subclasshook__', '__weakref__', 'move', 'stop']
+
+# print(my_car.__dict__)  # {}
+
+# my_car.move()  # Car is moving
+# my_car.stop()  # Car stopped
+
+# my_second_car = Car()
+# print(my_car == my_second_car)  # False
+# print(id(my_car))  # e.g., 140123456789456
+# print(id(my_second_car))  # e.g., 140123456789600
+
+# Car.move(my_car)  # Car is moving
+
+
+# ************************************************************************************************************************
