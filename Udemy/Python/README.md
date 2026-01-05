@@ -3621,9 +3621,9 @@ my_car.move()  # Car is moving
 my_car.stop()  # Car stopped
 ```
 
-## Магический метод классов **init** - The **init** Magic Method of Classes
+## Магический метод классов `__init__` - The `__init__` Magic Method of Classes
 
-**Создание класса с методом **init****
+Создание класса с методом `__init__`
 
 ```python
 class Comment:
@@ -3636,7 +3636,7 @@ class Comment:
         self.votes_qty += 1
 ```
 
-**Собственные атрибуты экземпляров определяются с помощью функции **init\*\*\*\*
+**Собственные атрибуты экземпляров определяются с помощью функции `__init__`**
 
 **Создание экземпляра класса**
 
