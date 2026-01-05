@@ -3620,3 +3620,15 @@ my_car = Car()
 my_car.move()  # Car is moving
 my_car.stop()  # Car stopped
 ```
+
+## Магический метод классов **init** - The **init** Magic Method of Classes
+
+```python
+class Comment:
+    def __init__(self, text):
+        self.text = text        # Атрибут экземпляра класса
+        self.votes_qty = 0      # Атрибут экземпляра класса
+
+    def upvote(self):
+        self.votes_qty += 1
+```
