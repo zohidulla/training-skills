@@ -3623,12 +3623,34 @@ my_car.stop()  # Car stopped
 
 ## Магический метод классов **init** - The **init** Magic Method of Classes
 
+**Создание класса с методом **init****
+
 ```python
 class Comment:
     def __init__(self, text):
-        self.text = text        # Атрибут экземпляра класса
-        self.votes_qty = 0      # Атрибут экземпляра класса
+        # Переменная self указывает на конкретный экземпляр класса
+        self.text = text
+        self.votes_qty = 0
 
     def upvote(self):
         self.votes_qty += 1
+```
+
+**Собственные атрибуты экземпляров определяются с помощью функции **init\*\*\*\*
+
+**Создание экземпляра класса**
+
+```python
+first_comment = Comment("First comment") # Вызывается метод __init__
+```
+
+**Собственные атрибуты экземпляра**
+
+```python
+first_comment = Comment("First comment")
+
+print(first_comment.text)        # First comment
+print(first_comment.votes_qty)   # 0
+
+print(first_comment.__dict__)  # {'text': 'First comment', 'votes_qty': 0}
 ```
