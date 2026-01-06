@@ -1463,38 +1463,36 @@
 # Вы должны просто менять значение атрибута resolution
 # 4. Создайте несколько экземпляров класса Image и вызовите метод resize
 
-class Image:
-    def __init__(self, resolution, title, extension):
-        self.resolution = resolution
-        self.title = title
-        self.extension = extension
+# class Image:
+#     def __init__(self, resolution, title, extension):
+#         self.resolution = resolution
+#         self.title = title
+#         self.extension = extension
 
-    def resize(self, new_resolution):
-        self.resolution = new_resolution
+#     def resize(self, new_resolution):
+#         self.resolution = new_resolution
 
-my_image = Image('1920x1080', 'My vacation photo', 'jpg')
-print(my_image.__dict__)
-# {'resolution': '1920x1080', 'title': 'My vacation photo', 'extension': 'jpg'}
-my_image.resize('1280x720')
-print(my_image.resolution)  # 1280x720
-
-# Создаём второй экземпляр
-logo = Image('500x500', 'Company logo', 'png')
-print(logo.__dict__)
-# {'resolution': '500x500', 'title': 'Company logo', 'extension': 'png'}
-logo.resize('250x250')
-print(logo.resolution)  # 250x250
-
-# Создаём третий экземпляр
-screenshot = Image('2560x1440', 'Desktop screenshot', 'png')
-print(screenshot.__dict__)
-# {'resolution': '2560x1440', 'title': 'Desktop screenshot', 'extension': 'png'}
-screenshot.resize('1920x1080')
-print(screenshot.resolution)  # 1920x1080
+#     def __str__(self):
+#         return f"{self.title}.{self.extension}"
 
 
+# first_image = Image('1920x1080', 'My vacation photo', 'jpg')
+# print(first_image.__dict__)
+# # {'resolution': '1920x1080', 'title': 'My vacation photo', 'extension': 'jpg'}
+# first_image.resize('1280x720')
+# print(first_image.resolution)  # 1280x720
 
+# second_image = Image('500x500', 'Company logo', 'png')
+# print(second_image.__dict__)
+# # {'resolution': '500x500', 'title': 'Company logo', 'extension': 'png'}
+# second_image.resize('250x250')
+# print(second_image.resolution)  # 250x250
 
+# third_image = Image('2560x1440', 'Desktop screenshot', 'png')
+# print(third_image.__dict__)
+# # {'resolution': '2560x1440', 'title': 'Desktop screenshot', 'extension': 'png'}
+# third_image.resize('1920x1080')
+# print(third_image.resolution)  # 1920x1080
 
 
 # ************************************************************************************************************************
