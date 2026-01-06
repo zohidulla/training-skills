@@ -1405,3 +1405,25 @@
 
 
 # ************************************************************************************************************************
+# Магический метод классов `__init__`
+class Comment:
+    def __init__(self, text):
+        self.text = text
+        self.votes_qty = 0
+
+    def upvote(self):
+        self.votes_qty += 1
+
+
+my_comment = Comment("My comment")
+
+print(my_comment)  # <__main__.Comment object at 0x7f9c8c0c8d30>
+print(type(my_comment))  # <class '__main__.Comment'>
+print(my_comment.__dict__)  # {'text': 'My comment', 'votes_qty': 0}
+print(dir(my_comment))
+# ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__firstlineno__', '__format__', '__ge__',
+# '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__',
+# '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__',
+# '__static_attributes__', '__str__', '__subclasshook__', '__weakref__', 'text', 'upvote', 'votes_qty']
+
+# ************************************************************************************************************************
