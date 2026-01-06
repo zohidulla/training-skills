@@ -1406,24 +1406,52 @@
 
 # ************************************************************************************************************************
 # Магический метод классов `__init__`
-class Comment:
-    def __init__(self, text):
-        self.text = text
-        self.votes_qty = 0
+# class Comment:
+#     def __init__(self, text, initial_votes_qty=0):
+#         self.text = text
+#         self.votes_qty = initial_votes_qty
 
-    def upvote(self):
-        self.votes_qty += 1
+#     def upvote(self, qty):
+#         self.votes_qty += qty
+
+#     def reset_votes_qty(self):
+#         self.votes_qty = 0
 
 
-my_comment = Comment("My comment")
+# my_comment = Comment("My comment")
 
-print(my_comment)  # <__main__.Comment object at 0x7f9c8c0c8d30>
-print(type(my_comment))  # <class '__main__.Comment'>
-print(my_comment.__dict__)  # {'text': 'My comment', 'votes_qty': 0}
-print(dir(my_comment))
+# print(my_comment)  # <__main__.Comment object at 0x7f9c8c0c8d30>
+# print(type(my_comment))  # <class '__main__.Comment'>
+# print(my_comment.__dict__)  # {'text': 'My comment', 'votes_qty': 0}
+# print(dir(my_comment))
 # ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__firstlineno__', '__format__', '__ge__',
 # '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__',
 # '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__',
 # '__static_attributes__', '__str__', '__subclasshook__', '__weakref__', 'text', 'upvote', 'votes_qty']
+# print(my_comment.text)  # My comment
+# print(my_comment.votes_qty)  # 0
+
+# my_comment.upvote(5)
+# print(my_comment.votes_qty)  # 5
+
+# my_comment.upvote = 10
+# print(my_comment.__dict__)
+# # {'text': 'My comment', 'votes_qty': 0, 'upvote': 10}
+
+# second_comment = Comment("Second comment")
+# second_comment.upvote(2)
+# print(second_comment.votes_qty)  # 2
+
+# print(my_comment.votes_qty)  # 0
+
+# my_comment.upvote(10)
+# my_comment.upvote(20)
+
+# print(my_comment.votes_qty)  # 30
+
+# my_comment.reset_votes_qty()
+
+# print(my_comment.votes_qty)  # 0
+
 
 # ************************************************************************************************************************
