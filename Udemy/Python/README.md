@@ -3654,3 +3654,5 @@ print(first_comment.votes_qty)   # 0
 
 print(first_comment.__dict__)  # {'text': 'First comment', 'votes_qty': 0}
 ```
+
+## Методы экземпляров и классов - Instance and Class Methods
