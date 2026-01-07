@@ -3817,3 +3817,7 @@ print(Comment.total_comments)  # 1
 second_comment = Comment("Second comment")
 print(Comment.total_comments)  # 2
 ```
+
+# Классы - Магические методы в классах - Classes - Magic Methods in Classes
+
+## Магические методы в классах - Magic Methods in Classes
