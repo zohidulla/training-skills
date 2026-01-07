@@ -3857,3 +3857,21 @@ second_comment.upvote()
 print(first_comment + second_comment)
 # ('First comment Second comment', 2)
 ```
+
+## Наследование из других классов - Inheriting from Other Classes
+
+```python
+class ExtendedList(list):
+    def print_list_info(self):
+        # Метод __init__ родительского класса вызовется автоматически
+        print(f"List has {len(self)} elements")
+
+custom_list = ExtendedList([3, 5, 2])
+custom_list.print_list_info()  # List has 3 elements
+```
+
+**Цепочка классов**
+
+```python
+custom_list => ExtendedList => list => object
+```
