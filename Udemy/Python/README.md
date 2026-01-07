@@ -3779,3 +3779,23 @@ print(first_comment.text)        # First comment
 print(second_comment.text)       # Second comment
 # Разные объекты с разными собственными атрибутами
 ```
+
+## Статические методы классов - Static Class Methods
+
+```python
+class Comment:
+    def __init__(self, text):
+        self.text = text
+
+    @staticmethod
+    def merge_comments(first, second):
+        return f"{first} {second}"
+
+my_comment = Comment("My comment")
+# Статический методы доступны как атрибуты класса и как атирибуты экземпляров класса
+m_1 = Comment.merge_comments("Thanks!", "Excellent.")
+print(m_1)  # Thanks! Excellent.
+
+m_2 = my_comment.merge_comments("Great", "OK")
+print(m_2)  # Great OK
+```
