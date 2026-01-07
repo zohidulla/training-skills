@@ -3669,7 +3669,53 @@ my_comment.votes_qty    # votes_qty - attribute
 ```python
 first_comment = Comment("First comment")
 
-print(first_comment.upvote)  # <bound method Comment.upvote of <__main__.Comment object at 0x7f9c8c0c8d60>>
+print(first_comment.upvote)
+# Метод является привязанным, если у него первый параметр self
+# <bound method Comment.upvote of <__main__.Comment object at 0x7f9c8c0c8d60>>
 
-print(Comment.upvote)      # <function Comment.upvote at 0x7f9c8c0c8310>
+print(Comment.upvote)
+# <function Comment.upvote at 0x7f9c8c0c8310>
+
+Comment.upvote()
+# Привязанный метод нельзя вызвать без аргументов как метод класса
+# TypeError: upvote() missing 1 required positional argument: 'self'
+```
+
+**Привязанные методы вызываются для конкретного экземпляра**
+
+```python
+first_commnent.upvote()  # Метод вызывается для экземпляра first_comment
+or
+Comment.upvote(first_comment)  # Метод вызывается для экземпляра first_comment
+```
+
+**Использование методов**
+
+```python
+class Comment:
+    def __init__(self, text):
+        self.text = text
+        self.votes_qty = 0
+
+    def upvote(self):
+        self.votes_qty += 1
+
+first_comment = Comment("First comment")
+
+print(first_comment.text)       # First comment
+print(first_comment.votes_qty)  # 0
+
+first_comment.upvote()
+
+print(first_comment.votes_qty)  # 1
+```
+
+**Наследование от нескольких классов**
+
+```python
+first_comment       Comment         object
+
+print(Comment) # <class '__main__.Comment'>
+
+print(object)  # <class 'object'>
 ```
