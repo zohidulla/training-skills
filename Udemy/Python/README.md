@@ -3713,9 +3713,50 @@ print(first_comment.votes_qty)  # 1
 **Наследование от нескольких классов**
 
 ```python
-first_comment       Comment         object
+first_comment   =>    Comment    =>     object
 
 print(Comment) # <class '__main__.Comment'>
 
 print(object)  # <class 'object'>
+```
+
+**Проверка принадлежности классу**
+
+```python
+class Comment:
+    def __init__(self, text):
+        self.text = text
+        self.votes_qty = 0
+
+    def upvote(self):
+        self.votes_qty += 1
+
+first_comment = Comment("First comment")
+
+print(isinstance(first_comment, Comment))   # True
+print(type(first_comment) == Comment)       # True
+print(isinstance(first_comment, object))    # True
+```
+
+**Вызов методов**
+
+```python
+class Comment:
+    def __init__(self, text):
+        self.text = text
+        self.votes_qty = 0
+
+    def upvote(self):
+        self.votes_qty += 1
+
+first_comment = Comment("First comment")
+
+print(first_comment.text)       # First comment
+print(first_comment.votes_qty)  # 0
+
+first_comment.upvote()
+print(first_comment.votes_qty)  # 1
+
+first_comment.upvote()
+print(first_comment.votes_qty)  # 2
 ```
