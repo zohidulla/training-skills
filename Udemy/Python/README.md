@@ -3799,3 +3799,21 @@ print(m_1)  # Thanks! Excellent.
 m_2 = my_comment.merge_comments("Great", "OK")
 print(m_2)  # Great OK
 ```
+
+## Атрибуты класса - Class Attributes
+
+```python
+class Comment:
+    total_comments = 0  # Атрибут класса
+
+    def __init__(self, text):
+        self.text = text
+        self.votes_qty = 0
+        Comment.total_comments += 1  # Обращение к атрибуту класса через имя класса
+
+first_comment = Comment("First comment")
+print(Comment.total_comments)  # 1
+
+second_comment = Comment("Second comment")
+print(Comment.total_comments)  # 2
+```
