@@ -3656,3 +3656,20 @@ print(first_comment.__dict__)  # {'text': 'First comment', 'votes_qty': 0}
 ```
 
 ## Методы экземпляров и классов - Instance and Class Methods
+
+```python
+my_comment = Comment("My comment")
+
+my_comment.upvote()     # upvote - method
+my_comment.votes_qty    # votes_qty - attribute
+```
+
+**Привязанные методы (Bound methods)**
+
+```python
+first_comment = Comment("First comment")
+
+print(first_comment.upvote)  # <bound method Comment.upvote of <__main__.Comment object at 0x7f9c8c0c8d60>>
+
+print(Comment.upvote)      # <function Comment.upvote at 0x7f9c8c0c8310>
+```
