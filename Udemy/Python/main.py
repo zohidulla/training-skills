@@ -1525,4 +1525,61 @@
 # print(first_comment == third_comment)  # True
 
 # ************************************************************************************************************************
+## Наследование из других классов
+# class ExtendedList(list):
+#     def print_list_info(self):
+#         print(f"List has {len(self)} elements")
 
+# class OneMoreExtendedList(list):
+#     def print_list_info(self):
+#         print(f"List has {len(self)} elements")
+
+# custom_list = ExtendedList([3, 5, 2])
+# custom_list.print_list_info()  # List has 3 elements
+# custom_list.append(7)
+# custom_list.print_list_info()  # List has 4 elements
+
+# print(ExtendedList.__dict__)
+# {'__module__': '__main__', '__firstlineno__': 1529, 'print_list_info': <function ExtendedList.print_list_info at 0x00000240796E37F0>,
+# '__static_attributes__': (), '__dict__': <attribute '__dict__' of 'ExtendedList' objects>, '__weakref__':
+# <attribute '__weakref__' of 'ExtendedList' objects>, '__doc__': None}
+
+# print(list.__dict__)
+# {'__new__': <built-in method __new__ of type object at 0x00007FFA22532580>, '__repr__': <slot wrapper '__repr__' of 'list' objects>,
+# '__hash__': None, '__lt__': <slot wrapper '__lt__' of 'list' objects>, '__le__': <slot wrapper '__le__' of 'list' objects>, '__eq__':
+# <slot wrapper '__eq__' of 'list' objects>, '__ne__': <slot wrapper '__ne__' of 'list' objects>, '__gt__':
+# <slot wrapper '__gt__' of 'list' objects>, '__ge__': <slot wrapper '__ge__' of 'list' objects>, '__iter__':
+# <slot wrapper '__iter__' of 'list' objects>, '__init__': <slot wrapper '__init__' of 'list' objects>, '__len__':
+# <slot wrapper '__len__' of 'list' objects>, '__getitem__': <method '__getitem__' of 'list' objects>, '__setitem__':
+# <slot wrapper '__setitem__' of 'list' objects>, '__delitem__': <slot wrapper '__delitem__' of 'list' objects>, '__add__':
+# <slot wrapper '__add__' of 'list' objects>, '__mul__': <slot wrapper '__mul__' of 'list' objects>, '__rmul__':
+# <slot wrapper '__rmul__' of 'list' objects>, '__contains__': <slot wrapper '__contains__' of 'list' objects>, '__iadd__':
+# <slot wrapper '__iadd__' of 'list' objects>, '__imul__': <slot wrapper '__imul__' of 'list' objects>, '__reversed__':
+# <method '__reversed__' of 'list' objects>, '__sizeof__': <method '__sizeof__' of 'list' objects>, 'clear':
+# <method 'clear' of 'list' objects>, 'copy': <method 'copy' of 'list' objects>, 'append': <method 'append' of 'list' objects>, 'insert':
+# <method 'insert' of 'list' objects>, 'extend': <method 'extend' of 'list' objects>, 'pop': <method 'pop' of 'list' objects>, 'remove':
+# <method 'remove' of 'list' objects>, 'index': <method 'index' of 'list' objects>, 'count': <method 'count' of 'list' objects>, 'reverse':
+# <method 'reverse' of 'list' objects>, 'sort': <method 'sort' of 'list' objects>, '__class_getitem__':
+# <method '__class_getitem__' of 'list' objects>, '__doc__': 'Built-in mutable sequence.\n\nIf no argument is given,
+# the constructor creates a new empty list.\nThe argument must be an iterable if specified.'}
+
+# print(object.__dict__)
+# {'__new__': <built-in method __new__ of type object at 0x00007FFA22536BF0>, '__repr__': <slot wrapper '__repr__' of 'object' objects>,
+# '__hash__': <slot wrapper '__hash__' of 'object' objects>, '__str__': <slot wrapper '__str__' of 'object' objects>, '__getattribute__':
+# <slot wrapper '__getattribute__' of 'object' objects>, '__setattr__': <slot wrapper '__setattr__' of 'object' objects>, '__delattr__':
+# <slot wrapper '__delattr__' of 'object' objects>, '__lt__': <slot wrapper '__lt__' of 'object' objects>, '__le__':
+# <slot wrapper '__le__' of 'object' objects>, '__eq__': <slot wrapper '__eq__' of 'object' objects>, '__ne__':
+# <slot wrapper '__ne__' of 'object' objects>, '__gt__': <slot wrapper '__gt__' of 'object' objects>, '__ge__':
+# <slot wrapper '__ge__' of 'object' objects>, '__init__': <slot wrapper '__init__' of 'object' objects>, '__reduce_ex__':
+# <method '__reduce_ex__' of 'object' objects>, '__reduce__': <method '__reduce__' of 'object' objects>, '__getstate__':
+# <method '__getstate__' of 'object' objects>, '__subclasshook__': <method '__subclasshook__' of 'object' objects>, '__init_subclass__':
+# <method '__init_subclass__' of 'object' objects>, '__format__': <method '__format__' of 'object' objects>, '__sizeof__':
+# <method '__sizeof__' of 'object' objects>, '__dir__': <method '__dir__' of 'object' objects>, '__class__':
+# <attribute '__class__' of 'object' objects>, '__doc__': 'The base class of the class hierarchy.\n\nWhen called,
+# it accepts no arguments and returns a new featureless\ninstance that has no instance attributes and cannot be given any.\n'}
+
+# print(list.__subclasses__())
+# [<class '_frozen_importlib._List'>, <class '__main__.ExtendedList'>, <class '__main__.OneMoreExtendedList'>]
+# print(object.__subclasses__())
+
+# ************************************************************************************************************************
