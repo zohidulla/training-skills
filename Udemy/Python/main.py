@@ -1711,28 +1711,57 @@
 #     pass
 
 # Inheritance
-class Vehicle:
-    def __init__(self, make, model):
-        self.make = make
-        self.model = model
+# class Vehicle:
+#     def __init__(self, make, model):
+#         self.make = make
+#         self.model = model
 
-    def start(self):
-        # Code to start the vehicle
+#     def start(self):
+#         # Code to start the vehicle
+#         pass
+
+#     def stop(self):
+#         # Code to stop the vehicle
+#         pass
+
+# class Car(Vehicle):
+#     def __init__(self, make, model, doors_qty):
+#         super().__init__(make, model)
+#         self.doors_qty = doors_qty
+
+#     def lock_doors(self):
+#         # Logic to lock the doors
+#         pass
+
+#     def unlock_doors(self):
+#         # Logic to unlock the doors
+#         pass
+
+# Polymorphism
+import math
+class Shape:
+    def calc_area(self):
         pass
 
-    def stop(self):
-        # Code to stop the vehicle
-        pass
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
 
-class Car(Vehicle):
-    def __init__(self, make, model, doors_qty):
-        super().__init__(make, model)
-        self.doors_qty = doors_qty
+    def calc_area(self):
+        return math.pi * pow(self.radius, 2)
 
-    def lock_doors(self):
-        # Logic to lock the doors
-        pass
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
 
-    def unlock_doors(self):
-        # Logic to unlock the doors
-        pass
+    def calc_area(self):
+        return self.width * self.height
+
+shapes = [Circle(5), Rectangle(10, 2), Circle(7), Rectangle(25, 15)]
+for shape in shapes:
+    print(f"Area: {shape.calc_area()}")
+    # Area: 78.53981633974483
+    # Area: 20
+    # Area: 153.93804002589985
+    # Area: 375
