@@ -3875,3 +3875,5 @@ custom_list.print_list_info()  # List has 3 elements
 ```python
 custom_list => ExtendedList => list => object
 ```
+
+# Классы - Ключевые принципы объектно-ориентированного программирования (ООП) - Classes - Key Principles of Object-Oriented Programming (OOP)
