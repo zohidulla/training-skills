@@ -3877,3 +3877,5 @@ custom_list => ExtendedList => list => object
 ```
 
 # Классы - Ключевые принципы объектно-ориентированного программирования (ООП) - Classes - Key Principles of Object-Oriented Programming (OOP)
+
+## Инкапсуляция в объектно-ориентированном программировании (ООП) - Encapsulation in Object-Oriented Programming (OOP)
