@@ -1738,30 +1738,51 @@
 #         pass
 
 # Polymorphism
-import math
-class Shape:
-    def calc_area(self):
+# import math
+# class Shape:
+#     def calc_area(self):
+#         pass
+
+# class Circle(Shape):
+#     def __init__(self, radius):
+#         self.radius = radius
+
+#     def calc_area(self):
+#         return math.pi * pow(self.radius, 2)
+
+# class Rectangle(Shape):
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+
+#     def calc_area(self):
+#         return self.width * self.height
+
+# shapes = [Circle(5), Rectangle(10, 2), Circle(7), Rectangle(25, 15)]
+# for shape in shapes:
+#     print(f"Area: {shape.calc_area()}")
+#     # Area: 78.53981633974483
+#     # Area: 20
+#     # Area: 153.93804002589985
+#     # Area: 375
+
+# Abstraction
+from abc import ABC, abstractmethod
+class Payment(ABC):
+    @abstractmethod
+    def process_payment(self):
+        pass
+class CreditCardPayment():
+    def process_payment(self):
+        # Code to process credit card payment
+        pass
+class StripePayment(Payment):
+    def process_payment(self):
+        # Code to process stripe payment
+        pass
+class PayPalPayment(Payment):
+    def process_payment(self):
+        # Code to process PayPal payment
         pass
 
-class Circle(Shape):
-    def __init__(self, radius):
-        self.radius = radius
-
-    def calc_area(self):
-        return math.pi * pow(self.radius, 2)
-
-class Rectangle(Shape):
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
-
-    def calc_area(self):
-        return self.width * self.height
-
-shapes = [Circle(5), Rectangle(10, 2), Circle(7), Rectangle(25, 15)]
-for shape in shapes:
-    print(f"Area: {shape.calc_area()}")
-    # Area: 78.53981633974483
-    # Area: 20
-    # Area: 153.93804002589985
-    # Area: 375
+# ************************************************************************************************************************
