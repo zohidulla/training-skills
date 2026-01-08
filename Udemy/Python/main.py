@@ -1694,17 +1694,45 @@
 # ************************************************************************************************************************
 # Классы - Ключевые принципы объектно-ориентированного программирования (ООП) - Classes - Key Principles of Object-Oriented Programming (OOP)
 # Инкапсуляция в объектно-ориентированном программировании (ООП) - Encapsulation in Object-Oriented Programming (OOP)
-class Email:
-  def __init__(self, sender, recipient, subject, body):
-    self.sender = sender
-    self.recipient = recipient
-    self.subject = subject
-    self.body = body
+# Encapsulation
+# # class Email:
+#   def __init__(self, sender, recipient, subject, body):
+#     self.sender = sender
+#     self.recipient = recipient
+#     self.subject = subject
+#     self.body = body
 
-  def send_email(self):
-    # Logic related to sending email
-    pass
+#   def send_email(self):
+#     # Logic related to sending email
+#     pass
 
-  def read_email(self):
-    # Logic related to reading email
-    pass
+#   def read_email(self):
+#     # Logic related to reading email
+#     pass
+
+# Inheritance
+class Vehicle:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+    def start(self):
+        # Code to start the vehicle
+        pass
+
+    def stop(self):
+        # Code to stop the vehicle
+        pass
+
+class Car(Vehicle):
+    def __init__(self, make, model, doors_qty):
+        super().__init__(make, model)
+        self.doors_qty = doors_qty
+
+    def lock_doors(self):
+        # Logic to lock the doors
+        pass
+
+    def unlock_doors(self):
+        # Logic to unlock the doors
+        pass
