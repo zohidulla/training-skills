@@ -1612,13 +1612,13 @@
 # ************************************************************************************************************************
 # Пример - Создание классов Forum, User и Post - Example - Creating Forum, User, and Post classes
 class User:
-    def __init__(self, username, email):
+    def __init__(self, username: str, email: str):
         self.username = username
         self.email = email
 
 
 class Post:
-    def __init__(self, title, content, author):
+    def __init__(self, title: str, content: str, author: User):
         self.title = title
         self.content = content
         self.author = author
@@ -1629,35 +1629,67 @@ class Forum:
         self.users = []
         self.posts = []
 
-    def register_user(self, username, email):
+    def register_user(self, username: str, email: str):
         user = User(username, email)
         self.users.append(user)
         return user
 
-    def create_post(self, title, content, author):
+    def create_post(self, title: str, content: str, author: User):
         post = Post(title, content, author)
         self.posts.append(post)
         return post
 
+    def find_user_by_username(self, username: str):
+        for user in self.users:
+            if user.username == username:
+                return user
+        return None
+
+    def find_user_by_email(self, email: str):
+        for user in self.users:
+            if user.email == email:
+                return user
+        return None
+
+    def find_posts_by_author(self, author: User):
+        found_posts = []
+        for post in self.posts:
+            if post.author == author:
+                found_posts.append(post)
+        return found_posts
 
 forum = Forum()
 
 alice = forum.register_user("alice", "alice@gmail.com")
 bob = forum.register_user("bob", "bob@gmail.com")
 
-# print(forum.users)  # [<__main__.User object at 0x7f9c8c0c8d30>]
-
 forum.create_post("Hello World", "This is my first post!", alice)
 forum.create_post("Python Tips", "Use list comprehensions for cleaner code.", bob)
 
+# print(forum.users)  # [<__main__.User object at 0x7f9c8c0c8d30>]
 # print(forum.posts)  # [<__main__.Post object at 0x7f9c8c0c8d60>, <__main__.Post object at 0x7f9c8c0c8d90>]
-print(forum.posts[0].title)  # Hello World
-print(forum.posts[0].content)  # This is my first post!
-print(forum.posts[0].author.username)  # alice
-print(forum.posts[0].author.email)  # alice@gmail.com
+# print(forum.posts[0].title)  # Hello World
+# print(forum.posts[0].content)  # This is my first post!
+# print(forum.posts[0].author.username)  # alice
+# print(forum.posts[0].author.email)  # alice@gmail.com
 
+# forum.find_user_by_username("admin")  # None
+# forum.find_user_by_username("bob").email # bob@gmail.com
+# forum.find_user_by_email("admin")  # None
+# forum.find_user_by_email("alice@gmail.com").username  # alice
 
+# Find posts by author
+found_posts = forum.find_posts_by_author(alice)  # [<__main__.Post object at 0x7f9c8c0c8d60>]
+found_posts_titles = [post.title for post in found_posts]
+print(found_posts_titles)  # ['Hello World']
 
+# Find user by email and print their posts
+user_email = "alice@gmail.com"
+found_user = forum.find_user_by_email(user_email)
+if found_user:
+    print(forum.find_posts_by_author(found_user))  # [<__main__.Post object at 0x7f9c8c0c8d60>]
+else:
+    print(f"User with email {user_email} doesn't exist") # User with email aa@gmail.com doesn't exist
 
 
 # ************************************************************************************************************************
