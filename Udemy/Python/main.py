@@ -1767,22 +1767,22 @@
 #     # Area: 375
 
 # Abstraction
-from abc import ABC, abstractmethod
-class Payment(ABC):
-    @abstractmethod
-    def process_payment(self):
-        pass
-class CreditCardPayment():
-    def process_payment(self):
-        # Code to process credit card payment
-        pass
-class StripePayment(Payment):
-    def process_payment(self):
-        # Code to process stripe payment
-        pass
-class PayPalPayment(Payment):
-    def process_payment(self):
-        # Code to process PayPal payment
-        pass
+# from abc import ABC, abstractmethod
+# class Payment(ABC):
+#     @abstractmethod
+#     def process_payment(self):
+#         pass
+# class CreditCardPayment():
+#     def process_payment(self):
+#         # Code to process credit card payment
+#         pass
+# class StripePayment(Payment):
+#     def process_payment(self):
+#         # Code to process stripe payment
+#         pass
+# class PayPalPayment(Payment):
+#     def process_payment(self):
+#         # Code to process PayPal payment
+#         pass
 
 # ************************************************************************************************************************
