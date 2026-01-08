@@ -1584,12 +1584,28 @@
 
 # ************************************************************************************************************************
 # Классы - Примеры использования классов и ООП - Classes - Examples of using classes and OOP
+class User:
+  def __init__(self, username, email):
+      self.username = username
+      self.email = email
 
 
+class AdminUser(User):
+  def __init__(self, username, email, role):
+      super().__init__(username, email)
+      self.role = role
+      self.is_admin = True
 
+my_admin = AdminUser("admin", "admin@admin.com", "Administrator")
+# print(my_admin) # <__main__.AdminUser object at 0x7f9c8c0c8d30>
+# print(type(my_admin)) # <class '__main__.AdminUser'>
+# print(isinstance(my_admin, AdminUser)) # True
+# print(isinstance(my_admin, User)) # True
+# print(isinstance(my_admin, object)) # True
+# print(my_admin.__dict__) # {'username': 'admin', 'email': 'admin@admin.com', 'role': 'Administrator', 'is_admin': True}
 
-
-
+my_user = User("john_doe", "john_doe@example.com")
+print(my_user.__dict__)  # {'username': 'john_doe', 'email': 'john_doe@example.com'}
 
 
 
