@@ -1609,6 +1609,52 @@
 
 # print(User.__subclasses__()) # [<class '__main__.AdminUser'>]
 
+# ************************************************************************************************************************
+# Пример - Создание классов Forum, User и Post - Example - Creating Forum, User, and Post classes
+class User:
+    def __init__(self, username, email):
+        self.username = username
+        self.email = email
+
+
+class Post:
+    def __init__(self, title, content, author):
+        self.title = title
+        self.content = content
+        self.author = author
+
+
+class Forum:
+    def __init__(self):
+        self.users = []
+        self.posts = []
+
+    def register_user(self, username, email):
+        user = User(username, email)
+        self.users.append(user)
+        return user
+
+    def create_post(self, title, content, author):
+        post = Post(title, content, author)
+        self.posts.append(post)
+        return post
+
+
+forum = Forum()
+
+alice = forum.register_user("alice", "alice@gmail.com")
+bob = forum.register_user("bob", "bob@gmail.com")
+
+# print(forum.users)  # [<__main__.User object at 0x7f9c8c0c8d30>]
+
+forum.create_post("Hello World", "This is my first post!", alice)
+forum.create_post("Python Tips", "Use list comprehensions for cleaner code.", bob)
+
+# print(forum.posts)  # [<__main__.Post object at 0x7f9c8c0c8d60>, <__main__.Post object at 0x7f9c8c0c8d90>]
+print(forum.posts[0].title)  # Hello World
+print(forum.posts[0].content)  # This is my first post!
+print(forum.posts[0].author.username)  # alice
+print(forum.posts[0].author.email)  # alice@gmail.com
 
 
 
