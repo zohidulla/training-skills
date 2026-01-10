@@ -3891,3 +3891,16 @@ def decorator_function(original_function):
 def display():
     print("Display function ran")
 ```
+
+**Декораторы классов**
+```python
+def add_repr(cls):
+    cls.__repr__ = lambda self: f"<{cls.__name__}>"
+    return cls
+
+@add_repr
+class Server:
+    pass
+
+print(Server())
+```
