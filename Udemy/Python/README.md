@@ -3904,3 +3904,9 @@ class Server:
 
 print(Server())
 ```
+
+- @decorator = синтаксический сахар
+- Всегда используй functools.wraps
+- *args, **kwargs — must-have
+- Декораторы с параметрами → 3 уровня функций
+- Это фундамент для Django / FastAPI / Click / Celery
