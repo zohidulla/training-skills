@@ -1789,8 +1789,18 @@
 # Декораторы
 def decorator_function(original_function):
     def wrapper_function():
-        return original_function()
+        # Some code before calling the original function
+        print("Executed before function")
+
+        result = original_function()
+
+        # Some code after calling the original function
+        print("Executed after function")
+
+        return result
+
     return wrapper_function
+
 
 @decorator_function
 def my_function():
