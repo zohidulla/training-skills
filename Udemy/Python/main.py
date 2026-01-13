@@ -1787,31 +1787,32 @@
 
 # ************************************************************************************************************************
 # Декораторы
-def decorator_function(original_function):
-    def wrapper_function(*args, **kwargs):
-        # Some code before calling the original function
-        print("Executed before function")
+# def decorator_function(original_function):
+#     def wrapper_function(*args, **kwargs):
+#         # Some code before calling the original function
+#         print("Executed before function")
 
-        result = original_function(*args, **kwargs)
-        # Some code after calling the original function
-        print("Executed after function")
+#         result = original_function(*args, **kwargs)
+#         # Some code after calling the original function
+#         print("Function result:", result)
+#         print("Executed after function")
 
-        return result
-        # if no return statement here, the decorated function will return None
+#         return result
+#         # if no return statement here, the decorated function will return None
 
-    return wrapper_function
+#     return wrapper_function
 
 
-@decorator_function
-def my_function(a, b):
-    print("This is my function")
-    return (a, b)
+# @decorator_function
+# def my_function(a, b):
+#     print("This is my function")
+#     return (a, b)
 
-result = my_function(100, 50)
-print("Result:", result)
-# TypeError: decorator_function.<locals>.wrapper_function() takes 0 positional arguments but 2 were given
-#
-# Executed before function
-# This is my function
-# Executed after function
-# Result: (100, 50)
+# result = my_function(100, 50)
+# print("Result:", result)
+# # TypeError: decorator_function.<locals>.wrapper_function() takes 0 positional arguments but 2 were given
+# #
+# # Executed before function
+# # This is my function
+# # Executed after function
+# # Result: (100, 50)
