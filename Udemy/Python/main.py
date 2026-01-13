@@ -1816,3 +1816,45 @@
 # # This is my function
 # # Executed after function
 # # Result: (100, 50)
+
+
+def log_function_call(fn):
+    def wrapper(*args, **kwargs):
+        print(f"Calling function '{fn.__name__}' with arguments: {args} and keyword arguments: {kwargs}")
+        result = fn(*args, **kwargs)
+        print(f"Function '{fn.__name__}' returned: {result}")
+        return result
+
+    return wrapper
+
+
+@log_function_call
+def multiply(a, b):
+    return a * b
+
+# print(multiply(5, 10))
+# Calling function 'multiply' with arguments: (5, 10) and keyword arguments: {}
+# Function 'multiply' returned: 50
+# 50
+
+print(multiply(a=5, b=10))
+# Calling function 'multiply' with arguments: () and keyword arguments: {'a': 5, 'b': 10}
+# Function 'multiply' returned: 50
+# 50
+
+
+@log_function_call
+def sum(a, b):
+    return a + b
+
+# print(sum(5, 10))
+# Calling function 'sum' with arguments: (5, 10) and keyword arguments: {}
+# Function 'sum' returned: 15
+# 15
+
+print(sum(a=5, b=10))
+# Calling function 'sum' with arguments: () and keyword arguments: {'a': 5, 'b': 10}
+# Function 'sum' returned: 15
+# 15
+
+# ************************************************************************************************************************
