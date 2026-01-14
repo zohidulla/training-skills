@@ -1858,31 +1858,27 @@
 # 15
 
 ## Пример декоратора - Проверка аргументов - Example of a decorator - Argument validation
-def validate_args(fn):
-    def wrapper(*args, **kwargs):
-        for arg in [*args, *kwargs.values()]:
-            if not isinstance(arg, int) and not isinstance(arg, float):
-                raise ValueError(f"Type of the {arg} is {type(arg)}. All arguments must be integers or floats")
+# def validate_args(fn):
+#     def wrapper(*args, **kwargs):
+#         for arg in [*args, *kwargs.values()]:
+#             if not isinstance(arg, int) and not isinstance(arg, float):
+#                 raise ValueError(f"Type of the {arg} is {type(arg)}. All arguments must be integers or floats")
 
-        # for key, value in kwargs.items():
-        #     if not isinstance(value, int) and not isinstance(value, float):
-        #         raise ValueError(f"Keyword argument '{key}' must be an integer or float")
+#         return fn(*args, **kwargs)
 
-        return fn(*args, **kwargs)
-
-    return wrapper
+#     return wrapper
 
 
-@validate_args
-def sum_numbers(a, b):
-    return a + b
+# @validate_args
+# def sum_numbers(a, b):
+#     return a + b
 
-try:
-    print(sum_numbers(5, 10))  # 15
-    print(sum_numbers(10.5, 2.3))  # 12.8
-    print(sum_numbers(a=10.4, b='5.7'))  # Type of the 5.7 is <class 'str'>. All arguments must be integers or floats
-    print(sum_numbers([1, 2, 3], '2.0'))  # Type of the [1, 2, 3] is <class 'list'>. All arguments must be integers or floats
-except ValueError as e:
-    print(e)
+# try:
+#     print(sum_numbers(5, 10))  # 15
+#     print(sum_numbers(10.5, 2.3))  # 12.8
+#     print(sum_numbers(a=10.4, b='5.7'))  # Type of the 5.7 is <class 'str'>. All arguments must be integers or floats
+#     print(sum_numbers([1, 2, 3], '2.0'))  # Type of the [1, 2, 3] is <class 'list'>. All arguments must be integers or floats
+# except ValueError as e:
+#     print(e)
 
 # ************************************************************************************************************************
