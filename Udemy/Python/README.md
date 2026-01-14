@@ -3893,6 +3893,7 @@ def display():
 ```
 
 **Декораторы классов**
+
 ```python
 def add_repr(cls):
     cls.__repr__ = lambda self: f"<{cls.__name__}>"
@@ -3907,6 +3908,8 @@ print(Server())
 
 - @decorator = синтаксический сахар
 - Всегда используй functools.wraps
-- *args, **kwargs — must-have
+- \*args, \*\*kwargs — must-have
 - Декораторы с параметрами → 3 уровня функций
 - Это фундамент для Django / FastAPI / Click / Celery
+
+# Модули - Modules
