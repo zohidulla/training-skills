@@ -3963,3 +3963,35 @@ from module_one import print_name
 
 print_name("Charlie")  # Charlie
 ```
+
+## Встроенные модули - Built-in Modules
+
+**В Python 200+ встроенных модулей**
+
+**Встроенные модули**
+
+- math
+- random
+- datetime
+- os
+- sys
+- json
+- csv
+- regex
+- statistics
+- pprint
+- calendar
+- и многие другие
+
+**Информация о мудулях**
+
+```python
+help('modules')
+# Список всех доступных модулей
+
+help('calendar')
+# Информация о модуле calendar
+# Help on module calendar: calendar:
+# NAME
+#     calendar - Calendar printing functions
+```
