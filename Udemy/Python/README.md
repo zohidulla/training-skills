@@ -3913,3 +3913,53 @@ print(Server())
 - Это фундамент для Django / FastAPI / Click / Celery
 
 # Модули - Modules
+
+## Модули - Modules
+
+**Модули позволяют структурировать код, разбивая его на отдельные файлы**
+
+**Модули позволяют избегать дублирование блоков кода и повторное использование функций, классов и переменных в разных частях программы**
+
+**Любой файл с расширением .py является модулем в Python**
+
+**Для импорта из другого модуля нужно использовать import**
+
+**Импорт всего модуля**
+
+```python
+module_one.py
+
+def print_name(name):
+    print(name)
+```
+
+```python
+module_two.py
+
+import module_one
+
+print(type(module_one))  # <class 'module'>
+print(dir(module_one)) # ['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'print_name']
+
+module_one.print_name("Alice")  # Alice
+```
+
+**Изменение имени модуля**
+
+```python
+module_two.py
+
+import module_one as m_one
+
+m_one.print_name("Bob")  # Bob
+```
+
+**Импорт определенных переменных из модуля**
+
+```python
+module_two.py
+
+from module_one import print_name
+
+print_name("Charlie")  # Charlie
+```
