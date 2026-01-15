@@ -1956,7 +1956,8 @@
 
 # **********************************************************************************************************************************
 ## Встроенные модули - Built-in Modules
-help('modules')  # List of available modules: https://docs.python.org/3/py-modindex.html
+# help('modules')
+# List of available modules: https://docs.python.org/3/py-modindex.html
 # Please wait a moment while I gather a list of all available modules...
 
 # __future__          _ssl                fileinput           re
