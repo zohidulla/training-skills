@@ -2034,17 +2034,15 @@
 # _sre                filecmp             random
 
 
+# **********************************************************************************************************************************
+# Создание и использование собственных пакетов - Creating and Using Custom packages
+# import pack.other_module
 
+# pack.other_module.a # 10
 
+# from pack.one_more_module import my_name
 
-
-
-
-
-
-
-
-
+# my_name("Alice")  # My name is Alice
 
 
 
