@@ -1944,10 +1944,10 @@
 # print(type(__name__))  # <class 'str'>
 # print(__name__ == "__main__")  # True
 
-from other import my_fn
+# from other_module import my_fn
 
-print("main.py", __name__)
-print("main.py", __name__ == "__main__")
+# print("main.py", __name__)
+# print("main.py", __name__ == "__main__")
 # other.py other
 # other.py False
 # main.py __main__
