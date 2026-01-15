@@ -1954,6 +1954,97 @@
 # main.py True
 
 
+# **********************************************************************************************************************************
+## Встроенные модули - Built-in Modules
+help('modules')  # List of available modules: https://docs.python.org/3/py-modindex.html
+# Please wait a moment while I gather a list of all available modules...
+
+# __future__          _ssl                fileinput           re
+# __hello__           _stat               fnmatch             reprlib
+# __phello__          _statistics         fractions           rlcompleter
+# _abc                _string             ftplib              runpy
+# _aix_support        _strptime           functools           sched
+# _android_support    _struct             gc                  secrets
+# _apple_support      _suggestions        genericpath         select
+# _ast                _symtable           getopt              selectors
+# _ast_unparse        _sysconfig          getpass             shelve
+# _asyncio            _thread             gettext             shlex
+# _bisect             _threading_local    glob                shutil
+# _blake2             _tkinter            graphlib            signal
+# _bz2                _tokenize           gzip                site
+# _codecs             _tracemalloc        hashlib             smtplib
+# _codecs_cn          _types              heapq               socket
+# _codecs_hk          _typing             hmac                socketserver
+# _codecs_iso2022     _uuid               html                sqlite3
+# _codecs_jp          _warnings           http                sre_compile
+# _codecs_kr          _weakref            idlelib             sre_constants
+# _codecs_tw          _weakrefset         imaplib             sre_parse
+# _collections        _winapi             importlib           ssl
+# _collections_abc    _wmi                inspect             stat
+# _colorize           _zoneinfo           io                  statistics
+# _compat_pickle      _zstd               ipaddress           string
+# _contextvars        abc                 itertools           stringprep
+# _csv                annotationlib       json                struct
+# _ctypes             antigravity         keyword             subprocess
+# _datetime           argparse            linecache           symtable
+# _decimal            array               locale              sys
+# _elementtree        ast                 logging             sysconfig
+# _functools          asyncio             lzma                tabnanny
+# _hashlib            atexit              mailbox             tarfile
+# _heapq              base64              main                tempfile
+# _hmac               bdb                 marshal             textwrap
+# _imp                binascii            math                this
+# _interpchannels     bisect              mimetypes           threading
+# _interpqueues       builtins            mmap                time
+# _interpreters       bz2                 modulefinder        timeit
+# _io                 cProfile            msvcrt              tkinter
+# _ios_support        calendar            multiprocessing     token
+# _json               cmath               netrc               tokenize
+# _locale             cmd                 nt                  tomllib
+# _lsprof             code                ntpath              trace
+# _lzma               codecs              nturl2path          traceback
+# _markupbase         codeop              numbers             tracemalloc
+# _md5                collections         opcode              tty
+# _multibytecodec     colorsys            operator            turtle
+# _multiprocessing    compileall          optparse            turtledemo
+# _opcode             compression         os                  types
+# _opcode_metadata    concurrent          other_module        typing
+# _operator           configparser        pathlib             unicodedata
+# _osx_support        contextlib          pdb                 unittest
+# _overlapped         contextvars         pickle              urllib
+# _pickle             copy                pickletools         uuid
+# _py_abc             copyreg             pip                 venv
+# _py_warnings        csv                 pkgutil             warnings
+# _pydatetime         ctypes              platform            wave
+# _pydecimal          curses              plistlib            weakref
+# _pyio               dataclasses         poplib              webbrowser
+# _pylong             datetime            posixpath           winreg
+# _pyrepl             dbm                 pprint              winsound
+# _queue              decimal             profile             wsgiref
+# _random             difflib             pstats              xml
+# _remote_debugging   dis                 pty                 xmlrpc
+# _sha1               doctest             py_compile          xxsubtype
+# _sha2               email               pyclbr              zipapp
+# _sha3               encodings           pydoc               zipfile
+# _signal             ensurepip           pydoc_data          zipimport
+# _sitebuiltins       enum                pyexpat             zlib
+# _socket             errno               queue               zoneinfo
+# _sqlite3            faulthandler        quopri
+# _sre                filecmp             random
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # **********************************************************************************************************************************
