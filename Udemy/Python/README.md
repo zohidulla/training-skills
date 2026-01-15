@@ -3995,3 +3995,13 @@ help('calendar')
 # NAME
 #     calendar - Calendar printing functions
 ```
+
+**Использование встроенных модулей**
+
+```python
+import math
+
+print(math.pi)  # 3.141592653589793
+
+print(math.pow(5, 7))  # 78125.0
+```
