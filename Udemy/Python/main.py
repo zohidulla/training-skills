@@ -1909,3 +1909,37 @@
 
 
 # **********************************************************************************************************************************
+## Модули
+# import other
+
+# print(other)  # <module 'other' from '/path/to/other.py'>
+# print(type(other))  # <class 'module'>
+# print(dir(other))
+# ['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'my_name', 'print_sum']
+# print(other.my_name)  # Alice
+# print(other.print_sum(5, 10))  # 15
+
+#-----------------------------------------------------------
+# import other as other_module
+
+# print(other_module.print_sum(5, 10))  # 15
+
+#-----------------------------------------------------------
+# from other import my_name, print_sum as sum
+
+# print(my_name)  # Alice
+# print(sum(5, 10))  # 15
+
+#-----------------------------------------------------------
+# from other import *
+
+# print(my_name)  # Alice
+# print(print_sum(5, 10))  # 15
+
+
+
+
+
+
+
+# **********************************************************************************************************************************
