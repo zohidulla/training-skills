@@ -1939,11 +1939,19 @@
 
 # **********************************************************************************************************************************
 # Что такое __main__ и __name__ - What are __main__ and __name__
-print(dir())  # ['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__']
-print(__name__)  # __main__
-print(type(__name__))  # <class 'str'>
-print(__name__ == "__main__")  # True
+# print(dir())  # ['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__']
+# print(__name__)  # __main__
+# print(type(__name__))  # <class 'str'>
+# print(__name__ == "__main__")  # True
 
+from other import my_fn
+
+print("main.py", __name__)
+print("main.py", __name__ == "__main__")
+# other.py other
+# other.py False
+# main.py __main__
+# main.py True
 
 
 
