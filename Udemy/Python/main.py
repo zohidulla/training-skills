@@ -2120,3 +2120,7 @@ print(json_string)
 # }
 
 print(type(json_string)) # <class 'str'>
+
+json_from_dict = json.loads(json_string)
+print(json_from_dict) # {'name': 'John', 'age': 30, 'is_student': False, 'grades': [85, 90, 78], 'address': {'city': 'New York', 'zip_code': 10001}}
+print(type(json_from_dict))  # <class 'dict'>
