@@ -4122,3 +4122,26 @@ print(json_str)
 # Работа с файлами - Working with Files
 
 ## Работа с файлами - Working with Files
+
+**Встроенные модули для работы с файлами**
+
+- **os** - **os** является пакетом, который содержит различные модули, в том числе **path**
+- **pathlib** - Объектно-ориентированный подход к работе с файлами
+
+**OS vs Pathlib**
+
+```python
+from os import path
+
+# Функциональный подход
+print(path.abspath('.'))  # /home/user/project
+print(type(path)) #  <class 'module'>
+```
+
+```python
+from pathlib import Path
+
+# Объектно-ориентированный подход
+print(Path('.').absolute())  # /home/user/project
+print(type(Path)) # <class 'type'>
+```
