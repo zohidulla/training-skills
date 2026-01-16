@@ -4026,3 +4026,37 @@ print(dir(math))
 # 'remainder', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau',
 # 'trunc']
 ```
+
+# JSON
+
+## JSON
+
+**JSON - формат обмена данными и формат файлов**
+
+**JSON - JavaScript Object Notation**
+
+```js
+{
+    "id": 235,
+    "brand": "Nike",
+    "qty": 84,
+    "status": {
+        "isForSale": true,
+    }
+}
+```
+
+**Допустимые типы значеник в JSON**
+
+- string
+- number
+- JSON object
+- boolean
+- array
+- null
+
+**Передача данных в формате JSON**
+
+```js
+{"id": 235, "brand": "Nike", "qty": 84, "status": {"isForSale": true}}
+```
