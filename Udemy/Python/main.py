@@ -2087,3 +2087,36 @@
 # 2. Конвертируйте словарь в JSON
 # 3. Результирующий JSON выведите в терминал
 # 4. Выведите в терминал тип результирующего значения
+
+import json
+
+my_dict = {
+    'name': 'John',
+    'age': 30,
+    'is_student': False,
+    'grades': [85, 90, 78],
+    'address': {
+        'city': 'New York',
+        'zip_code': 10001
+    }
+}
+
+json_string = json.dumps(my_dict, indent=2)
+
+print(json_string)
+# {
+#   "name": "John",
+#   "age": 30,
+#   "is_student": false,
+#   "grades": [
+#     85,
+#     90,
+#     78
+#   ],
+#   "address": {
+#     "city": "New York",
+#     "zip_code": 10001
+#   }
+# }
+
+print(type(json_string)) # <class 'str'>
