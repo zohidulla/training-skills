@@ -2048,30 +2048,30 @@
 
 # **********************************************************************************************************************************
 # JSON
-import json
+# import json
 
-json_str = '{"id": 235, "brand": "Nike", "qty": 84, "status": {"isForSale": true}}'
+# json_str = '{"id": 235, "brand": "Nike", "qty": 84, "status": {"isForSale": true}}'
 
-sneakers = json.loads(json_str)
+# sneakers = json.loads(json_str)
 
-print(type(sneakers))  # <class 'dict'>
-print(sneakers) # {'id': 235, 'brand': 'Nike', 'qty': 84, 'status': {'isForSale': True}}
-print(sneakers['brand'])  # Nike
-print(sneakers['qty'])    # 84
-print(sneakers['status']['isForSale'])  # True
+# print(type(sneakers))  # <class 'dict'>
+# print(sneakers) # {'id': 235, 'brand': 'Nike', 'qty': 84, 'status': {'isForSale': True}}
+# print(sneakers['brand'])  # Nike
+# print(sneakers['qty'])    # 84
+# print(sneakers['status']['isForSale'])  # True
 
-json_array_str = '[{"id": 235, "brand": "Nike", "qty": 84}, {"id": 478, "brand": "Adidas", "qty": 50}]'
-sneakers_list = json.loads(json_array_str)
-print(type(sneakers_list))  # <class 'list'>
-print(sneakers_list)
-[{'id': 235, 'brand': 'Nike', 'qty': 84}, {'id': 478, 'brand': 'Adidas', 'qty': 50}]
+# json_array_str = '[{"id": 235, "brand": "Nike", "qty": 84}, {"id": 478, "brand": "Adidas", "qty": 50}]'
+# sneakers_list = json.loads(json_array_str)
+# print(type(sneakers_list))  # <class 'list'>
+# print(sneakers_list)
+# [{'id': 235, 'brand': 'Nike', 'qty': 84}, {'id': 478, 'brand': 'Adidas', 'qty': 50}]
 
 # json_from_dict = json.dumps(sneakers)
 # print(type(json_from_dict))  # <class 'str'>
 # print(json_from_dict) # {"id": 235, "brand": "Nike", "qty": 84, "status": {"isForSale": true}}
 
-json_from_dict = json.dumps(sneakers, indent=2)
-print(json_from_dict)
+# json_from_dict = json.dumps(sneakers, indent=2)
+# print(json_from_dict)
 # {
 #   "id": 235,
 #   "brand": "Nike",
