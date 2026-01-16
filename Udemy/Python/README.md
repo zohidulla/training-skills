@@ -4060,3 +4060,61 @@ print(dir(math))
 ```js
 {"id": 235, "brand": "Nike", "qty": 84, "status": {"isForSale": true}}
 ```
+
+## Конвертация JSON в словарь - Converting JSON to Dictionary
+
+```python
+{
+    "id": 235,
+    "brand": "Nike",
+    "qty": 84,
+    "status": {
+        "isForSale": True,
+    }
+}
+```
+
+```python
+import json
+
+json_str = '{"id": 235, "brand": "Nike", "qty": 84, "status": {"isForSale": true}}'
+
+sneakers = json.loads(json_str)
+
+print(type(sneakers))  # <class 'dict'>
+print(sneakers)
+# {'id': 235, 'brand': 'Nike', 'qty': 84, 'status': {'isForSale': True}}
+print(sneakers['brand'])  # Nike
+print(sneakers['qty'])    # 84
+print(sneakers['status']['isForSale'])  # True
+```
+
+```python
+import json
+
+sneakers_dict = {
+    "id": 235,
+    "brand": "Nike",
+    "qty": 84,
+    "status": {
+        "isForSale": True,
+    }
+}
+
+json_str = json.dumps(sneakers_dict, indent=1)
+
+print(type(json_str))  # <class 'str'>
+print(json_str)
+# {"id": 235, "brand": "Nike", "qty": 84, "status": {"isForSale": true}}
+```
+
+**Конвертация типов Python в типы JSON**
+| Python | JSON |
+| ------------- |:-------------:|
+| dict | object |
+| list, tuple | array |
+| str | string |
+| int, float | number |
+| True | true |
+| False | false |
+| None | null |
