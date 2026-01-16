@@ -2088,22 +2088,22 @@
 # 3. Результирующий JSON выведите в терминал
 # 4. Выведите в терминал тип результирующего значения
 
-import json
+# import json
 
-my_dict = {
-    'name': 'John',
-    'age': 30,
-    'is_student': False,
-    'grades': [85, 90, 78],
-    'address': {
-        'city': 'New York',
-        'zip_code': 10001
-    }
-}
+# my_dict = {
+#     'name': 'John',
+#     'age': 30,
+#     'is_student': False,
+#     'grades': [85, 90, 78],
+#     'address': {
+#         'city': 'New York',
+#         'zip_code': 10001
+#     }
+# }
 
-json_string = json.dumps(my_dict, indent=2)
+# json_string = json.dumps(my_dict, indent=2)
 
-print(json_string)
+# print(json_string)
 # {
 #   "name": "John",
 #   "age": 30,
@@ -2119,8 +2119,11 @@ print(json_string)
 #   }
 # }
 
-print(type(json_string)) # <class 'str'>
+# print(type(json_string)) # <class 'str'>
 
-json_from_dict = json.loads(json_string)
-print(json_from_dict) # {'name': 'John', 'age': 30, 'is_student': False, 'grades': [85, 90, 78], 'address': {'city': 'New York', 'zip_code': 10001}}
-print(type(json_from_dict))  # <class 'dict'>
+# json_from_dict = json.loads(json_string)
+# print(json_from_dict) # {'name': 'John', 'age': 30, 'is_student': False, 'grades': [85, 90, 78], 'address': {'city': 'New York', 'zip_code': 10001}}
+# print(type(json_from_dict))  # <class 'dict'>
+
+
+# **********************************************************************************************************************************
