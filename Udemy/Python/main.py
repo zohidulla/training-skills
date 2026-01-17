@@ -2135,3 +2135,11 @@ if os.path.exists("example.txt"):
     print("File exists")
 else:
     print("File not found")
+
+# Recommended way
+from pathlib import Path
+
+file = Path("logs/app.log")
+
+if file.exists():
+    print(file.read_text())
