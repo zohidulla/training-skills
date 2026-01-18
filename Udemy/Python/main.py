@@ -2143,3 +2143,16 @@ file = Path("logs/app.log")
 
 if file.exists():
     print(file.read_text())
+
+
+import csv
+
+data = [
+    ["name", "status"],
+    ["server1", "OK"],
+    ["server2", "FAIL"]
+]
+
+with open("servers.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerows(data)
