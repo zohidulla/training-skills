@@ -2218,3 +2218,57 @@
 
 
 # **********************************************************************************************************************************
+## Практика - Запись и чтение файлов - Practice - Writing and Reading Files
+
+# test_file = open('test.txt', 'w')
+
+# print(test_file)  # <_io.TextIOWrapper name='test.txt' mode='w' encoding='UTF-8'>
+# print(type(test_file))  # <class '_io.TextIOWrapper'>
+
+# test_file.write("First line\n")
+# test_file.write("Second line\n")
+
+# print(test_file.read())  # UnsupportedOperation: not readable
+
+# test_file.close()
+
+# test_file = open('test.txt')
+
+# print(test_file.read())
+# First line
+# Second line
+
+#-----------------------------------------------------------
+# with open('test.txt', 'w') as test_file:
+#     test_file.write("First line\n")
+#     test_file.write("Second line\n")
+#     test_file.write("Third line\n")
+
+# test_file = open('test.txt')
+# print(test_file.read())
+# # First line
+# # Second line
+# test_file.close()
+
+# equivalently
+# with open('test.txt') as test_file:
+    # print(test_file.readlines()) # ['First line\n', 'Second line\n', 'Third line\n']
+    # print(test_file.readline()) # First line
+    # for line in test_file:
+    #     print(line)
+        # First line
+        # Second line
+        # Third line
+
+    # while True:
+    #     line = test_file.readline()
+    #     if not line:
+    #         break
+    #     print(line)
+        # First line
+        # Second line
+        # Third line
+
+
+
+# **********************************************************************************************************************************
