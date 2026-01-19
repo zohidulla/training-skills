@@ -2288,7 +2288,46 @@
 # 5. Удалите оба файла
 # 6. Удалите папку files
 
+from pathlib import Path
 
+files_dir = Path('files')
+files_dir.mkdir(exist_ok=True)
+
+first_file = files_dir / 'first.txt'
+second_file = files_dir / 'second.txt'
+
+with open(first_file, 'w', encoding='utf-8') as f:
+    f.write("This is the first line\n")
+    f.write("This is the second line\n")
+    f.write("This is the third line\n")
+
+with open(second_file, 'w', encoding='utf-8') as f:
+    f.write("Line 1 in second file\n")
+    f.write("Line 2 in second file\n")
+    f.write("Line 3 in second file\n")
+
+print("Reading all lines from first.txt:")
+with open(first_file, 'r', encoding='utf-8') as f:
+    content = f.read()
+    print(content)
+    # This is the first line
+    # This is the second line
+    # This is the third line
+
+print("\nReading second.txt line by line:")
+with open(second_file, 'r', encoding='utf-8') as f:
+    for line in f:
+        print(line.strip())
+        # Line 1 in second file
+        # Line 2 in second file
+        # Line 3 in second file
+
+# first_file.unlink()
+# second_file.unlink()
+# print("\nFiles deleted")
+
+# files_dir.rmdir()
+# print("Directory 'files' deleted")
 
 
 
