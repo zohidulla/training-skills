@@ -4283,3 +4283,9 @@ print(Path('new.txt').exists())  # False
 ```
 
 # Работа с zip архивами - Working with zip Archives
+
+## Создание zip архива - Creating a zip Archive
+
+```python
+
+```
