@@ -2161,9 +2161,9 @@
 # **********************************************************************************************************************************
 ## Практика - Работа с путями к файлам и директориям - Practice - Working with File and Directory Paths
 
-from os import path
+# from os import path
 
-print(path.__dir__())
+# print(path.__dir__())
 # ['__name__', '__doc__', '__package__', '__loader__', '__spec__', '__file__', '__builtins__', 'curdir', 'pardir', 'extsep', 'sep',
 # 'pathsep', 'altsep', 'defpath', 'devnull', 'os', 'sys', 'genericpath', 'commonprefix', 'exists', 'getatime', 'getctime', 'getmtime',
 # 'getsize', 'isdevdrive', 'isdir', 'isfile', 'isjunction', 'islink', 'lexists', 'samefile', 'sameopenfile', 'samestat', 'ALLOW_MISSING',
@@ -2172,4 +2172,23 @@ print(path.__dir__())
 # 'isreserved', '_isreservedname', 'expanduser', 'expandvars', 'normpath', '_getfullpathname', 'abspath', '_findfirstfile',
 # '_getfinalpathname', '_nt_readlink', '_readlink_deep', '_getfinalpathname_nonstrict', 'realpath', 'supports_unicode_filenames',
 # 'relpath', 'commonpath', '_path_isdevdrive']
+
+# print(path.abspath('.')) # /current/working/directory/path
+
+#-----------------------------------------------------------
+from pathlib import Path
+
+print(dir(Path))
+# ['__bytes__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__firstlineno__', '__format__', '__fspath__', '__ge__',
+# '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__',
+# '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rtruediv__', '__setattr__', '__sizeof__', '__slots__', '__static_attributes__',
+# '__str__', '__subclasshook__', '__truediv__', '_copy_from', '_copy_from_file', '_copy_from_file_fallback', '_copy_from_symlink', '_delete',
+# '_drv', '_filter_trailing_slash', '_format_parsed_parts', '_from_dir_entry', '_from_parsed_parts', '_from_parsed_string', '_hash', '_info',
+# '_parse_path', '_parse_pattern', '_parts_normcase', '_parts_normcase_cached', '_raw_path', '_raw_paths', '_remove_leading_dot',
+# '_remove_trailing_slash', '_root', '_str', '_str_normcase', '_str_normcase_cached', '_tail', '_tail_cached', 'absolute', 'anchor', 'as_posix',
+# 'as_uri', 'chmod', 'copy', 'copy_into', 'cwd', 'drive', 'exists', 'expanduser', 'from_uri', 'full_match', 'glob', 'group', 'hardlink_to', 'home',
+# 'info', 'is_absolute', 'is_block_device', 'is_char_device', 'is_dir', 'is_fifo', 'is_file', 'is_junction', 'is_mount', 'is_relative_to', 'is_reserved',
+# 'is_socket', 'is_symlink', 'iterdir', 'joinpath', 'lchmod', 'lstat', 'match', 'mkdir', 'move', 'move_into', 'name', 'open', 'owner', 'parent', 'parents',
+# 'parser', 'parts', 'read_bytes', 'read_text', 'readlink', 'relative_to', 'rename', 'replace', 'resolve', 'rglob', 'rmdir', 'root', 'samefile', 'stat',
+# 'stem', 'suffix', 'suffixes', 'symlink_to', 'touch', 'unlink', 'walk', 'with_name', 'with_segments', 'with_stem', 'with_suffix', 'write_bytes', 'write_text']
 
