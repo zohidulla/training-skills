@@ -4309,3 +4309,19 @@ with zipfile.ZipFile("archive.zip", "r") as z:
 ```
 
 # Работа с CSV файлами - Working with CSV Files
+
+## Работа с CSV файлами - Working with CSV Files
+
+```python
+import csv
+
+with open('data.csv', newline='', encoding='utf-8') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+
+with open('output.csv', 'w', newline='', encoding='utf-8') as file:
+    writer = csv.writer(file)
+    writer.writerow(['name', 'age'])
+    writer.writerow(['Alice', 30])
+```
