@@ -4196,3 +4196,27 @@ print(Path('C:/').joinpath('Users').joinpath('alice'))
 print(Path('C:/') / 'Users' / 'alice')
 # C:/Users/alice
 ```
+
+**Проверка присутствия файла или директории**
+
+```python
+from pathlib import Path
+
+print(Path('main.py').exists())  # True
+
+print(Path('/Users/alice/Desktop').exists())  # True
+
+print(Path('other.py').exists())  # False
+```
+
+**Директория или файл?**
+
+```python
+from pathlib import Path
+
+print(Path('main.py').is_file())  # True
+
+print(Path('../python').is_file())  # False
+
+print(Path('../python').is_dir())  # True
+```
