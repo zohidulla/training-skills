@@ -2176,9 +2176,9 @@
 # print(path.abspath('.')) # /current/working/directory/path
 
 #-----------------------------------------------------------
-from pathlib import Path
+# from pathlib import Path
 
-print(dir(Path))
+# print(dir(Path))
 # ['__bytes__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__firstlineno__', '__format__', '__fspath__', '__ge__',
 # '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__',
 # '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rtruediv__', '__setattr__', '__sizeof__', '__slots__', '__static_attributes__',
@@ -2192,3 +2192,29 @@ print(dir(Path))
 # 'parser', 'parts', 'read_bytes', 'read_text', 'readlink', 'relative_to', 'rename', 'replace', 'resolve', 'rglob', 'rmdir', 'root', 'samefile', 'stat',
 # 'stem', 'suffix', 'suffixes', 'symlink_to', 'touch', 'unlink', 'walk', 'with_name', 'with_segments', 'with_stem', 'with_suffix', 'write_bytes', 'write_text']
 
+# cwd = Path('.')
+
+# print(isinstance(cwd, Path))  # True
+# print(type(cwd))  # <class 'pathlib.PosixPath'>
+# print(Path.__subclasses__())  # [<class 'pathlib.WindowsPath'>, <class 'pathlib.PosixPath'>]
+
+# print(cwd.__str__())  # ./
+# print(cwd.resolve())  # /current/working/directory/path
+# print(cwd.absolute())  # /current/working/directory/path
+
+# cwd = Path('/Users').joinpath('alice').joinpath('documents').joinpath('python')
+# cwd = Path('/Users') / 'alice' / 'documents' / 'python'
+# print(cwd)  # /Users/alice/documents/python
+# print(cwd.exists())  # True
+# print(cwd.is_dir())  # True
+# print(cwd.mkdir())
+
+# if not cwd.exists():
+#     cwd.mkdir()
+
+# if cwd.exists():
+#     cwd.rmdir()
+
+
+
+# **********************************************************************************************************************************
