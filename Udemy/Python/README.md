@@ -4234,3 +4234,50 @@ for file in Path('.').iterdir():
     # module_two.py
     # my_file.txt
 ```
+
+## Чтение и запись файлов - Reading and Writing Files
+
+```python
+with open('test.txt') as test_file:
+    print(test_file.read())
+    # This is a test file
+    # Another line in the test file
+
+with open('test.txt') as test_file:
+    print(test_file.readlines())
+    # ['This is a test file\n',
+    # 'Another line in the test file']
+```
+
+**Запись в файл**
+
+```python
+with open('new.txt', 'w') as new_file:
+    # 'w' - write mode - Режим записи в файл
+    new_file.write("First line in the new file\n")
+
+with open('new.txt') as new_file:
+    print(new_file.read())
+    # First line in the new file
+
+with open('new.txt', 'a') as new_file:
+    # 'a' - append mode - Режим добавления текста в конец файла
+    new_file.write("Second line in the new file\n")
+
+with open('new.txt') as new_file:
+    print(new_file.read())
+    # First line in the new file
+    # Second line in the new file
+```
+
+**Удаление файла**
+
+```python
+from pathlib import Path
+
+print(Path('new.txt').exists())  # True
+
+Path('new.txt').unlink()  # Удаление файла
+
+print(Path('new.txt').exists())  # False
+```
