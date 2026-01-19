@@ -2129,30 +2129,47 @@
 # **********************************************************************************************************************************
 ## Работа с файлами - Working with Files
 
-import os
+# import os
 
-if os.path.exists("example.txt"):
-    print("File exists")
-else:
-    print("File not found")
+# if os.path.exists("example.txt"):
+#     print("File exists")
+# else:
+#     print("File not found")
 
-# Recommended way
-from pathlib import Path
+# # Recommended way
+# from pathlib import Path
 
-file = Path("logs/app.log")
+# file = Path("logs/app.log")
 
-if file.exists():
-    print(file.read_text())
+# if file.exists():
+#     print(file.read_text())
 
 
-import csv
+# import csv
 
-data = [
-    ["name", "status"],
-    ["server1", "OK"],
-    ["server2", "FAIL"]
-]
+# data = [
+#     ["name", "status"],
+#     ["server1", "OK"],
+#     ["server2", "FAIL"]
+# ]
 
-with open("servers.csv", "w", newline="") as f:
-    writer = csv.writer(f)
-    writer.writerows(data)
+# with open("servers.csv", "w", newline="") as f:
+#     writer = csv.writer(f)
+#     writer.writerows(data)
+
+
+# **********************************************************************************************************************************
+## Практика - Работа с путями к файлам и директориям - Practice - Working with File and Directory Paths
+
+from os import path
+
+print(path.__dir__())
+# ['__name__', '__doc__', '__package__', '__loader__', '__spec__', '__file__', '__builtins__', 'curdir', 'pardir', 'extsep', 'sep',
+# 'pathsep', 'altsep', 'defpath', 'devnull', 'os', 'sys', 'genericpath', 'commonprefix', 'exists', 'getatime', 'getctime', 'getmtime',
+# 'getsize', 'isdevdrive', 'isdir', 'isfile', 'isjunction', 'islink', 'lexists', 'samefile', 'sameopenfile', 'samestat', 'ALLOW_MISSING',
+# '__all__', '_get_bothseps', '_LCMapStringEx', '_LOCALE_NAME_INVARIANT', '_LCMAP_LOWERCASE', 'normcase', 'isabs', 'join', 'splitdrive',
+# 'splitroot', 'split', 'splitext', 'basename', 'dirname', '_getvolumepathname', 'ismount', '_reserved_chars', '_reserved_names',
+# 'isreserved', '_isreservedname', 'expanduser', 'expandvars', 'normpath', '_getfullpathname', 'abspath', '_findfirstfile',
+# '_getfinalpathname', '_nt_readlink', '_readlink_deep', '_getfinalpathname_nonstrict', 'realpath', 'supports_unicode_filenames',
+# 'relpath', 'commonpath', '_path_isdevdrive']
+
