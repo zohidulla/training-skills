@@ -2272,3 +2272,12 @@
 
 
 # **********************************************************************************************************************************
+# Практика - Удаление файлов - Practice - Deleting Files
+# from pathlib import Path
+
+# my_file = Path('test.txt')
+
+# if my_file.exists():
+#     my_file.unlink()
+#     print("File deleted")
+
