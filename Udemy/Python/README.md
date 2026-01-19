@@ -4145,3 +4145,54 @@ from pathlib import Path
 print(Path('.').absolute())  # /home/user/project
 print(type(Path)) # <class 'type'>
 ```
+
+## Методы класса Path - Methods of the Path Class
+
+```python
+from pathlib import Path
+
+file_path = Path('my_file.txt')
+
+print([method for method in dir(file_path) if not method.startswith('_')])
+# ['absolute', 'as_posix', 'as_uri', 'chmod', 'cwd', 'exists', 'expanduser',
+# 'glob', 'group', 'home', 'is_absolute', 'is_dir', 'is_file', 'is_mount',
+# 'is_symlink', 'is_reserved', 'iterdir', 'joinpath', 'lchmod', 'link_to',
+# 'mkdir', 'name', 'open', 'owner', 'parent', 'parents', 'read_bytes',
+# 'read_text', 'relative_to', 'rename', 'replace', 'resolve', 'rglob',
+# 'rmdir', 'samefile', 'stat', 'suffix', 'suffixes', 'touch', 'unlink',
+# 'with_name', 'with_suffix', 'write_bytes', 'write_text']
+```
+
+**Путь к текущей директории**
+
+```python
+from pathlib import Path
+
+print(Path.cwd())
+# cwd - Current Working Directory
+# /home/user/project
+```
+
+**Формирование путей на MAC и UNIX**
+
+```python
+from pathlib import Path
+
+print(Path('usr').joinpath('local').joinpath('bin'))
+# usr/local/bin
+
+print(Path('usr') / 'local' / 'bin')
+# usr/local/bin
+```
+
+**Формирование путей на WINDOWS**
+
+```python
+from pathlib import Path
+
+print(Path('C:/').joinpath('Users').joinpath('alice'))
+# C:/Users/alice
+
+print(Path('C:/') / 'Users' / 'alice')
+# C:/Users/alice
+```
