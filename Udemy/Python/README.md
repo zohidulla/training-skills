@@ -4286,6 +4286,24 @@ print(Path('new.txt').exists())  # False
 
 ## Создание zip архива - Creating a zip Archive
 
-```python
+В Python работа с ZIP-архивами обычно делается через стандартный модуль zipfile
 
+```python
+import zipfile
+from pathlib import Path
+
+with zipfile.ZipFile("archive.zip", "r") as z:
+    print(z.namelist())        # список файлов
+    print(z.infolist())        # подробная информация
+
+with zipfile.ZipFile("archive.zip", "r") as z:
+    z.extractall("output_dir")
+
+with zipfile.ZipFile("new.zip", "w", compression=zipfile.ZIP_DEFLATED) as z:
+    z.write("file1.txt")
+    z.write("folder/file2.txt")
+
+with zipfile.ZipFile("archive.zip", "r") as z:
+    with z.open("file.txt") as f:
+        content = f.read().decode("utf-8")
 ```

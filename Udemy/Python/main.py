@@ -2330,6 +2330,20 @@
 # print("Directory 'files' deleted")
 
 
-
-
 # **********************************************************************************************************************************
+# Работа с zip архивами - Working with zip Archives
+## Создание zip архива - Creating a zip Archive
+from zipfile import ZipFile
+from pathlib import Path
+
+# Path("my-files").mkdir(exist_ok=True)
+
+# with open("my-files/first.txt", "w") as my_file:
+#     my_file.write("This is the first file\n")
+
+# with open("my-files/second.txt", "w") as my_file:
+#     my_file.write("This is the second file\n")
+
+with ZipFile("my-files.zip", mode="w") as my_zip_file:
+    for file in Path("my-files").iterdir():
+        my_zip_file.write(file, arcname=file.name)
