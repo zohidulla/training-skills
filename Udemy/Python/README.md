@@ -4307,3 +4307,5 @@ with zipfile.ZipFile("archive.zip", "r") as z:
     with z.open("file.txt") as f:
         content = f.read().decode("utf-8")
 ```
+
+# Работа с CSV файлами - Working with CSV Files
