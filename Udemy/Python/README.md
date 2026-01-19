@@ -4281,3 +4281,5 @@ Path('new.txt').unlink()  # Удаление файла
 
 print(Path('new.txt').exists())  # False
 ```
+
+# Работа с zip архивами - Working with zip Archives
