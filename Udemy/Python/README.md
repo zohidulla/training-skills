@@ -4220,3 +4220,17 @@ print(Path('../python').is_file())  # False
 
 print(Path('../python').is_dir())  # True
 ```
+
+**Список файлов в директории**
+
+```python
+from pathlib import Path
+
+for file in Path('.').iterdir():
+    print(file)
+    # __pycache__
+    # main.py
+    # module_one.py
+    # module_two.py
+    # my_file.txt
+```
