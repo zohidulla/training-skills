@@ -2363,11 +2363,34 @@ from pathlib import Path
 
 # **********************************************************************************************************************************
 ## Работа с CSV файлами - Working with CSV Files
-import csv
+# import csv
 
-with open('test.csv', 'w') as csv_file:
-    writer = csv.writer(csv_file)
-    writer.writerow(['user_id', 'user_name', 'comments_qty'])
-    writer.writerow([5235, 'alice', 1352])
-    writer.writerow([4789, 'bob', 842])
-    writer.writerow([6598, 'charlie', 430])
+# with open('test.csv', 'w') as csv_file:
+#     writer = csv.writer(csv_file)
+#     writer.writerow(['user_id', 'user_name', 'comments_qty'])
+#     writer.writerow([5235, 'alice', 1352])
+#     writer.writerow([4789, 'bob', 842])
+#     writer.writerow([6598, 'charlie', 430])
+
+# with open('test.csv') as csv_file:
+#     reader = csv.reader(csv_file)
+
+    # for row in reader:
+    #     print(row)
+        # ['user_id', 'user_name', 'comments_qty']
+        # ['5235', 'alice', '1352']
+        # ['4789', 'bob', '842']
+        # ['6598', 'charlie', '430']
+
+    # csv_list = list(reader)
+    # print(csv_list) # [['user_id', 'user_name', 'comments_qty'], ['5235', 'alice', '1352'], ['4789', 'bob', '842'], ['6598', 'charlie', '430']]
+
+    # print(dir(reader))
+    # ['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__',
+    # '__init__', '__init_subclass__', '__iter__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__next__', '__reduce__', '__reduce_ex__',
+    # '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'dialect', 'line_num']
+
+
+
+
+# **********************************************************************************************************************************
