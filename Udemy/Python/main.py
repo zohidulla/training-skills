@@ -2344,6 +2344,21 @@ from pathlib import Path
 # with open("my-files/second.txt", "w") as my_file:
 #     my_file.write("This is the second file\n")
 
-with ZipFile("my-files.zip", mode="w") as my_zip_file:
-    for file in Path("my-files").iterdir():
-        my_zip_file.write(file, arcname=file.name)
+# with ZipFile("my-files.zip", mode="w") as my_zip_file:
+#     for file in Path("my-files").iterdir():
+#         my_zip_file.write(file, arcname=file.name)
+
+#-----------------------------------------------------------
+# Практика - Распаковка zip архива - Practice - Unpacking a zip Archive
+# with ZipFile("my-files.zip", mode="r") as my_zip_file:
+    # my_zip_file.extractall("my-files-extracted")
+
+    # print(my_zip_file.namelist())
+    # ['first.txt', 'second.txt']
+
+    # print(my_zip_file.infolist())
+    # [<ZipInfo filename='first.txt' compress_type=deflate file_size=21 compress_size=37>,
+    #  <ZipInfo filename='second.txt' compress_type=deflate file_size=22 compress_size=38>]
+
+
+# **********************************************************************************************************************************
