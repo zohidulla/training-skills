@@ -2362,3 +2362,12 @@ from pathlib import Path
 
 
 # **********************************************************************************************************************************
+## Работа с CSV файлами - Working with CSV Files
+import csv
+
+with open('test.csv', 'w') as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerow(['user_id', 'user_name', 'comments_qty'])
+    writer.writerow([5235, 'alice', 1352])
+    writer.writerow([4789, 'bob', 842])
+    writer.writerow([6598, 'charlie', 430])
