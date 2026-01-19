@@ -2322,12 +2322,12 @@ with open(second_file, 'r', encoding='utf-8') as f:
         # Line 2 in second file
         # Line 3 in second file
 
-# first_file.unlink()
-# second_file.unlink()
-# print("\nFiles deleted")
+first_file.unlink()
+second_file.unlink()
+print("\nFiles deleted")
 
-# files_dir.rmdir()
-# print("Directory 'files' deleted")
+files_dir.rmdir()
+print("Directory 'files' deleted")
 
 
 
