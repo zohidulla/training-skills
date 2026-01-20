@@ -2393,14 +2393,32 @@ from pathlib import Path
 
 # **********************************************************************************************************************************
 # Работа с датами и временем - Working with Dates and Time
-from datetime import date
+# from datetime import date
 
-my_date = date(2024, 6, 15)
+# my_date = date(2024, 6, 15)
+# print(my_date)  # 2024-06-15
+# print(type(my_date))  # <class 'datetime.date'>
+# print(my_date.year)  # 2024
+# print(my_date.month)  # 6
+# print(my_date.day)  # 15
+# print(my_date.isoformat())  # 2024-06-15
+# print(my_date.isocalendar())  # (2024, 24, 6)
 
-print(my_date)  # 2024-06-15
-print(type(my_date))  # <class 'datetime.date'>
-print(my_date.year)  # 2024
-print(my_date.month)  # 6
-print(my_date.day)  # 15
+# from datetime import time
 
+# my_time = time(14, 30, 15)
+# print(my_time)  # 14:30:15
+# print(type(my_time))  # <class 'datetime.time'>
+# print(my_time.hour)  # 14
+# print(my_time.minute)  # 30
+# print(my_time.second)  # 15
+
+# from datetime import datetime
+
+# my_datetime = datetime(2024, 6, 15, 14, 30, 15)
+
+# print(my_datetime)  # 2024-06-15 14:30:15
+# print(type(my_datetime))  # <class 'datetime.datetime'>
+# print(my_datetime.year)  # 2024
+# print(my_datetime.isoformat())  # 2024-06-15T14:30:15
 
