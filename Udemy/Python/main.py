@@ -2447,18 +2447,18 @@ from pathlib import Path
 
 # **********************************************************************************************************************************
 # Модули для работы с числами - Modules for Working with Numbers
-import random
+# import random
 
-print(random.random())  # e.g., 0.37444887175646646
-print(random.randint(1, 10))  # e.g., 7
-print(random.choice(['apple', 'banana', 'cherry']))  # e.g., 'banana'
-print(random.choices(['red', 'blue', 'green'], k=2))  # e.g., ['green', 'red']
-print(random.sample(range(1, 100), 5))  # e.g., [23, 67, 12, 89, 45]
-print(random.uniform(1.0, 10.0))  # e.g., 5.6789123456
-my_list = [1, 2, 3, 4, 5]
-random.shuffle(my_list)
-print(my_list)  # e.g., [3, 1, 5, 2, 4]
-random.shuffle(my_list)
-print(my_list)  # e.g., [4, 2, 1, 5, 3]
-print(random.choices('0123456789ABCDEF', k=6))  # e.g., ['A', '3', 'F', '1', 'C', '9']
-print(''.join(random.choices('0123456789ABCDEFJHKL', k=8)))  # e.g., '3F1AC9JL'
+# print(random.random())  # e.g., 0.37444887175646646
+# print(random.randint(1, 10))  # e.g., 7
+# print(random.choice(['apple', 'banana', 'cherry']))  # e.g., 'banana'
+# print(random.choices(['red', 'blue', 'green'], k=2))  # e.g., ['green', 'red']
+# print(random.sample(range(1, 100), 5))  # e.g., [23, 67, 12, 89, 45]
+# print(random.uniform(1.0, 10.0))  # e.g., 5.6789123456
+# my_list = [1, 2, 3, 4, 5]
+# random.shuffle(my_list)
+# print(my_list)  # e.g., [3, 1, 5, 2, 4]
+# random.shuffle(my_list)
+# print(my_list)  # e.g., [4, 2, 1, 5, 3]
+# print(random.choices('0123456789ABCDEF', k=6))  # e.g., ['A', '3', 'F', '1', 'C', '9']
+# print(''.join(random.choices('0123456789ABCDEFJHKL', k=8)))  # e.g., '3F1AC9JL'
