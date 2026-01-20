@@ -2413,12 +2413,16 @@ from pathlib import Path
 # print(my_time.minute)  # 30
 # print(my_time.second)  # 15
 
-# from datetime import datetime
+from datetime import datetime
 
-# my_datetime = datetime(2024, 6, 15, 14, 30, 15)
+my_datetime = datetime(2024, 6, 15, 14, 30, 15)
 
 # print(my_datetime)  # 2024-06-15 14:30:15
 # print(type(my_datetime))  # <class 'datetime.datetime'>
 # print(my_datetime.year)  # 2024
 # print(my_datetime.isoformat())  # 2024-06-15T14:30:15
+print(my_datetime.strftime("%Y-%m-%d %H:%M:%S"))  # 2024-06-15 14:30:15
 
+date_str = "2024-06-15 14:30:15"
+parsed_datetime = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
+print(parsed_datetime)  # 2024-06-15 14:30:15
