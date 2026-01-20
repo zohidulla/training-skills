@@ -2446,3 +2446,10 @@ from pathlib import Path
 
 
 # **********************************************************************************************************************************
+# Модули для работы с числами - Modules for Working with Numbers
+import random
+
+print(random.random())  # e.g., 0.37444887175646646
+print(random.randint(1, 10))  # e.g., 7
+print(random.choice(['apple', 'banana', 'cherry']))  # e.g., 'banana'
+print(random.sample(range(1, 100), 5))  # e.g., [23, 67, 12, 89, 45]
