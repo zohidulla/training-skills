@@ -2501,8 +2501,23 @@ from pathlib import Path
 # 'nextafter', 'perm', 'pi', 'pow', 'prod', 'radians', 'remainder', 'sin', 'sinh', 'sqrt', 'sumprod', 'tan', 'tanh',
 # 'tau', 'trunc', 'ulp']
 
+# -----------------------------------------------------------
+# Рекурсивные функции - Recursive Functions
+def factorial(number):
+    if type(number) is not int:
+        raise TypeError("Number must be an integer")
+    if number <= 0:
+        raise ValueError("Input must be positive")
+    if number == 1:
+        return 1
+    return factorial(number - 1) * number
 
-
+print(factorial(1))  # 1
+print(factorial(5))  # 120
+print(factorial(20))  # 2432902008176640000
+print(factorial(0))  # ValueError: Input must be a non-negative integer
+print(factorial(-5))  # ValueError: Input must be a non-negative integer
+print(factorial(5.5))  # TypeError: Number must be an integer
 
 
 
