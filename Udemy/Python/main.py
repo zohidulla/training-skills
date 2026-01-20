@@ -2462,3 +2462,18 @@ from pathlib import Path
 # print(my_list)  # e.g., [4, 2, 1, 5, 3]
 # print(random.choices('0123456789ABCDEF', k=6))  # e.g., ['A', '3', 'F', '1', 'C', '9']
 # print(''.join(random.choices('0123456789ABCDEFJHKL', k=8)))  # e.g., '3F1AC9JL'
+
+import secrets
+import string
+
+# print(string.ascii_letters)  # abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+# print(string.ascii_lowercase)  # abcdefghijklmnopqrstuvwxyz
+# print(string.ascii_uppercase)  # ABCDEFGHIJKLMNOPQRSTUVWXYZ
+# print(string.digits)  # 0123456789
+# print(string.digits + string.ascii_letters)  # 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+# print(string.punctuation)  # !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+# secure_password = ''.join(secrets.choice(string.ascii_letters + string.digits + string.punctuation) for _ in range(12))
+# print(secure_password)  # e.g., 'aB3$dE5&gH1!'
+all_chars = string.ascii_letters + string.digits + string.punctuation
+secure_password = ''.join(secrets.choice(all_chars) for _ in range(10))
+print(secure_password)  # e.g., 'F3$dE5&gH1'
