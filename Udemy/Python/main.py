@@ -2433,25 +2433,16 @@ from pathlib import Path
 # print(my_datetime - timedelta(hours=2))  # 2024-06-15 12:30:15
 # print(my_datetime + timedelta(weeks=1, minutes=15))  # 2024-06-22 14:45:15
 
-import time
+# import time
 
-start_time = time.time()
-print('Start time: ', start_time)  # 1718361234.5678901
-print(time.ctime())  # Sat Jun 15 14:30:15 2024
-print(time.localtime())  # time.struct_time(tm_year=2024, tm_mon=6, tm_mday=15, tm_hour=14, tm_min=30, tm_sec=15, tm_wday=5, tm_yday=167, tm_isdst=0)
-time.sleep(2)  # Pauses execution for 2 seconds
-end_time = time.time()
-print('End time: ', end_time)  # 1718361236.567890
-print('Total duration of the operation: ', end_time - start_time)  # 2.0
-
-
-
-
-
-
-
-
-
+# start_time = time.time()
+# print('Start time: ', start_time)  # 1718361234.5678901
+# print(time.ctime())  # Sat Jun 15 14:30:15 2024
+# print(time.localtime())  # time.struct_time(tm_year=2024, tm_mon=6, tm_mday=15, tm_hour=14, tm_min=30, tm_sec=15, tm_wday=5, tm_yday=167, tm_isdst=0)
+# time.sleep(2)  # Pauses execution for 2 seconds
+# end_time = time.time()
+# print('End time: ', end_time)  # 1718361236.567890
+# print('Total duration of the operation: ', end_time - start_time)  # 2.0
 
 
 # **********************************************************************************************************************************
