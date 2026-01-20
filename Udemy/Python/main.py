@@ -2391,6 +2391,16 @@ from pathlib import Path
     # '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'dialect', 'line_num']
 
 
-
-
 # **********************************************************************************************************************************
+# Работа с датами и временем - Working with Dates and Time
+from datetime import date
+
+my_date = date(2024, 6, 15)
+
+print(my_date)  # 2024-06-15
+print(type(my_date))  # <class 'datetime.date'>
+print(my_date.year)  # 2024
+print(my_date.month)  # 6
+print(my_date.day)  # 15
+
+
