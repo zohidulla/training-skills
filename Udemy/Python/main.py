@@ -2480,18 +2480,26 @@ from pathlib import Path
 # print(secure_password)  # e.g., 'F3$dE5&gH1'
 
 # -----------------------------------------------------------
-import math
+# import math
 
-print(math.pi)  # 3.141592653589793
-print(math.e)  # 2.718281828459045
-print(math.sqrt(16))  # 4.0
-print(math.pow(2, 5))  # 32.0
-print(math.factorial(5))  # 120
-print(math.gcd(48, 18))  # 6
-print(math.sin(math.pi / 2))  # 1.0
-print(math.cos(0))  # 1.0
-print(math.log(100, 10))  # 2.0
-print(math.ceil(4.3))  # 5
+# print(math.pi)  # 3.141592653589793
+# print(math.e)  # 2.718281828459045
+# print(math.sqrt(16))  # 4.0
+# print(math.pow(2, 5))  # 32.0
+# print(math.factorial(5))  # 120
+# print(math.gcd(48, 18))  # 6
+# print(math.sin(math.pi / 2))  # 1.0
+# print(math.cos(0))  # 1.0
+# print(math.log(100, 10))  # 2.0
+# print(math.ceil(4.3))  # 5
+
+# print(dir(math))
+# ['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2',
+# 'atanh', 'cbrt', 'ceil', 'comb', 'copysign', 'cos', 'cosh', 'degrees', 'dist', 'e', 'erf', 'erfc', 'exp', 'exp2',
+# 'expm1', 'fabs', 'factorial', 'floor', 'fma', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose',
+# 'isfinite', 'isinf', 'isnan', 'isqrt', 'lcm', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan',
+# 'nextafter', 'perm', 'pi', 'pow', 'prod', 'radians', 'remainder', 'sin', 'sinh', 'sqrt', 'sumprod', 'tan', 'tanh',
+# 'tau', 'trunc', 'ulp']
 
 
 
