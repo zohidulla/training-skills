@@ -2425,13 +2425,13 @@ from pathlib import Path
 # parsed_datetime = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
 # print(parsed_datetime)  # 2024-06-15 14:30:15
 
-from datetime import datetime, timedelta
+# from datetime import datetime, timedelta
 
-my_datetime = datetime(2024, 6, 15, 14, 30, 15)
-print(my_datetime)  # 2024-06-15 14:30:15
-print(my_datetime + timedelta(days=5))  # 2024-06-20 14:30:15
-print(my_datetime - timedelta(hours=2))  # 2024-06-15 12:30:15
-print(my_datetime + timedelta(weeks=1, minutes=15))  # 2024-06-22 14:45:15
+# my_datetime = datetime(2024, 6, 15, 14, 30, 15)
+# print(my_datetime)  # 2024-06-15 14:30:15
+# print(my_datetime + timedelta(days=5))  # 2024-06-20 14:30:15
+# print(my_datetime - timedelta(hours=2))  # 2024-06-15 12:30:15
+# print(my_datetime + timedelta(weeks=1, minutes=15))  # 2024-06-22 14:45:15
 
 
 
