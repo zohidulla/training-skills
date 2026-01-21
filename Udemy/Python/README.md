@@ -4325,3 +4325,20 @@ with open('output.csv', 'w', newline='', encoding='utf-8') as file:
     writer.writerow(['name', 'age'])
     writer.writerow(['Alice', 30])
 ```
+
+# Виртуальные среды, PIP и Pipenv - Virtual Environments, PIP and Pipenv
+
+## Менеджер пакетов PIP - Package Manager PIP
+
+```python
+pip3 install package_name
+# Установка пакета package_name
+pip3 uninstall package_name
+# Удаление пакета package_name
+pip3 show package_name
+# Информация о пакете package_name
+pip3 list
+# Список установленных пакетов
+pip3 freeze
+# Список установленных пакетов с их версиями
+```
