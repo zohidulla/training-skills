@@ -2886,7 +2886,7 @@ from pathlib import Path
 
 # **********************************************************************************************************************************
 # Аргументы функции и модуль sys - Function Arguments and the sys Module
-import sys
+# import sys
 
 # print(dir(sys))
 # ['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__', '__interactivehook__', '__loader__', '__name__', '__package__',
@@ -2907,14 +2907,18 @@ import sys
 # 'version_info', 'warnoptions', 'winver']
 
 
-print(sys.argv) # e.g., ['main.py', 'arg1', 'arg2']
-print(type(sys.argv))  # <class 'list'>
+# print(sys.argv) # e.g., ['main.py', 'arg1', 'arg2']
+# print(type(sys.argv))  # <class 'list'>
 
-if len(sys.argv) < 3:
-    raise IOError("Not enough arguments provided. Please provide two numbers.")
+# if len(sys.argv) < 3:
+#     raise IOError("Not enough arguments provided. Please provide two numbers.")
 
-username = sys.argv[1]
-password = sys.argv[2]
-filename, username, password = sys.argv
-print(f"Username: {username}, Password: {password}")
-# python main.py my_username my_password
+# username = sys.argv[1]
+# password = sys.argv[2]
+# filename, username, password = sys.argv
+# print(f"Username: {username}, Password: {password}")
+# # python main.py my_username my_password
+
+
+
+# **********************************************************************************************************************************
