@@ -2922,3 +2922,21 @@ from pathlib import Path
 
 
 # **********************************************************************************************************************************
+# Модуль webbrowser - Module webbrowser
+import webbrowser
+
+# print(dir(webbrowser))
+# ['BackgroundBrowser', 'BaseBrowser', 'Chrome', 'Chromium', 'Edge', 'Elinks', 'Epiphany', 'Error', 'GenericBrowser', 'Konqueror',
+# 'Mozilla', 'Opera', 'UnixBrowser', 'WindowsDefault', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__',
+# '__name__', '__package__', '__spec__', '_browsers', '_lock', '_os_preferred_browser', '_synthesize', '_tryorder', 'get', 'main',
+# 'open', 'open_new', 'open_new_tab', 'os', 'parse_args', 'register', 'register_X_browsers', 'register_standard_browsers', 'shlex',
+# 'shutil', 'subprocess', 'sys', 'threading']
+
+webbrowser.open("https://www.python.org")
+webbrowser.open_new("https://www.python.org")
+webbrowser.open_new_tab("https://www.python.org")
+webbrowser.get('chrome').open("https://www.python.org")
+webbrowser.get('firefox').open("https://www.python.org")
+webbrowser.main()
+webbrowser.os = "nt"
+webbrowser.sys = "win32"
