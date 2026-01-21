@@ -2542,10 +2542,10 @@ import re
 # '_sre', '_zero_sentinel', 'compile', 'copyreg', 'enum', 'error', 'escape', 'findall', 'finditer', 'fullmatch', 'functools',
 # 'match', 'purge', 'search', 'split', 'sub', 'subn']
 
-my_string = "Contact us at support@example.com or sales@example.com."
+# my_string = "Contact us at support@example.com or sales@example.com."
 # my_pattern = re.compile(r'^Contact.*\.com\.$')
 # print(my_pattern.match(my_string))  # <re.Match object; span=(0, 49), match='Contact us at
-my_pattern = re.compile(r'@example.com')
-print(my_pattern.findall(my_string))  # ['@example.com', '@example.com']
+# my_pattern = re.compile(r'@example.com')
+# print(my_pattern.findall(my_string))  # ['@example.com', '@example.com']
 
 # -----------------------------------------------------------
