@@ -2585,6 +2585,53 @@ import re
 #    - специальные символы
 # 4. Попросите пользователя ввести пароль и выведите результат проверки
 
+# v.0
+def check_password(password):
+    length_pattern = re.compile(r'\S{8,}')
+    lowercase_pattern = re.compile(r'^.*[a-z]+.*$')
+    uppercase_pattern = re.compile(r'^.*[A-Z]+.*$')
+    number_pattern = re.compile(r'^.*[0-9]+.*$')
+    special_symbol_pattern = re.compile(r'^.*[!@#$%^&*(),.?":{}|<>]+.*$')
+    no_whiterspace_pattern = re.compile(r'^\S*$')
+
+    if not re.fullmatch(no_whiterspace_pattern, password):
+        return (False, "Password must not contain whitespace characters")
+
+    if not re.fullmatch(length_pattern, password):
+        return (False, "Password must have at least 8 symbols")
+
+    if not re.fullmatch(lowercase_pattern, password):
+        return (False, "Password must have at least one lowercase letter")
+
+    if not re.fullmatch(uppercase_pattern, password):
+        return (False, "Password must have at least one uppercase letter")
+
+    if not re.fullmatch(number_pattern, password):
+        return (False, "Password must have at least one digit")
+
+    if not re.fullmatch(special_symbol_pattern, password):
+        return (False, "Password must have at least one special symbol")
+
+    return (True, "Password is valid!")
+
+print(check_password("Password1!   d234234dsfdsf"))  # (False, 'Password must not contain whitespace characters')
+print(check_password("123"))  # (False, 'Password must have at least 8 symbols')
+print(check_password("pass"))  # (False, 'Password must have at least 8 symbols')
+print(check_password("PASSWORD1!"))  # (False, 'Password must have at least one lowercase letter')
+print(check_password("12345678"))  # (False, 'Password must have at least one lowercase letter')
+print(check_password("password1!"))  # (False, 'Password must have at least one uppercase letter')
+print(check_password("Password!"))  # (False, 'Password must have at least one digit')
+print(check_password("Password1!"))  # (True, 'Password is valid!'
+
+while True:
+    user_password = input("Enter your password: ")
+    is_valid, message = check_password(user_password)
+    if is_valid:
+        print(f"✓ {message}")
+        break
+    else:
+        print(f"✗ {message}. Please try again.")
+
 # v.1
 def validate_password_v1(password):
     if len(password) < 8:
@@ -2673,16 +2720,16 @@ else:
 # v.5 - Using sets for O(1) character lookups
 def validate_password_v5(password):
     import string
-    
+
     if len(password) < 8:
         return (False, "Password must be at least 8 characters long")
-    
+
     password_set = set(password)
     lowercase = set(string.ascii_lowercase)
     uppercase = set(string.ascii_uppercase)
     digits = set(string.digits)
     special = set('!@#$%^&*(),.?":{}|<>')
-    
+
     if not password_set & lowercase:
         return (False, "Password must contain at least one lowercase letter")
     if not password_set & uppercase:
@@ -2691,7 +2738,7 @@ def validate_password_v5(password):
         return (False, "Password must contain at least one digit")
     if not password_set & special:
         return (False, "Password must contain at least one special character")
-    
+
     return (True, "Password is strong!")
 
 
@@ -2699,10 +2746,10 @@ def validate_password_v5(password):
 def validate_password_v6(password):
     if len(password) < 8:
         return (False, "Password must be at least 8 characters long")
-    
+
     has_lower = has_upper = has_digit = has_special = False
     special_chars = set('!@#$%^&*(),.?":{}|<>')
-    
+
     for char in password:
         if not has_lower and char.islower():
             has_lower = True
@@ -2712,10 +2759,10 @@ def validate_password_v6(password):
             has_digit = True
         elif not has_special and char in special_chars:
             has_special = True
-        
+
         if all([has_lower, has_upper, has_digit, has_special]):
             return (True, "Password is strong!")
-    
+
     if not has_lower:
         return (False, "Password must contain at least one lowercase letter")
     if not has_upper:
@@ -2724,7 +2771,7 @@ def validate_password_v6(password):
         return (False, "Password must contain at least one digit")
     if not has_special:
         return (False, "Password must contain at least one special character")
-    
+
     return (False, "Unknown validation error")
 
 
@@ -2732,11 +2779,11 @@ def validate_password_v6(password):
 def validate_password_v7(password):
     if len(password) < 8:
         return (False, "Password must be at least 8 characters long")
-    
+
     flags = 0
     ALL_FLAGS = 15
     special_chars = set('!@#$%^&*(),.?":{}|<>')
-    
+
     for char in password:
         if char.islower():
             flags |= 1
@@ -2746,10 +2793,10 @@ def validate_password_v7(password):
             flags |= 4
         elif char in special_chars:
             flags |= 8
-        
+
         if flags == ALL_FLAGS:
             return (True, "Password is strong!")
-    
+
     if not flags & 1:
         return (False, "Password must contain at least one lowercase letter")
     if not flags & 2:
@@ -2758,7 +2805,7 @@ def validate_password_v7(password):
         return (False, "Password must contain at least one digit")
     if not flags & 8:
         return (False, "Password must contain at least one special character")
-    
+
     return (False, "Unknown validation error")
 
 
@@ -2769,15 +2816,15 @@ class PasswordValidator:
         self.special_chars = set(special_chars)
         self.rules = [
             (lambda p: len(p) >= self.min_length,
-             f"Password must be at least {self.min_length} characters long"),
+            f"Password must be at least {self.min_length} characters long"),
             (lambda p: any(c.islower() for c in p),
-             "Password must contain at least one lowercase letter"),
+            "Password must contain at least one lowercase letter"),
             (lambda p: any(c.isupper() for c in p),
-             "Password must contain at least one uppercase letter"),
+            "Password must contain at least one uppercase letter"),
             (lambda p: any(c.isdigit() for c in p),
-             "Password must contain at least one digit"),
+            "Password must contain at least one digit"),
             (lambda p: any(c in self.special_chars for c in p),
-             "Password must contain at least one special character")
+            "Password must contain at least one special character")
         ]
 
     def validate(self, password):
