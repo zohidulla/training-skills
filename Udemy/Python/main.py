@@ -2522,3 +2522,10 @@ from pathlib import Path
 
 
 # **********************************************************************************************************************************
+# Работа с регулярными выражениями - Working with Regular Expressions
+import re
+
+pattern = r'\b[a-zA-Z]{3}\b'
+text = "The cat sat on the mat and saw a dog."
+matches = re.findall(pattern, text)
+print(matches)  # ['The', 'cat', 'sat', 'the', 'mat', 'and', 'saw', 'dog']
