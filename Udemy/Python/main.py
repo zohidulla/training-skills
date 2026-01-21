@@ -2523,7 +2523,7 @@ from pathlib import Path
 
 # **********************************************************************************************************************************
 # Работа с регулярными выражениями - Working with Regular Expressions
-# import re
+import re
 
 # pattern = r'\b[a-zA-Z]{3}\b'
 # text = "The cat sat on the mat and saw a dog."
@@ -2541,5 +2541,11 @@ from pathlib import Path
 # '_cache2', '_casefix', '_compile', '_compile_template', '_compiler', '_constants', '_parser', '_pickle', '_special_chars_map',
 # '_sre', '_zero_sentinel', 'compile', 'copyreg', 'enum', 'error', 'escape', 'findall', 'finditer', 'fullmatch', 'functools',
 # 'match', 'purge', 'search', 'split', 'sub', 'subn']
+
+my_string = "Contact us at support@example.com or sales@example.com."
+# my_pattern = re.compile(r'^Contact.*\.com\.$')
+# print(my_pattern.match(my_string))  # <re.Match object; span=(0, 49), match='Contact us at
+my_pattern = re.compile(r'@example.com')
+print(my_pattern.findall(my_string))  # ['@example.com', '@example.com']
 
 # -----------------------------------------------------------
