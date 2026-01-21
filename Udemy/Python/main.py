@@ -2885,3 +2885,36 @@ from pathlib import Path
 
 
 # **********************************************************************************************************************************
+# Аргументы функции и модуль sys - Function Arguments and the sys Module
+import sys
+
+# print(dir(sys))
+# ['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__', '__interactivehook__', '__loader__', '__name__', '__package__',
+# '__spec__', '__stderr__', '__stdin__', '__stdout__', '__unraisablehook__', '_base_executable', '_baserepl', '_clear_internal_caches',
+# '_clear_type_cache', '_clear_type_descriptors', '_current_exceptions', '_current_frames', '_debugmallocstats', '_dump_tracelets',
+# '_enablelegacywindowsfsencoding', '_framework', '_get_cpu_count_config', '_getframe', '_getframemodulename', '_git', '_home',
+# '_is_gil_enabled', '_is_immortal', '_is_interned', '_jit', '_setprofileallthreads', '_settraceallthreads', '_stdlib_dir', '_vpath',
+# '_xoptions', 'activate_stack_trampoline', 'addaudithook', 'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',
+# 'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing', 'copyright', 'deactivate_stack_trampoline', 'displayhook',
+# 'dllhandle', 'dont_write_bytecode', 'exc_info', 'excepthook', 'exception', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',
+# 'float_repr_style', 'get_asyncgen_hooks', 'get_coroutine_origin_tracking_depth', 'get_int_max_str_digits', 'getallocatedblocks',
+# 'getdefaultencoding', 'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile', 'getrecursionlimit', 'getrefcount',
+# 'getsizeof', 'getswitchinterval', 'gettrace', 'getunicodeinternedsize', 'getwindowsversion', 'hash_info', 'hexversion', 'implementation',
+# 'int_info', 'intern', 'is_finalizing', 'is_remote_debug_enabled', 'is_stack_trampoline_active', 'maxsize', 'maxunicode', 'meta_path',
+# 'modules', 'monitoring', 'orig_argv', 'path', 'path_hooks', 'path_importer_cache', 'platform', 'platlibdir', 'prefix', 'pycache_prefix',
+# 'remote_exec', 'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'set_int_max_str_digits', 'setprofile', 'setrecursionlimit',
+# 'setswitchinterval', 'settrace', 'stderr', 'stdin', 'stdlib_module_names', 'stdout', 'thread_info', 'unraisablehook', 'version',
+# 'version_info', 'warnoptions', 'winver']
+
+
+print(sys.argv) # e.g., ['main.py', 'arg1', 'arg2']
+print(type(sys.argv))  # <class 'list'>
+
+if len(sys.argv) < 3:
+    raise IOError("Not enough arguments provided. Please provide two numbers.")
+
+username = sys.argv[1]
+password = sys.argv[2]
+filename, username, password = sys.argv
+print(f"Username: {username}, Password: {password}")
+# python main.py my_username my_password
