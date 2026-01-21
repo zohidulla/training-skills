@@ -4376,3 +4376,39 @@ pipenv install --dev
 pipenv install
 # Установка зависимостей из Pipfile.lock
 ```
+
+## Создание виртуальной среды - Creating a Virtual Environment
+
+```python
+pipenv install requests
+# Установка пакета requests и создание виртуальной среды
+```
+
+```python
+pipenv graph
+# Просмотр установленных пакетов в виртуальной среде
+```
+
+**Example pipenv graph output:**
+
+```python
+pandas==2.3.3
+├── numpy [required: >=1.26.0, installed: 2.4.1]
+├── python-dateutil [required: >=2.8.2, installed: 2.9.0.post0]
+│   └── six [required: >=1.5, installed: 1.17.0]
+├── pytz [required: >=2020.1, installed: 2025.2]
+└── tzdata [required: >=2022.7, installed: 2025.3]
+requests==2.32.5
+├── charset-normalizer [required: >=2,<4, installed: 3.4.4]
+├── idna [required: >=2.5,<4, installed: 3.11]
+├── urllib3 [required: >=1.21.1,<3, installed: 2.6.3]
+└── certifi [required: >=2017.4.17, installed: 2026.1.4]
+```
+
+```python
+pipenv update
+# Обновление всех пакетов в виртуальной среде pipenv
+
+pipenv update package_name
+# Обновление пакета package_name в виртуальной среде pipenv
+```
