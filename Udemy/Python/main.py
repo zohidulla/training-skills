@@ -2844,3 +2844,44 @@ from pathlib import Path
 
 
 # **********************************************************************************************************************************
+# Модуль array - Module array
+
+# import array
+# print(dir(array))
+# ['ArrayType', '__doc__', '__loader__', '__name__', '__package__', '__spec__', '_array_reconstructor', 'array', 'typecodes']
+
+from array import array
+# print(dir(array))
+# ['__add__', '__buffer__', '__class__', '__class_getitem__', '__contains__', '__copy__', '__deepcopy__', '__delattr__', '__delitem__',
+# '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__',
+# '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__mul__', '__ne__',
+# '__new__', '__reduce__', '__reduce_ex__', '__release_buffer__', '__repr__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__',
+# '__str__', '__subclasshook__', 'append', 'buffer_info', 'byteswap', 'clear', 'count', 'extend', 'frombytes', 'fromfile', 'fromlist',
+# 'fromunicode', 'index', 'insert', 'itemsize', 'pop', 'remove', 'reverse', 'tobytes', 'tofile', 'tolist', 'tounicode', 'typecode']
+
+my_array = array('i', [1, 2, 3, 4, 5])
+print(my_array)  # array('i', [1, 2, 3, 4, 5])
+print(type(my_array))  # <class 'array.array'>
+my_array.append(6)
+print(my_array)  # array('i', [1, 2, 3, 4, 5, 6])
+my_array.pop()
+print(my_array)  # array('i', [1, 2, 3, 4, 5])
+print(my_array.index(3))  # 2
+my_array.remove(2)
+print(my_array)  # array('i', [1, 3, 4, 5])
+print(my_array.tolist())  # [1, 3, 4, 5]
+
+with open('array_data.bin', 'wb') as my_file:
+    my_array.tofile(my_file)
+
+with open('array_data.bin', 'rb') as my_file:
+    new_array = array('i')
+    new_array.fromfile(my_file, len(my_array))
+print(new_array)  # array('i', [1, 3, 4, 5])
+
+my_array.reverse()
+print(my_array)  # array('i', [5, 4, 3, 1])
+
+
+
+# **********************************************************************************************************************************
