@@ -2923,7 +2923,7 @@ from pathlib import Path
 
 # **********************************************************************************************************************************
 # Модуль webbrowser - Module webbrowser
-import webbrowser
+# import webbrowser
 
 # print(dir(webbrowser))
 # ['BackgroundBrowser', 'BaseBrowser', 'Chrome', 'Chromium', 'Edge', 'Elinks', 'Epiphany', 'Error', 'GenericBrowser', 'Konqueror',
@@ -2932,11 +2932,16 @@ import webbrowser
 # 'open', 'open_new', 'open_new_tab', 'os', 'parse_args', 'register', 'register_X_browsers', 'register_standard_browsers', 'shlex',
 # 'shutil', 'subprocess', 'sys', 'threading']
 
-webbrowser.open("https://www.python.org")
-webbrowser.open_new("https://www.python.org")
-webbrowser.open_new_tab("https://www.python.org")
-webbrowser.get('chrome').open("https://www.python.org")
-webbrowser.get('firefox').open("https://www.python.org")
-webbrowser.main()
-webbrowser.os = "nt"
-webbrowser.sys = "win32"
+# webbrowser.open("https://www.python.org")
+# webbrowser.open_new("https://www.python.org")
+# webbrowser.open_new_tab("https://www.python.org")
+# webbrowser.get('chrome').open("https://www.python.org")
+# webbrowser.get('firefox').open("https://www.python.org")
+# webbrowser.main()
+# webbrowser.os = "nt"
+# webbrowser.sys = "win32"
+
+
+
+# **********************************************************************************************************************************
+
