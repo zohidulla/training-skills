@@ -2561,18 +2561,18 @@ import re
 # print(email_check_pattern.fullmatch('email@domain'))  # None
 # print(email_check_pattern.fullmatch('a.email@gmail.com')) #  <re.Match object; span=(0, 18), match='a.email@gmail.com'>
 
-def check_email(email):
-    email_regexp = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
-    email_check_pattern = re.compile(email_regexp)
-    validation_result = "valid" if email_check_pattern.fullmatch(email) else "not valid"
-    return (email, validation_result)
+# def check_email(email):
+#     email_regexp = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+#     email_check_pattern = re.compile(email_regexp)
+#     validation_result = "valid" if email_check_pattern.fullmatch(email) else "not valid"
+#     return (email, validation_result)
 
-print(check_email('support@example.com'))  # ('support@example.com', 'valid')
-print(check_email('invalid-email@com'))  # ('invalid-email@com', 'not valid')
-print(check_email('chat_ai@ya.ru'))  # ('chat_ai@ya.ru', 'valid')
-print(check_email('@gmail.com'))  # ('@gmail.com', 'not valid')
-print(check_email('email@domain'))  # ('email@domain', 'not valid')
-print(check_email('a.email@gmail.com')) #  ('a.email@gmail.com', 'valid')
+# print(check_email('support@example.com'))  # ('support@example.com', 'valid')
+# print(check_email('invalid-email@com'))  # ('invalid-email@com', 'not valid')
+# print(check_email('chat_ai@ya.ru'))  # ('chat_ai@ya.ru', 'valid')
+# print(check_email('@gmail.com'))  # ('@gmail.com', 'not valid')
+# print(check_email('email@domain'))  # ('email@domain', 'not valid')
+# print(check_email('a.email@gmail.com')) #  ('a.email@gmail.com', 'valid')
 
 
 # -----------------------------------------------------------
