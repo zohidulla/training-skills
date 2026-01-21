@@ -2525,6 +2525,14 @@ from pathlib import Path
 # Работа с регулярными выражениями - Working with Regular Expressions
 import re
 
+# print(dir(re))
+# ['A', 'ASCII', 'DEBUG', 'DOTALL', 'I', 'IGNORECASE', 'L', 'LOCALE', 'M', 'MULTILINE', 'Match', 'NOFLAG', 'Pattern', 'PatternError',
+# 'RegexFlag', 'S', 'Scanner', 'U', 'UNICODE', 'VERBOSE', 'X', '_MAXCACHE', '_MAXCACHE2', '_ZeroSentinel', '__all__', '__builtins__',
+# '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__', '_cache',
+# '_cache2', '_casefix', '_compile', '_compile_template', '_compiler', '_constants', '_parser', '_pickle', '_special_chars_map',
+# '_sre', '_zero_sentinel', 'compile', 'copyreg', 'enum', 'error', 'escape', 'findall', 'finditer', 'fullmatch', 'functools',
+# 'match', 'purge', 'search', 'split', 'sub', 'subn']
+
 # pattern = r'\b[a-zA-Z]{3}\b'
 # text = "The cat sat on the mat and saw a dog."
 # matches = re.findall(pattern, text)
@@ -2534,18 +2542,37 @@ import re
 # print(res)  # <re.Match object; span=(4, 7), match='cat'>
 # print(type(res))  # <class 're.Match'>
 
-# print(dir(re))
-# ['A', 'ASCII', 'DEBUG', 'DOTALL', 'I', 'IGNORECASE', 'L', 'LOCALE', 'M', 'MULTILINE', 'Match', 'NOFLAG', 'Pattern', 'PatternError',
-# 'RegexFlag', 'S', 'Scanner', 'U', 'UNICODE', 'VERBOSE', 'X', '_MAXCACHE', '_MAXCACHE2', '_ZeroSentinel', '__all__', '__builtins__',
-# '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__', '_cache',
-# '_cache2', '_casefix', '_compile', '_compile_template', '_compiler', '_constants', '_parser', '_pickle', '_special_chars_map',
-# '_sre', '_zero_sentinel', 'compile', 'copyreg', 'enum', 'error', 'escape', 'findall', 'finditer', 'fullmatch', 'functools',
-# 'match', 'purge', 'search', 'split', 'sub', 'subn']
-
 # my_string = "Contact us at support@example.com or sales@example.com."
 # my_pattern = re.compile(r'^Contact.*\.com\.$')
 # print(my_pattern.match(my_string))  # <re.Match object; span=(0, 49), match='Contact us at
 # my_pattern = re.compile(r'@example.com')
 # print(my_pattern.findall(my_string))  # ['@example.com', '@example.com']
+
+
+# email_regexp = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+# text = "Please contact us at support@example.com or sales@example.com or chat_ai@ya.ru."
+# emails = re.findall(email_regexp, text)
+# print(emails)  # ['support@example.com', 'sales@example.com', 'chat_ai@ya.ru']
+# email_check_pattern = re.compile(email_regexp)
+# print(email_check_pattern.fullmatch('support@example.com'))  # <re.Match object; span=(0, 19), match='support@example.com'>
+# print(email_check_pattern.fullmatch('invalid-email@com'))  # None
+# print(email_check_pattern.fullmatch('chat_ai@ya.ru'))  # <re.Match object; span=(0, 14), match='chat_ai@ya.ru'>
+# print(email_check_pattern.fullmatch('@gmail.com'))  # None
+# print(email_check_pattern.fullmatch('email@domain'))  # None
+# print(email_check_pattern.fullmatch('a.email@gmail.com')) #  <re.Match object; span=(0, 18), match='a.email@gmail.com'>
+
+def check_email(email):
+    email_regexp = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+    email_check_pattern = re.compile(email_regexp)
+    validation_result = "valid" if email_check_pattern.fullmatch(email) else "not valid"
+    return (email, validation_result)
+
+print(check_email('support@example.com'))  # ('support@example.com', 'valid')
+print(check_email('invalid-email@com'))  # ('invalid-email@com', 'not valid')
+print(check_email('chat_ai@ya.ru'))  # ('chat_ai@ya.ru', 'valid')
+print(check_email('@gmail.com'))  # ('@gmail.com', 'not valid')
+print(check_email('email@domain'))  # ('email@domain', 'not valid')
+print(check_email('a.email@gmail.com')) #  ('a.email@gmail.com', 'valid')
+
 
 # -----------------------------------------------------------
