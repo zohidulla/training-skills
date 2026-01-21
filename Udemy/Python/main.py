@@ -2525,7 +2525,19 @@ from pathlib import Path
 # Работа с регулярными выражениями - Working with Regular Expressions
 import re
 
-pattern = r'\b[a-zA-Z]{3}\b'
-text = "The cat sat on the mat and saw a dog."
-matches = re.findall(pattern, text)
-print(matches)  # ['The', 'cat', 'sat', 'the', 'mat', 'and', 'saw', 'dog']
+# pattern = r'\b[a-zA-Z]{3}\b'
+# text = "The cat sat on the mat and saw a dog."
+# matches = re.findall(pattern, text)
+# print(matches)  # ['The', 'cat', 'sat', 'the', 'mat', 'and', 'saw', 'dog']
+
+# res = re.search('cat', text)
+# print(res)  # <re.Match object; span=(4, 7), match='cat'>
+# print(type(res))  # <class 're.Match'>
+
+print(dir(re))
+# ['A', 'ASCII', 'DEBUG', 'DOTALL', 'I', 'IGNORECASE', 'L', 'LOCALE', 'M', 'MULTILINE', 'Match', 'NOFLAG', 'Pattern', 'PatternError',
+# 'RegexFlag', 'S', 'Scanner', 'U', 'UNICODE', 'VERBOSE', 'X', '_MAXCACHE', '_MAXCACHE2', '_ZeroSentinel', '__all__', '__builtins__',
+# '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '__version__', '_cache',
+# '_cache2', '_casefix', '_compile', '_compile_template', '_compiler', '_constants', '_parser', '_pickle', '_special_chars_map',
+# '_sre', '_zero_sentinel', 'compile', 'copyreg', 'enum', 'error', 'escape', 'findall', 'finditer', 'fullmatch', 'functools',
+# 'match', 'purge', 'search', 'split', 'sub', 'subn']
