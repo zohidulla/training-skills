@@ -4342,3 +4342,37 @@ pip3 list
 pip3 freeze
 # Список установленных пакетов с их версиями
 ```
+
+## Виртуальные среды и Pipenv - Virtual Environments and Pipenv
+
+**Виртуальная среда позволяет изолировать зависимости проекта**
+
+```python
+python3 -m venv my_env
+# Создание виртуальной среды my_env
+source my_env/bin/activate
+# Активация виртуальной среды my_env на MAC и UNIX
+my_env\Scripts\activate
+# Активация виртуальной среды my_env на WINDOWS
+deactivate
+# Деактивация виртуальной среды
+```
+
+```python
+pip3 install pipenv
+# Установка pipenv
+pipenv install package_name
+# Установка пакета package_name в виртуальную среду pipenv
+pipenv uninstall package_name
+# Удаление пакета package_name из виртуальной среды pipenv
+pipenv shell
+# Активация виртуальной среды pipenv
+pipenv --rm
+# Удаление виртуальной среды pipenv
+pipenv lock
+# Создание файла Pipfile.lock с зафиксированными версиями пакетов
+pipenv install --dev
+# Установка зависимостей для разработки из Pipfile.lock
+pipenv install
+# Установка зависимостей из Pipfile.lock
+```
