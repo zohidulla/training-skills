@@ -134,3 +134,8 @@ The `urls.py` file is responsible for mapping URL patterns to views in your Djan
 ```bash
 python manage.py startapp shop
 ```
+
+## Difference between a project and applications
+
+A Django project is a collection of settings and configurations that define a web application, while a Django application is a modular component that performs a specific function within the project. A project can contain multiple applications, each responsible for different features or functionalities.
+For example, a project could be an e-commerce website, while applications within that project could include a shopping cart, user authentication, and product catalog.
