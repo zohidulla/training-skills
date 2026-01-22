@@ -108,3 +108,23 @@ pipenv --venv
 
 This command will display the path to the virtual environment created by Pipenv for your project. You can use this path to activate the virtual environment manually if needed.
 For more information on managing virtual environments with Pipenv, refer to the [Pipenv documentation](https://pipenv.pypa.io/en/latest/).
+
+## manage.py
+
+The `manage.py` file is a command-line utility that allows you to interact with your Django project in various ways. It provides commands for tasks such as running the development server, creating database migrations, and managing applications within your project.
+
+## settings.py
+
+The `settings.py` file is a crucial part of any Django project. It contains all the configuration settings for your Django application, including database configurations, installed apps, middleware, templates, static files, and more.
+
+## wsgi.py
+
+The `wsgi.py` file is used for deploying your Django application on a web server that supports the Web Server Gateway Interface (WSGI) standard. It serves as the entry point for WSGI-compatible web servers to serve your Django application.
+
+## asgi.py
+
+The `asgi.py` file is used for deploying your Django application on a web server that supports the Asynchronous Server Gateway Interface (ASGI) standard. It serves as the entry point for ASGI-compatible web servers to serve your Django application.
+
+## urls.py
+
+The `urls.py` file is responsible for mapping URL patterns to views in your Django application. It defines the routing of incoming HTTP requests to the appropriate view functions or class-based views that handle those requests.
