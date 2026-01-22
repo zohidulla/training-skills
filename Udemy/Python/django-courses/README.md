@@ -50,3 +50,20 @@ Django follows the Model-View-Controller (MVC) architectural pattern, which help
 
 This separation of concerns makes Django applications easier to manage and scale.
 For more details on Django's MVC implementation, refer to the [official documentation](https://docs.djangoproject.com/en/stable/intro/tutorial01/#the-mvc-pattern-and-django).
+
+## Install Django
+
+To install Django, you can use pip, the Python package manager. Open your terminal and run the following command:
+
+```bash
+pipenv install django
+```
+
+This will install the latest stable version of Django. You can verify the installation by running:
+
+```bash
+django-admin --version
+```
+
+This should display the version of Django that you have installed.
+For more installation options and details, refer to the [official installation guide](https://docs.djangoproject.com/en/stable/topics/install/).
