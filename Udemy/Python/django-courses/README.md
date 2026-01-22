@@ -67,3 +67,35 @@ django-admin --version
 
 This should display the version of Django that you have installed.
 For more installation options and details, refer to the [official installation guide](https://docs.djangoproject.com/en/stable/topics/install/).
+
+## Project Setup with Specific Django Version
+
+```bash
+pipenv install django==4.0.8
+or
+pipenv install django
+```
+
+## To activate this project's virtualenv, run pipenv shell.
+
+```bash
+pipenv shell
+```
+
+## Start Django Project
+
+```bash
+django-admin startproject base .
+# django-admin - is a command-line utility that comes with Django.
+# startproject - is the command to create a new Django project.
+# base - is the project name
+# . - indicates current directory
+```
+
+## Run Development Server
+
+```bash
+python manage.py runserver
+```
+
+This command starts the Django development server, which allows you to test your application locally. By default, the server runs on `http://127.0.0.1:8000/`. You can access this URL in your web browser to see your Django project in action.
