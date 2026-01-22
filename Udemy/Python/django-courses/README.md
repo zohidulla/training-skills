@@ -99,3 +99,12 @@ python manage.py runserver
 ```
 
 This command starts the Django development server, which allows you to test your application locally. By default, the server runs on `http://127.0.0.1:8000/`. You can access this URL in your web browser to see your Django project in action.
+
+## Locate Virtual Environment
+
+```bash
+pipenv --venv
+```
+
+This command will display the path to the virtual environment created by Pipenv for your project. You can use this path to activate the virtual environment manually if needed.
+For more information on managing virtual environments with Pipenv, refer to the [Pipenv documentation](https://pipenv.pypa.io/en/latest/).
