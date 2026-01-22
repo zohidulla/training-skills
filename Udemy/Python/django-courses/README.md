@@ -128,3 +128,9 @@ The `asgi.py` file is used for deploying your Django application on a web server
 ## urls.py
 
 The `urls.py` file is responsible for mapping URL patterns to views in your Django application. It defines the routing of incoming HTTP requests to the appropriate view functions or class-based views that handle those requests.
+
+## Create Django App
+
+```bash
+python manage.py startapp shop
+```
