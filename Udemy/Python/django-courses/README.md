@@ -147,3 +147,11 @@ python manage.py migrate
 ```
 
 This command applies database migrations to your Django project. Migrations are a way of propagating changes made to your models (such as adding or modifying fields) into your database schema. Running `migrate` ensures that your database is in sync with your current set of models and their definitions.
+
+## Create Superuser
+
+```bash
+python manage.py createsuperuser
+```
+
+This command creates a superuser account for your Django project. A superuser has all permissions and can access the Django admin interface to manage the application's data and settings. You will be prompted to enter a username, email address, and password for the superuser account.
