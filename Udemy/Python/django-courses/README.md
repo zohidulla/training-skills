@@ -139,3 +139,11 @@ python manage.py startapp shop
 
 A Django project is a collection of settings and configurations that define a web application, while a Django application is a modular component that performs a specific function within the project. A project can contain multiple applications, each responsible for different features or functionalities.
 For example, a project could be an e-commerce website, while applications within that project could include a shopping cart, user authentication, and product catalog.
+
+## Apply Migrations
+
+```bash
+python manage.py migrate
+```
+
+This command applies database migrations to your Django project. Migrations are a way of propagating changes made to your models (such as adding or modifying fields) into your database schema. Running `migrate` ensures that your database is in sync with your current set of models and their definitions.
