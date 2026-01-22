@@ -163,3 +163,11 @@ python manage.py makemigrations
 ```
 
 This command creates new migration files based on the changes you have made to your models. Migrations are used to propagate changes to your database schema, and running `makemigrations` generates the necessary files that describe those changes. After creating migrations, you can apply them to the database using the `migrate` command.
+
+## Apply Migrations
+
+```bash
+python manage.py migrate
+```
+
+This command applies database migrations to your Django project. Migrations are a way of propagating changes made to your models (such as adding or modifying fields) into your database schema. Running `migrate` ensures that your database is in sync with your current set of models and their definitions.
