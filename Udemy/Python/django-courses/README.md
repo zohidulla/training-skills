@@ -155,3 +155,11 @@ python manage.py createsuperuser
 ```
 
 This command creates a superuser account for your Django project. A superuser has all permissions and can access the Django admin interface to manage the application's data and settings. You will be prompted to enter a username, email address, and password for the superuser account.
+
+## Make Migrations
+
+```bash
+python manage.py makemigrations
+```
+
+This command creates new migration files based on the changes you have made to your models. Migrations are used to propagate changes to your database schema, and running `makemigrations` generates the necessary files that describe those changes. After creating migrations, you can apply them to the database using the `migrate` command.
