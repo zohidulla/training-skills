@@ -245,3 +245,13 @@ datetime.datetime(2026, 1, 23, 4, 22, 19, 537730, tzinfo=datetime.timezone.utc)
 >>> quit()
 now exiting InteractiveConsole...
 ```
+
+Shell Commands
+
+```bash
+dir(obj)          # List object attributes/methods
+help(Model)       # Get help on a model
+vars(obj)         # View object's __dict__
+type(obj)         # Check object type
+quit() or exit()  # Exit the shell
+```
