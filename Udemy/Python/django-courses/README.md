@@ -171,3 +171,11 @@ python manage.py migrate
 ```
 
 This command applies database migrations to your Django project. Migrations are a way of propagating changes made to your models (such as adding or modifying fields) into your database schema. Running `migrate` ensures that your database is in sync with your current set of models and their definitions.
+
+## Django Shell
+
+```bash
+python manage.py shell
+```
+
+This command opens an interactive Python shell with your Django project's settings and models loaded. It allows you to interact with your Django application directly from the command line, making it useful for testing, debugging, and experimenting with your models and database queries.
