@@ -174,8 +174,54 @@ This command applies database migrations to your Django project. Migrations are 
 
 ## Django Shell
 
+This command opens an interactive Python shell with your Django project's settings and models loaded. It allows you to interact with your Django application directly from the command line, making it useful for testing, debugging, and experimenting with your models and database queries.
+
 ```bash
 python manage.py shell
+
+Python 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>>
 ```
 
-This command opens an interactive Python shell with your Django project's settings and models loaded. It allows you to interact with your Django application directly from the command line, making it useful for testing, debugging, and experimenting with your models and database queries.
+Example Usage:
+
+```bash
+>>> from shop.models import Category, Course
+>>> Course.objects.all()
+<QuerySet []>
+>>> Category.objects.all()
+<QuerySet []>
+>>> new_category = Category(title='Programming')
+>>> new_category.save()
+>>> Category.objects.all()
+<QuerySet [<Category: Category object (1)>]>
+>>> new_category.id
+1
+>>> new_category.title
+'Programming'
+>>> new_category.created_at
+datetime.datetime(2026, 1, 23, 4, 22, 19, 537730, tzinfo=datetime.timezone.utc)
+>>>
+```
+
+```bash
+>>> Category.objects.get(pk=1)
+<Category: Category object (1)>
+>>> Category.objects.get(pk=1).id
+1
+>>> Category.objects.get(pk=1).title
+'Programming'
+>>> Category.objects.get(pk=1).created_at
+datetime.datetime(2026, 1, 23, 4, 22, 19, 537730, tzinfo=datetime.timezone.utc)
+>>>
+```
+
+```bash
+>>> Category.objects.filter(pk=1)
+<QuerySet [<Category: Category object (1)>]>
+>>> Category.objects.filter(title='Programming')
+<QuerySet [<Category: Category object (1)>]>
+>>>
+```
