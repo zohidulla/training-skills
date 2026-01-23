@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Course, Category
 
-# Create your views here.
 def index(request):
-    # return render(request, 'shop/index.html')
-    return HttpResponse("Welcome to the Shop Index Page")
+    courses = Course.objects.all()
+    return HttpResponse(''.join([str(course) + '<br>' for course in courses]))
