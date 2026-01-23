@@ -225,3 +225,23 @@ datetime.datetime(2026, 1, 23, 4, 22, 19, 537730, tzinfo=datetime.timezone.utc)
 <QuerySet [<Category: Category object (1)>]>
 >>>
 ```
+
+```bash
+>>> category = Category.objects.get(id=1)
+>>> category.course_set.all()
+<QuerySet []>
+>>> category.course_set.create(title="Complete Python Guide", price=99.99, students_qty=100, reviews_qty=50)
+<Course: Course object (1)>
+>>> Course.objects.all()
+<QuerySet [<Course: Course object (1)>]>
+>>> Course.objects.get(pk=1)
+<Course: Course object (1)>
+>>> category.course_set.create(title="Complete Java Guide", price=99.99, students_qty=80, reviews_qty=40)
+<Course: Course object (2)>
+>>> Course.objects.all()
+<QuerySet [<Course: Course object (1)>, <Course: Course object (2)>]>
+>>> [course.title for course in Course.objects.all()]
+['Complete Python Guide', 'Complete Java Guide']
+>>> quit()
+now exiting InteractiveConsole...
+```
