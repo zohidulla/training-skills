@@ -4,4 +4,4 @@ from .models import Course, Category
 
 def index(request):
     courses = Course.objects.all()
-    return HttpResponse(''.join([str(course) + '<br>' for course in courses]))
+    return render(request, 'courses.html')
