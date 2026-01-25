@@ -263,3 +263,11 @@ pipenv install django-tastypie
 ```
 
 Django Tastypie is a powerful and flexible library for building RESTful APIs in Django. It provides a simple and consistent way to expose your Django models as web services, allowing you to create, read, update, and delete resources over HTTP.
+
+## Create Django App for API
+
+```bash
+python manage.py startapp api
+```
+
+This command creates a new Django application named "api" within your project. This application will be used to define and manage your API endpoints using Django Tastypie.
