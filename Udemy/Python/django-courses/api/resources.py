@@ -22,7 +22,6 @@ class CourseResource(ModelResource):
 
     def hydrate(self, bundle):
         bundle.obj.category_id = bundle.data['category_id']
-        bundle.obj.reviews_qty = bundle.data.get('reviews_qty', 0)
         return bundle
 
     def dehydrate(self, bundle):
