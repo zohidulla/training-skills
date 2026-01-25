@@ -255,3 +255,11 @@ vars(obj)         # View object's __dict__
 type(obj)         # Check object type
 quit() or exit()  # Exit the shell
 ```
+
+## Install Django tastypie
+
+```bash
+pipenv install django-tastypie
+```
+
+Django Tastypie is a powerful and flexible library for building RESTful APIs in Django. It provides a simple and consistent way to expose your Django models as web services, allowing you to create, read, update, and delete resources over HTTP.
