@@ -152,3 +152,17 @@ pip install numpy
 - [NumPy Tutorial for Beginners](https://www.dataquest.io/blog/numpy-tutorial/)
 - [NumPy Cheat Sheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf)
   NumPy является фундаментальной библиотекой для Data Science и Machine Learning, обеспечивая эффективные инструменты для работы с данными и выполнения математических операций.
+
+### Оси в массивах NumPy
+
+Оси в массивах NumPy начинаются с 0. Например, в двумерном массиве первая ось (ось 0) представляет строки, а вторая ось (ось 1) представляет столбцы.
+Пример создания и индексирования массива NumPy:
+
+```python
+import numpy as np
+# Создание двумерного массива
+array = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+# Индексация элементов
+element = array[0, 1]  # Получение элемента из первой строки и второго столбца (значение 2)
+print(element) # Вывод: 2
+```
