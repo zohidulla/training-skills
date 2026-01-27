@@ -210,3 +210,45 @@ df = pd.DataFrame(data)
 age_of_bob = df.loc[1, 'Age']  # Получение возраста Боба (значение 30)
 print(age_of_bob) # Вывод: 30
 ```
+
+## Matplotlib
+
+Matplotlib[https://matplotlib.org/] - это библиотека Python для создания статических, анимированных и интерактивных визуализаций данных. Matplotlib широко используется в области Data Science и Machine Learning для построения графиков и диаграмм, которые помогают анализировать и интерпретировать данные.
+
+### Установка Matplotlib
+
+Чтобы установить Matplotlib, выполните следующую команду в терминале или командной строке:
+
+```bash
+pip install matplotlib
+```
+
+### Основные функции Matplotlib
+
+- **Построение графиков**: Matplotlib предоставляет широкий набор функций для создания различных типов графиков, включая линейные графики, гистограммы, диаграммы рассеяния и многое другое.
+- **Настройка визуализаций**: Matplotlib позволяет настраивать внешний вид графиков, включая цвета, шрифты, легенды и оси.
+- **Интерактивные визуализации**: Matplotlib поддерживает создание интерактивных графиков, которые можно масштабировать и перемещать.
+- **Интеграция с Jupyter**: Matplotlib легко интегрируется с Jupyter Notebook и Jupyter Lab для отображения графиков непосредственно в ноутбуках.
+
+### Полезные ресурсы
+
+- [Официальная документация Matplotlib](https://matplotlib.org/stable/contents.html)
+- [Matplotlib Tutorial for Beginners](https://www.dataquest.io/blog/matplotlib-tutorial/)
+- [Matplotlib Cheat Sheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Matplotlib_Python_Cheat_Sheet.pdf)
+  Matplotlib является мощной библиотекой для Data Science и Machine Learning, предоставляя инструменты
+  для создания информативных визуализаций данных и анализа результатов.
+
+### Пример построения графика с Matplotlib
+
+```python
+import matplotlib.pyplot as plt
+# Данные для построения графика
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+# Построение линейного графика
+plt.plot(x, y)
+plt.title('Пример линейного графика')
+plt.xlabel('X ось')
+plt.ylabel('Y ось')
+plt.show()
+```
