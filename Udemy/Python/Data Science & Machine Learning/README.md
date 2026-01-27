@@ -252,3 +252,54 @@ plt.xlabel('X ось')
 plt.ylabel('Y ось')
 plt.show()
 ```
+
+## Scikit-Learn
+
+Scikit-Learn[https://scikit-learn.org/] - это библиотека Python для машинного обучения, которая предоставляет простой и эффективный инструментарий для анализа данных и построения моделей машинного обучения. Scikit-Learn широко используется в области Data Science и Machine Learning для решения задач классификации, регрессии, кластеризации и других.
+
+### Установка Scikit-Learn
+
+Чтобы установить Scikit-Learn, выполните следующую команду в терминале или командной строке:
+
+```bash
+pip install scikit-learn
+```
+
+### Основные функции Scikit-Learn
+
+- **Алгоритмы машинного обучения**: Scikit-Learn включает широкий набор алгоритмов для классификации, регрессии, кластеризации и понижения размерности.
+- **Предобработка данных**: Scikit-Learn предоставляет инструменты для масштабирования, нормализации и кодирования данных.
+- **Оценка моделей**: Scikit-Learn включает функции для оценки производительности моделей с использованием различных метрик.
+- **Разделение данных**: Scikit-Learn позволяет легко разделять данные на обучающую и тестовую выборки.
+
+### Полезные ресурсы
+
+- [Официальная документация Scikit-Learn](https://scikit-learn.org/stable/documentation.html)
+- [Scikit-Learn Tutorial for Beginners](https://www.dataquest.io/blog/scikit-learn-tutorial/)
+- [Scikit-Learn Cheat Sheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Scikit_Learn_Cheat_Sheet_Python.pdf)
+  Scikit-Learn является мощной библиотекой для Data Science и Machine Learning, предоставляя инструменты для построения и оценки моделей машинного обучения.
+
+### Пример использования Scikit-Learn для классификации
+
+```python
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+# Загрузка набора данных Iris
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+# Разделение данных на обучающую и тестовую выборки
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Создание и обучение модели Random Forest
+model = RandomForestClassifier()
+model.fit(X_train, y_train)
+# Предсказание на тестовой выборке
+y_pred = model.predict(X_test)
+# Оценка точности модели
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Accuracy: {accuracy}')
+```
+
+Этот пример демонстрирует, как использовать Scikit-Learn для загрузки данных, разделения их на обучающую и тестовую выборки, создания модели классификации и оценки ее точности.
